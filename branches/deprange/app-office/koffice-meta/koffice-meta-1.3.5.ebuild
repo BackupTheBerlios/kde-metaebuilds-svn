@@ -12,7 +12,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 # Note most packages didn't change between koffice 1.3.4 and 1.3.5
-DEPEND="~app-office/karbon-1.3.4
+RDEPEND="~app-office/karbon-1.3.4
 	~app-office/kchart-1.3.4
 	~app-office/kformula-1.3.4
 	~app-office/kivio-1.3.4

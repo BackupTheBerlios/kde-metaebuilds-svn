@@ -11,7 +11,7 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="
+RDEPEND="
 ~kde-base/kig-3.3.1
 ~kde-base/kalzium-$PV
 ~kde-base/khangman-3.3.1

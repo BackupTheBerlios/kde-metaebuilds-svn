@@ -11,7 +11,7 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="
+RDEPEND="
 	~kde-base/cervisia-$PV
 	~kde-base/kapptemplate-3.3.1
 	~kde-base/kbabel-$PV

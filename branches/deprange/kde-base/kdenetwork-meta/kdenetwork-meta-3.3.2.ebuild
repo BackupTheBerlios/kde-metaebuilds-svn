@@ -11,7 +11,7 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="~kde-base/dcoprss-3.3.1
+RDEPEND="~kde-base/dcoprss-3.3.1
 	~kde-base/kdenetwork-filesharing-3.3.1
 	~kde-base/kdict-3.3.1
 	~kde-base/kget-$PV

@@ -11,7 +11,7 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND="
+RRDEPEND="
 ~kde-base/dcopc-3.3.1
 ~kde-base/dcopperl-3.3.1
 ~kde-base/dcoppython-3.3.1

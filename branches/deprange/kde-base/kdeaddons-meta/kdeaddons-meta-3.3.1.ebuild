@@ -11,7 +11,7 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE="sdl arts"
 
-DEPEND="
+RDEPEND="
 ~kde-base/atlantikdesigner-$PV
 ~kde-base/knewsticker-scripts-$PV
 ~kde-base/ksig-$PV

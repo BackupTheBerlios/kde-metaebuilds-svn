@@ -11,7 +11,7 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="~app-office/karbon-$PV
+RDEPEND="~app-office/karbon-$PV
 	~app-office/kchart-$PV
 	~app-office/kformula-$PV
 	~app-office/kivio-$PV

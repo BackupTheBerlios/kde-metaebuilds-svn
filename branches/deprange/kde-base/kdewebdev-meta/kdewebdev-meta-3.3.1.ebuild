@@ -11,7 +11,7 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="
+RDEPEND="
 ~kde-base/kfilereplace-$PV
 ~kde-base/kimagemapeditor-$PV
 ~kde-base/klinkstatus-$PV

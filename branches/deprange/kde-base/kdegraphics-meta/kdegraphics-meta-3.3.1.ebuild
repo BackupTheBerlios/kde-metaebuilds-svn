@@ -11,7 +11,7 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE="gphoto2 scanner povray"
 
-DEPEND="gphoto2? ( ~kde-base/kamera-$PV )
+RDEPEND="gphoto2? ( ~kde-base/kamera-$PV )
 	~kde-base/kcoloredit-$PV
 	~kde-base/kdegraphics-kfile-plugins-$PV
 	~kde-base/kdvi-$PV

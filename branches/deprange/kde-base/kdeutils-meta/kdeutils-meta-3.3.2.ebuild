@@ -12,7 +12,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 # We don't add kcardtools because it needs a libksmartcard from kdelibs that it's not alway installed"
-DEPEND="
+RDEPEND="
 	~kde-base/ark-3.3.1
 	~kde-base/kcalc-3.3.1
 	~kde-base/kcharselect-3.3.1

@@ -11,7 +11,7 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="
+RDEPEND="
 ~kde-base/kdeartwork-iconthemes-$PV
 ~kde-base/kdeartwork-icewm-themes-$PV
 ~kde-base/kdeartwork-kscreensaver-$PV

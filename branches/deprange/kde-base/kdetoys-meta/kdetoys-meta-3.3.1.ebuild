@@ -11,7 +11,7 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="
+RDEPEND="
 ~kde-base/amor-$PV
 ~kde-base/eyesapplet-$PV
 ~kde-base/fifteenapplet-$PV

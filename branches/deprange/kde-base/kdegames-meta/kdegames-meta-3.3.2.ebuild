@@ -11,7 +11,7 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="
+RDEPEND="
 ~kde-base/atlantik-$PV
 ~kde-base/kasteroids-3.3.1
 ~kde-base/katomic-3.3.1

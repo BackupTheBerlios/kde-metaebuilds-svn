@@ -11,7 +11,7 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="
+RDEPEND="
 ~kde-base/ktuberling-$PV
 arts? ( ~kde-base/kolf-$PV )
 ~kde-base/kpat-$PV
