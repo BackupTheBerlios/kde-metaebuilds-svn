@@ -16,7 +16,6 @@ RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/certmanager)
 	$(deprange $PV $MAXKDEVER kde-base/kaddressbook)
 	$(deprange $PV $MAXKDEVER kde-base/kalarm)
-	$(deprange $PV $MAXKDEVER kde-base/kalarmd)
 	$(deprange $PV $MAXKDEVER kde-base/kandy)
 	$(deprange $PV $MAXKDEVER kde-base/karm)
 	$(deprange $PV $MAXKDEVER kde-base/kdepim-kioslaves)
