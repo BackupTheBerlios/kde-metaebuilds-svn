@@ -2,12 +2,16 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 KMNAME=kdegames
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KDE Atomic Entertainment Game"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdegames-$PV"
+DEPEND=""
+OLDDEPEND="~kde-base/libkdegames-$PV"
+need-version-range $KM_DEPRANGE  kde-base/libkdegames
 
 KMEXTRACTONLY=libkdegames
 KMCOPYLIB="libkdegames libkdegames"

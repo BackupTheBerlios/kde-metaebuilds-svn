@@ -3,6 +3,8 @@
 # $Header: $
 KMNAME=kdegames
 KM_MAKEFILESREV=1
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="library common to many KDE games"

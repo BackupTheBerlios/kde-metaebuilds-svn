@@ -3,12 +3,16 @@
 # $Header: $
 
 KMNAME=kdepim
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE: Communicating with your mobile phone"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdepim-$PV"
+DEPEND=""
+OLDDEPEND="~kde-base/libkdepim-$PV"
+need-version-range $KM_DEPRANGE  kde-base/libkdepim
 KMCOPYLIB="
 	libkdepim libkdepim"
 KMEXTRACTONLY="

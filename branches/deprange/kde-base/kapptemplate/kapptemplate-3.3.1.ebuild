@@ -3,6 +3,8 @@
 # $Header: $
 
 KMNAME=kdesdk
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KAppTemplate - A shell script that will create the necessary framework to develop various KDE applications"

@@ -4,10 +4,14 @@
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="kate/filelistloader"
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="kate plugin for managing lists of files, like projects"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"
+DEPEND=""
+OLDDEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"
+need-version-range $KM_DEPRANGE  kde-base/kate kde-base/kdeaddons-docs-kate-plugins
 

@@ -4,6 +4,8 @@
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="kfile-plugins/txt"
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="kfile textfile plugin"

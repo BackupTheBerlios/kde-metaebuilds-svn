@@ -4,10 +4,14 @@
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="kate/helloworld"
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="Hello World sample plugin for kate"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"
+DEPEND=""
+OLDDEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"
+need-version-range $KM_DEPRANGE  kde-base/kate kde-base/kdeaddons-docs-kate-plugins
 

@@ -4,12 +4,16 @@
 
 KMNAME=kdemultimedia
 KMMODULE=mpeglib_artsplug
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="mpeglib plugin for arts"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/mpeglib-$PV"
+DEPEND=""
+OLDDEPEND="~kde-base/mpeglib-$PV"
+need-version-range $KM_DEPRANGE  kde-base/mpeglib
 KMCOPYLIB="libmpeg mpeglib/lib/"
 KMEXTRACTONLY="mpeglib/"
 

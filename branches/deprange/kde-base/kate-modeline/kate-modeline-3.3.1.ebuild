@@ -4,10 +4,14 @@
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="kate/modeline"
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="kate plugin: set document settings based on vim or emacs plugins"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"
+DEPEND=""
+OLDDEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"
+need-version-range $KM_DEPRANGE  kde-base/kate kde-base/kdeaddons-docs-kate-plugins
 

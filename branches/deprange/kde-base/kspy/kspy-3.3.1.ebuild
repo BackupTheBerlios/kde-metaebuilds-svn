@@ -3,6 +3,8 @@
 # $Header: $
 
 KMNAME=kdesdk
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="kspy - an utility intended to help developers examine the internal state of a Qt/KDE application"

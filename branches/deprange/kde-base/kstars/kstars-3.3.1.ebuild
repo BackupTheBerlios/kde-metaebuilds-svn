@@ -2,12 +2,16 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 KMNAME=kdeedu
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KDE Desktop Planetarium"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdeedu-$PV"
+DEPEND=""
+OLDDEPEND="~kde-base/libkdeedu-$PV"
+need-version-range $KM_DEPRANGE  kde-base/libkdeedu
 
 KMEXTRACTONLY="libkdeedu/extdate libkdeedu/kdeeduplot"
 KMCOPYLIB="libextdate libkdeedu/extdate

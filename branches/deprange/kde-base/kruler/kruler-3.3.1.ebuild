@@ -3,6 +3,8 @@
 # $Header: $
 
 KMNAME=kdegraphics
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="A screen ruler for the K Desktop Environment"

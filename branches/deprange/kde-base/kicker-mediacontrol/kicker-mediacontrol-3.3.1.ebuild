@@ -4,14 +4,18 @@
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="kicker-applets/mediacontrol"
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="kicker plugin for controlling various media players"
 KEYWORDS="~x86"
 IUSE="xmms"
-DEPEND="~kde-base/kicker-$PV ~kde-base/kdeaddons-docs-kicker-applets-$PV
+OLDDEPEND="~kde-base/kicker-$PV ~kde-base/kdeaddons-docs-kicker-applets-$PV
 	xmms? ( media-sound/xmms )"
-	
+DEPEND="xmms? ( media-sound/xmms )"
+need-version-range $KM_DEPRANGE kde-base/kicker kde-base/kdeaddons-docs-kicker-applets
+
 use xmms || export ac_cv_have_xmms=no
 
 

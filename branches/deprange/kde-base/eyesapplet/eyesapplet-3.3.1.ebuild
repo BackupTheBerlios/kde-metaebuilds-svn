@@ -3,6 +3,8 @@
 # $Header: $
 
 KMNAME=kdetoys
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="kicker applet: eyes following the movement of the mouse pointer"

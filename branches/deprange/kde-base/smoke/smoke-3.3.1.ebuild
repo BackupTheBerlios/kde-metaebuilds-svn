@@ -5,6 +5,8 @@
 KMNAME=kdebindings
 KMEXTRACTONLY="kalyptus/kalyptus kalyptus/*.pm"
 KM_MAKEFILESREV=1
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="Scripting Meta Object Kompiler Engine: a language-agnostic bindings generator for qt and kde"
