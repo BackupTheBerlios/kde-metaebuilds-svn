@@ -20,7 +20,7 @@ fi
 myPN="$KMNAME"
 case "$PV" in
 	3.4.0_alpha1)	myPV="${PV/3.4.0_alpha1/3.3.90}" ;;
-	3.4.0_alpha2)	myPV="${PV/3.4.0_alpha2/3.3.91}" ;;
+	3.4.0_beta1)	myPV="${PV/3.4.0_alpha2/3.3.91}" ;;
 	*)		myPV="$PV" ;;
 esac
 myP="$myPN-$myPV"
@@ -64,6 +64,9 @@ if [ "$KDEBASE" = "true" ]; then
 					;;
 		3.3.2)		XDELTA_BASE="stable/3.3/src/${myPN}-3.3.0.tar.bz2"
 					XDELTA_DELTA="stable/3.3.1/src/${myPN}-3.3.0-3.3.1.tar.xdelta stable/3.3.2/src/${myPN}-3.3.1-3.3.2.tar.xdelta"
+					;;
+		3.3.91)		XDELTA_BASE="unstable/3.3.90/src/${myPN}-3.3.90.tar.bz2"
+					XDELTA_DELTA="unstable/3.3.91/src/${myPN}-3.3.90-3.3.91.tar.xdelta"
 					;;
 		*)			;;
 	esac	
