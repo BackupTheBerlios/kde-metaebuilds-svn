@@ -6,14 +6,13 @@ KMNAME=kdebase
 KMMODULE=kioslave
 inherit kde-meta eutils
 
-DESCRIPTION="kioslaves from kdebase"
+DESCRIPTION="kioslave: the kde VFS framework - kioslave plugins present a filesystem-like view of arbitrary data"
 KEYWORDS="~x86"
 IUSE="ldap samba"
 DEPEND="ldap? ( net-nds/openldap )
 		samba? ( >=net-fs/samba-3.0.1 )
 		~kde-base/kdesktop-$PV" # for the kdeeject script used by the devices/mounthelper ioslave
-PATCHES="$FILESDIR/remove-startkde-$PV.diff
-		 ${FILESDIR}/3.3.0-sasl-fix.diff"
+PATCHES="$FILESDIR/remove-startkde-$PV.diff"
 
 src_compile () {
 	myconf="$myconf `use_with ldap`"
