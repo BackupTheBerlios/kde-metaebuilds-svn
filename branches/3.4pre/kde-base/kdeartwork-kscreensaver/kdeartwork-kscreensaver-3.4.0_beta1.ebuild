@@ -13,7 +13,7 @@ KEYWORDS="~x86"
 IUSE="opengl xscreensaver"
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/kscreensaver)
 	opengl? ( virtual/opengl )
-	!ppc64 ( xscreensaver? ( x11-misc/xscreensaver ) )"
+	!ppc64? ( xscreensaver? ( x11-misc/xscreensaver ) )"
 
 src_compile() {
 	myconf="$myconf --with-dpms $(use_with opengl gl)"
