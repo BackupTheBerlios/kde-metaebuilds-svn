@@ -12,8 +12,8 @@ IUSE=""
 DEPEND=">=media-libs/xine-lib-1_beta12"
 
 pkg_setup() {
-	if [ ! `use arts` ]; then
-		eerror "artsplugin-xine needs the USE=\"alsa\" enabled."
+	if ! useq arts; then
+		eerror "artsplugin-audiofile needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
 		die	
 	fi
 }

@@ -13,8 +13,8 @@ KMEXTRACTONLY=libkdegames
 KMCOPYLIB="libkdegames libkdegames"
 
 pkg_setup() {
-	if [ ! `use arts` ]; then
-		eerror "kolf needs the USE=\"alsa\" enabled. You need also that the kdelibs are compiled with this use enabled too."
+	if ! useq arts; then
+		eerror "artsplugin-audiofile needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
 		die	
 	fi
 }

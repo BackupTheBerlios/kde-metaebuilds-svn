@@ -17,8 +17,8 @@ RDEPEND="${DEPEND}
 KMEXTRACTONLY="arts/"
 
 pkg_setup() {
-	if [ ! `use arts` ]; then
-		eerror "kaboodle needs the USE=\"alsa\" enabled."
+	if ! useq arts; then
+		eerror "artsplugin-audiofile needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
 		die	
 	fi
 }

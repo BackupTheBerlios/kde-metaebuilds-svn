@@ -10,11 +10,14 @@ KEYWORDS="~x86"
 IUSE="flac oggvorbis speex"
 DEPEND="flac? ( media-libs/flac )
 	oggvorbis? ( media-sound/vorbis-tools )
-	speex? ( media-libs/speex !=media-libs/speex-1.1.4 )
+	speex? ( media-libs/speex )
+	!=media-libs/speex-1.1.4
 	media-libs/libsamplerate"
 
 src_compile() {
 	use oggvorbis && myconf="$myconf --with-vorbis=/usr" || myconf="$myconf --without-vorbis"
+	
+	use speex && myconf="$myconf --with-extra-includes=/usr/include/speex"
 	
 	kde-meta_src_compile
 }
