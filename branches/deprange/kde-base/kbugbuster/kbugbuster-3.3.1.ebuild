@@ -3,6 +3,8 @@
 # $Header: $
 
 KMNAME=kdesdk
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KBugBuster - A tool for checking and reporting KDE apps' bugs"

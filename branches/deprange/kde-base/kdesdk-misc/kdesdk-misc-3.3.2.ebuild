@@ -5,6 +5,8 @@
 KMNAME=kdesdk
 KMNOMODULE="true"
 KMNODOCS="true"
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="kdesdk-misc - Various files and utilities"

@@ -4,6 +4,8 @@
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="kicker-applets/math"
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="kicker applet evaluating math expressions"

@@ -4,6 +4,8 @@
 
 KMMODULE=wallpapers
 KMNAME=kdeartwork
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION=""

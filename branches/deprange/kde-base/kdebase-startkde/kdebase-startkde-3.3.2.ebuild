@@ -5,6 +5,8 @@
 KMNAME=kdebase
 KMNOMODULE=true
 KMEXTRACTONLY="kdm/kfrontend/sessions/kde.desktop.in startkde"
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 need-kde $PV

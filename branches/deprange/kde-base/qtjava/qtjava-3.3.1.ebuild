@@ -4,6 +4,8 @@
 
 KMNAME=kdebindings
 KM_MAKEFILESREV=1
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="Java bindings for QT"

@@ -4,6 +4,8 @@
 
 KMNAME=kdegraphics
 KMMODULE=kfile-plugins
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="kfile plugins from kdegraphics"

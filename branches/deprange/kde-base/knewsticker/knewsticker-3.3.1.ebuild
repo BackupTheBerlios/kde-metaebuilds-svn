@@ -3,6 +3,8 @@
 # $Header: $
 
 KMNAME=kdenetwork
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="kicker plugin: rss news ticker"

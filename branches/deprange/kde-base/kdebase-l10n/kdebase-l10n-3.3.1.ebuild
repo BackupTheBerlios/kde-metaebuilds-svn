@@ -4,6 +4,8 @@
 
 KMNAME=kdebase
 KMMODULE=l10n
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="l10n files from kdebase"

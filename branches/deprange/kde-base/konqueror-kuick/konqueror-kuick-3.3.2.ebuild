@@ -4,6 +4,8 @@
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="konq-plugins/kuick"
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KDE: Kuick Copy And Move service"

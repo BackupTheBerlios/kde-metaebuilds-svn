@@ -4,6 +4,8 @@
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="konq-plugins/rellinks"
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KHTML plugin: Document Relations (back/forward/up browsing for sites which have generated page-per-chapter layout)"

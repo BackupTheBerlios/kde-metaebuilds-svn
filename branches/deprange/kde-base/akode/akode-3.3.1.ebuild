@@ -3,6 +3,8 @@
 # $Header: $
 
 KMNAME=kdemultimedia
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="aRts plugins for various formats"

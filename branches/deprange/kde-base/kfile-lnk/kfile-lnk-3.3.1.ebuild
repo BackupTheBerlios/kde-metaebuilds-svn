@@ -4,6 +4,8 @@
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="kfile-plugins/lnk"
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="kfile plugin for Windows .lnk files and command-line tool for exctracting target URLs from these files"
