@@ -29,7 +29,9 @@ KMCOPYLIB="
 	libksieve libksieve/
 	libkleopatra certmanager/lib/
 	libkcal libkcal
-	libkpinterfaces kontact/interfaces/"
+	libkpinterfaces kontact/interfaces/
+	libkmime libkmime
+	libkpgp libkpgp"
 KMEXTRACTONLY=" 
 	libkdenetwork/
 	libkdepim/
@@ -39,7 +41,10 @@ KMEXTRACTONLY="
 	mimelib/
 	certmanager/
 	korganizer/korganizeriface.h
-	kontact/interfaces/"
+	kontact/interfaces/
+	libkmime/
+	libkpgp"
+KMCOMPILEONLY="libemailfunctions"
 # the kmail plugins are installed with kmail
 KMEXTRA="
 	plugins/kmail/
