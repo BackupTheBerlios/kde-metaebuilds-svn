@@ -12,7 +12,7 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/librss-3.3.1"
 DEPEND="
-$(deprange 3.3.1 $PV kde)"
+$(deprange 3.3.1 $PV librss)"
 
 KMCOPYLIB="librss librss"
 KMEXTRACTONLY="librss"
