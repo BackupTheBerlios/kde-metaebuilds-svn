@@ -5,7 +5,7 @@
 KMNAME=kdepim
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
+DESCRIPTION="library common to many KDE network apps"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=">=app-crypt/gpgme-0.4.0"

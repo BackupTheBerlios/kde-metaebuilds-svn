@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kfile-plugins/folder"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="kfile plugin for directories"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

@@ -1,6 +1,4 @@
-MD5 b0129d59f29013fdae01fa3b005a86ea kdebase-kioslaves-3.3.1.ebuild 728
-MD5 b0129d59f29013fdae01fa3b005a86ea kdebase-kioslaves-3.3.0.ebuild 728
-MD5 01021b0391dbf4a3319df6adfe0bf14d files/digest-kdebase-kioslaves-3.3.0 156
+MD5 2c91a8caeb96c0a858518b5719bb8267 kdebase-kioslaves-3.3.1.ebuild 666
 MD5 57a9a66cba8e7319e0bb10abdb57a5a1 files/digest-kdebase-kioslaves-3.3.1 155
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295

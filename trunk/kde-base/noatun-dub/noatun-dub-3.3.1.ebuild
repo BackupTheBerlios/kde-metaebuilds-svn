@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="noatun-plugins/dub"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="noatun playlist plugin"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/noatun-$PV"

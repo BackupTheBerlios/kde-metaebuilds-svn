@@ -6,7 +6,7 @@ KMNAME=kdebase
 KMMODULE=pics
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
+DESCRIPTION="Pics included with kdebase"
 KEYWORDS="~x86"
 IUSE=""
 PATCHES="$FILESDIR/remove-startkde-$PV.diff"

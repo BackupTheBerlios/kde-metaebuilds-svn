@@ -5,7 +5,7 @@
 KMNAME=kdepim
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
+DESCRIPTION="KDE Time tracker tool"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/libkcal-$PV

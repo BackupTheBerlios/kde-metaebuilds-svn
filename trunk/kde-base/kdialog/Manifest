@@ -1,6 +1,4 @@
-MD5 a232bb7481e7364d63cd0fb729d35bf5 kdialog-3.3.0.ebuild 441
-MD5 a232bb7481e7364d63cd0fb729d35bf5 kdialog-3.3.1.ebuild 441
-MD5 df8203cb77bea3cb3006774fe1584b16 files/digest-kdialog-3.3.0 146
+MD5 1b4014995f5e176e137da4ec7ee32b65 kdialog-3.3.1.ebuild 421
 MD5 3821ca7d52c4315570112b144fa8e2fd files/digest-kdialog-3.3.1 145
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295

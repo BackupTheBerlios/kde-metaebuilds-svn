@@ -4,7 +4,7 @@
 KMNAME=kdeedu
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE Educational: Form-based tests and exams"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

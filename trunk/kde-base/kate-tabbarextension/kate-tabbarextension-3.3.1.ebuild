@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kate/tabbarextension"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="kate plugin: adds a tab bar to kate's main window"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"

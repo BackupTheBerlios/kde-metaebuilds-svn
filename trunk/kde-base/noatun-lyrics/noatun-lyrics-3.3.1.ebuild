@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="noatun-plugins/lyrics"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="noatun lyrics downloading plugin"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/noatun-$PV"

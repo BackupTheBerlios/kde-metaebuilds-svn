@@ -5,7 +5,7 @@
 KMNAME=kdebindings
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE javascript parser and embedder"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/kwin-$PV"

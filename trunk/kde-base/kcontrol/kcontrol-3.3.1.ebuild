@@ -5,7 +5,7 @@
 KMNAME=kdebase
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
+DESCRIPTION="The KDE Control Center"
 KEYWORDS="~x86"
 IUSE="ssl arts"
 PATCHES="$FILESDIR/remove-startkde-$PV.diff $FILESDIR/configure.in.in-kdm-settings.diff"

@@ -5,7 +5,7 @@
 KMNAME=kdetoys
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="kicker plugin for the 15-game"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

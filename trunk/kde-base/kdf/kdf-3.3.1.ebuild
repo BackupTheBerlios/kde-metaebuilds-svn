@@ -5,6 +5,6 @@
 KMNAME=kdeutils
 inherit kde-meta eutils
 
-DESCRIPTION="KDiskFree - KDE free disk space utility"
+DESCRIPTION="KDE free disk space utility"
 KEYWORDS="~x86"
 IUSE=""

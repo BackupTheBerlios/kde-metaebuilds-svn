@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kate/openheader"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="kate plugin that opens the .h header corresponding to the .c[pp] file being edited"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"

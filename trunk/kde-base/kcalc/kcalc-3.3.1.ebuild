@@ -5,6 +5,6 @@
 KMNAME=kdeutils
 inherit kde-meta eutils
 
-DESCRIPTION="KCalc - KDE Calculator"
+DESCRIPTION="KDE Calculator"
 KEYWORDS="~x86"
 IUSE=""

@@ -4,7 +4,7 @@
 KMNAME=kdeedu
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE Japanese dictionary and reference"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

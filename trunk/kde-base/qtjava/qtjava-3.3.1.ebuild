@@ -5,7 +5,7 @@
 KMNAME=kdebindings
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="Java bindings for QT"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/jdk"

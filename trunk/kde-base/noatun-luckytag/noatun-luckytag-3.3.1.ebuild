@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="noatun-plugins/luckytag"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="noatun plugin that guesses tag values (author, title, ...) from filenames"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/noatun-$PV"

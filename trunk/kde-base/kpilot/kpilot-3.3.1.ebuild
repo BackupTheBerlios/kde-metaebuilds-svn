@@ -5,7 +5,7 @@
 KMNAME=kdepim
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
+DESCRIPTION="KPilot - HotSync software for KDE"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="app-pda/pilot-link 

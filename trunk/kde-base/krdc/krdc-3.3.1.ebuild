@@ -5,7 +5,7 @@
 KMNAME=kdenetwork
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
+DESCRIPTION="KDE remote desktp connection (RDP and VNC) cient"
 KEYWORDS="~x86"
 IUSE="rdesktop slp"
 DEPEND=">=dev-libs/openssl-0.9.6b

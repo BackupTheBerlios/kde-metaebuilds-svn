@@ -6,7 +6,7 @@ KMNAME=kdemultimedia
 KMMODULE=kioslave
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
+DESCRIPTION="kioslaves from kdemultimedia package"
 KEYWORDS="~x86"
 IUSE="oggvorbis flac encode"
 DEPEND="~kde-base/libkcddb-$PV

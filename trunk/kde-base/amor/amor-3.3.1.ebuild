@@ -5,7 +5,7 @@
 KMNAME=kdetoys
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE: Amusing Misuse Of Resources - desktop-dwelling creature"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

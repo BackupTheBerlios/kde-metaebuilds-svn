@@ -4,7 +4,7 @@
 KMNAME=kdegames
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE patience game"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/libkdegames-$PV"

@@ -4,7 +4,7 @@
 KMNAME=kdegames
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="The KDE Battleship clone"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/libkdegames-$PV"

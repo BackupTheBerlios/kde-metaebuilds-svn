@@ -1,6 +1,4 @@
-MD5 3be18647662916551a59fb6d66a3d410 konqueror-3.3.0.ebuild 569
-MD5 3be18647662916551a59fb6d66a3d410 konqueror-3.3.1.ebuild 569
-MD5 2c1b42d8cf9bd8799c241c21d0ab93ef files/digest-konqueror-3.3.0 68
+MD5 cfce8325de53099f69176cfe35f59972 konqueror-3.3.1.ebuild 520
 MD5 98d6d6a0fb7d680d646717c8cf65fafd files/digest-konqueror-3.3.1 147
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295

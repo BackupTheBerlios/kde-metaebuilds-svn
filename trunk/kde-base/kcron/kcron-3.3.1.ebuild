@@ -4,7 +4,7 @@
 KMNAME=kdeadmin
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE Task Scheduler"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

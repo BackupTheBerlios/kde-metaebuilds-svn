@@ -4,7 +4,7 @@
 KMNAME=kdeedu
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE: Educational programming environment using the Logo programming language"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

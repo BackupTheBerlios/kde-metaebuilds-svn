@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kicker-applets/ktimemon"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="kicker applet: system monitor"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/kicker-$PV ~kde-base/kdeaddons-docs-kicker-applets-$PV"

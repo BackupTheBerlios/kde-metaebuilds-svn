@@ -4,7 +4,7 @@
 KMNAME=kdewebdev
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE: Quanta Plus Web Development Environment"
 KEYWORDS="~x86"
 IUSE="doc"
 DEPEND="doc? ( app-doc/quanta-docs )

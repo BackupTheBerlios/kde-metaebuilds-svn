@@ -4,7 +4,7 @@
 KMNAME=kdeadmin
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE LiLo kcontrol module"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

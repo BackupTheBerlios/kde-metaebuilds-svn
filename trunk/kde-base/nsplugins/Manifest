@@ -1,6 +1,4 @@
-MD5 e8b6ba96f3efa2529870ea65b9075c71 nsplugins-3.3.0.ebuild 428
-MD5 e8b6ba96f3efa2529870ea65b9075c71 nsplugins-3.3.1.ebuild 428
+MD5 dd3f9ab041e5dd8edd1ee8bf737c8132 nsplugins-3.3.1.ebuild 382
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
-MD5 2c1b42d8cf9bd8799c241c21d0ab93ef files/digest-nsplugins-3.3.0 68
 MD5 5e0763fd9fd36cfe1ac6c5cecd42d2c7 files/digest-nsplugins-3.3.1 147

@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kate/make"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="make plugin for kate"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"

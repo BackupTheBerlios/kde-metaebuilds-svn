@@ -4,7 +4,7 @@
 KMNAME=kdeedu
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE: KMathTool is a collection of little math tools."
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

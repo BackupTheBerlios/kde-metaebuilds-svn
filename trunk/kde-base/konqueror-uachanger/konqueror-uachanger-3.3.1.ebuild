@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="konq-plugins/uachanger"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="konqueror plugin for changing the User Agent field sent to the server"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"

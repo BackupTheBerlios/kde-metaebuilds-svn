@@ -5,7 +5,7 @@
 KMNAME=kdesdk
 inherit kde-meta eutils
 
-DESCRIPTION="Cervisia - A KDE CVS frontend"
+DESCRIPTION="KDE Frontend for Cachegrind"
 KEYWORDS="~x86"
 IUSE=""
 

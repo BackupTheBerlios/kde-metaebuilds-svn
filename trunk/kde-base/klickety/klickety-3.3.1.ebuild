@@ -4,7 +4,7 @@
 KMNAME=kdegames
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE: Klickety is an adaptation of the "clickomania" game"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/libkdegames-$PV ~kde-base/libksirtet-$PV"

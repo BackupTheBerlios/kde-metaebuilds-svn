@@ -5,7 +5,7 @@
 KMNAME=kdebindings
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE: Python bindings for DCOP"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/python"

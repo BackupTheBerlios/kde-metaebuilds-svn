@@ -6,6 +6,6 @@ KMNAME=kdesdk
 KMMODULE="kfile-plugins"
 inherit kde-meta eutils
 
-DESCRIPTION="kdesdk - kfile plugins"
+DESCRIPTION="kfile plugins for .cpp, .h, .diff and .ts files"
 KEYWORDS="~x86"
 IUSE=""

@@ -6,7 +6,7 @@ KMNAME=kdegraphics
 KMMODULE=kfile-plugins
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
+DESCRIPTION="kfile plugins from kdegraphics"
 KEYWORDS="~x86"
 IUSE="tiff openexr"
 DEPEND="tiff? ( media-libs/tiff )

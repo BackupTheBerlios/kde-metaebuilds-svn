@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="noatun-plugins/noatunmadness"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="noatun visualizatin plugin"
 KEYWORDS="~x86"
 IUSE="svga"
 DEPEND="~kde-base/noatun-$PV

@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="konq-plugins/domtreeviewer"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="khtml plugin that displays the DOM tree"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"

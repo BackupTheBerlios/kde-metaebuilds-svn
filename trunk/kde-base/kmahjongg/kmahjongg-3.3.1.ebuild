@@ -4,7 +4,7 @@
 KMNAME=kdegames
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="Mahjongg for KDE"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/libkdegames-$PV"

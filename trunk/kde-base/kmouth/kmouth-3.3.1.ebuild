@@ -4,7 +4,7 @@
 KMNAME=kdeaccessibility
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE: A type-and-say front end for speech synthesizers"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

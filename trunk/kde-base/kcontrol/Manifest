@@ -1,4 +1,4 @@
-MD5 8f6e3ae73b86f4f0b6f005673d4013ca kcontrol-3.3.1.ebuild 1229
+MD5 d62592808886589926c33d0b5bade12f kcontrol-3.3.1.ebuild 1167
 MD5 d1a503f0037164e8327b5286e49c14d9 files/digest-kcontrol-3.3.1 147
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295

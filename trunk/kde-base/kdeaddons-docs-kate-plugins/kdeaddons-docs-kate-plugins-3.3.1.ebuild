@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="doc/kate-plugins"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="documentation for all kate plugins from kdeaddons"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

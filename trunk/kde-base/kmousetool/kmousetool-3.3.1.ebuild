@@ -4,7 +4,7 @@
 KMNAME=kdeaccessibility
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE accessibility tool: translates mouse hovering into clicks"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

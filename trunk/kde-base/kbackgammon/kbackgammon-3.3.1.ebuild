@@ -4,7 +4,7 @@
 KMNAME=kdegames
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="A Backgammon program for KDE"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/libkdegames-$PV"

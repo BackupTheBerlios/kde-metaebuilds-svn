@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="konq-plugins/arkplugin"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="Ark (kde archiver) plugin for konqueror"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"

@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kate/filelistloader"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="kate plugin for managing lists of files, like projects"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"

@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kicker-applets/kolourpicker"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE color picker gui"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/kicker-$PV ~kde-base/kdeaddons-docs-kicker-applets-$PV"

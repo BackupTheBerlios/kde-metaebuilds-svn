@@ -5,8 +5,7 @@
 KMNAME=kdemultimedia
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop
-and other kde apps"
+DESCRIPTION="Jukebox and music manager for KDE"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="media-libs/taglib 

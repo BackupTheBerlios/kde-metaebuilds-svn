@@ -6,7 +6,7 @@ KMNAME=kdenetwork
 KMMODULE=lanbrowsing
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
+DESCRIPTION="KDE Lan Information Server - allows KDE desktops to share information over a network"
 KEYWORDS="~x86"
 IUSE=""
 KMEXTRA="doc/kcontrol/lanbrowser"

@@ -5,7 +5,7 @@
 KMNAME=kdetoys
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE: screensaver featuring the Space-Faring Tux"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

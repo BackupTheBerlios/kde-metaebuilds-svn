@@ -4,7 +4,7 @@
 KMNAME=kdeedu
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE Desktop Planetarium"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/libkdeedu-$PV"

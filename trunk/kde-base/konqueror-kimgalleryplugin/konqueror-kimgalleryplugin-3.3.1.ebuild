@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="konq-plugins/kimgalleryplugin"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="konqueror Image Gallery plugin"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"

@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kate/modeline"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="kate plugin: set document settings based on vim or emacs plugins"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"

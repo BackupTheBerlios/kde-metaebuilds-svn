@@ -5,6 +5,6 @@
 KMNAME=kdeutils
 inherit kde-meta eutils
 
-DESCRIPTION="kregexpeditor - A regular expression editor for kde"
+DESCRIPTION="KDE: Editor for Regular Expressions"
 KEYWORDS="~x86"
 IUSE=""

@@ -6,6 +6,6 @@ KMNAME=kdemultimedia
 KMMODULE=kappfinder-data
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
+DESCRIPTION="kappfinder data from kdemultimedia"
 KEYWORDS="~x86"
 IUSE=""

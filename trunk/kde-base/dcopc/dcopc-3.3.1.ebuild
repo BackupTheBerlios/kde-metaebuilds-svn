@@ -5,7 +5,7 @@
 KMNAME=kdebindings
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="C bindings for DCOP"
 KEYWORDS="~x86"
 DEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*"

@@ -4,7 +4,7 @@
 KMNAME=kdeadmin
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE: Editor for Sys-V like init configurations"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

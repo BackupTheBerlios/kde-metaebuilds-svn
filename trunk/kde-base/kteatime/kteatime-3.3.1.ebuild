@@ -5,7 +5,7 @@
 KMNAME=kdetoys
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE utility for making a fine cup of tea"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

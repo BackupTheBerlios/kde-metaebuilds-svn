@@ -4,7 +4,7 @@
 KMNAME=kdewebdev
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE link status checker for html pages"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

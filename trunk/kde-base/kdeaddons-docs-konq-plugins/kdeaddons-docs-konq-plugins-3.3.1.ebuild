@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="doc/konq-plugins"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="Documentation for the konqueror plugins from kdeaddons"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

@@ -5,7 +5,7 @@
 KMNAME=koffice
 inherit kde-meta eutils
 
-DESCRIPTION="A free, integrated office suite for KDE, the K Desktop Environment."
+DESCRIPTION="KOffice Flowchart And Diagram Tool"
 HOMEPAGE="http://www.koffice.org/"
 SRC_URI="$SRC_URI mirror://kde/stable/${KMNAME}/src/${KMNAME}-${PV}.tar.bz2"
 

@@ -5,7 +5,7 @@
 KMNAME=kdetoys
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE moon phase display"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

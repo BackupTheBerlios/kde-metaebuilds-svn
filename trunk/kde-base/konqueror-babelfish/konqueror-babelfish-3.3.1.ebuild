@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="konq-plugins/babelfish"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="konqueror plugin for translating pages with babelfish"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"

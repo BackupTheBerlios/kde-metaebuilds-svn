@@ -5,7 +5,7 @@
 KMNAME=kdesdk
 inherit kde-meta eutils
 
-DESCRIPTION="Umbrello - KDE UML Modeller"
+DESCRIPTION="KDE: Umbrello UML Modeller"
 KEYWORDS="~x86"
 IUSE=""
 

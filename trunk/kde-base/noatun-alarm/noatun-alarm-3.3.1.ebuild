@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="noatun-plugins/alarm"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="noatun alarm plugin"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/noatun-$PV"

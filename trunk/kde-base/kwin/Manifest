@@ -1,6 +1,4 @@
-MD5 002fbc8dc5b661f82512d9b258df4211 kwin-3.3.0.ebuild 476
-MD5 63eb1095b38f088c74926e88389b565c kwin-3.3.1.ebuild 429
-MD5 2c1b42d8cf9bd8799c241c21d0ab93ef files/digest-kwin-3.3.0 68
+MD5 9d40e76ff5346592f5cffc3d7fe53322 kwin-3.3.1.ebuild 363
 MD5 648ce5724ceb15b6dacf93b5939c1c5d files/digest-kwin-3.3.1 142
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295

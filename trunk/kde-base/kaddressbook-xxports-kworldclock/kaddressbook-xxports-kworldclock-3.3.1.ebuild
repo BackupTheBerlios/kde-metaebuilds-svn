@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA=kaddressbook-plugins/xxports/kworldclock
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KAB KWorldClock XXPort Plugin"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/kaddressbook-$PV"

@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kate/helloworld"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="Hello World sample plugin for kate"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"

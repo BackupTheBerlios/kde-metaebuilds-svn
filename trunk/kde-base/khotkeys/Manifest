@@ -1,6 +1,4 @@
-MD5 e8b6ba96f3efa2529870ea65b9075c71 khotkeys-3.3.1.ebuild 428
-MD5 e8b6ba96f3efa2529870ea65b9075c71 khotkeys-3.3.0.ebuild 428
+MD5 13a6ede30a7a04bfc2700819202ea27d khotkeys-3.3.1.ebuild 362
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
-MD5 eacc08c1d683214e9563ac7eb40c5c2d files/digest-khotkeys-3.3.0 145
 MD5 5770877afcd20304b091934bfe6de3fd files/digest-khotkeys-3.3.1 146

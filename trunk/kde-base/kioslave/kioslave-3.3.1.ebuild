@@ -5,7 +5,7 @@
 KMNAME=kdebase
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
+DESCRIPTION="kioslave: the kde VFS framework - kioslave plugins present a filesystem-like view of arbitrary data"
 KEYWORDS="~x86"
 IUSE="ldap samba"
 DEPEND="ldap? ( net-nds/openldap )

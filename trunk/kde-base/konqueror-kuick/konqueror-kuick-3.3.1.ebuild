@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="konq-plugins/kuick"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE: Kuick Copy And Move service"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"

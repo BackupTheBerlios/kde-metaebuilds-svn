@@ -5,7 +5,7 @@
 KMNAME=kdebase
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
+DESCRIPTION="KDE tool that looks for well-known apps in your path and creates .desktop files for them in the KDE menu"
 KEYWORDS="~x86"
 IUSE=""
 

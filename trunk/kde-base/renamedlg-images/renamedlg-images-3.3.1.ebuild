@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="renamedlgplugins/images"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="renamedlg plugin for image files"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

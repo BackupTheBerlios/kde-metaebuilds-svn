@@ -7,7 +7,7 @@ KMEXTRACTONLY=qtjava
 KMCOPYLIB="libqtjavasupport qtjava/javalib/qtjava"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE java bindings"
 KEYWORDS="~x86"
 IUSE=""
 COMMONDEPEND="~kde-base/kwin-$PV ~kde-base/kcontrol-$PV ~kde-base/qtjava-$PV"

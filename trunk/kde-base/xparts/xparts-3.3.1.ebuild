@@ -5,7 +5,7 @@
 KMNAME=kdebindings
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="Allows embedding of generic XParts as KDE KParts (broken)"
 KEYWORDS="~x86"
 IUSE="mozilla"
 DEPEND="=dev-libs/glib-1.2*

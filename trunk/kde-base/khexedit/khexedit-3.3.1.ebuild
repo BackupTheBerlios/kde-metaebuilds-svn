@@ -5,7 +5,7 @@
 KMNAME=kdeutils
 inherit kde-meta eutils
 
-DESCRIPTION="KHexEdit - KDE hex editor"
+DESCRIPTION="KDE hex editor"
 KEYWORDS="~x86"
 IUSE=""
 

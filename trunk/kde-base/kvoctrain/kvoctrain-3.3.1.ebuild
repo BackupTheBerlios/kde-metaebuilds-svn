@@ -4,7 +4,7 @@
 KMNAME=kdeedu
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE Educational: vocabulary trainer"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

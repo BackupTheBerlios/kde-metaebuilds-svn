@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kfile-plugins/lnk"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="kfile plugin for Windows .lnk files and command-line tool for exctracting target URLs from these files"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

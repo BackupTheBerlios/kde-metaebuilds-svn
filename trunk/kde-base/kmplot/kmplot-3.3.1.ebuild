@@ -4,7 +4,7 @@
 KMNAME=kdeedu
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="Mathematical function plotter for KDE"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="noatun-plugins/alsaplayer"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="noatun alsaplayer plugin"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/arts-${PV//3.3/1.3} ~kde-base/noatun-$PV"

@@ -5,7 +5,7 @@ KMNAME=kdegames
 KM_MAKEFILESREV=1
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="library common to many KDE games"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

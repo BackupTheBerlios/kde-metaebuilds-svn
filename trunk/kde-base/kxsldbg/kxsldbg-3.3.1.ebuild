@@ -4,7 +4,7 @@
 KMNAME=kdewebdev
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="A KDE KPart Application for xsldbg, an XSLT debugger"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

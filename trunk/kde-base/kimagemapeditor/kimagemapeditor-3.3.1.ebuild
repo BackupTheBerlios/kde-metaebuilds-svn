@@ -4,7 +4,7 @@
 KMNAME=kdewebdev
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE: An HTML imagemap editor"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

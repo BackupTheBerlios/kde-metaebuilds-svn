@@ -4,7 +4,7 @@
 KMNAME=kdewebdev
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE dialog system for scripting"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

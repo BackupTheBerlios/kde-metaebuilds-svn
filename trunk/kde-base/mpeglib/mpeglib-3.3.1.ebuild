@@ -5,7 +5,6 @@
 KMNAME=kdemultimedia
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop
-and other kde apps"
+DESCRIPTION="KDE mpeg library"
 KEYWORDS="~x86"
 IUSE=""

@@ -1,6 +1,4 @@
-MD5 fc7f6cf3449e70333e2bf5ab4af5fb2f kdeprint-3.3.0.ebuild 541
-MD5 fc7f6cf3449e70333e2bf5ab4af5fb2f kdeprint-3.3.1.ebuild 541
-MD5 c409eb810886d4ac957fc8006ba1a873 files/digest-kdeprint-3.3.0 147
+MD5 17a8ccb4aa8bf45d42b920d02f7f9e8b kdeprint-3.3.1.ebuild 489
 MD5 247af03ec5e93f5c46e686781c619115 files/digest-kdeprint-3.3.1 146
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295

@@ -6,8 +6,7 @@ KMNAME=kdemultimedia
 KMMODULE=mpeglib_artsplug
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop
-and other kde apps"
+DESCRIPTION="mpeglib plugin for arts"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/mpeglib-$PV"

@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="noatun-plugins/oblique"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="Noatun auto-collatig playlist"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/noatun-$PV =sys-libs/db-4.2*"

@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kicker-applets/kbinaryclock"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="kicker applet displaying a clock in binary"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/kicker-$PV ~kde-base/kdeaddons-docs-kicker-applets-$PV"

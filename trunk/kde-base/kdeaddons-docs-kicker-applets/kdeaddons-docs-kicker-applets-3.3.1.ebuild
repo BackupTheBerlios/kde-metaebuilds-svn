@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="doc/kicker-applets"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="Documentation for the kicker applets from kdeaddons"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

@@ -4,7 +4,7 @@
 KMNAME=kdeaddons
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="Kicker applet - RSS news ticker"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/knewsticker-$PV"

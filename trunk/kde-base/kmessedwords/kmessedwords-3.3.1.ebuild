@@ -4,7 +4,7 @@
 KMNAME=kdeedu
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE: Letter Order Game"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

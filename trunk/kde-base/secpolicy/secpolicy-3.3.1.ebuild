@@ -4,7 +4,7 @@
 KMNAME=kdeadmin
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE: Display PAM security policies"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

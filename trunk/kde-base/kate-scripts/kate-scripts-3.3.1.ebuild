@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kate/scripts"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="Scripts for kate: HTML tidy"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"

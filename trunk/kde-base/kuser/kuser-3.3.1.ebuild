@@ -4,7 +4,7 @@
 KMNAME=kdeadmin
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE user (/etc/passwd and other methods) manager"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

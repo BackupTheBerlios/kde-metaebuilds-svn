@@ -5,8 +5,7 @@
 KMNAME=kdemultimedia
 inherit kde-meta
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop
-and other kde apps"
+DESCRIPTION="aRts plugins for various formats"
 KEYWORDS="~x86"
 IUSE="flac oggvorbis speex"
 DEPEND="flac? ( media-libs/flac )

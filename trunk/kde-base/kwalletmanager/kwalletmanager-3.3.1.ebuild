@@ -6,6 +6,6 @@ KMNAME=kdeutils
 KMMODULE=kwallet
 inherit kde-meta eutils
 
-DESCRIPTION="KWalletManager - KDE Wallet management tool"
+DESCRIPTION="KDE Wallet Management Tool"
 KEYWORDS="~x86"
 IUSE=""

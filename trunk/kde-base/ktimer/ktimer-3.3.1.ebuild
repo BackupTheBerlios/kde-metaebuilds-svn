@@ -5,6 +5,6 @@
 KMNAME=kdeutils
 inherit kde-meta eutils
 
-DESCRIPTION="KBabel - An advanced PO file editor"
+DESCRIPTION="KDE Timer"
 KEYWORDS="~x86"
 IUSE=""

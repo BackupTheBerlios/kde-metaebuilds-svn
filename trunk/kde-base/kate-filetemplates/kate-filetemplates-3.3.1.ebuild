@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kate/filetemplates"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="file tamplates for kate"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"

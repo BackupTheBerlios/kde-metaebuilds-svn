@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="noatun-plugins/charlatan"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="noatun interface plugin"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/noatun-$PV"

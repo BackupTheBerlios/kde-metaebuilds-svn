@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kicker-applets/mediacontrol"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="kicker plugin for controlling various media players"
 KEYWORDS="~x86"
 IUSE="xmms"
 DEPEND="~kde-base/kicker-$PV ~kde-base/kdeaddons-docs-kicker-applets-$PV

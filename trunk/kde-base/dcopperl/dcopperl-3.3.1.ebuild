@@ -5,7 +5,7 @@
 KMNAME=kdebindings
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="Perl bindings for DCOP"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="dev-lang/perl"

@@ -4,7 +4,7 @@
 KMNAME=kdeedu
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE: KLettres helps a very young child or an adult learning "
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

@@ -1,6 +1,4 @@
-MD5 e8b6ba96f3efa2529870ea65b9075c71 ksystraycmd-3.3.1.ebuild 428
-MD5 e8b6ba96f3efa2529870ea65b9075c71 ksystraycmd-3.3.0.ebuild 428
-MD5 2c1b42d8cf9bd8799c241c21d0ab93ef files/digest-ksystraycmd-3.3.0 68
+MD5 842bad150b29f7c8d5497604781bf77b ksystraycmd-3.3.1.ebuild 401
 MD5 4a438e3d4e38d544b91798d3220ea999 files/digest-ksystraycmd-3.3.1 149
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295

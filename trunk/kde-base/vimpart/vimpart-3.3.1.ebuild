@@ -4,7 +4,7 @@
 KMNAME=kdeaddons
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE embeddable VIM editor part"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

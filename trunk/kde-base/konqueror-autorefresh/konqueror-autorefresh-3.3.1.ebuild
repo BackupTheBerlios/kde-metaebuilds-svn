@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="konq-plugins/autorefresh"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="konqueror timed autorefresh plugin"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"

@@ -5,7 +5,7 @@ KMNAME=kdeadmin
 inherit kde-meta
 KMMODULE=kfile-plugins
 
-DESCRIPTION=""
+DESCRIPTION="kfile plugins from kdeadmin"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

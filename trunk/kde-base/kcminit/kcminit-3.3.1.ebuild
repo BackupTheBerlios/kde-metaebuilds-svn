@@ -5,7 +5,7 @@
 KMNAME=kdebase
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
+DESCRIPTION="KCMInit - runs startups initialization for Control Modules."
 KEYWORDS="~x86"
 IUSE=""
 

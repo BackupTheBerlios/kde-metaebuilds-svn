@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="noatun-plugins/configure.in.in noatun-plugins/nexscope"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="noatun visualizatin plugin"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=">=media-libs/libsdl-1.2 ~kde-base/noatun-$PV"

@@ -4,7 +4,7 @@
 KMNAME=kdeedu
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE Educational: Learn calculating with fractions"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

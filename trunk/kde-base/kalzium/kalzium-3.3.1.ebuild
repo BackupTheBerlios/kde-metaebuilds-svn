@@ -4,7 +4,7 @@
 KMNAME=kdeedu
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE: periodic table of the elements"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/libkdeedu-$PV"

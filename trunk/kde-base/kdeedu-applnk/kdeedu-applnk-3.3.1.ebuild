@@ -5,7 +5,7 @@ KMNAME=kdeedu
 KMMODULE=applnk
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="applnk files for kdeedu-derived apps"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

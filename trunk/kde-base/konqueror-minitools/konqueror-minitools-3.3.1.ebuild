@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="konq-plugins/minitools"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="konqueror plugin for custom tool menus"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"

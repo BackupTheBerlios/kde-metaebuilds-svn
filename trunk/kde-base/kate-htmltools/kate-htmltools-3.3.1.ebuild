@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kate/htmltools"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="Kate plugin: html editing tools"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"

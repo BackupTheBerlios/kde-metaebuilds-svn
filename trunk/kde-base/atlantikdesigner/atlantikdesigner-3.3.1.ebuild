@@ -4,7 +4,7 @@
 KMNAME=kdeaddons
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="Atlantik gameboard designer"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/atlantik-$PV"

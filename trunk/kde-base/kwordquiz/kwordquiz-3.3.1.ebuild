@@ -4,7 +4,7 @@
 KMNAME=kdeedu
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE: A powerful flashcard and vocabulary learning program"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0.ebuild,v 1.11 2004/09/20 01:59:38 malc Exp $
 
-DESCRIPTION="kdebase 3.3.0 - merge this to pull in all kdebase-derived packages"
+DESCRIPTION="kde 3.3.1 - merge this to pull in all kde packages"
 HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"

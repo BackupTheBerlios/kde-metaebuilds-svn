@@ -4,7 +4,7 @@
 KMNAME=kdeedu
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE educational: A program to improve your skills in calculating with percentages"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

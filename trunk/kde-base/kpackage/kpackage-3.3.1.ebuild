@@ -4,7 +4,7 @@
 KMNAME=kdeadmin
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE package manager (deb, rpm etc support; rudimentary ebuild support)"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

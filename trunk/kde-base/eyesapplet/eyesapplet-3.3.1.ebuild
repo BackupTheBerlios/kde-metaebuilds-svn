@@ -5,7 +5,7 @@
 KMNAME=kdetoys
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="kicker applet: eyes following the movement of the mouse pointer"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

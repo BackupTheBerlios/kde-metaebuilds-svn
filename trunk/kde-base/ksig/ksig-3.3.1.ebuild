@@ -4,7 +4,7 @@
 KMNAME=kdeaddons
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE email signature manager"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

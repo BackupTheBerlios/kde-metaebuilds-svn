@@ -5,6 +5,6 @@
 KMNAME=kdeutils
 inherit kde-meta
 
-DESCRIPTION="Ark - KDE Archiving tool"
+DESCRIPTION="KDE Archiving tool"
 KEYWORDS="~x86"
 IUSE=""

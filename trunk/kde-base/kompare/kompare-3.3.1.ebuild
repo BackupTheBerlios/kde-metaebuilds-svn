@@ -5,6 +5,6 @@
 KMNAME=kdesdk
 inherit kde-meta eutils
 
-DESCRIPTION="Kompare - A program to view the differences between files and optionally generate a diff"
+DESCRIPTION="KDE: A program to view the differences between files and optionally generate a diff"
 KEYWORDS="~x86"
 IUSE=""

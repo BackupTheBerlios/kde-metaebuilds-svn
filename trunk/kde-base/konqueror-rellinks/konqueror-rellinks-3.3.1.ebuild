@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="konq-plugins/rellinks"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KHTML plugin: Document Relations (back/forward/up browsing for sites which have generated page-per-chapter layout)"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"

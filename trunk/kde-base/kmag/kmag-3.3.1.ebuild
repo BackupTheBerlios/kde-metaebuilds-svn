@@ -4,7 +4,7 @@
 KMNAME=kdeaccessibility
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE screen magnifier"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

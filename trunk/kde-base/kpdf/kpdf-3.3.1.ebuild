@@ -5,7 +5,7 @@
 KMNAME=kdegraphics
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
+DESCRIPTION="kpdf, a kde pdf viewer based on xpdf"
 KEYWORDS="~x86"
 IUSE=""
 KMEXTRA="kfile-plugins/pdf"

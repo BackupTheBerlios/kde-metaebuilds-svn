@@ -9,7 +9,7 @@ KMNAME=kdebindings
 KMEXTRACTONLY="kdejava/configure.in.in"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="Java bindings for DCOP"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/jdk"

@@ -4,7 +4,7 @@
 KMNAME=kdeedu
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE Interactive Geometry tool"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

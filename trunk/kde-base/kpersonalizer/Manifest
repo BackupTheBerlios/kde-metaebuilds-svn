@@ -1,6 +1,4 @@
-MD5 e8b6ba96f3efa2529870ea65b9075c71 kpersonalizer-3.3.0.ebuild 428
-MD5 e8b6ba96f3efa2529870ea65b9075c71 kpersonalizer-3.3.1.ebuild 428
-MD5 2c1b42d8cf9bd8799c241c21d0ab93ef files/digest-kpersonalizer-3.3.0 68
+MD5 360c312a5400de7323d5e284bf3212a9 kpersonalizer-3.3.1.ebuild 369
 MD5 7fefef1d611d42d02e7f971342e3cc79 files/digest-kpersonalizer-3.3.1 151
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295

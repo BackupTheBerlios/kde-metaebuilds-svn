@@ -5,7 +5,7 @@
 KMNAME=kdeutils
 inherit kde-meta eutils
 
-DESCRIPTION="KCharSelect - KDE character selection utilty"
+DESCRIPTION="KDE character selection utility"
 KEYWORDS="~x86"
 IUSE=""
 

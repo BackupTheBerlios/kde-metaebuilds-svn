@@ -5,7 +5,7 @@
 KMNAME=kdeutils
 inherit kde-meta eutils
 
-DESCRIPTION="Kgpg - Simple gui for gpg"
+DESCRIPTION="KDE gpg keyring manager"
 KEYWORDS="~x86"
 IUSE=""
 

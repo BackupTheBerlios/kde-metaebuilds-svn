@@ -4,7 +4,7 @@
 KMNAME=kdeadmin
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE linux kernel configuration module for kcontrol"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="noatun-plugins/blurscope noatun-plugins/configure.in.in"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="noatun visualization plugin"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=">=media-libs/libsdl-1.2 ~kde-base/noatun-$PV"

@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kate/xmlcheck"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="kate xml validator plugin"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"

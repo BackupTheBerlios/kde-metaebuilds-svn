@@ -6,7 +6,7 @@ KMNAME=kdebindings
 KMEXTRACTONLY="kalyptus/kalyptus kalyptus/*.pm"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="Scripting Meta Object Kompiler Engine: a language-agnostic bindings generator for qt and kde"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="dev-lang/perl"

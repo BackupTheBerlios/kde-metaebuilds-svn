@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kate/textfilter"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="kate plugin for simple text filtering"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"

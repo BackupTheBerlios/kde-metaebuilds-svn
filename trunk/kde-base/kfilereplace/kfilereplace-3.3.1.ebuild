@@ -4,7 +4,7 @@
 KMNAME=kdewebdev
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE batch search&replace tool"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

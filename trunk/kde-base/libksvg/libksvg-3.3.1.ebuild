@@ -6,7 +6,7 @@ KMNAME=kdegraphics
 KMMODULE=ksvg
 inherit kde-meta eutils
 
-DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
+DESCRIPTION="KDE SVG library"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="dev-libs/fribidi"

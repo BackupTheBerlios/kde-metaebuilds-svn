@@ -5,7 +5,7 @@
 KMNAME=kdebindings
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="KDE bindings generator for C, ObjC and Java"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="dev-lang/perl"

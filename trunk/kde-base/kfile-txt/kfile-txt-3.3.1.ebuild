@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kfile-plugins/txt"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="kfile textfile plugin"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

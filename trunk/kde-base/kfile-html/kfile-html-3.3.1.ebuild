@@ -6,7 +6,7 @@ KMNOMODULE=true
 KMEXTRA="kfile-plugins/html"
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="kfile plugin for html files"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

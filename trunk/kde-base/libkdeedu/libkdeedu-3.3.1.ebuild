@@ -4,7 +4,7 @@
 KMNAME=kdeedu
 inherit kde-meta
 
-DESCRIPTION=""
+DESCRIPTION="common library for kde educational apps"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""

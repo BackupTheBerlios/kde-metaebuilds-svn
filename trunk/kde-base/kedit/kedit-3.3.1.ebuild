@@ -5,6 +5,6 @@
 KMNAME=kdeutils
 inherit kde-meta eutils
 
-DESCRIPTION="KEdit - KDE simple text editor"
+DESCRIPTION="KDE: very simple text editor"
 KEYWORDS="~x86"
 IUSE=""
