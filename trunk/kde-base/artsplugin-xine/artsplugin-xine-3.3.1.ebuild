@@ -13,7 +13,7 @@ DEPEND=">=media-libs/xine-lib-1_beta12"
 
 pkg_setup() {
 	if ! useq arts; then
-		eerror "artsplugin-xine needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
+		eerror "${PN} needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
 		die	
 	fi
 }

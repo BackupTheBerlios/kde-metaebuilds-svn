@@ -15,7 +15,7 @@ KMEXTRACTONLY="arts/configure.in.in"
 	
 pkg_setup() {
 	if ! useq arts; then
-		eerror "juk needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
+		eerror "${PN} needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
 		die	
 	fi
 }
