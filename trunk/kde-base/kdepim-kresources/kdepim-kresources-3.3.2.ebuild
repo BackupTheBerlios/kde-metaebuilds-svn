@@ -25,7 +25,7 @@ KMEXTRACTONLY="
 	kmail/kmailicalIface.h
 	"
 KMCOMPILEONLY="
-	libkdenetwork/gpgmepp/
+	libkdenetwork/
 	certmanager/
 	libical/src/libical/
 	libical/src/libicalss/
