@@ -14,6 +14,8 @@ OLDDEPEND="~kde-base/libkdepim-$PV
 	~kde-base/libkcal-$PV"
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
 $(deprange $PV $MAXKDEVER kde-base/libkcal)"
+RDEPEND="$DEPEND
+	!app-pda/kitchensync"
 
 KMCOPYLIB="
 	libkcal libkcal
