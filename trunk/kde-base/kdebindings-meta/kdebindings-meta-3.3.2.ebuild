@@ -11,16 +11,16 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="
-~kde-base/dcopc-${PV}
-~kde-base/dcopperl-${PV}
-~kde-base/dcoppython-${PV}
+~kde-base/dcopc-3.3.1
+~kde-base/dcopperl-3.3.1
+~kde-base/dcoppython-3.3.1
 ~kde-base/kalyptus-${PV}
-~kde-base/kdejava-${PV}
-~kde-base/kjsembed-${PV}
+~kde-base/kdejava-3.3.1
+~kde-base/kjsembed-3.3.1
 ~kde-base/korundum-${PV}
 ~kde-base/qtjava-${PV}
 ~kde-base/qtruby-${PV}
-~kde-base/smoke-${PV}"
+~kde-base/smoke-3.3.1"
 
 
 # Omitted: qtsharp, dcopjava, xparts (considered broken by upstream) 
