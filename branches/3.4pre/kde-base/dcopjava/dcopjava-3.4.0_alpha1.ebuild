@@ -13,7 +13,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="Java bindings for DCOP"
-KEYWORDS="~x86"
+KEYWORDS="-*" # broken according to upstream - 3.4a1 README
 IUSE=""
 DEPEND="virtual/jdk"
 RDEPEND="virtual/jre"

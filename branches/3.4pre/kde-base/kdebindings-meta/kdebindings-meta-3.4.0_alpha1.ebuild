@@ -13,7 +13,6 @@ KEYWORDS="~x86"
 IUSE=""
 
 RRDEPEND="
-$(deprange $PV $MAXKDEVER kde-base/dcopc)
 $(deprange $PV $MAXKDEVER kde-base/dcopperl)
 $(deprange $PV $MAXKDEVER kde-base/dcoppython)
 $(deprange $PV $MAXKDEVER kde-base/kalyptus)
@@ -25,4 +24,4 @@ $(deprange $PV $MAXKDEVER kde-base/qtruby)
 $(deprange $PV $MAXKDEVER kde-base/smoke)"
 
 
-# Omitted: qtsharp, dcopjava, xparts (considered broken by upstream) 
+# Omitted: qtsharp, dcopc, dcopjava, xparts (considered broken by upstream) 

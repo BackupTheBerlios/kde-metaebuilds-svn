@@ -10,17 +10,13 @@ MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
-DESCRIPTION="Allows embedding of generic XParts as KDE KParts (broken)"
-KEYWORDS="~x86"
+DESCRIPTION="Allows embedding of generic XParts as KDE KParts"
+KEYWORDS="-*" # broken according to upstream - 3.4a1 README
 IUSE="mozilla"
 DEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
 	mozilla? ( net-www/mozilla )"
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"
-
-pkg_setup() {
-	ewarn "This is considered to be broken by upstream. You're on your own."
-}
 
 src_unpack() {
 	kde-meta_src_unpack

@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="C# bindings for QT"
-KEYWORDS="~x86"
+KEYWORDS="-*" # broken according to upstream - 3.4a1 README; see also note below
 IUSE=""
 DEPEND="dev-dotnet/pnet"
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"
