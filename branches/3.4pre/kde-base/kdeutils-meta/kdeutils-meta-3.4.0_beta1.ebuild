@@ -10,7 +10,7 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 SLOT="3.4"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="crypt"
 
 # We don't add kcardtools because it needs a libksmartcard from kdelibs that it's not alway installed"
 RDEPEND="
@@ -21,7 +21,7 @@ RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/kdf)
 	$(deprange $PV $MAXKDEVER kde-base/kedit)
 	$(deprange $PV $MAXKDEVER kde-base/kfloppy)
-	$(deprange $PV $MAXKDEVER kde-base/kgpg)
+	crypt? ( $(deprange $PV $MAXKDEVER kde-base/kgpg) )
 	$(deprange $PV $MAXKDEVER kde-base/khexedit)
 	$(deprange $PV $MAXKDEVER kde-base/kjots)
 	$(deprange $PV $MAXKDEVER kde-base/klaptopdaemon)
