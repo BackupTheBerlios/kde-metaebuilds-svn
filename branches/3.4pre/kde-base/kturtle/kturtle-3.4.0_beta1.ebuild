@@ -11,14 +11,3 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND=""
 
-# fix for bug 62510 - weird character on JFS
-KMTARPARAMS="--exclude=kdeedu-$PV/kturtle/examples/fr_FR"
-src_unpack() {
-    kde-meta_src_unpack unpack
-    cd $WORKDIR
-    bzip2 -dc $DISTDIR/${myP}.tar.bz2 | tar xf - kdeedu-$PV/kturtle/examples/fr_FR
-    mv kdeedu-$PV/kturtle/examples/fr_FR kturtle-$PV/kturtle/examples/
-    rm -rf kdeedu-$PV
-    kde-meta_src_unpack makefiles
-}
-
