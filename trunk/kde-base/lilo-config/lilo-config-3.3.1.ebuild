@@ -9,9 +9,4 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND=""
 
-# For consistent building behaviour regardless of whether lilo is installed
-src_unpack () {
-    kde-meta_src_unpack unpack
-    echo > $S/lilo-config/configure.in.in
-    kde-meta_src_unpack makefiles
-}
+PATCHES="$FILESDIR/never-disable.diff"
