@@ -11,3 +11,10 @@ DEPEND="~kde-base/libkdegames-$PV"
 
 KMEXTRACTONLY=libkdegames
 KMCOPYLIB="libkdegames libkdegames"
+
+pkg_setup() {
+	if [ ! `use arts` ]; then
+		eerror "kolf needs the USE=\"alsa\" enabled. You need also that the kdelibs are compiled with this use enabled too."
+		die	
+	fi
+}
