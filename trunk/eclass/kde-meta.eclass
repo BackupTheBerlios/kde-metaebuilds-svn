@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.58 2004/08/19 14:24:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.5 2004/11/24 19:19:22 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -19,6 +19,7 @@ fi
 
 myPN="$KMNAME"
 myP="$myPN-$PV"
+myPV="$PV"
 # is this a kde-base ebuild, vs eg koffice
 case "$myPN" in kde-i18n|arts|kdeaccessibility|kdeaddons|kdeadmin|kdeartwork|kdebase|kdebindings|kdeedu|kdegames|kdegraphics|kdelibs|kdemultimedia|kdenetwork|kdepim|kdesdk|kdetoys|kdeutils|kdewebdev|kdelibs-apidocs)
 	debug-print "$ECLASS: KDEBASE ebuild recognized"
@@ -30,7 +31,7 @@ esac
 if [ "$KDEBASE" = "true" ]; then
 	unset SRC_URI
 	
-	need-kde $PV
+	need-kde $myPV
 	
 	DESCRIPTION="KDE ${myPV} - "
 	HOMEPAGE="http://www.kde.org/"
@@ -38,7 +39,7 @@ if [ "$KDEBASE" = "true" ]; then
 	SLOT="$KDEMAJORVER.$KDEMINORVER"
 	
 	# Main tarball for normal downloading style
-	case "$PV" in
+	case "$myPV" in
 		3.3.0)		SRC_PATH="stable/3.3/src/${myP}.tar.bz2" ;;
 		3*)			SRC_PATH="stable/${myPV}/src/${myP}.tar.bz2" ;;
 		5)			SRC_URI="" # cvs ebuilds, no SRC_URI needed
@@ -49,7 +50,7 @@ if [ "$KDEBASE" = "true" ]; then
 	# Base tarball and xdeltas for patch downloading style
 	# Note that we use XDELTA_BASE, XDELTA_DELTA again in src_unpack()
 	# For future versions, add all applicable xdeltas (from x.y.0) in correct order to XDELTA_DELTA
-	case "$PV" in
+	case "$myPV" in
 		3.3.0)		XDELTA_BASE="stable/3.3/src/${myP}.tar.bz2"
 					XDELTA_DELTA=""
 					;;
@@ -61,8 +62,8 @@ if [ "$KDEBASE" = "true" ]; then
 	esac	
 
 elif [ "$KMNAME" == "koffice" ]; then
-	SRC_PATH="mirror://kde/stable/koffice-$PV/src/koffice-$PV.tar.bz2"
-	case $PV in
+	SRC_PATH="mirror://kde/stable/koffice-$myPV/src/koffice-$myPV.tar.bz2"
+	case $myPV in
 		1.3.4)
 			XDELTA_BASE=""
 			XDELTA_DELTA=""
@@ -76,7 +77,7 @@ fi
 
 # Common xdelta code
 
-if [ -n "$XDELTA_BASE" ]; then
+if [ -n "$XDELTA_BASE" ]; then # depends on $PV only, so is safe to modify SRC_URI inside it
 	SRC_URI="$SRC_URI kdexdeltas? ( mirror://kde/$XDELTA_BASE "
 	for x in $XDELTA_DELTA; do
 		SRC_URI="$SRC_URI mirror://kde/$x"
