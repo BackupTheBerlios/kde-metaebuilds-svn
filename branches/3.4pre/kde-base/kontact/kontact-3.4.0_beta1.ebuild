@@ -13,13 +13,15 @@ IUSE=""
 OLDDEPEND="~kde-base/libkdepim-$PV"
 DEPEND="
 $(deprange $PV $MAXKDEVER kde-base/libkdepim)
-$(deprange $PV $MAXKDEVER kde-base/libkpimidentities)"
+$(deprange $PV $MAXKDEVER kde-base/libkpimidentities)
+$(deprange $PV $MAXKDEVER kde-base/akregator)"
 
 KMCOPYLIB="libkdepim libkdepim/
 	libkpimidentities.la libkpimidentities/"
 KMEXTRACTONLY="libkdepim/
 	libkpimidentities/
-	kontact/plugins/"
+	kontact/plugins/
+	akregator"
 KMEXTRA="
 	kontact/plugins/newsticker/
 	kontact/plugins/summary/
