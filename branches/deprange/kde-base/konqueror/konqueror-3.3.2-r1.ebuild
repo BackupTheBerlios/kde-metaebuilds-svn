@@ -4,8 +4,8 @@
 
 KMNAME=kdebase
 # Note: we need >=kdelibs-3.3.2-r1, but we don't want 3.3.3!
-KDEMAXVER=3.3.2
-KM_DEPRANGE="3.3.2-r1 $KDEMAXVER"
+MAXKDEVER=3.3.2
+KM_DEPRANGE="3.3.2-r1 $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE: Web browser, file manager, ..."
