@@ -40,6 +40,7 @@ if [ "$KDEBASE" = "true" ]; then
 	
 	# Main tarball for normal downloading style
 	case "$myPV" in
+		3.3.90)		SRC_PATH="unstable/3.3.90/src/${myP}.tar.bz2" ;;
 		3.3.0)		SRC_PATH="stable/3.3/src/${myP}.tar.bz2" ;;
 		3*)			SRC_PATH="stable/${myPV}/src/${myP}.tar.bz2" ;;
 		5)			SRC_URI="" # cvs ebuilds, no SRC_URI needed
@@ -60,7 +61,7 @@ if [ "$KDEBASE" = "true" ]; then
 		3.3.2)		XDELTA_BASE="stable/3.3/src/${myPN}-3.3.0.tar.bz2"
 					XDELTA_DELTA="stable/3.3.1/src/${myPN}-3.3.0-3.3.1.tar.xdelta stable/3.3.2/src/${myPN}-3.3.1-3.3.2.tar.xdelta"
 					;;
-		*)			die "$ECLASS: Error: unrecognized version ${myPV}, could not set SRC_URI"
+		*)			ewarn "$ECLASS: Error: unrecognized version ${myPV}, could not set SRC_URI, can't use xdeltas"
 					;;
 	esac	
 
@@ -86,6 +87,8 @@ if [ -n "$XDELTA_BASE" ]; then # depends on $PV only, so is safe to modify SRC_U
 		SRC_URI="$SRC_URI mirror://kde/$x"
 	done
 	SRC_URI="$SRC_URI ) !kdexdeltas? ( mirror://kde/$SRC_PATH )"
+else # xdelta don't available, for example with kde 3.4 alpha/beta/rc ebuilds.
+	SRC_URI="$SRC_URI mirror://kde/$SRC_PATH"
 fi
 	
 debug-print "$ECLASS: finished, SRC_URI=$SRC_URI"
