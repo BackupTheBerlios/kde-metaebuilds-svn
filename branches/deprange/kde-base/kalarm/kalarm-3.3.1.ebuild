@@ -10,10 +10,15 @@ inherit kde-meta eutils
 DESCRIPTION="Personal alarm message, command and email scheduler for KDE"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdepim-$PV
+OLDDEPEND="~kde-base/libkdepim-$PV
 	~kde-base/libkdenetwork-$PV
 	~kde-base/libkcal-$PV
 	~kde-base/kalarmd-$PV"
+DEPEND="$(need-version-range $PV $MAXKDEVER kde-base/libkdepim)
+$(need-version-range $PV $MAXKDEVER kde-base/libkdenetwork)
+$(need-version-range $PV $MAXKDEVER kde-base/libkcal)
+$(need-version-range $PV $MAXKDEVER kde-base/kalarmd)"
+
 KMCOPYLIB="
 	libkcal libkcal
 	libkdenetwork libkdenetwork

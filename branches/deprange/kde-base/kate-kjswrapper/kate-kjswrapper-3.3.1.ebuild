@@ -11,6 +11,7 @@ inherit kde-meta
 DESCRIPTION="javascript scripting for kate (broken?)"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV
-	~kde-base/kjsembed-$PV"
+DEPEND="$(need-version-range $PV $MAXKDEVER kde-base/kate)
+$(need-version-range $PV $MAXKDEVER kde-base/kdeaddons-docs-kate-plugins)
+$(need-version-range $PV $MAXKDEVER kde-base/kjsembed)"
 

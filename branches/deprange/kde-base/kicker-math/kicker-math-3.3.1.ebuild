@@ -11,5 +11,9 @@ inherit kde-meta
 DESCRIPTION="kicker applet evaluating math expressions"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/kicker-$PV ~kde-base/kdeaddons-docs-kicker-applets-$PV"
+OLDDEPEND="~kde-base/kicker-$PV ~kde-base/kdeaddons-docs-kicker-applets-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/kicker)
+$(need-version-range $PV $MAXKDEVER kde-base/kdeaddons-docs-kicker-applets)"
+
 

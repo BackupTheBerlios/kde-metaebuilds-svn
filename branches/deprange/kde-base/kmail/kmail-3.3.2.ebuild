@@ -10,17 +10,17 @@ inherit kde-meta eutils
 DESCRIPTION="KDE mail client"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdenetwork-$PV  
-	~kde-base/libkdepim-$PV
-	~kde-base/libkpimidentities-3.3.1
-	~kde-base/mimelib-$PV
-	~kde-base/libksieve-3.3.1
-	~kde-base/certmanager-$PV
-	~kde-base/libkcal-$PV"
+DEPEND="$(need-version-range $PV $MAXKDEVER kde-base/libkdenetwork)
+$(need-version-range $PV $MAXKDEVER kde-base/libkdepim)
+$(need-version-range 3.3.1 $PV kde-base/libkpimidentities) 
+$(need-version-range $PV $MAXKDEVER kde-base/mimelib) 
+$(need-version-range 3.3.1 $PV kde-base/libksieve) 
+$(need-version-range $PV $MAXKDEVER kde-base/certmanager)
+$(need-version-range $PV $MAXKDEVER kde-base/libkcal)"
 RDEPEND="${DEPEND}
-	~kde-base/kdepim-kioslaves-$PV
-	~kde-base/kmailcvt-3.3.1
-	~kde-base/kontact-$PV" 
+$(need-version-range $PV $MAXKDEVER kde-base/kdepim-kioslaves)
+$(need-version-range 3.3.1 $PV kde-base/kmailcvt)
+$(need-version-range $PV $MAXKDEVER kde-base/kontact)"
 	
 KMCOPYLIB="
 	libkdenetwork libkdenetwork/ 

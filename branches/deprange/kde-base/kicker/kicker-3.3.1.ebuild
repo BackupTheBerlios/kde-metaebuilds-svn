@@ -11,7 +11,10 @@ DESCRIPTION="KDE panel housing varous applets"
 KEYWORDS="~x86"
 IUSE=""
 PATCHES="$FILESDIR/remove-startkde-$PV.diff $FILESDIR/applets-configure.in.in.diff"
-DEPEND="$DEPEND ~kde-base/libkonq-$PV"
+OLDDEPEND="~kde-base/libkonq-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/libkonq)"
+
 KMCOPYLIB="libkonq libkonq"
 KMEXTRACTONLY="libkonq"
 

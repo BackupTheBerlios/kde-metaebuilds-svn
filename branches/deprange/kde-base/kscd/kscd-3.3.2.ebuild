@@ -10,7 +10,10 @@ inherit kde-meta eutils
 DESCRIPTION="KDE CD player"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkcddb-3.3.1"
+OLDDEPEND="~kde-base/libkcddb-3.3.1"
+DEPEND="
+$(need-version-range 3.3.1 $PV kde-base/libkcddb)"
+
 KMCOPYLIB="libkcddb libkcddb"
 KMEXTRACTONLY="
 	libkcddb/

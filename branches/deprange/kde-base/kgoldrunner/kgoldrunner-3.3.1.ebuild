@@ -9,7 +9,10 @@ inherit kde-meta
 DESCRIPTION="KDE: KGoldrunner is a game of action and puzzle solving"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdegames-$PV"
+OLDDEPEND="~kde-base/libkdegames-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/libkdegames)"
+
 
 KMEXTRACTONLY=libkdegames
 KMCOPYLIB="libkdegames libkdegames"

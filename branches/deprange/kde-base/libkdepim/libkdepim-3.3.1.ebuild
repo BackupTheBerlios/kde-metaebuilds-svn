@@ -10,5 +10,8 @@ inherit kde-meta eutils
 DESCRIPTION="common library for KDE PIM apps"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkcal-$PV"
+OLDDEPEND="~kde-base/libkcal-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/libkcal)"
+
 KMCOPYLIB="libkcal libkcal"

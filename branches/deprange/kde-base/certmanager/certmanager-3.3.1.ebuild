@@ -10,7 +10,10 @@ inherit kde-meta eutils
 DESCRIPTION="KDE certificate manager gui"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdenetwork-$PV"
+OLDDEPEND="~kde-base/libkdenetwork-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/libkdenetwork)"
+
 KMCOPYLIB="libkdenetwork libkdenetwork/ 
 	libqgpgme libkdenetwork/qgpgme/"
 KMCOMPILEONLY="libkdenetwork/"

@@ -12,9 +12,10 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND="app-pda/pilot-link 
 	dev-libs/libmal
-	~kde-base/libkcal-$PV
-	~kde-base/libkdepim-$PV
-	~kde-base/kontact-$PV"
+$(need-version-range $PV $MAXKDEVER kde-base/libkcal)
+$(need-version-range $PV $MAXKDEVER kde-base/libkdepim)
+$(need-version-range $PV $MAXKDEVER kde-base/kontact)"
+
 KMCOPYLIB="
 	libkcal libkcal
 	libkdepim libkdepim

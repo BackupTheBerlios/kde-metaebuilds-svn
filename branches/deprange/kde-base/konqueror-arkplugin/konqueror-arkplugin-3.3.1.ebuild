@@ -11,5 +11,7 @@ inherit kde-meta
 DESCRIPTION="Ark (kde archiver) plugin for konqueror"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"
-
+OLDDEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/konqueror)
+$(need-version-range $PV $MAXKDEVER kde-base/kdeaddons-docs-konq-plugins)"

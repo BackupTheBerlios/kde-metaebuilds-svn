@@ -10,6 +10,9 @@ inherit kde-meta eutils
 DESCRIPTION="kicker plugin: rss news ticker"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/librss"
+OLDDEPEND="~kde-base/librss-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER librss)"
+
 KMCOPYLIB="librss librss"
 KMEXTRACTONLY="librss"

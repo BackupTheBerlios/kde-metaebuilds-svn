@@ -11,7 +11,7 @@ inherit kde-meta
 DESCRIPTION=""
 KEYWORDS="~x86"
 IUSE="opengl xscreensaver"
-DEPEND="~kde-base/kscreensaver-3.3.1
+DEPEND="$(need-version-range 3.3.1 $PV kde-base/kscreensaver)
 	opengl? ( virtual/opengl )
 	!ppc64 ( xscreensaver? ( x11-misc/xscreensaver ) )"
 

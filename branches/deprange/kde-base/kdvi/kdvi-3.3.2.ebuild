@@ -10,7 +10,10 @@ inherit kde-meta eutils
 DESCRIPTION="KDE DVI viewer"
 KEYWORDS="~x86"
 IUSE="tetex"
-DEPEND="~kde-base/kviewshell-$PV"
+OLDDEPEND="~kde-base/kviewshell-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/kviewshell)"
+
 RDEPEND="${DEPEND}
 	tetex? (
 	|| ( >=app-text/tetex-2

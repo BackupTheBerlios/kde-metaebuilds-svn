@@ -10,11 +10,17 @@ inherit kde-meta eutils
 DESCRIPTION="The KDE Address Book"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdepim-$PV 
+OLDDEPEND="~kde-base/libkdepim-$PV 
 	~kde-base/libkcal-$PV 
 	~kde-base/certmanager-$PV
 	~kde-base/libkdenetwork-$PV
 	~kde-base/kontact-$PV"
+DEPEND="$(need-version-range $PV $MAXKDEVER kde-base/libkdepim)
+$(need-version-range $PV $MAXKDEVER kde-base/libkcal)
+$(need-version-range $PV $MAXKDEVER kde-base/certmanager)
+$(need-version-range $PV $MAXKDEVER kde-base/libkdenetwork)
+$(need-version-range $PV $MAXKDEVER kde-base/kontact)"
+
 KMCOPYLIB="
 	libkdepim libkdepim
 	libkcal libkcal

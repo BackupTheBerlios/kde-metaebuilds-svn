@@ -11,11 +11,13 @@ DESCRIPTION="The KDE Control Center"
 KEYWORDS="~x86"
 IUSE="ssl arts"
 PATCHES="$FILESDIR/remove-startkde-$PV.diff $FILESDIR/configure.in.in-kdm-settings.diff"
+
 DEPEND="ssl? ( dev-libs/openssl )
-	arts? ( ~kde-base/arts-${PV//3.3/1.3} )"
+	arts? ( $(need-version-range ${PV/3.3/1.3} ${MAXKDEVER/3.3/1.3} kde-base/arts) )"
 RDEPEND="${DEPEND}
-	~kde-base/kcminit-$PV
-	~kde-base/kdebase-applnk-$PV"
+$(need-version-range $PV $MAXKDEVER kde-base/kcminit)
+$(need-version-range $PV $MAXKDEVER kde-base/kdebase-applnk)"
+
 KMEXTRACTONLY="kicker/core/kicker.h
 	    kwin/kwinbindings.cpp
 	    kicker/core/kickerbindings.cpp

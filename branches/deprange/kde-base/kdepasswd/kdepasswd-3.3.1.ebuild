@@ -11,6 +11,9 @@ DESCRIPTION="KDE GUI for passwd"
 KEYWORDS="~x86"
 IUSE=""
 PATCHES="$FILESDIR/remove-startkde-$PV.diff"
-DEPEND="~kde-base/libkonq-$PV"
+OLDDEPEND="~kde-base/libkonq-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/libkonq)"
+
 KMCOPYLIB="libkonq libkonq"
 KMNODOCS=true

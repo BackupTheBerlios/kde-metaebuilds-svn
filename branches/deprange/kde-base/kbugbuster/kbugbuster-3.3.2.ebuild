@@ -11,5 +11,7 @@ DESCRIPTION="KBugBuster - A tool for checking and reporting KDE apps' bugs"
 KEYWORDS="~x86"
 IUSE="kcal"
 
-DEPEND="kcal? ( ~kde-base/libkcal-$PV )"
+OLDDEPEND="kcal? ( ~kde-base/libkcal-$PV )"
+DEPEND="kcal? ( $(need-version-range $PV $MAXKDEVER kde-base/libkcal) )"
 
+#TODO tell configure about the optional kcal support, or something

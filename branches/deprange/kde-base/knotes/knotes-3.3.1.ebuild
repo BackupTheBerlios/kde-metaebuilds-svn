@@ -10,9 +10,9 @@ inherit kde-meta eutils
 DESCRIPTION="KDE Notes"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkcal-$PV
-	~kde-base/libkdepim-$PV
-	~kde-base/kontact-$PV"
+DEPEND="$(need-version-range $PV $MAXKDEVER kde-base/libkcal)
+$(need-version-range $PV $MAXKDEVER kde-base/libkdepim)
+$(need-version-range $PV $MAXKDEVER kde-base/kontact)"
 KMCOPYLIB="
 	libkcal libkcal
 	libkdepim libkdepim

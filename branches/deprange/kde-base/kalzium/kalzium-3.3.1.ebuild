@@ -9,7 +9,10 @@ inherit kde-meta
 DESCRIPTION="KDE: periodic table of the elements"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdeedu-$PV"
+OLDDEPEND="~kde-base/libkdeedu-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/libkdeedu)"
+
 
 KMEXTRACTONLY="libkdeedu/kdeeduplot"
 KMCOPYLIB="libkdeeduplot libkdeedu/kdeeduplot"

@@ -13,7 +13,11 @@ inherit kde-meta
 DESCRIPTION="KDE ruby bindings"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=">=virtual/ruby-1.8 ~kde-base/qtruby-$PV ~kde-base/smoke-3.3.1"
+OLDDEPEND=">=virtual/ruby-1.8 ~kde-base/qtruby-$PV ~kde-base/smoke-3.3.1"
+DEPEND=" >=virtual/ruby-1.8
+$(need-version-range $PV $MAXKDEVER kde-base/qtruby)
+$(need-version-range 3.3.1 $PV kde-base/smoke)"
+
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
 

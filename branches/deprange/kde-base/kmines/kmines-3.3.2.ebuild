@@ -9,7 +9,9 @@ inherit kde-meta
 DESCRIPTION="KMines is a classic mine sweeper game"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdegames-3.3.1"
+OLDDEPEND="~kde-base/libkdegames-3.3.1"
+DEPEND="
+$(need-version-range 3.3.1 $PV kde-base/libkdegames)"
 
 KMEXTRACTONLY=libkdegames
 KMCOPYLIB="libkdegames libkdegames"

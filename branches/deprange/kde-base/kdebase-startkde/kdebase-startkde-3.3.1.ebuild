@@ -2,8 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0.ebuild,v 1.11 2004/09/20 01:59:38 malc Exp $
 
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-functions
-
 need-kde $PV
 
 DESCRIPTION="startkde script, which starts a complete KDE session, and associated scripts"
@@ -14,13 +15,13 @@ IUSE=""
 # kdesktop, kicker etc are started because they put files in $KDEDIR/share/autostart
 # and so in theory they aren't strictly necessary deps.
 RDEPEND="$RDEPEND 
-		~kde-base/kdesktop-$PV
-		~kde-base/kcminit-$PV
-		~kde-base/ksmserver-$PV
-		~kde-base/kwin-$PV
-		~kde-base/kpersonalizer-$PV
-		~kde-base/kreadconfig-$PV
-		~kde-base/ksplashml-$PV"
+$(need-version-range $PV $MAXKDEVER kde-base/kdesktop)
+$(need-version-range $PV $MAXKDEVER kde-base/kcminit)
+$(need-version-range $PV $MAXKDEVER kde-base/ksmserver)
+$(need-version-range $PV $MAXKDEVER kde-base/kwin)
+$(need-version-range $PV $MAXKDEVER kde-base/kpersonalizer)
+$(need-version-range $PV $MAXKDEVER kde-base/kreadconfig)
+$(need-version-range $PV $MAXKDEVER kde-base/ksplashml)"
 
 src_unpack() {
 	einfo "Nothing to unpack"

@@ -9,7 +9,10 @@ inherit kde-meta
 DESCRIPTION="KDE: KLatin - a program to help revise Latin"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdeedu-$PV"
+OLDDEPEND="~kde-base/libkdeedu-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/libkdeedu)"
+
 
 KMEXTRACTONLY="libkdeedu/kdeeducore"
 KMCOPYLIB="libkdeeducore libkdeedu/kdeeducore"

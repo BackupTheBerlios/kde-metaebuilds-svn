@@ -11,4 +11,7 @@ inherit kde-meta
 DESCRIPTION=""
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/kwin-$PV"
+OLDDEPEND="~kde-base/kwin-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/kwin)"
+

@@ -17,9 +17,11 @@ OLDRDEPEND="
 	~kde-base/artsplugin-mpg123-$PV
 	xine? ( ~kde-base/artsplugin-xine-$PV )
 	audiofile? ( ~kde-base/artsplugin-audiofile-$PV )"
-RDEPEND="$(need-version-range $KM_DEPRANGE kde-base/kdemultimedia-arts kde-base/artsplugin-mpeglib kde-base/artsplugin-mpg123)
-	xine? ( ~kde-base/artsplugin-xine-$PV )
-	audiofile? ( ~kde-base/artsplugin-audiofile-$PV )"
+RDEPEND="$(need-version-range $PV $MAXKDEVER kde-base/kdemultimedia-arts)
+$(need-version-range $PV $MAXKDEVER kde-base/artsplugin-mpeglib)
+$(need-version-range $PV $MAXKDEVER kde-base/artsplugin-mpg123)
+	xine? ( $(need-version-range $PV $MAXKDEVER kde-base/artsplugin-xine) )
+	audiofile? ( $(need-version-range $PV $MAXKDEVER kde-base/artsplugin-audiofile) )"
 	
 KMEXTRACTONLY="arts/"
 

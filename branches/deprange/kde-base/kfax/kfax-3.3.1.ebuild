@@ -10,7 +10,10 @@ inherit kde-meta eutils
 DESCRIPTION="KDE G3/G4 fax viewer"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/kviewshell-$PV"
+OLDDEPEND="~kde-base/kviewshell-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/kviewshell)"
+
 KMEXTRA="kfaxview"
 KMCOPYLIB="libkmultipage kviewshell"
 KMEXTRACTONLY="kviewshell/"

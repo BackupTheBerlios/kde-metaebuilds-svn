@@ -9,7 +9,9 @@ inherit kde-meta
 DESCRIPTION="KDE patience game"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdegames-$PV"
+OLDDEPEND="~kde-base/libkdegames-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/libkdegames)"
 
 KMEXTRACTONLY=libkdegames
 KMCOPYLIB="libkdegames libkdegames"

@@ -11,8 +11,11 @@ DESCRIPTION="KDE: Web browser, file manager, ..."
 KEYWORDS="~x86"
 IUSE=""
 PATCHES="$FILESDIR/remove-startkde-$PV.diff"
-DEPEND="~kde-base/libkonq-$PV"
+OLDDEPEND="~kde-base/libkonq-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/libkonq)"
+
 RDEPEND="${DEPEND}
-	~kde-base/kcontrol-$PV"
+$(need-version-range 3.3.1 $PV kde-base/kcontrol)"
 KMCOPYLIB="libkonq libkonq"
 KMEXTRACTONLY=kdesktop/KDesktopIface.h

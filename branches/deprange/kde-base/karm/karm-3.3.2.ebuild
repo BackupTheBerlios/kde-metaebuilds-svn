@@ -10,8 +10,11 @@ inherit kde-meta eutils
 DESCRIPTION="KDE Time tracker tool"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkcal-$PV
+OLDDEPEND="~kde-base/libkcal-$PV
 	~kde-base/libkdepim-$PV"
+DEPEND="$(need-version-range $PV $MAXKDEVER kde-base/libkcal)
+$(need-version-range $PV $MAXKDEVER kde-base/libkdepim)"
+
 KMCOPYLIB="
 	libkcal libkcal
 	libkdepim libkdepim"

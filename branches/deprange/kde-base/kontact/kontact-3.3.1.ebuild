@@ -10,7 +10,10 @@ inherit kde-meta eutils
 DESCRIPTION="KDE personal information manager"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdepim-$PV"
+OLDDEPEND="~kde-base/libkdepim-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/libkdepim)"
+
 KMCOPYLIB="libkdepim libkdepim/"
 KMEXTRACTONLY="libkdepim/
 	kontact/plugins/"

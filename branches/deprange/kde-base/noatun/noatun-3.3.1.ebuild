@@ -10,11 +10,12 @@ inherit kde-meta eutils
 DESCRIPTION="KDE media player"
 KEYWORDS="~x86"
 IUSE="xine audiofile"
-RDEPEND="~kde-base/kdemultimedia-arts-$PV
-	~kde-base/artsplugin-mpeglib-$PV
-	~kde-base/artsplugin-mpg123-$PV
-	xine? ( ~kde-base/artsplugin-xine-$PV )
-	audiofile? ( ~kde-base/artsplugin-audiofile-$PV )"
+RDEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/kdemultimedia-arts)
+$(need-version-range $PV $MAXKDEVER kde-base/artsplugin-mpeglib)
+$(need-version-range $PV $MAXKDEVER  kde-base/artsplugin-mpg123)
+	xine? ( $(need-version-range $PV $MAXKDEVER kde-base/artsplugin-xine) )
+	audiofile? ( $(need-version-range $PV $MAXKDEVER kde-base/artsplugin-audiofile) )"
 	
 KMCOPYLIB="
 	libartsgui_kde arts/gui/kde/

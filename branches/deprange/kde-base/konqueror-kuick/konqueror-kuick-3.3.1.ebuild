@@ -11,5 +11,7 @@ inherit kde-meta
 DESCRIPTION="KDE: Kuick Copy And Move service"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"
-
+OLDDEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"
+DEPEND="
+$(need-version-range $PV $MAXKDEVER kde-base/konqueror)
+$(need-version-range $PV $MAXKDEVER kde-base/kdeaddons-docs-konq-plugins)"

@@ -12,13 +12,14 @@ KEYWORDS="~x86"
 IUSE=""
 PATCHES="$FILESDIR/remove-startkde-$PV.diff"
 DEPEND="$DEPEND 
-		~kde-base/libkonq-$PV
-		~kde-base/kdm-$PV
-		~kde-base/kcontrol-$PV" # Requires the desktop background settings module, 
-					# so until we separate the kcontrol modules into separate ebuilds :-),
-					# there's a dep here
+$(need-version-range $PV $MAXKDEVER kde-base/libkonq)
+$(need-version-range $PV $MAXKDEVER kde-base/kdm)
+$(need-version-range $PV $MAXKDEVER kde-base/kcontrol)"
+	# Requires the desktop background settings module, 
+	# so until we separate the kcontrol modules into separate ebuilds :-),
+	# there's a dep here
 RDEPEND="${DEPEND}
-	~kde-base/kcheckpass-$PV
+$(need-version-range $PV $MAXKDEVER kde-base/kcheckpass)
 	sys-apps/eject"
 KMCOPYLIB="libkonq libkonq"
 KMEXTRACTONLY="kcheckpass/kcheckpass.h"
