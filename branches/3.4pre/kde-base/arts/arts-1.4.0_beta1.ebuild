@@ -34,11 +34,11 @@ src_unpack() {
 		epatch ${FILESDIR}/arts-1.3.2-mcopidl.patch
 	fi
 
-	kde_sandbox_patch ${S}/soundserver
+	# None of this should be needed anymore... remove some time later
+	# 
 	# for the configure.in.in patch, for some reason it's not automatically picked up
 	# rm -f $S/configure
-
-	cd ${S} && make -f admin/Makefile.common
+	# cd ${S} && make -f admin/Makefile.common
 	# use amd64 && epatch ${FILESDIR}/arts-${PV}-buffer.patch
 	# this patch fixes the high cpu usage of mp3 and vorbis
 	# epatch ${FILESDIR}/arts-vorbis-fix.dif
