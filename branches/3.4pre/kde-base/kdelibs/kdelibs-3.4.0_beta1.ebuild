@@ -13,7 +13,7 @@ S="$WORKDIR/$PN-$myPV"
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.4"
 KEYWORDS="~x86"
-IUSE="alsa arts cups doc ipv6 kerberos ldap ssl tiff"
+IUSE="alsa arts cups doc ipv6 kerberos ssl tiff"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
@@ -26,7 +26,6 @@ RDEPEND="arts? ( ~kde-base/arts-${PV/3.4/1.4} )
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	alsa? ( media-libs/alsa-lib virtual/alsa )
 	cups? ( >=net-print/cups-1.1.19 )
-	ldap? ( >=net-nds/openldap-2.1.26 )
 	tiff? ( media-libs/tiff )
 	kerberos? ( virtual/krb5 )
 	virtual/fam
