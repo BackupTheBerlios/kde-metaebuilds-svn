@@ -76,8 +76,8 @@ SRC_URI="$SRC_URI usepackagedmakefiles? ( mirror://gentoo/$MAKEFILESTARBALL )"
 
 # Necessary dep for xdeltas. Hope like hell it doesn't worm its way into RDEPEND
 # through the sneaky eclass dep mangling portage does.
-DEPEND="kdexdeltas? ( dev-util/xdelta )"
-RDEPEND=""
+DEPEND="$DEPEND kdexdeltas? ( dev-util/xdelta )"
+#RDEPEND=""
 
 # TODO FIX: Temporary place for code common to all ebuilds derived from any one metapackage.
 
