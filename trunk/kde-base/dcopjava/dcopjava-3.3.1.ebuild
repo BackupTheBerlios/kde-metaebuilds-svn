@@ -16,8 +16,12 @@ DEPEND="virtual/jdk"
 RDEPEND="virtual/jre"
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
-myconf="$myconf --with-java=`java-config --jdk-home`"
 
 pkg_setup() {
     ewarn "This package is consdered broken by upstream. You're on your own."
+}
+
+src_compile () {
+    myconf="$myconf --with-java=`java-config --jdk-home`"
+    kde-meta_src_compile
 }

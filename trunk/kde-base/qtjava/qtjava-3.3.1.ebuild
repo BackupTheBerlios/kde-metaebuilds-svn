@@ -11,9 +11,13 @@ IUSE=""
 DEPEND="virtual/jdk"
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
-myconf="$myconf --with-java=`java-config --jdk-home`"
 
-# Doesn't really need kde, only kde? But then, it installs by default into $KDEDIR/...
+src_compile() {
+    myconf="$myconf --with-java=`java-config --jdk-home`"
+    kde-meta_src_compile
+}
+
+# Doesn't really need kde, only qt? But then, it installs by default into $KDEDIR/...
 
 # Someone who's into java should look over this...
 

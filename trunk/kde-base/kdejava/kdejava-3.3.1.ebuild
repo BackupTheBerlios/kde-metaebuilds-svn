@@ -15,7 +15,6 @@ DEPEND="$COMMONDEPEND virtual/jdk"
 RDEPEND="$COMMONDPEND virtual/jre"
 PATCHES="$FILESDIR/no-gtk-glib-check.diff $FILESDIR/classpath.diff"
 
-myconf="$myconf --with-java=`java-config --jdk-home`"
 
 # Probably missing other kdebase, kdepim etc deps
 # Needs to be compiled with just kdelibs installed to make sure
@@ -32,4 +31,9 @@ src_unpack() {
 	sed -e "s:_CLASSPATH_:$(java-config -p qtjava):" $x.orig > $x
 	rm $x.orig
     done
+}
+
+src_compile() {
+    myconf="$myconf --with-java=`java-config --jdk-home`"
+    kde-meta_src_compile
 }
