@@ -3,22 +3,24 @@
 # $Header: $
 
 KMNAME=kdepim
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE mail client"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdenetwork-$PV  
-	~kde-base/libkdepim-$PV
-	~kde-base/libkpimidentities-3.3.1
-	~kde-base/mimelib-3.3.1
-	~kde-base/libksieve-3.3.1
-	~kde-base/certmanager-$PV
-	~kde-base/libkcal-$PV"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
+$(deprange $PV $MAXKDEVER kde-base/libkdepim)
+$(deprange 3.3.1 $PV kde-base/libkpimidentities) 
+$(deprange $PV $MAXKDEVER kde-base/mimelib) 
+$(deprange 3.3.1 $PV kde-base/libksieve) 
+$(deprange $PV $MAXKDEVER kde-base/certmanager)
+$(deprange $PV $MAXKDEVER kde-base/libkcal)"
 RDEPEND="${DEPEND}
-	~kde-base/kdepim-kioslaves-$PV
-	~kde-base/kmailcvt-3.3.1
-	~kde-base/kontact-$PV" 
+$(deprange $PV $MAXKDEVER kde-base/kdepim-kioslaves)
+$(deprange 3.3.1 $PV kde-base/kmailcvt)
+$(deprange $PV $MAXKDEVER kde-base/kontact)"
 	
 KMCOPYLIB="
 	libkdenetwork libkdenetwork/ 

@@ -1,7 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+MAXKDEVER=3.3.2
 
+inherit kde-functions
 DESCRIPTION="kdenetwork - merge this to pull in all kdenetwork-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
@@ -10,18 +12,18 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="~kde-base/dcoprss-3.3.1
-	~kde-base/kdenetwork-filesharing-3.3.1
-	~kde-base/kdict-3.3.1
-	~kde-base/kget-$PV
-	~kde-base/knewsticker-$PV
-	~kde-base/kopete-$PV
-	~kde-base/kpf-3.3.1
-	~kde-base/kppp-$PV
-	~kde-base/krdc-3.3.1
-	~kde-base/krfb-3.3.1
-	~kde-base/ksirc-$PV
-	~kde-base/ktalkd-3.3.1
-	~kde-base/kwifimanager-3.3.1
-	~kde-base/librss-3.3.1
-	~kde-base/lisa-3.3.1"
+RDEPEND="$(deprange 3.3.1 $PV kde-base/dcoprss)
+	$(deprange 3.3.1 $PV kde-base/kdenetwork-filesharing)
+	$(deprange 3.3.1 $PV kde-base/kdict)
+	$(deprange $PV $MAXKDEVER kde-base/kget)
+	$(deprange $PV $MAXKDEVER kde-base/knewsticker)
+	$(deprange $PV $MAXKDEVER kde-base/kopete)
+	$(deprange 3.3.1 $PV kde-base/kpf)
+	$(deprange $PV $MAXKDEVER kde-base/kppp)
+	$(deprange 3.3.1 $PV kde-base/krdc)
+	$(deprange 3.3.1 $PV kde-base/krfb)
+	$(deprange $PV $MAXKDEVER kde-base/ksirc)
+	$(deprange 3.3.1 $PV kde-base/ktalkd)
+	$(deprange $PV $MAXKDEVER kde-base/kwifimanager)
+	$(deprange 3.3.1 $PV kde-base/librss)
+	$(deprange 3.3.1 $PV kde-base/lisa)"

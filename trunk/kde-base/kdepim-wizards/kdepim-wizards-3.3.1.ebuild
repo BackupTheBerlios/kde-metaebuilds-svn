@@ -4,16 +4,24 @@
 
 KMNAME=kdepim
 KMMODULE=wizards
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDEPIM wizards"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdepim-$PV 
+OLDDEPEND="~kde-base/libkdepim-$PV 
 	~kde-base/libkcal-$PV 
 	~kde-base/certmanager-$PV
 	~kde-base/kdepim-kresources-$PV
 	~kde-base/libkpimidentities-$PV"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
+$(deprange $PV $MAXKDEVER kde-base/libkcal)
+$(deprange $PV $MAXKDEVER kde-base/certmanager)
+$(deprange $PV $MAXKDEVER kde-base/kdepim-kresources)
+$(deprange $PV $MAXKDEVER kde-base/libkpimidentities)"
+
 KMCOPYLIB="
 	libkcal_imap kresources/imap/kcal
 	libkabc_imap kresources/imap/kabc

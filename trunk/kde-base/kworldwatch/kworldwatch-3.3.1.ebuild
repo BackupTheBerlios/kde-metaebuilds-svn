@@ -3,6 +3,8 @@
 # $Header: $
 
 KMNAME=kdetoys
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KDE program that displays the part of the Earth lit up by the Sun"

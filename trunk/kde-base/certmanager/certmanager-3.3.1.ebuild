@@ -3,12 +3,17 @@
 # $Header: $
 
 KMNAME=kdepim
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE certificate manager gui"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdenetwork-$PV"
+OLDDEPEND="~kde-base/libkdenetwork-$PV"
+DEPEND="
+$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)"
+
 KMCOPYLIB="libkdenetwork libkdenetwork/ 
 	libqgpgme libkdenetwork/qgpgme/"
 KMCOMPILEONLY="libkdenetwork/"

@@ -4,14 +4,16 @@
 
 KMNAME=kdepim
 KMMODULE=kresources
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE PIM groupware plugin collection"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkcal-$PV
-	~kde-base/libkpimexchange-$PV
-	~kde-base/libkdepim-$PV"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcal)
+$(deprange $PV $MAXKDEVER kde-base/libkpimexchange)
+$(deprange $PV $MAXKDEVER kde-base/libkdepim)"
 KMCOPYLIB="
 	libkcal libkcal
 	libkpimexchange libkpimexchange

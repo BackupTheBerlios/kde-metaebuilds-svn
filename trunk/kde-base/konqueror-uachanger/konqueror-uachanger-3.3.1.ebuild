@@ -4,10 +4,13 @@
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="konq-plugins/uachanger"
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="konqueror plugin for changing the User Agent field sent to the server"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-3.3.1"
-
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/konqueror)
+$(deprange $PV $MAXKDEVER kde-base/kdeaddons-docs-konq-plugins)"
+OLDDEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"

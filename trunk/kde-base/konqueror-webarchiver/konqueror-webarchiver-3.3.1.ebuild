@@ -4,10 +4,15 @@
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="konq-plugins/webarchiver"
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="konqueror webarchiver plugin: store an html page and all lnked images etc in a single .war file"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/konqueror)
+$(deprange $PV $MAXKDEVER kde-base/kdeaddons-docs-konq-plugins)"
+OLDDEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"
+
 

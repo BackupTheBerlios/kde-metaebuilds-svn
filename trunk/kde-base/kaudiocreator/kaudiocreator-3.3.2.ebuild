@@ -3,12 +3,14 @@
 # $Header: $
 
 KMNAME=kdemultimedia
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE CD ripper and audio encoder frontend"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkcddb-3.3.1
+DEPEND="$(deprange 3.3.1 $PV kde-base/libkcddb)
 	media-sound/cdparanoia"
 KMCOPYLIB="libkcddb libkcddb"
 KMCOMPILEONLY="kscd/libwm/"

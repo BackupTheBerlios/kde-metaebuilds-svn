@@ -5,6 +5,8 @@
 KMNAME=kdebase
 KMNOMODULE=true
 KMEXTRACTONLY="kdm/kfrontend/sessions/kde.desktop.in startkde"
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 need-kde $PV
@@ -17,13 +19,13 @@ IUSE=""
 # kdesktop, kicker etc are started because they put files in $KDEDIR/share/autostart
 # and so in theory they aren't strictly necessary deps.
 RDEPEND="$RDEPEND 
-		~kde-base/kdesktop-3.3.1
-		~kde-base/kcminit-3.3.1
-		~kde-base/ksmserver-3.3.1
-		~kde-base/kwin-$PV
-		~kde-base/kpersonalizer-3.3.1
-		~kde-base/kreadconfig-3.3.1
-		~kde-base/ksplashml-3.3.1"
+$(deprange 3.3.1 $PV kde-base/kdesktop)
+$(deprange 3.3.1 $PV kde-base/kcminit)
+$(deprange 3.3.1 $PV kde-base/ksmserver)
+$(deprange $PV $MAXKDEVER kde-base/kwin)
+$(deprange 3.3.1 $PV kde-base/kpersonalizer)
+$(deprange 3.3.1 $PV kde-base/kreadconfig)
+$(deprange 3.3.1 $PV kde-base/ksplashml)"
 
 src_compile() {
 	einfo "Nothing to compile"

@@ -4,6 +4,8 @@
 
 KMNAME=kdebase
 KMMODULE=kioslave
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="kioslave: the kde VFS framework - kioslave plugins present a filesystem-like view of arbitrary data"
@@ -11,7 +13,7 @@ KEYWORDS="~x86"
 IUSE="ldap samba"
 DEPEND="ldap? ( net-nds/openldap )
 		samba? ( >=net-fs/samba-3.0.1 )
-		~kde-base/kdesktop-$PV" # for the kdeeject script used by the devices/mounthelper ioslave
+		$(deprange $PV $MAXKDEVER kde-base/kdesktop)" # for the kdeeject script used by the devices/mounthelper ioslave
 PATCHES="$FILESDIR/remove-startkde-$PV.diff"
 
 src_compile () {

@@ -3,6 +3,8 @@
 # $Header: $
 
 KMNAME=kdesdk
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="Cervisia - A KDE CVS frontend"

@@ -3,15 +3,21 @@
 # $Header: $
 
 KMNAME=kdemultimedia
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE sound recorder"
 KEYWORDS="~x86"
 IUSE="oggvorbis encode"
-DEPEND="
+OLDDEPEND="
 	~kde-base/kdemultimedia-arts-$PV
 	oggvorbis? ( media-libs/libvorbis )
 	encode? ( media-sound/lame )"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/kdemultimedia-arts)
+	oggvorbis? ( media-libs/libvorbis )
+	encode? ( media-sound/lame )"
+
 KMCOPYLIB="libartsgui_kde arts/gui/kde/
 	libartscontrolsupport arts/tools/"
 KMEXTRACTONLY="

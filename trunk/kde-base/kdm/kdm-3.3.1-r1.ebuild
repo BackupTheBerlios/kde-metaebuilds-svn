@@ -3,6 +3,8 @@
 # $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0.ebuild,v 1.11 2004/09/20 01:59:38 malc Exp $
 
 KMNAME=kdebase
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE login manager, similar to xdm and gdm"
@@ -11,9 +13,10 @@ IUSE="pam"
 KMCOMPILEONLY="kcontrol/background"
 DEPEND="$DEPEND 
 		pam? ( sys-libs/pam )
-		~kde-base/kcontrol-$PV" # Requires the desktop background settings and kdm modules,
-								# so until we separate the kcontrol modules into separate ebuilds :-),
-								# there's a dep here
+$(deprange $PV $MAXKDEVER kde-base/kcontrol)"
+	# Requires the desktop background settings and kdm modules,
+	# so until we separate the kcontrol modules into separate ebuilds :-),
+	# there's a dep here
 PATCHES="$FILESDIR/remove-startkde-$PV.diff"
 
 src_compile() {

@@ -1,7 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+MAXKDEVER=3.3.1
 
+inherit kde-functions
 DESCRIPTION="kdepim 3.3.0 - merge this to pull in all kdepim-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
@@ -11,32 +13,32 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="
-	~kde-base/certmanager-$PV
-	~kde-base/kaddressbook-$PV
-	~kde-base/kalarm-$PV
-	~kde-base/kalarmd-$PV
-	~kde-base/kandy-$PV
-	~kde-base/karm-$PV
-	~kde-base/kdepim-kioslaves-$PV
-	~kde-base/kdepim-kresources-$PV
-	~kde-base/kdepim-wizards-$PV
-	~kde-base/kitchensync-$PV
-	~kde-base/kmail-$PV
-	~kde-base/kmailcvt-$PV
-	~kde-base/kmobile-$PV
-	~kde-base/knode-$PV
-	~kde-base/knotes-$PV
-	~kde-base/konsolekalendar-$PV
-	~kde-base/kontact-$PV
-	~kde-base/korganizer-$PV
-	~kde-base/korn-$PV
-	~kde-base/kpilot-$PV
-	~kde-base/ksync-$PV
-	~kde-base/ktnef-$PV
-	~kde-base/libkcal-$PV
-	~kde-base/libkdenetwork-$PV
-	~kde-base/libkdepim-$PV
-	~kde-base/libkpimexchange-$PV
-	~kde-base/libkpimidentities-$PV
-	~kde-base/libksieve-$PV
-	~kde-base/mimelib-$PV"
+	$(deprange $PV $MAXKDEVER kde-base/certmanager)
+	$(deprange $PV $MAXKDEVER kde-base/kaddressbook)
+	$(deprange $PV $MAXKDEVER kde-base/kalarm)
+	$(deprange $PV $MAXKDEVER kde-base/kalarmd)
+	$(deprange $PV $MAXKDEVER kde-base/kandy)
+	$(deprange $PV $MAXKDEVER kde-base/karm)
+	$(deprange $PV $MAXKDEVER kde-base/kdepim-kioslaves)
+	$(deprange $PV $MAXKDEVER kde-base/kdepim-kresources)
+	$(deprange $PV $MAXKDEVER kde-base/kdepim-wizards)
+	$(deprange $PV $MAXKDEVER kde-base/kitchensync)
+	$(deprange $PV $MAXKDEVER kde-base/kmail)
+	$(deprange $PV $MAXKDEVER kde-base/kmailcvt)
+	$(deprange $PV $MAXKDEVER kde-base/kmobile)
+	$(deprange $PV $MAXKDEVER kde-base/knode)
+	$(deprange $PV $MAXKDEVER kde-base/knotes)
+	$(deprange $PV $MAXKDEVER kde-base/konsolekalendar)
+	$(deprange $PV $MAXKDEVER kde-base/kontact)
+	$(deprange $PV $MAXKDEVER kde-base/korganizer)
+	$(deprange $PV $MAXKDEVER kde-base/korn)
+	$(deprange $PV $MAXKDEVER kde-base/kpilot)
+	$(deprange $PV $MAXKDEVER kde-base/ksync)
+	$(deprange $PV $MAXKDEVER kde-base/ktnef)
+	$(deprange $PV $MAXKDEVER kde-base/libkcal)
+	$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
+	$(deprange $PV $MAXKDEVER kde-base/libkdepim)
+	$(deprange $PV $MAXKDEVER kde-base/libkpimexchange)
+	$(deprange $PV $MAXKDEVER kde-base/libkpimidentities)
+	$(deprange $PV $MAXKDEVER kde-base/libksieve)
+	$(deprange $PV $MAXKDEVER kde-base/mimelib)"

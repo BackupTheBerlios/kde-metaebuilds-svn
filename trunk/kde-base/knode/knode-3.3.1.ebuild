@@ -3,14 +3,16 @@
 # $Header: $
 
 KMNAME=kdepim
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="A newsreader for KDE"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdepim-$PV
-	~kde-base/libkdenetwork-$PV
-	~kde-base/kontact-$PV"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
+$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
+$(deprange $PV $MAXKDEVER kde-base/kontact)"
 KMCOPYLIB="
 	libkdepim libkdepim
 	libkdenetwork libkdenetwork

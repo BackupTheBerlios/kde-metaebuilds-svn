@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 KMNAME=kdewebdev
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KDE: Quanta Plus Web Development Environment"
@@ -10,12 +12,11 @@ IUSE="doc"
 DEPEND="doc? ( app-doc/quanta-docs )
 	dev-libs/libxml2"
 RDEPEND="$DEPEND
-	~kde-base/kfilereplace-$PV
-	~kde-base/kimagemapeditor-$PV
-	~kde-base/klinkstatus-$PV
-	~kde-base/kommander-$PV
-	~kde-base/kxsldbg-$PV"
-myconf="--with-extra-includes=$(xml2-config --cflags | sed -e 's:^-I::')"
+$(deprange $PV $MAXKDEVER kde-base/kfilereplace)
+$(deprange $PV $MAXKDEVER kde-base/kimagemapeditor)
+$(deprange $PV $MAXKDEVER kde-base/klinkstatus)
+$(deprange $PV $MAXKDEVER kde-base/kommander)
+$(deprange $PV $MAXKDEVER kde-base/kxsldbg)"
 
 KMCOMPILEONLY=lib
 

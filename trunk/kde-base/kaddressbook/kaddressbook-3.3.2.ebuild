@@ -3,16 +3,24 @@
 # $Header: $
 
 KMNAME=kdepim
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="The KDE Address Book"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdepim-$PV 
+OLDDEPEND="~kde-base/libkdepim-$PV 
 	~kde-base/libkcal-$PV 
 	~kde-base/certmanager-$PV
 	~kde-base/libkdenetwork-$PV
 	~kde-base/kontact-$PV"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
+$(deprange $PV $MAXKDEVER kde-base/libkcal)
+$(deprange $PV $MAXKDEVER kde-base/certmanager)
+$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
+$(deprange $PV $MAXKDEVER kde-base/kontact)"
+
 KMCOPYLIB="
 	libkdepim libkdepim
 	libkcal libkcal

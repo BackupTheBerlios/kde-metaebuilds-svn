@@ -3,12 +3,17 @@
 # $Header: $
 
 KMNAME=kdegraphics
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE DVI viewer"
 KEYWORDS="~x86"
 IUSE="tetex"
-DEPEND="~kde-base/kviewshell-$PV"
+OLDDEPEND="~kde-base/kviewshell-$PV"
+DEPEND="
+$(deprange $PV $MAXKDEVER kde-base/kviewshell)"
+
 RDEPEND="${DEPEND}
 	tetex? (
 	|| ( >=app-text/tetex-2

@@ -3,12 +3,17 @@
 # $Header: $
 
 KMNAME=kdepim
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE mailbox checker"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/mimelib-$PV ~kde-base/libkdenetwork-$PV"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/mimelib)
+$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)"
+OLDDEPEND="~kde-base/mimelib-$PV ~kde-base/libkdenetwork-$PV"
+
 KMCOPYLIB="libmimelib mimelib
 	libkdenetwork libkdenetwork"
 # libkcal is installed because a lot of headers are needed, but it don't have to be compiled

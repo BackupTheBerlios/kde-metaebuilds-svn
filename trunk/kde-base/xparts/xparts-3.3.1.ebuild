@@ -6,6 +6,8 @@ KMNAME=kdebindings
 KMEXTRACTONLY="dcopc"
 KMCOPYLIB="libdcopc dcopc"
 KM_MAKEFILESREV=1
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="Allows embedding of generic XParts as KDE KParts (broken)"

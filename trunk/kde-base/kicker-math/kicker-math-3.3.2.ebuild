@@ -4,10 +4,16 @@
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="kicker-applets/math"
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="kicker applet evaluating math expressions"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/kicker-$PV ~kde-base/kdeaddons-docs-kicker-applets-3.3.1"
+OLDDEPEND="~kde-base/kicker-$PV ~kde-base/kdeaddons-docs-kicker-applets-3.3.1"
+DEPEND="
+$(deprange $PV $MAXKDEVER kde-base/kicker)
+$(deprange 3.3.1 $PV kde-base/kdeaddons-docs-kicker-applets)"
+
 

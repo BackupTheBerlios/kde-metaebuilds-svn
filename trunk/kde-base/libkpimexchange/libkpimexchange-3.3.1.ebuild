@@ -3,12 +3,17 @@
 # $Header: $
 
 KMNAME=kdepim
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE PIM exchange library"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkcal-$PV"
+OLDDEPEND="~kde-base/libkcal-$PV"
+DEPEND="
+$(deprange $PV $MAXKDEVER kde-base/libkcal)"
+
 KMCOPYLIB="libkcal libkcal"
 # libkcal is installed because a lot of headers are needed, but it don't have to be compiled
 KMEXTRACTONLY="

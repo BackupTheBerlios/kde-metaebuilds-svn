@@ -4,12 +4,14 @@
 
 KMMODULE=kscreensaver
 KMNAME=kdeartwork
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION=""
 KEYWORDS="~x86"
 IUSE="opengl xscreensaver"
-DEPEND="~kde-base/kscreensaver-3.3.1
+DEPEND="$(deprange 3.3.1 $PV kde-base/kscreensaver)
 	opengl? ( virtual/opengl )
 	!ppc64 ( xscreensaver? ( x11-misc/xscreensaver ) )"
 

@@ -4,6 +4,8 @@
 
 KMNAME=kdenetwork
 KMMODULE=lanbrowsing
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE Lan Information Server - allows KDE desktops to share information over a network"

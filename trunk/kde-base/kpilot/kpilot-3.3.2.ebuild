@@ -3,6 +3,8 @@
 # $Header: $
 
 KMNAME=kdepim
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KPilot - HotSync software for KDE"
@@ -10,9 +12,10 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND="app-pda/pilot-link 
 	dev-libs/libmal
-	~kde-base/libkcal-$PV
-	~kde-base/libkdepim-$PV
-	~kde-base/kontact-$PV"
+$(deprange $PV $MAXKDEVER kde-base/libkcal)
+$(deprange $PV $MAXKDEVER kde-base/libkdepim)
+$(deprange $PV $MAXKDEVER kde-base/kontact)"
+
 KMCOPYLIB="
 	libkcal libkcal
 	libkdepim libkdepim

@@ -8,6 +8,8 @@
 KMNAME=kdebindings
 KMEXTRACTONLY="kdejava/configure.in.in"
 KM_MAKEFILESREV=1
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="Java bindings for DCOP"

@@ -6,14 +6,20 @@ KMNAME=kdebindings
 KMEXTRACTONLY=qtjava
 KMCOPYLIB="libqtjavasupport qtjava/javalib/qtjava"
 KM_MAKEFILESREV=1
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KDE java bindings"
 KEYWORDS="~x86"
 IUSE=""
-COMMONDEPEND="~kde-base/kwin-$PV ~kde-base/kcontrol-$PV ~kde-base/qtjava-$PV"
-DEPEND="$COMMONDEPEND virtual/jdk"
-RDEPEND="$COMMONDPEND virtual/jre"
+COMMONDEPEND="$(deprange $PV $MAXKDEVER kde-base/kwin)
+	$(deprange $PV $MAXKDEVER kde-base/kcontrol)
+	$(deprange $PV $MAXKDEVER kde-base/qtjava)"
+DEPEND="virtual/jdk $COMMONDEPEND"
+RDEPEND="virtual/jre $COMMONDEPEND"
+OLDDEPEND="~kde-base/kwin-$PV ~kde-base/kcontrol-$PV ~kde-base/qtjava-$PV virtual/jdk"
+
 PATCHES="$FILESDIR/no-gtk-glib-check.diff $FILESDIR/classpath.diff"
 
 

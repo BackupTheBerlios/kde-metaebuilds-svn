@@ -4,10 +4,16 @@
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="konq-plugins/sidebar"
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="konqueror sidebar plugin"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"
+OLDDEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"
+DEPEND="
+$(deprange $PV $MAXKDEVER kde-base/konqueror)
+$(deprange $PV $MAXKDEVER kde-base/kdeaddons-docs-konq-plugins)"
+
 

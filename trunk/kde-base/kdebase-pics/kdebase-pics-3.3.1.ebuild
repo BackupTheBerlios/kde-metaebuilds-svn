@@ -4,6 +4,8 @@
 
 KMNAME=kdebase
 KMMODULE=pics
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="Pics included with kdebase"

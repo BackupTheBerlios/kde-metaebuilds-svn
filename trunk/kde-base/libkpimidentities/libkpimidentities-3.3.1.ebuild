@@ -3,12 +3,17 @@
 # $Header: $
 
 KMNAME=kdepim
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE PIM identities library"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/certmanager-$PV ~kde-base/libkdepim-$PV"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/certmanager)
+$(deprange $PV $MAXKDEVER kde-base/libkdepim)"
+OLDDEPEND="~kde-base/certmanager-$PV ~kde-base/libkdepim-$PV"
+
 KMCOPYLIB="
 	libkleopatra certmanager/lib/ 
 	libkdepim libkdepim/"

@@ -3,6 +3,8 @@
 # $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0.ebuild,v 1.11 2004/09/20 01:59:38 malc Exp $
 
 KMNAME=kdebase
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="The KDE desktop"
@@ -10,14 +12,16 @@ KEYWORDS="~x86"
 IUSE=""
 PATCHES="$FILESDIR/remove-startkde-$PV.diff"
 DEPEND="$DEPEND 
-		~kde-base/libkonq-3.3.1
-		~kde-base/kdm-$PV
-		~kde-base/kcontrol-$PV" # Requires the desktop background settings module, 
-					# so until we separate the kcontrol modules into separate ebuilds :-),
-					# there's a dep here
+$(deprange 3.3.1 $PV kde-base/libkonq)
+$(deprange $PV $MAXKDEVER kde-base/kdm)
+$(deprange $PV $MAXKDEVER kde-base/kcontrol)"
+	# Requires the desktop background settings module, 
+	# so until we separate the kcontrol modules into separate ebuilds :-),
+	# there's a dep here
 RDEPEND="${DEPEND}
-	~kde-base/kcheckpass-3.3.1
+$(deprange 3.3.1 $PV kde-base/kcheckpass)
 	sys-apps/eject"
+
 KMCOPYLIB="libkonq libkonq"
 KMEXTRACTONLY="kcheckpass/kcheckpass.h"
 KMCOMPILEONLY="kcontrol/background"

@@ -3,6 +3,7 @@
 # $Header: $
 
 KMNAME=koffice
+MAXKOFFICEVER=1.3.5
 inherit kde-meta eutils
 
 DESCRIPTION="KOffice: Report viewer(generator)"
@@ -15,7 +16,7 @@ KEYWORDS="~x86"
 IUSE=""
 SLOT="0"
 
-DEPEND="~app-office/koffice-libs-$PV
+DEPEND="$(deprange $PV $MAXKOFFICEVER app-office/koffice-libs)
 	dev-util/pkgconfig"
 
 KMCOPYLIB="

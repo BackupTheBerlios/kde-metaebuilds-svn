@@ -3,6 +3,7 @@
 # $Header: $
 
 KMNAME=koffice
+MAXKOFFICEVER=1.3.5
 inherit kde-meta eutils
 
 DESCRIPTION="KOffice Presentation Tool"
@@ -15,7 +16,7 @@ KEYWORDS="~x86"
 IUSE=""
 SLOT="0"
 
-DEPEND="~app-office/koffice-libs-1.3.4
+DEPEND="$(deprange 1.3.4 $PV app-office/koffice-libs)
 	dev-util/pkgconfig"
 
 KMCOPYLIB="

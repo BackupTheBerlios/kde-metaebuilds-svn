@@ -3,17 +3,26 @@
 # $Header: $
 
 KMNAME=kdemultimedia
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="The Lean KDE Media Player"
 KEYWORDS="~x86"
 IUSE="xine audiofile"
-RDEPEND="${DEPEND}
+
+OLDRDEPEND="
 	~kde-base/kdemultimedia-arts-$PV
 	~kde-base/artsplugin-mpeglib-$PV
 	~kde-base/artsplugin-mpg123-$PV
 	xine? ( ~kde-base/artsplugin-xine-$PV )
-	audiofike? ( ~kde-base/artsplugin-audiofile-$PV )"
+	audiofile? ( ~kde-base/artsplugin-audiofile-$PV )"
+RDEPEND="$(deprange $PV $MAXKDEVER kde-base/kdemultimedia-arts)
+$(deprange $PV $MAXKDEVER kde-base/artsplugin-mpeglib)
+$(deprange $PV $MAXKDEVER kde-base/artsplugin-mpg123)
+	xine? ( $(deprange $PV $MAXKDEVER kde-base/artsplugin-xine) )
+	audiofile? ( $(deprange $PV $MAXKDEVER kde-base/artsplugin-audiofile) )"
+	
 KMEXTRACTONLY="arts/"
 
 pkg_setup() {

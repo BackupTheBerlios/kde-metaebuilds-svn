@@ -3,15 +3,22 @@
 # $Header: $
 
 KMNAME=kdepim
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="Personal alarm message, command and email scheduler for KDE"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdepim-$PV
+OLDDEPEND="~kde-base/libkdepim-$PV
 	~kde-base/libkdenetwork-$PV
 	~kde-base/libkcal-$PV
 	~kde-base/kalarmd-3.3.1"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
+$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
+$(deprange $PV $MAXKDEVER kde-base/libkcal)
+$(deprange 3.3.1 $PV kde-base/kalarmd)"
+
 KMCOPYLIB="
 	libkcal libkcal
 	libkdenetwork libkdenetwork

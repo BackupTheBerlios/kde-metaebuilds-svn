@@ -5,12 +5,16 @@
 KMNAME=kdegraphics
 KMNOMODULE=true
 KMNODOCS=true
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="SVG viewer kpart"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libksvg"
+DEPEND="$(deprange $PV $MAXKDEVER libksvg)"
+OLDDEPEND="~kde-base/libksvg"
+
 KMNODOC="true"
 KMCOPYLIB="libksvg ksvg"
 KMEXTRACTONLY="ksvg/"

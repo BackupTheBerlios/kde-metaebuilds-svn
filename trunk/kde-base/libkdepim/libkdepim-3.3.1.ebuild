@@ -3,10 +3,15 @@
 # $Header: $
 
 KMNAME=kdepim
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="common library for KDE PIM apps"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkcal-$PV"
+OLDDEPEND="~kde-base/libkcal-$PV"
+DEPEND="
+$(deprange $PV $MAXKDEVER kde-base/libkcal)"
+
 KMCOPYLIB="libkcal libkcal"

@@ -3,13 +3,18 @@
 # $Header: $
 
 KMNAME=kdepim
+MAXKDEVER=3.3.1
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE Time tracker tool"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkcal-$PV
+OLDDEPEND="~kde-base/libkcal-$PV
 	~kde-base/libkdepim-$PV"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcal)
+$(deprange $PV $MAXKDEVER kde-base/libkdepim)"
+
 KMCOPYLIB="
 	libkcal libkcal
 	libkdepim libkdepim"

@@ -1,7 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+MAXKDEVER=3.3.1
 
+inherit kde-functions
 DESCRIPTION="kdesdk - merge this to pull in all kdesdk-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
@@ -10,17 +12,17 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="
-	~kde-base/cervisia-$PV
-	~kde-base/kapptemplate-$PV
-	~kde-base/kbabel-$PV
-	~kde-base/kbugbuster-$PV
-	~kde-base/kcachegrind-$PV
-	~kde-base/kdesdk-kfile-plugins-$PV
-	~kde-base/kdesdk-misc-$PV
-	~kde-base/kdesdk-scripts-$PV
-	~kde-base/kmtrace-$PV
-	~kde-base/kompare-$PV
-	~kde-base/kspy-$PV
-	~kde-base/kuiviewer-$PV
-	~kde-base/umbrello-$PV"
+RDEPEND="
+	$(deprange $PV $MAXKDEVER kde-base/cervisia)
+	$(deprange $PV $MAXKDEVER kde-base/kapptemplate)
+	$(deprange $PV $MAXKDEVER kde-base/kbabel)
+	$(deprange $PV $MAXKDEVER kde-base/kbugbuster)
+	$(deprange $PV $MAXKDEVER kde-base/kcachegrind)
+	$(deprange $PV $MAXKDEVER kde-base/kdesdk-kfile-plugins)
+	$(deprange $PV $MAXKDEVER kde-base/kdesdk-misc)
+	$(deprange $PV $MAXKDEVER kde-base/kdesdk-scripts)
+	$(deprange $PV $MAXKDEVER kde-base/kmtrace)
+	$(deprange $PV $MAXKDEVER kde-base/kompare)
+	$(deprange $PV $MAXKDEVER kde-base/kspy)
+	$(deprange $PV $MAXKDEVER kde-base/kuiviewer)
+	$(deprange $PV $MAXKDEVER kde-base/umbrello)"

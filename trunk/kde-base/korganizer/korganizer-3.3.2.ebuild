@@ -3,18 +3,21 @@
 # $Header: $
 
 KMNAME=kdepim
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="A Personal Organizer for KDE"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkpimexchange-$PV  
-	~kde-base/libkdepim-$PV 
-	~kde-base/libkcal-$PV
-	~kde-base/libkpimidentities-3.3.1
-	~kde-base/ktnef-$PV
-	~kde-base/kdepim-kresources-$PV
-	~kde-base/kontact-$PV"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkpimexchange)
+$(deprange $PV $MAXKDEVER kde-base/libkdepim) 
+$(deprange $PV $MAXKDEVER kde-base/libkcal)
+$(deprange 3.3.1 $PV kde-base/libkpimidentities)
+$(deprange $PV $MAXKDEVER kde-base/ktnef)
+$(deprange $PV $MAXKDEVER kde-base/kdepim-kresources)
+$(deprange $PV $MAXKDEVER kde-base/kontact)"
+
 KMCOPYLIB="
 	libkdepim libkdepim
 	libkpimexchange libkpimexchange

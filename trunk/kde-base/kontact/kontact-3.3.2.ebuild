@@ -3,12 +3,17 @@
 # $Header: $
 
 KMNAME=kdepim
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE personal information manager"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdepim-$PV"
+OLDDEPEND="~kde-base/libkdepim-$PV"
+DEPEND="
+$(deprange $PV $MAXKDEVER kde-base/libkdepim)"
+
 KMCOPYLIB="libkdepim libkdepim/"
 KMEXTRACTONLY="libkdepim/
 	kontact/plugins/"

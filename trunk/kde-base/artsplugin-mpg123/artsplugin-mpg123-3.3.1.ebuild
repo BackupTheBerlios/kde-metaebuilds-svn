@@ -4,6 +4,8 @@
 
 KMNAME=kdemultimedia
 KMMODULE=mpg123_artsplugin
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="aRts plugin for mpg123"

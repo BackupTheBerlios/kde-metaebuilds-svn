@@ -4,12 +4,18 @@
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="noatun-plugins/noatunmadness"
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="noatun visualizatin plugin"
 KEYWORDS="~x86"
 IUSE="svga"
-DEPEND="~kde-base/noatun-$PV
-	svga? ( media-libs/svgalib )" # in case something from kdelibs linked against svgalib,
-				      # we might link against it too. this isn't pretty by any means.
+
+# in case something from kdelibs linked against svgalib,
+# we might link against it too. this isn't pretty by any means.
+OLDDEPEND="~kde-base/noatun-$PV
+	svga? ( media-libs/svgalib )" 
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/noatun)
+		svga? ( media-libs/svgalib )"
 

@@ -1,7 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0.ebuild,v 1.11 2004/09/20 01:59:38 malc Exp $
+MAXKDEVER=3.3.2
 
+inherit kde-functions
 DESCRIPTION="kdebase - merge this to pull in all kdebase-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
@@ -11,43 +13,43 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="
-~kde-base/kdebase-applnk-3.3.1
-~kde-base/drkonqi-3.3.1
-~kde-base/kappfinder-3.3.1
-~kde-base/kate-${PV}
-~kde-base/kcheckpass-3.3.1
-~kde-base/kcminit-3.3.1
-~kde-base/kcontrol-${PV}
-~kde-base/kdcop-3.3.1
-~kde-base/kdebugdialog-3.3.1
-~kde-base/kdepasswd-3.3.1
-~kde-base/kdeprint-3.3.1
-~kde-base/kdesktop-3.3.1
-~kde-base/kdesu-3.3.1
-~kde-base/kdialog-3.3.1
-~kde-base/kdm-${PV}
-~kde-base/kfind-3.3.1
-~kde-base/khelpcenter-3.3.1
-~kde-base/khotkeys-3.3.1
-~kde-base/kicker-${PV}
-~kde-base/kdebase-kioslaves-$PV
-~kde-base/klipper-${PV}
-~kde-base/kmenuedit-3.3.1
-~kde-base/konqueror-${PV}
-~kde-base/konsole-${PV}
-~kde-base/kpager-3.3.1
-~kde-base/kpersonalizer-3.3.1
-~kde-base/kreadconfig-3.3.1
-~kde-base/kscreensaver-3.3.1
-~kde-base/ksmserver-3.3.1
-~kde-base/ksplashml-3.3.1
-~kde-base/kstart-3.3.1
-~kde-base/ksysguard-3.3.1
-~kde-base/ksystraycmd-3.3.1
-~kde-base/ktip-3.3.1
-~kde-base/kwin-${PV}
-~kde-base/kxkb-${PV}
-~kde-base/kdebase-l10n-${PV}
-~kde-base/libkonq-3.3.1
-~kde-base/nsplugins-${PV}
-~kde-base/kdebase-pics-3.3.1"
+$(deprange 3.3.1 $PV kde-base/kdebase-applnk)
+$(deprange 3.3.1 $PV kde-base/drkonqi)
+$(deprange 3.3.1 $PV kde-base/kappfinder)
+$(deprange $PV $MAXKDEVER kde-base/kate)
+$(deprange 3.3.1 $PV kde-base/kcheckpass)
+$(deprange 3.3.1 $PV kde-base/kcminit)
+$(deprange $PV $MAXKDEVER kde-base/kcontrol)
+$(deprange 3.3.1 $PV kde-base/kdcop)
+$(deprange 3.3.1 $PV kde-base/kdebugdialog)
+$(deprange $PV $MAXKDEVER kde-base/kdepasswd)
+$(deprange 3.3.1 $PV kde-base/kdeprint)
+$(deprange $PV $MAXKDEVER kde-base/kdesktop)
+$(deprange $PV $MAXKDEVER kde-base/kdesu)
+$(deprange 3.3.1 $PV kde-base/kdialog)
+$(deprange $PV $MAXKDEVER kde-base/kdm)
+$(deprange 3.3.1 $PV kde-base/kfind)
+$(deprange 3.3.1 $PV kde-base/khelpcenter)
+$(deprange $PV $MAXKDEVER kde-base/khotkeys)
+$(deprange $PV $MAXKDEVER kde-base/kicker)
+$(deprange $PV $MAXKDEVER kde-base/kdebase-kioslaves)
+$(deprange $PV $MAXKDEVER kde-base/klipper)
+$(deprange 3.3.1 $PV kde-base/kmenuedit)
+$(deprange $PV $MAXKDEVER kde-base/konqueror)
+$(deprange $PV $MAXKDEVER kde-base/konsole)
+$(deprange 3.3.1 $PV kde-base/kpager)
+$(deprange 3.3.1 $PV kde-base/kpersonalizer)
+$(deprange 3.3.1 $PV kde-base/kreadconfig)
+$(deprange 3.3.1 $PV kde-base/kscreensaver)
+$(deprange 3.3.1 $PV kde-base/ksmserver)
+$(deprange 3.3.1 $PV kde-base/ksplashml)
+$(deprange $PV $MAXKDEVER kde-base/kstart)
+$(deprange 3.3.1 $PV kde-base/ksysguard)
+$(deprange 3.3.1 $PV kde-base/ksystraycmd)
+$(deprange 3.3.1 $PV kde-base/ktip)
+$(deprange $PV $MAXKDEVER kde-base/kwin)
+$(deprange $PV $MAXKDEVER kde-base/kxkb)
+$(deprange $PV $MAXKDEVER kde-base/kdebase-l10n)
+$(deprange 3.3.1 $PV kde-base/libkonq)
+$(deprange $PV $MAXKDEVER kde-base/nsplugins)
+$(deprange 3.3.1 $PV kde-base/kdebase-pics)"

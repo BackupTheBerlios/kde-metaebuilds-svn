@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+MAXKOFFICEVER=1.3.5
 KMNAME=koffice
 KMMODULE=
 inherit kde-meta eutils

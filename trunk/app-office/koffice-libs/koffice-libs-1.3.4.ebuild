@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+MAXKOFFICEVER=1.3.5
 KMNAME=koffice
 KMMODULE=lib
 inherit kde-meta eutils
@@ -18,8 +19,7 @@ SLOT="0"
 
 DEPEND="dev-util/pkgconfig"
 
-RDEPEND="$DEPEND
-	~app-office/koffice-data-$PV"
+RDEPEND="$DEPEND $(deprange $PV $MAXKOFFICEVER app-office/koffice-data)"
 
 KMEXTRA="
 	interfaces/ 

@@ -1,7 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+MAXKDEVER=3.3.2
 
+inherit kde-functions
 DESCRIPTION="kdegames - merge this to pull in all kdepim-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
@@ -10,36 +12,36 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="
-~kde-base/atlantik-$PV
-~kde-base/kasteroids-3.3.1
-~kde-base/katomic-3.3.1
-~kde-base/kbackgammon-3.3.1
-~kde-base/kbattleship-3.3.1
-~kde-base/kblackbox-3.3.1
-~kde-base/kbounce-3.3.1
-~kde-base/kenolaba-3.3.1
-~kde-base/kfouleggs-3.3.1
-~kde-base/kgoldrunner-$PV
-~kde-base/kjumpingcube-3.3.1
-~kde-base/klickety-3.3.1
-~kde-base/klines-3.3.1
-~kde-base/kmahjongg-3.3.1
-~kde-base/kmines-$PV
-arts? ( ~kde-base/kolf-3.3.1 )
-~kde-base/konquest-3.3.1
-~kde-base/kpat-$PV
-~kde-base/kpoker-$PV
-~kde-base/ktron-3.3.1
-~kde-base/ktuberling-3.3.1
-~kde-base/ksame-3.3.1
-~kde-base/kshisen-3.3.1
-~kde-base/ksirtet-3.3.1
-~kde-base/ksmiletris-3.3.1
-~kde-base/ksnake-3.3.1
-~kde-base/ksokoban-3.3.1
-~kde-base/kspaceduel-3.3.1
-~kde-base/kreversi-3.3.1
-~kde-base/kwin4-3.3.1
-~kde-base/lskat-3.3.1
+RDEPEND="
+$(deprange $PV $MAXKDEVER kde-base/atlantik)
+$(deprange 3.3.1 $PV kde-base/kasteroids)
+$(deprange 3.3.1 $PV kde-base/katomic)
+$(deprange 3.3.1 $PV kde-base/kbackgammon)
+$(deprange 3.3.1 $PV kde-base/kbattleship)
+$(deprange 3.3.1 $PV kde-base/kblackbox)
+$(deprange 3.3.1 $PV kde-base/kbounce)
+$(deprange 3.3.1 $PV kde-base/kenolaba)
+$(deprange 3.3.1 $PV kde-base/kfouleggs)
+$(deprange $PV $MAXKDEVER kde-base/kgoldrunner)
+$(deprange 3.3.1 $PV kde-base/kjumpingcube)
+$(deprange 3.3.1 $PV kde-base/klickety)
+$(deprange 3.3.1 $PV kde-base/klines)
+$(deprange 3.3.1 $PV kde-base/kmahjongg)
+$(deprange $PV $MAXKDEVER kde-base/kmines)
+arts? ( $(deprange 3.3.1 $PV kde-base/kolf) )
+$(deprange 3.3.1 $PV kde-base/konquest)
+$(deprange $PV $MAXKDEVER kde-base/kpat)
+$(deprange $PV $MAXKDEVER kde-base/kpoker)
+$(deprange 3.3.1 $PV kde-base/ktron)
+$(deprange 3.3.1 $PV kde-base/ktuberling)
+$(deprange 3.3.1 $PV kde-base/ksame)
+$(deprange 3.3.1 $PV kde-base/kshisen)
+$(deprange 3.3.1 $PV kde-base/ksirtet)
+$(deprange 3.3.1 $PV kde-base/ksmiletris)
+$(deprange 3.3.1 $PV kde-base/ksnake)
+$(deprange 3.3.1 $PV kde-base/ksokoban)
+$(deprange 3.3.1 $PV kde-base/kspaceduel)
+$(deprange 3.3.1 $PV kde-base/kreversi)
+$(deprange 3.3.1 $PV kde-base/kwin4)
+$(deprange 3.3.1 $PV kde-base/lskat)
 "

@@ -3,6 +3,8 @@
 # $Header: $
 
 KMNAME=kdeutils
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE Timer"

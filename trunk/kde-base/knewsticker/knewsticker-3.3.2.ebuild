@@ -3,11 +3,16 @@
 # $Header: $
 
 KMNAME=kdenetwork
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="kicker plugin: rss news ticker"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/librss"
+OLDDEPEND="~kde-base/librss-3.3.1"
+DEPEND="
+$(deprange 3.3.1 $PV librss)"
+
 KMCOPYLIB="librss librss"
 KMEXTRACTONLY="librss"

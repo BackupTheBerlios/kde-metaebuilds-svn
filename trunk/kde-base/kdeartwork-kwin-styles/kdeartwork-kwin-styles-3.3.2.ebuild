@@ -4,9 +4,14 @@
 
 KMMODULE=kwin-styles
 KMNAME=kdeartwork
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION=""
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/kwin-$PV"
+OLDDEPEND="~kde-base/kwin-$PV"
+DEPEND="
+$(deprange $PV $MAXKDEVER kde-base/kwin)"
+

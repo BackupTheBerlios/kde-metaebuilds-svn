@@ -3,11 +3,15 @@
 # $Header: $
 
 KMNAME=kdenetwork
+MAXKDEVER=3.3.2
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE: RSS server and client for DCOP"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/librss"
+DEPEND="$(deprange $PV $MAXKDEVER librss)"
+OLDDEPEND="~kde-base/librss-$PV"
+
 KMCOPYLIB="librss librss"
 KMEXTRACTONLY="librss"
