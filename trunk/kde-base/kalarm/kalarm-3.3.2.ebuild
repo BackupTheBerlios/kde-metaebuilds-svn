@@ -11,7 +11,7 @@ IUSE=""
 DEPEND="~kde-base/libkdepim-$PV
 	~kde-base/libkdenetwork-$PV
 	~kde-base/libkcal-$PV
-	~kde-base/kalarmd-$PV"
+	~kde-base/kalarmd-3.3.1"
 KMCOPYLIB="
 	libkcal libkcal
 	libkdenetwork libkdenetwork
