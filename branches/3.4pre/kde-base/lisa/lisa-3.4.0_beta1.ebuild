@@ -18,9 +18,6 @@ src_install() {
 
 	chmod u+s ${D}/${KDEDIR}/bin/reslisa
 
-	# empty config file needed for lisa to work with default settings
-	touch ${D}/etc/lisarc
-
 	# lisa, reslisa initscripts
 	dodir /etc/init.d
 	sed -e "s:_KDEDIR_:${KDEDIR}:g" ${FILESDIR}/lisa > ${D}/etc/init.d/lisa
