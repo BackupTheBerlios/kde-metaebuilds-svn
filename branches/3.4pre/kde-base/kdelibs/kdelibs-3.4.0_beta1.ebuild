@@ -66,13 +66,7 @@ src_install() {
 	kde_src_install
 	dohtml *.html
 
-	if use doc ; then
-		einfo "Copying API documentation..."
-		dodir ${KDEDIR}/share/doc/HTML/en/kdelibs-apidocs
-		cp -r ${S}/apidocs/* ${D}/$KDEDIR/share/doc/HTML/en/kdelibs-apidocs
-	else
-		rm -r ${D}/$KDEDIR/share/doc/HTML/en/kdelibs-apidocs
-	fi
+	use doc && make DESTDIR=${D} install-apidox
 
 	# needed to fix lib64 issues on amd64, see bug #45669
 	use amd64 && ln -s ${KDEDIR}/lib ${D}/${KDEDIR}/lib64
@@ -90,10 +84,3 @@ CONFIG_PROTECT=\"${PREFIX}/share/config ${PREFIX}/env ${PREFIX}/shutdown\"" > ${
 
 }
 
-pkg_postinst() {
-	if use doc ; then
-		rm $KDEDIR/share/doc/HTML/en/kdelibs-apidocs/common
-		ln -sf $KDEDIR/share/doc/HTML/en/common \
-			$KDEDIR/share/doc/HTML/en/kdelibs-apidocs/common
-	fi
-}

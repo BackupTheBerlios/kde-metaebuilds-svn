@@ -5,10 +5,14 @@
 KMNAME=kdebase
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
-inherit kde-meta eutils
 
-DESCRIPTION="KDE pam client that allows you to auth as a specified user without actually doing anything as that user"
+DESCRIPTION="KDE pam.d files"
 KEYWORDS="~x86"
-IUSE="pam"
-DEPEND="pam? ( sys-libs/pam $(deprange $PV $MAXKDEVER kde-base/kdebase-pam) ) !pam? ( sys-apps/shadow )"
+IUSE=""
+DEPEND="sys-libs/pam"
 
+src_install() {
+	insinto /etc/pam.d
+	newins $FILESDIR/kde.pam kde
+	newins $FILESDIR/kde-np.pam kde-np
+}

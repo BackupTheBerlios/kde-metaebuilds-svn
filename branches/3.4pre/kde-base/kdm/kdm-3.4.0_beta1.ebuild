@@ -15,8 +15,8 @@ KMEXTRA="kdmlib/"
 KMEXTRACTONLY="libkonq/konq_defaults.h"
 KMCOMPILEONLY="kcontrol/background"
 DEPEND="$DEPEND 
-		pam? ( sys-libs/pam )
-$(deprange $PV $MAXKDEVER kde-base/kcontrol)"
+	pam? ( sys-libs/pam $(deprange $PV $MAXKDEVER kde-base/kdebase-pam) )
+	$(deprange $PV $MAXKDEVER kde-base/kcontrol)"
 	# Requires the desktop background settings and kdm modules,
 	# so until we separate the kcontrol modules into separate ebuilds :-),
 	# there's a dep here
@@ -35,10 +35,6 @@ src_compile() {
 src_install() {
 	kde-meta_src_install
 	cd ${S}/kdm && make DESTDIR=${D} GENKDMCONF_FLAGS="--no-old --no-backup" install
-
-	insinto /etc/pam.d
-	newins ${FILESDIR}/kde.pam kde
-	newins ${FILESDIR}/kde-np.pam kde-np
 
 	# We tell kdm to /use session files from /usr/share/xsessions.
 	# I've removed some other kdmrc mods from here, since it's not clear why
