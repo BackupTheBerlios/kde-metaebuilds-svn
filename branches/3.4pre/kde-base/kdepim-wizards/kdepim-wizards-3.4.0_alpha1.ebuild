@@ -33,7 +33,9 @@ KMCOPYLIB="
 	libkcal_xmlrpc kresources/egroupware
 	libknotes_xmlrpc kresources/egroupware
 	libkcal_slox kresources/slox
-	libkabc_slox kresources/slox"
+	libkabc_slox kresources/slox
+	libkcal_groupwise kresources/groupwise
+	libkabc_groupwise kresources/groupwise"
 KMEXTRACTONLY="
 	libkdepim/
 	libkcal/
@@ -41,14 +43,21 @@ KMEXTRACTONLY="
 	kresources/
 	knotes/
 	certmanager/lib/"
-KMCOMPILEONLY="kresources/slox/"
+KMCOMPILEONLY="kresources/slox/
+		kresources/groupwise
+		kresources/egroupware"
 
 src_compile() {
 	export DO_NOT_COMPILE="kresources" && kde-meta_src_compile myconf configure
-	# generate "kabcsloxprefs.h"
+
+	# generate headers
 	cd ${S}/kresources/slox && make kabcsloxprefs.h
-	# generate "kcalsloxprefs.h"
 	cd ${S}/kresources/slox && make kcalsloxprefs.h
+	cd ${S}/kresources/groupwise && make kabc_groupwiseprefs.h
+	cd ${S}/kresources/groupwise && make kcal_groupwiseprefsbase.h
+	cd ${S}/kresources/egroupware && make kcal_egroupwareprefs.h
+	cd ${S}/kresources/egroupware && make kabc_egroupwareprefs.h
+	cd ${S}/kresources/egroupware && make knotes_egroupwareprefs.h
 	
 	kde-meta_src_compile make
 }
