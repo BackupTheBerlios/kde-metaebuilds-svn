@@ -263,6 +263,9 @@ function kde-meta_src_unpack() {
 		# Note that KMTARPARAMS is also used by an ebuild
 		tar -xpf $TARFILE $KMTARPARAMS $extractlist	
 		
+		# Avoid syncing if possible
+		rm -f $T/$myP.tar
+		
 		# Default $S is based on $P not $myP; rename the extracted dir to fit $S
 		mv $myP $P
 		
