@@ -11,7 +11,8 @@ DESCRIPTION="KDE mailbox checker"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/mimelib)
-$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)"
+$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
+$(deprange $PV $MAXKDEVER kde-base/libkmime)"
 OLDDEPEND="~kde-base/mimelib-$PV ~kde-base/libkdenetwork-$PV"
 
 KMCOPYLIB="libmimelib mimelib
