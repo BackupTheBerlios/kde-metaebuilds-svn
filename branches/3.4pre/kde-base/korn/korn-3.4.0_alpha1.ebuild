@@ -15,8 +15,9 @@ $(deprange $PV $MAXKDEVER kde-base/libkdenetwork)"
 OLDDEPEND="~kde-base/mimelib-$PV ~kde-base/libkdenetwork-$PV"
 
 KMCOPYLIB="libmimelib mimelib
-	libkdenetwork libkdenetwork"
+	libkmime libkmime"
 # libkcal is installed because a lot of headers are needed, but it don't have to be compiled
 KMEXTRACTONLY="
 	mimelib/
+	libkmime/
 	libkdenetwork/"
