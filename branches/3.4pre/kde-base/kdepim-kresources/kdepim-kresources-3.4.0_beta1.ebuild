@@ -17,6 +17,7 @@ $(deprange $PV $MAXKDEVER kde-base/libkdepim)
 $(deprange $PV $MAXKDEVER kde-base/libkpgp)
 $(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
 $(deprange $PV $MAXKDEVER kde-base/akregator)
+$(deprange $PV $MAXKDEVER kde-base/kode)
 	>=app-crypt/gpgme-0.4.0"
 KMCOPYLIB="
 	libkcal libkcal
