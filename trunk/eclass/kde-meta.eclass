@@ -73,6 +73,7 @@ fi
 #
 # KMNAME: name of the metapackage (eg kdebase, kdepim). Must be set before inheriting this eclass
 # (unlike the other parameters here), since it affects $SRC_URI.
+# KMNOMODULE: unless set to "true", then KMMODULE will be not defined and so also the docs. Useful when we want to installs subdirs of a subproject, like plugins, and we have to mark the topsubdir ad KMEXTRACTONLY.
 # KMMODULE: Defaults to $PN. Specify one subdirectory of KMNAME. Is treated exactly like items in KMEXTRA.
 # Fex., the ebuild name of kdebase/l10n is kdebase-l10n, because just 'l10n' would be too confusing.
 # KMNODOCS: unless set to "true", 'doc/$KMMODULE' is added to KMEXTRA. Set for packages that don't have docs.
@@ -182,13 +183,15 @@ function kde-meta_src_unpack() {
 	debug-print-function $FUNCNAME $*
 
 	# Overridable module (subdirectory) name, with default value
-	if [ -z "$KMMODULE" ]; then
+	if [ "$KMNOMODULE" != "true" ] && [ -z "$KMMODULE" ]; then
 		KMMODULE=$PN
+	else
+		KMMODULE=""
 	fi
 
 	# Unless disabled, docs are also extracted, compiled and installed
 	DOCS=""
-	if [ "$KMNODOCS" != "true" ]; then
+	if [ "$KMNOMODULE" != "true" ] && [ "$KMNODOCS" != "true" ]; then
 		DOCS="doc/$KMMODULE"
 	fi
 	
