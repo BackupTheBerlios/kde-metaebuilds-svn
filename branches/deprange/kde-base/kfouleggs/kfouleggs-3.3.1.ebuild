@@ -9,7 +9,8 @@ inherit kde-meta
 DESCRIPTION="KDE games: KFoulEggs is an adaptation of the well-known (at least in Japan) PuyoPuyo game"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(deprange $PV $MAXKDEVER  kde-base/libkdegames kde-base/libksirtet)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdegames)
+$(deprange $PV $MAXKDEVER kde-base/libksirtet)"
 OLDDEPEND="~kde-base/libkdegames-$PV ~kde-base/libksirtet-$PV"
 
 KMEXTRACTONLY=libkdegames

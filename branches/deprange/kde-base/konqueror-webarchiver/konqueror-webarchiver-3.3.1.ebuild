@@ -11,7 +11,8 @@ inherit kde-meta
 DESCRIPTION="konqueror webarchiver plugin: store an html page and all lnked images etc in a single .war file"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(deprange $PV $MAXKDEVER  kde-base/konqueror kde-base/kdeaddons-docs-konq-plugins)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/konqueror)
+$(deprange $PV $MAXKDEVER kde-base/kdeaddons-docs-konq-plugins)"
 OLDDEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"
 
 

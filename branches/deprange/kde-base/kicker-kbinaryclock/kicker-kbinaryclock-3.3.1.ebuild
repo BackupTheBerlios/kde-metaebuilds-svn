@@ -11,7 +11,8 @@ inherit kde-meta
 DESCRIPTION="kicker applet displaying a clock in binary"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(deprange $PV $MAXKDEVER  kde-base/kicker kde-base/kdeaddons-docs-kicker-applets)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/kicker)
+$(deprange $PV $MAXKDEVER kde-base/kdeaddons-docs-kicker-applets)"
 OLDDEPEND="~kde-base/kicker-$PV ~kde-base/kdeaddons-docs-kicker-applets-$PV"
 
 

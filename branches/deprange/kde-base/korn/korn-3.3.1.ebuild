@@ -10,7 +10,8 @@ inherit kde-meta eutils
 DESCRIPTION="KDE mailbox checker"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(deprange $PV $MAXKDEVER  kde-base/mimelib kde-base/libkdenetwork)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/mimelib)
+$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)"
 OLDDEPEND="~kde-base/mimelib-$PV ~kde-base/libkdenetwork-$PV"
 
 KMCOPYLIB="libmimelib mimelib

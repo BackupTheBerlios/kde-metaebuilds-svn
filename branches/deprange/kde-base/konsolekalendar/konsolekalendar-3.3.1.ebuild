@@ -10,7 +10,8 @@ inherit kde-meta eutils
 DESCRIPTION="A command line interface to KDE calendars"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(deprange $PV $MAXKDEVER  kde-base/libkcal kde-base/libkdepim)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcal)
+$(deprange $PV $MAXKDEVER kde-base/libkdepim)"
 OLDDEPEND="~kde-base/libkcal-$PV ~kde-base/libkdepim-$PV"
 
 KMCOPYLIB="libkcal libkcal

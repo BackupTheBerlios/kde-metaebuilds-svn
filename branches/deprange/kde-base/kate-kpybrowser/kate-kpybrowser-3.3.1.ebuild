@@ -11,7 +11,6 @@ inherit kde-meta
 DESCRIPTION="python browser plugin for kate"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(deprange $PV $MAXKDEVER  kde-base/kate kde-base/kdeaddons-docs-kate-plugins)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/kate)
+$(deprange $PV $MAXKDEVER kde-base/kdeaddons-docs-kate-plugins)"
 OLDDEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"
-
-

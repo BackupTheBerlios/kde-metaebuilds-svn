@@ -11,7 +11,6 @@ inherit kde-meta
 DESCRIPTION="konqueror file manager directory filter plugin"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(deprange $PV $MAXKDEVER  kde-base/konqueror kde-base/kdeaddons-docs-konq-plugins)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/konqueror)
+$(deprange $PV $MAXKDEVER kde-base/kdeaddons-docs-konq-plugins)"
 OLDDEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"
-
-
