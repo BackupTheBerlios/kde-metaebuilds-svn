@@ -22,5 +22,3 @@ KMEXTRACTONLY="
 	libkcal/
 	libkdepim/
 	libkdenetwork/"
-KMCOMPILEONLY="
-	libemailfunctions/"
