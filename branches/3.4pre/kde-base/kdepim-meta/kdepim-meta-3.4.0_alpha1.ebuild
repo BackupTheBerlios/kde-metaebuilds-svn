@@ -43,4 +43,7 @@ RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/libkpimexchange)
 	$(deprange $PV $MAXKDEVER kde-base/libkpimidentities)
 	$(deprange $PV $MAXKDEVER kde-base/libksieve)
-	$(deprange $PV $MAXKDEVER kde-base/mimelib)"
+	$(deprange $PV $MAXKDEVER kde-base/mimelib)
+	$(deprange $PV $MAXKDEVER kde-base/libkmime)
+	$(deprange $PV $MAXKDEVER kde-base/libkpgp)
+	$(deprange $PV $MAXKDEVER kde-base/libkholidays)"
