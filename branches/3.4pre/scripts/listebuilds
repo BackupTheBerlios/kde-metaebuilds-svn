@@ -1,0 +1,58 @@
+#!/bin/sh
+
+ARGSNUMBER=$#
+if [ $ARGSNUMBER -lt "2" ]; then
+	echo "Usage = $0 [-nameonly] [-ebuilds] [-digests] [-manifest] version ebuildlistfile"
+	echo
+	echo "This script will update the newest revision of the specified ebuild version."
+	exit 1
+fi
+
+LISTNAMEONLY=""
+LISTEBUILDS=""
+LISTDIGESTS=""
+LISTMANIFESTS=""
+
+for (( i=1; i<$(($ARGSNUMBER-1)); i++ )); do
+	case $1 in
+		-nameonly) LISTNAMEONLY="yes" ;;
+		-ebuilds) LISTEBUILDS="yes" ;;
+		-digests) LISTDIGESTS="yes" ;;
+		-manifest) LISTMANIFESTS="yes" ;;
+		*) ;;
+	esac
+	shift
+done
+
+VER=$1
+listfile=$2
+
+if [ ! -f $listfile ]; then
+	echo "$listfile: Not found"
+	exit 1
+fi
+
+while read line;
+do
+	if [ -n "$line" -a ! -n "$(echo $line | grep "#")" ]; then
+		ebuilddir=$line
+		ebuildname=`echo $line | sed -e s:.*\/::`
+		
+		# Take the last revision
+		lastebuild="$ebuildname-$VER"
+		i=1
+		while [ -f "$ebuilddir/$ebuildname-$VER-r$i.ebuild" ];
+		do
+			lastebuild="$ebuildname-$VER-r$i"
+			i=$(($i+1))
+		done
+	
+		[ -n "$LISTNAMEONLY" ] && fileslist="$fileslist $ebuildname"
+		[ -n "$LISTEBUILDS" ] && fileslist="$fileslist $ebuilddir/$lastebuild.ebuild"
+		[ -n "$LISTDIGESTS" ] && fileslist="$fileslist $ebuilddir/files/digest-$lastebuild"
+		[ -n "$LISTMANIFESTS" ] && fileslist="$fileslist $ebuilddir/Manifest"
+	fi
+
+done < $listfile
+
+echo "$fileslist"

@@ -1,0 +1,44 @@
+#!/bin/sh
+
+OLDVER=$1
+NEWVER=$2
+listfile=$3
+
+if [ ! $# = "3" ]; then
+	echo "Usage = $0 Oldversion NewVersion ebuildlistfile"
+	echo
+	echo "This script will use the newest revision of the old ebuild version."
+	exit 1
+fi
+
+count=0
+
+while read line;
+do
+	if [ -n "$line" -a ! -n "$(echo $line | grep "#")" ]; then
+		ebuilddir=$line
+		ebuildname=`echo $line | sed -e s:.*\/::`
+	
+		# Take the last revision
+		oldebuild="$ebuildname-$OLDVER.ebuild"
+		i=1
+		while [ -f "$ebuilddir/$ebuildname-$OLDVER-r$i.ebuild" ];
+		do
+			oldebuild="$ebuildname-$OLDVER-r$i.ebuild"	
+			i=$(($i+1))
+		done
+		
+		if [ -f $ebuilddir/$oldebuild ]; then
+			count=$(($count+1))	
+			echo ">>> Copying $ebuilddir/$oldebuild to $ebuilddir/$ebuildname-$NEWVER.ebuild"
+			cp $ebuilddir/$oldebuild $ebuilddir/$ebuildname-$NEWVER.ebuild
+			
+			# Remove the line KM_MAKEFILESREV
+			sed -i s:"KM_MAKEFILESREV.*"::g $ebuilddir/$ebuildname-$NEWVER.ebuild
+		else
+			echo ">>> File $ebuilddir/$oldebuild not found!"
+		fi
+	fi
+done < $listfile
+
+echo "Copied $$count ebuilds"

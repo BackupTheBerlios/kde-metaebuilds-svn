@@ -1,0 +1,7 @@
+MD5 a3bbc8b56ef460e5cda2015f584a2f79 kdebase-l10n-3.3.2.ebuild 394
+MD5 a3bbc8b56ef460e5cda2015f584a2f79 kdebase-l10n-3.3.1.ebuild 394
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.2.diff 295
+MD5 4a25ddbef2a4945460493f3e76b51ff6 files/digest-kdebase-l10n-3.3.1 294
+MD5 50425c576f9ef971939ab50fac02ecbb files/digest-kdebase-l10n-3.3.2 369
