@@ -16,7 +16,7 @@ KMEXTRA="doc/kcontrol/lanbrowser"
 src_install() {
 	kde-meta_src_install
 
-	chmod +s ${D}/${KDEDIR}/bin/reslisa
+	chmod u+s ${D}/${KDEDIR}/bin/reslisa
 
 	# empty config file needed for lisa to work with default settings
 	touch ${D}/etc/lisarc
