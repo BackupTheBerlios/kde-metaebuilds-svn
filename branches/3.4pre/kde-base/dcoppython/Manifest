@@ -1,3 +1,4 @@
-MD5 0ece4d522b5f77915b86f6e03497ba87 dcoppython-3.3.1.ebuild 313
+MD5 70d63555517be83b300811525960acd3 dcoppython-3.4.0_beta1.ebuild 356
+MD5 70d63555517be83b300811525960acd3 dcoppython-3.4.0_alpha1.ebuild 356
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
-MD5 3d45ac6c976be80f735224afee29c0f7 files/digest-dcoppython-3.3.1 302
+MD5 4877266a41162d4c439090a71dcc66bc files/digest-dcoppython-3.4.0_beta1 225
