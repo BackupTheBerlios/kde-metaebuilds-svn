@@ -34,13 +34,6 @@ src_install() {
 	# ugly, needs fixing: don't install kcontrol/background
 	kde-meta_src_install
 	
-	# Show gnome icons when choosing new icon for desktop shortcut
-	dodir /usr/share/pixmaps
-	mv ${D}/${PREFIX}/share/apps/kdesktop/pics/* ${D}/usr/share/pixmaps/
-	rm -rf ${D}/${PREFIX}/share/apps/kdesktop/pics/
-	cd ${D}/${PREFIX}/share/apps/kdesktop/
-	ln -sf /usr/share/pixmaps/ pics
-
 	rmdir ${D}/${PREFIX}/share/templates/.source/emptydir
 }
 
