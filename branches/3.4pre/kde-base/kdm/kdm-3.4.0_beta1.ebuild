@@ -44,5 +44,10 @@ src_install() {
 	# Tell me if you don't like this. --danarmak
 	cd ${D}/${KDEDIR}/share/config/kdm || die
 	sed -i -e "s:#SessionsDirs=:SessionsDirs=/usr/share/xsession\n#SessionsDirs=:" kdmrc
+	
+	# Install a default user icon to prevent kdm from logging an error every time it runs.
+	cd ${D}/${KDEDIR}/share/apps/kdm
+	mkdir faces
+	cp pics/users/default1.png faces/.default.face.icon
 }
 
