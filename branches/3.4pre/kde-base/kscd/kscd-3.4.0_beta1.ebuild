@@ -16,5 +16,12 @@ $(deprange $PV $MAXKDEVER kde-base/libkcddb)"
 
 KMCOPYLIB="libkcddb libkcddb"
 KMEXTRACTONLY="
-	libkcddb/
 	mpeglib_artsplug/configure.in.in"
+
+KMCOMPILEONLY="libkcddb"
+
+src_compile() {
+	DO_NOT_COMPILE=libkcddb kde-meta_src_compile myconf configure
+	cd $S/libkcddb && make configbase.h
+	DO_NOT_COMPILE=libkcddb kde-meta_src_compile make
+}
