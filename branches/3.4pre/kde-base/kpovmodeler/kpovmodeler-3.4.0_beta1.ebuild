@@ -10,6 +10,6 @@ inherit kde-meta eutils
 DESCRIPTION="KDE: Modeler for POV-Ray Scenes"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="virtual/glut virtual/opengl"
+DEPEND="virtual/opengl"
 RDEPEND="${DEPEND}
 	media-gfx/povray"
