@@ -53,4 +53,5 @@ $(deprange $PV $MAXKDEVER kde-base/kdebase-l10n)
 $(deprange $PV $MAXKDEVER kde-base/libkonq)
 $(deprange $PV $MAXKDEVER kde-base/nsplugins)
 $(deprange $PV $MAXKDEVER kde-base/kdebase-pics)
-$(deprange $PV $MAXKDEVER kde-base/knetattach)"
+$(deprange $PV $MAXKDEVER kde-base/knetattach)
+$(deprange $PV $MAXKDEVER kde-base/kdebase-startkde)"
