@@ -12,7 +12,7 @@ IUSE=""
 
 DEPEND="
 ~kde-base/ktuberling-$PV
-~kde-base/kolf-$PV
+arts? ( ~kde-base/kolf-$PV )
 ~kde-base/kpat-$PV
 ~kde-base/katomic-$PV
 ~kde-base/kbounce-$PV
