@@ -3,3 +3,4 @@ MD5 097ea8fc3b047c5b121e9d5a5e677d04 smoke-3.4.0_beta1.ebuild 494
 MD5 92a2bf7b4c3eebd09d53b684b22513af files/parallel-make.diff 1696
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 4877266a41162d4c439090a71dcc66bc files/digest-smoke-3.4.0_beta1 225
+MD5 7264c3be81fdb26380cbac0115a6b439 files/digest-smoke-3.4.0_alpha1 72
