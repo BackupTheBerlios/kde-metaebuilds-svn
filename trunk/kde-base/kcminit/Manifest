@@ -1,5 +1,6 @@
 MD5 e8b6ba96f3efa2529870ea65b9075c71 kcminit-3.3.1.ebuild 428
 MD5 e8b6ba96f3efa2529870ea65b9075c71 kcminit-3.3.0.ebuild 428
-MD5 8ac73092ff83886bdacad4ae2ad40f93 files/digest-kcminit-3.3.1 145
+MD5 42d829b06d866e3d8f5c1b3cb83cb155 files/digest-kcminit-3.3.0 146
+MD5 ff5f4c1a407ca750f4e7a18a92366e89 files/digest-kcminit-3.3.1 145
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295

@@ -1,5 +1,6 @@
 MD5 f0704f55141f8e22eadd30e8a03e7d27 kdcop-3.3.0.ebuild 443
 MD5 f0704f55141f8e22eadd30e8a03e7d27 kdcop-3.3.1.ebuild 443
-MD5 998dfb98ef6adb47feb314a78e29666d files/digest-kdcop-3.3.1 143
+MD5 c9d52fe51d6f320a598f1ebd0ac78513 files/digest-kdcop-3.3.0 144
+MD5 22ae1a00f12972a8619cd94f17455f9a files/digest-kdcop-3.3.1 143
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295

@@ -1,3 +1,4 @@
 MD5 2df7152deba98ec36b8754764350eadb kgpg-3.3.0.ebuild 262
 MD5 2df7152deba98ec36b8754764350eadb kgpg-3.3.1.ebuild 262
-MD5 b9aa813c3a97c7b4f461e336db53a47f files/digest-kgpg-3.3.1 142
+MD5 233cfe7326940e2a5e2b3d884988c1d3 files/digest-kgpg-3.3.0 68
+MD5 f59c1bd8bf2ed6daec62ac28e67ea0ef files/digest-kgpg-3.3.1 142

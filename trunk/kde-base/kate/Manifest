@@ -1,5 +1,6 @@
 MD5 e8b6ba96f3efa2529870ea65b9075c71 kate-3.3.1.ebuild 428
 MD5 e8b6ba96f3efa2529870ea65b9075c71 kate-3.3.0.ebuild 428
-MD5 077fd751b237c781f55fa8f6a208ea3b files/digest-kate-3.3.1 142
+MD5 bfe727efcacaf1bc6fef81284bd8a10e files/digest-kate-3.3.0 143
+MD5 f8b8a325a389e7fb4d4f06f7c3873478 files/digest-kate-3.3.1 142
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295

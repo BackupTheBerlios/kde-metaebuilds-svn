@@ -1,3 +1,4 @@
 MD5 3fe61775056c2f006d4fdc018641880d kdf-3.3.0.ebuild 239
 MD5 3fe61775056c2f006d4fdc018641880d kdf-3.3.1.ebuild 239
-MD5 e58e1c1cd0305978c7752adeb7b54c28 files/digest-kdf-3.3.1 141
+MD5 233cfe7326940e2a5e2b3d884988c1d3 files/digest-kdf-3.3.0 68
+MD5 7c843f1f48462766ae4f4d6b3eac9a14 files/digest-kdf-3.3.1 141

@@ -1,6 +1,6 @@
 MD5 a232bb7481e7364d63cd0fb729d35bf5 ksmserver-3.3.1.ebuild 441
 MD5 a232bb7481e7364d63cd0fb729d35bf5 ksmserver-3.3.0.ebuild 441
 MD5 2c1b42d8cf9bd8799c241c21d0ab93ef files/digest-ksmserver-3.3.0 68
-MD5 2fc37f547444702199d6e33634d44c20 files/digest-ksmserver-3.3.1 68
+MD5 9aad0dd0c3d7991d0a116d1e579546e4 files/digest-ksmserver-3.3.1 147
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
