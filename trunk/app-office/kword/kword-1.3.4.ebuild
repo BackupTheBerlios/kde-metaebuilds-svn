@@ -41,8 +41,11 @@ KMEXTRA="filters/kword"
 need-kde 3.1
 
 src_unpack() {
-	kde-meta_src_unpack
+	kde-meta_src_unpack unpack
 	
 	# We need to compile first liboofilter because it's needed by the kword's OOo filters
 	echo "SUBDIRS = liboofilter kword" > $S/filters/Makefile.am	
+	
+	kde-meta_src_unpack makefiles
 }
+

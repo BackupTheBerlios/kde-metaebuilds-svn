@@ -39,8 +39,10 @@ KMEXTRA="filters/kpresenter"
 need-kde 3.1
 
 src_unpack() {
-	kde-meta_src_unpack
+	kde-meta_src_unpack unpack
 	
 	# We need to compile first liboofilter because it's needed by the kpresenter's OOo filters
 	echo "SUBDIRS = liboofilter kpresenter" > $S/filters/Makefile.am
+	
+	kde-meta_src_unpack makefiles
 }

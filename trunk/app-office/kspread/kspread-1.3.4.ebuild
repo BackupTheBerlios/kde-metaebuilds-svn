@@ -41,8 +41,10 @@ KMEXTRA="filters/kspread"
 need-kde 3.1
 
 src_unpack() {
-	kde-meta_src_unpack
+	kde-meta_src_unpack unpack
 	
 	# We need to compile first liboofilter because it's needed by the kspread's OOo filters
 	echo "SUBDIRS = liboofilter kspread" > $S/filters/Makefile.am
+	
+	kde-meta_src_unpack makefiles
 }
