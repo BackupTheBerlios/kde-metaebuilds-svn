@@ -9,3 +9,4 @@ DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop a
 KEYWORDS="~x86"
 IUSE=""
 KMEXTRA="kfile-plugins/pdf"
+PATCHES="${FILESDIR}/post-3.3.1-kdegraphics.diff"
