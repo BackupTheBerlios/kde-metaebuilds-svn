@@ -49,8 +49,10 @@ if [ "$KDEBASE" = "true" ]; then
 fi
 # END adapted from kde-dist.eclass
 
-# prepackaged makefiles for broken-up ebuilds
-SRC_URI="$SRC_URI usepackagedmakefiles? ( mirror://gentoo/$P-makefiles.tar.bz2 )"
+# prepackaged makefiles for broken-up ebuilds. Ebuild can define KM_MAKEFILESREV to be >=1 to
+# use a newer tarball without increasing the ebuild revision.
+MAKEFILESTARBALL="$PN-$PVR-${KM_MAKEFILESREV:-0}-makefiles.tar.bz2"
+SRC_URI="$SRC_URI usepackagedmakefiles? ( mirror://gentoo/$MAKEFILESTARBALL )"
 
 # TODO FIX: Temporary place for code common to all ebuilds derived from any one metapackage.
 
@@ -218,30 +220,25 @@ function kde-meta_src_unpack() {
 		fi
 	done
 
-	# Create Makefile.am files
-	create_fullpaths
-	change_makefiles $S "false"
-	
 	# apply any patches
 	kde_src_unpack autopatch
 
-	# Extract Makefile.in files, configure script. 
-	# Don't preserve mtimes; this overrides all Makefile.am data.
-	if useq usepackagedmakefiles; then
-		tar -xjmf $DISTDIR/$P-makefiles.tar.bz2
-	fi
-	
 	# allow usage of precreated makefiles, and/or packaging of the makefiles we create.
 	if useq usepackagedmakefiles; then
 		echo ">>> Using pregenerated makefile templates"
+		cd $WORKDIR
+		tar -xjf $DISTDIR/$MAKEFILESTARBALL
 	else
+		# Create Makefile.am files
+		create_fullpaths
+		change_makefiles $S "false"
 		if useq packagemakefiles; then
 			make -f admin/Makefile.common || die "Failed to create makefile templates"
 			cd $WORKDIR
-			/bin/tar -cjpf $T/$P-makefiles.tar.bz2 $P/aclocal.m4 $P/stamp-h.in $P/configure.in* \
-				`find $P -name Makefile.in` $P/config.h.in $P/acinclude.m4 \
+			/bin/tar -cjpf $T/$MAKEFILESTARBALL  $P/stamp-h.in $P/configure.in* \
+				`find $P -name Makefile\*` $P/config.h.in $P/acinclude.m4 $P/aclocal.m4 \
 				$P/configure $P/configure.files $P/subdirs
-			echo ">>> Saved generated makefile templates in $T/$P-makefiles.tar.bz2"
+			echo ">>> Saved generated makefile templates in $T/$MAKEFILESTARBALL"
 		fi
 	fi
 }
@@ -278,7 +275,9 @@ function kde-meta_src_compile() {
 			myconf="$EXTRA_ECONF $myconf"
 		fi
 		kde_src_compile $section
-		[ "$section" == "configure" ] && confcache_stop
+		if [ "$section" == "configure" ]; then
+			confcache_stop
+		fi
 	done
 }
 

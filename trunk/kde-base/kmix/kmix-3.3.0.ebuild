@@ -16,5 +16,5 @@ src_compile() {
 	# alsa 0.9 not supported
 	use alsa && myconf="$myconf --with-alsa --with-arts-alsa" || myconf="$myconf --without-alsa --disable-alsa"
 	
-	kde_src_compile
+	kde-meta_src_compile
 }

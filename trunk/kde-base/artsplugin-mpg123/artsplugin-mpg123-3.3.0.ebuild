@@ -21,5 +21,5 @@ pkg_setup() {
 src_compile() {
 	replace-flags -O3 -O2
 	
-	kde_src_compile
+	kde-meta_src_compile
 }

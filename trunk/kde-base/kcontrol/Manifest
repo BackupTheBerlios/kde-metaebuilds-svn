@@ -1,4 +1,4 @@
 MD5 bba836cfad9b13ce07098df4193e392d kcontrol-3.3.0.ebuild 1287
-MD5 84de275c7e924072f1d50986afc52e05 files/digest-kcontrol-3.3.0 145
+MD5 15f6495a37d23346a6418a97462da52d files/digest-kcontrol-3.3.0 147
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 73e67368dac38c5d10a0f76d69c697fd files/configure.in.in-kdm-settings 543

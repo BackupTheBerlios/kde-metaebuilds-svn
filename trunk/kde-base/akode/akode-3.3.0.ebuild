@@ -17,5 +17,5 @@ DEPEND="flac? ( media-libs/flac )
 src_compile() {
 	use oggvorbis && myconf="$myconf --with-vorbis=/usr" || myconf="$myconf --without-vorbis"
 	
-	kde_src_compile
+	kde-meta_src_compile
 }
