@@ -13,8 +13,8 @@ KMEXTRACTONLY="mpeglib_artsplug/configure.in.in" # needed because the artsc-conf
 KMEXTRA="doc/artsbuilder"
 
 pkg_setup() {
-	if [ ! `use arts` ]; then
-		eerror "kdemultimedia-arts needs the USE=\"alsa\" enabled."
+	if ! useq arts; then
+		eerror "artsplugin-audiofile needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
 		die	
 	fi
 }
