@@ -1,2 +1,4 @@
-MD5 96f1535f79238710855a49864b63db29 krfb-3.3.0.ebuild 324
+MD5 c82181b235f2cb7d2ca2af4f0edb7edc krfb-3.3.1.ebuild 400
+MD5 c82181b235f2cb7d2ca2af4f0edb7edc krfb-3.3.0.ebuild 400
 MD5 ee738112b91143ae2af44dceb3d26ab1 files/digest-krfb-3.3.0 70
+MD5 a0086a72d069c5606f1e2ea81b98fea8 files/digest-krfb-3.3.1 70

@@ -1,3 +1,4 @@
-MD5 ca4420ad69402fef0ebccf76eb911523 libksieve-3.3.0.ebuild 387
-MD5 eb6d6606944139436d80c2d1077b74a1 libksieve-3.3.0.ebuild~ 388
+MD5 6e0fade4209fc9ea98d1b84bc23a1e41 libksieve-3.3.1.ebuild 284
+MD5 6e0fade4209fc9ea98d1b84bc23a1e41 libksieve-3.3.0.ebuild 284
 MD5 b23510fd22323447768b483104d208b0 files/digest-libksieve-3.3.0 66
+MD5 2de4f94fe84a3a581cdcf16819fa8e30 files/digest-libksieve-3.3.1 67

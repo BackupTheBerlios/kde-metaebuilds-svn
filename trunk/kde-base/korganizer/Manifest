@@ -1,2 +1,5 @@
-MD5 2552e3396d0441f1eceb6de177b515dc korganizer-3.3.0.ebuild 961
+MD5 4c42a91327f6249b05a9e2394f27ad89 korganizer-3.3.0.ebuild 1502
+MD5 4c42a91327f6249b05a9e2394f27ad89 korganizer-3.3.1.ebuild 1502
+MD5 a177687427f7274f5370733d2f4ff16a files/kdepim-3.3.0-korganizer.patch 469
 MD5 b23510fd22323447768b483104d208b0 files/digest-korganizer-3.3.0 66
+MD5 2de4f94fe84a3a581cdcf16819fa8e30 files/digest-korganizer-3.3.1 67

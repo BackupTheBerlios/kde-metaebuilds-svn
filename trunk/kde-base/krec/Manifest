@@ -1,2 +1,4 @@
-MD5 fc185f6f292b217d62cad9d25deda46a krec-3.3.0.ebuild 610
+MD5 56fece338961c17dd678ce47b4ba1747 krec-3.3.1.ebuild 869
+MD5 56fece338961c17dd678ce47b4ba1747 krec-3.3.0.ebuild 869
 MD5 ff71f209a5c07db1d7ba70b4109484f0 files/digest-krec-3.3.0 73
+MD5 b25b44699f69e998481bd9aad08e1cef files/digest-krec-3.3.1 73

@@ -1,3 +1,4 @@
-MD5 792a4cdd71d4b63c78460f10bb5b7960 libkcal-3.3.0.ebuild 414
-MD5 eb6d6606944139436d80c2d1077b74a1 libkcal-3.3.0.ebuild~ 388
+MD5 f4ec5f859740cc61a0f731128b622da0 libkcal-3.3.1.ebuild 302
+MD5 f4ec5f859740cc61a0f731128b622da0 libkcal-3.3.0.ebuild 302
 MD5 b23510fd22323447768b483104d208b0 files/digest-libkcal-3.3.0 66
+MD5 2de4f94fe84a3a581cdcf16819fa8e30 files/digest-libkcal-3.3.1 67

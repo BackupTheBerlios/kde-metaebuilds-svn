@@ -1,2 +1,4 @@
-MD5 a9a852a57da7b16476572795ec9cd1da ksync-3.3.0.ebuild 469
+MD5 681af824ec1a4251dea27241156dd6ea ksync-3.3.0.ebuild 371
+MD5 681af824ec1a4251dea27241156dd6ea ksync-3.3.1.ebuild 371
 MD5 b23510fd22323447768b483104d208b0 files/digest-ksync-3.3.0 66
+MD5 2de4f94fe84a3a581cdcf16819fa8e30 files/digest-ksync-3.3.1 67

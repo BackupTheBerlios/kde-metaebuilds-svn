@@ -1,2 +1,4 @@
-MD5 334c51c199280d3c685058c89b57e2f3 libksvg-3.3.0.ebuild 345
+MD5 5cd7d6a15d71330b668df0e8beb7d625 libksvg-3.3.1.ebuild 371
+MD5 5cd7d6a15d71330b668df0e8beb7d625 libksvg-3.3.0.ebuild 371
 MD5 33d7a652f3ae6f9e66d79fb818b684f6 files/digest-libksvg-3.3.0 71
+MD5 fecf5cb3209323e56be3368df325411a files/digest-libksvg-3.3.1 71
