@@ -38,7 +38,6 @@ RDEPEND="arts? ( ~kde-base/arts-${PV/3.4/1.4} )
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58
 	>=sys-devel/automake-1.8
-	app-text/sgml-common
 	doc? ( app-doc/doxygen )
 	!kde-misc/kgamma"
 
