@@ -5,6 +5,7 @@ for dir in $@; do
     cd $dir
     for x in *; do
 	[ "$x" != "${x//-meta}" ] && echo ">>> Skipping: $x" && continue
+	[ -f "/usr/local/portage/distfiles/$x-$ver-0-makefiles.tar.bz2" ] && echo ">>> Exists, skipping" && continue
         echo ">>> $x"
         cd $x && \
 	rm -f Manifest files/digest-$x-$ver && \
