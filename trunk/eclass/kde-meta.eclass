@@ -329,6 +329,7 @@ function kde-meta_src_unpack() {
 				else
 					die "Can't find library ${libname} under ${PREFIX}/lib/"
 				fi
+				libname=""
 			fi
 		done
 	
