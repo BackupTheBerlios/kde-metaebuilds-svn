@@ -3,7 +3,8 @@
 # $Header: $
 
 KMNAME=kdesdk
-KMMODULE=" "
+KMNOMODULE="true"
+KMNODOCS="true"
 inherit kde-meta eutils
 
 DESCRIPTION="kdesdk-misc - Various files and utilities"
