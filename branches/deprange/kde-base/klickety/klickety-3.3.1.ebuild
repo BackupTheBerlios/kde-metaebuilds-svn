@@ -9,9 +9,8 @@ inherit kde-meta
 DESCRIPTION="KDE: Klickety is an adaptation of the "clickomania" game"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/libkdegames kde-base/libksirtet)"
 OLDDEPEND="~kde-base/libkdegames-$PV ~kde-base/libksirtet-$PV"
-need-version-range $KM_DEPRANGE  kde-base/libkdegames kde-base/libksirtet
 
 KMEXTRACTONLY=libkdegames
 KMCOMPILEONLY=libksirtet

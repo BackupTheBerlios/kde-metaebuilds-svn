@@ -13,10 +13,11 @@ inherit kde-meta
 DESCRIPTION="KDE java bindings"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="virtual/jdk"
-RDEPEND="virtual/jre"
+DEPEND="virtual/jdk
+	$(need-version-range $KM_DEPRANGE  kde-base/kwin kde-base/kcontrol kde-base/qtjava)"
+RDEPEND="virtual/jre
+	$(need-version-range $KM_DEPRANGE  kde-base/kwin kde-base/kcontrol kde-base/qtjava)"
 OLDDEPEND="~kde-base/kwin-$PV ~kde-base/kcontrol-$PV ~kde-base/qtjava-$PV virtual/jdk"
-need-version-range $KM_DEPRANGE  kde-base/kwin kde-base/kcontrol kde-base/qtjava
 
 PATCHES="$FILESDIR/no-gtk-glib-check.diff $FILESDIR/classpath.diff"
 

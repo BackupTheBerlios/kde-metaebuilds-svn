@@ -25,7 +25,7 @@ RDEPEND="~kde-base/akode-$PV
 	~kde-base/kmid-3.3.1
 	~kde-base/kmix-$PV
 	arts? ( ~kde-base/krec-3.3.1 )
-	~kde-base/kscd-3.3.1
+	~kde-base/kscd-$PV
 	~kde-base/libkcddb-3.3.1
 	~kde-base/mpeglib-3.3.1
 	arts? ( ~kde-base/noatun-$PV )"

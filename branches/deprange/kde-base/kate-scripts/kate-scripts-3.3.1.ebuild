@@ -11,7 +11,7 @@ inherit kde-meta
 DESCRIPTION="Scripts for kate: HTML tidy"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/kate kde-base/kdeaddons-docs-kate-plugins)"
 OLDDEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"
-need-version-range $KM_DEPRANGE  kde-base/kate kde-base/kdeaddons-docs-kate-plugins
+
 

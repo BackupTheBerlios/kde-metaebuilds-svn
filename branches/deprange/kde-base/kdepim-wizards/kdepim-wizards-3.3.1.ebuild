@@ -11,11 +11,13 @@ inherit kde-meta eutils
 DESCRIPTION="KDEPIM wizards"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/libkdepim-$PV 
+OLDDEPEND="~kde-base/libkdepim-$PV 
 	~kde-base/libkcal-$PV 
 	~kde-base/certmanager-$PV
 	~kde-base/kdepim-kresources-$PV
 	~kde-base/libkpimidentities-$PV"
+DEPEND="$(need-version-range $KM_DEPRANGE kde-base/libkdepim kde-base/libkcal kde-base/certmanager kde-base/kdepim-kresources kde-base/libkpimidentities)"
+
 KMCOPYLIB="
 	libkcal_imap kresources/imap/kcal
 	libkabc_imap kresources/imap/kabc

@@ -9,9 +9,8 @@ inherit kde-meta
 DESCRIPTION="KDE: Same Game - a little game about balls and how to get rid of them"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/libkdegames)"
 OLDDEPEND="~kde-base/libkdegames-$PV"
-need-version-range $KM_DEPRANGE  kde-base/libkdegames
 
 KMEXTRACTONLY=libkdegames
 KMCOPYLIB="libkdegames libkdegames"

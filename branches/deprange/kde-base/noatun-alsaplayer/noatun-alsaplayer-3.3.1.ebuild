@@ -11,8 +11,8 @@ inherit kde-meta
 DESCRIPTION="noatun alsaplayer plugin"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/noatun)
+		$(need-version-range 1.3.1 1.3.2 kde-base/arts)"
 OLDDEPEND="~kde-base/arts-1.3.1 ~kde-base/noatun-$PV"
-need-version-range $KM_DEPRANGE  kde-base/noatun
-need-version-range 1.3.1 1.3.2 kde-base/arts
+
 

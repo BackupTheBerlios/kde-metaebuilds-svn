@@ -11,7 +11,7 @@ inherit kde-meta
 DESCRIPTION="noatun lyrics downloading plugin"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/noatun)"
 OLDDEPEND="~kde-base/noatun-$PV"
-need-version-range $KM_DEPRANGE  kde-base/noatun
+
 

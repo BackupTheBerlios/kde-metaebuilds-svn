@@ -11,7 +11,7 @@ inherit kde-meta
 DESCRIPTION="khtml plugins that link to the w3c html, css validators"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/konqueror kde-base/kdeaddons-docs-konq-plugins)"
 OLDDEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"
-need-version-range $KM_DEPRANGE  kde-base/konqueror kde-base/kdeaddons-docs-konq-plugins
+
 

@@ -10,9 +10,9 @@ inherit kde-meta eutils
 DESCRIPTION="KDE: Communicating with your mobile phone"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/libkdepim)"
 OLDDEPEND="~kde-base/libkdepim-$PV"
-need-version-range $KM_DEPRANGE  kde-base/libkdepim
+
 KMCOPYLIB="
 	libkdepim libkdepim"
 KMEXTRACTONLY="

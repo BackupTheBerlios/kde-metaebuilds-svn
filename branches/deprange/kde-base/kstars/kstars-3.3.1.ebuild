@@ -9,9 +9,8 @@ inherit kde-meta
 DESCRIPTION="KDE Desktop Planetarium"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/libkdeedu)"
 OLDDEPEND="~kde-base/libkdeedu-$PV"
-need-version-range $KM_DEPRANGE  kde-base/libkdeedu
 
 KMEXTRACTONLY="libkdeedu/extdate libkdeedu/kdeeduplot"
 KMCOPYLIB="libextdate libkdeedu/extdate

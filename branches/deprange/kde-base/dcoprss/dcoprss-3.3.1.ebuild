@@ -10,8 +10,8 @@ inherit kde-meta eutils
 DESCRIPTION="KDE: RSS server and client for DCOP"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="$(need-version-range $KM_DEPRANGE librss)"
 OLDDEPEND="~kde-base/librss-$PV"
-need-version-range $KM_DEPRANGE librss
+
 KMCOPYLIB="librss librss"
 KMEXTRACTONLY="librss"

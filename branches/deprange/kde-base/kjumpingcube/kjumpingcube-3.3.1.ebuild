@@ -9,9 +9,8 @@ inherit kde-meta
 DESCRIPTION="KDE: Tactical one or two player game"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/libkdegames)"
 OLDDEPEND="~kde-base/libkdegames-$PV"
-need-version-range $KM_DEPRANGE  kde-base/libkdegames
 
 KMEXTRACTONLY=libkdegames
 KMCOPYLIB="libkdegames libkdegames"

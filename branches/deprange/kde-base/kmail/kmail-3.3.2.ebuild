@@ -11,7 +11,7 @@ IUSE=""
 DEPEND="~kde-base/libkdenetwork-$PV  
 	~kde-base/libkdepim-$PV
 	~kde-base/libkpimidentities-3.3.1
-	~kde-base/mimelib-3.3.1
+	~kde-base/mimelib-$PV
 	~kde-base/libksieve-3.3.1
 	~kde-base/certmanager-$PV
 	~kde-base/libkcal-$PV"

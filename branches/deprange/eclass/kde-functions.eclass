@@ -45,15 +45,13 @@ need-autoconf() {
 
 }
 
-# Params:
-# 1. minimal version required. A -rN part is supported.
-# 2. maximal version allowed. A -rN part is NOT supported.
-# 3ff. package names.
-# This function adds a string of the form, 
+# Usage: need-version-range minver maxver package [...]
+# For minver, a -rN part is supported.
+# This function echoes a string of the form (for package="kde-base/kdelibs")
 # || ( =kde-base/kdelibs-3.3.1-r1 ~kde-base/kdelibs-3.3.2 ~kde-base/kdelibs-3.3.3 )
-# to DEPEND and RDEPEND. This dep means versions of $1 from $2
-# through $3 will be acceptable.
-# Note that only the kde versioning scheme is supported - ie x.y.z, and we only iterate through z
+# This dep means versions of package from maxver through minver will be acceptable.
+# Note that only the kde versioning scheme is supported - ie x.y, and we only iterate through y
+# (i.e. x can contain more . separators).
 need-version-range() {
 	
 	# Assign, parse params
@@ -64,7 +62,7 @@ need-version-range() {
 	local BASEVER=${MINVER%.*}
 	local MINMINOR=${MINVER##*.}
 	local MAXMINOR=${MAXVER##*.}
-	
+
 	while [ -n "$1" ]; do
 		local PACKAGE=$1
 		shift
@@ -93,8 +91,7 @@ need-version-range() {
 		fi
 		
 		NEWDEP="$NEWDEP ) "
-		DEPEND="$DEPEND $NEWDEP"
-		RDEPEND="$RDEPEND $NEWDEP"
+		echo -n $NEWDEP
 	done
 }
 
@@ -146,7 +143,8 @@ need-kde() {
 		# KM_DEPRANGE should contain 2nd and 3rd parameter to need-version-range:
 		# max and min KDE versions. E.g. KM_DEPRANGE="3.3.4 $PV".
 		if [ -n "$KM_DEPRANGE" ]; then
-			need-version-range $KM_DEPRANGE kde-base/kdelibs
+			DEPEND="$DEPEND $(need-version-range $KM_DEPRANGE kde-base/kdelibs)"
+			RDEPEND="$RDEPEND $(need-version-range $KM_DEPRANGE kde-base/kdelibs)"
 		else
 			DEPEND="${DEPEND} ~kde-base/kdelibs-$PV"
 			RDEPEND="${RDEPEND} ~kde-base/kdelibs-$PV"

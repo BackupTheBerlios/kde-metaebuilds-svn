@@ -10,8 +10,8 @@ inherit kde-meta eutils
 DESCRIPTION="Kooka is a KDE application which provides access to scanner hardware"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/libkscan)"
 OLDDEPEND="~kde-base/libkscan-$PV"
-need-version-range $KM_DEPRANGE  kde-base/libkscan
+
 KMCOPYLIB="libkscan libkscan"
 KMEXTRACTONLY="libkscan"

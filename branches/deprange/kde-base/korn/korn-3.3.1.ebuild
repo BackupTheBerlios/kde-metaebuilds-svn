@@ -10,9 +10,9 @@ inherit kde-meta eutils
 DESCRIPTION="KDE mailbox checker"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/mimelib kde-base/libkdenetwork)"
 OLDDEPEND="~kde-base/mimelib-$PV ~kde-base/libkdenetwork-$PV"
-need-version-range $KM_DEPRANGE  kde-base/mimelib kde-base/libkdenetwork
+
 KMCOPYLIB="libmimelib mimelib
 	libkdenetwork libkdenetwork"
 # libkcal is installed because a lot of headers are needed, but it don't have to be compiled

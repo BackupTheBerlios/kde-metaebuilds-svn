@@ -13,30 +13,30 @@ IUSE=""
 RDEPEND="
 	~kde-base/certmanager-$PV
 	~kde-base/kaddressbook-$PV
-	~kde-base/kalarm-3.3.1
+	~kde-base/kalarm-$PV
 	~kde-base/kalarmd-3.3.1
 	~kde-base/kandy-3.3.1
 	~kde-base/karm-$PV
-	~kde-base/kdepim-kioslaves-3.3.1
-	~kde-base/kdepim-kresources-3.3.1
+	~kde-base/kdepim-kioslaves-$PV
+	~kde-base/kdepim-kresources-$PV
 	~kde-base/kdepim-wizards-3.3.1
 	~kde-base/kitchensync-3.3.1
 	~kde-base/kmail-$PV
 	~kde-base/kmailcvt-3.3.1
 	~kde-base/kmobile-3.3.1
 	~kde-base/knode-$PV
-	~kde-base/knotes-3.3.1
+	~kde-base/knotes-$PV
 	~kde-base/konsolekalendar-3.3.1
 	~kde-base/kontact-$PV
 	~kde-base/korganizer-$PV
 	~kde-base/korn-3.3.1
 	~kde-base/kpilot-$PV
 	~kde-base/ksync-3.3.1
-	~kde-base/ktnef-3.3.1
+	~kde-base/ktnef-$PV
 	~kde-base/libkcal-$PV
 	~kde-base/libkdenetwork-$PV
 	~kde-base/libkdepim-$PV
 	~kde-base/libkpimexchange-$PV
 	~kde-base/libkpimidentities-3.3.1
 	~kde-base/libksieve-3.3.1
-	~kde-base/mimelib-3.3.1"
+	~kde-base/mimelib-$PV"

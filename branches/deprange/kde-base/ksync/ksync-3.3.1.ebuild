@@ -10,9 +10,9 @@ inherit kde-meta eutils
 DESCRIPTION="KDE pda synchronizer"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/libkcal)"
 OLDDEPEND="~kde-base/libkcal-$PV"
-need-version-range $KM_DEPRANGE  kde-base/libkcal
+
 KMCOPYLIB="
 	libkcal libkcal"
 KMEXTRACTONLY="

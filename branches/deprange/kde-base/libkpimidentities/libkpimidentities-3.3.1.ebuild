@@ -10,9 +10,9 @@ inherit kde-meta eutils
 DESCRIPTION="KDE PIM identities library"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/certmanager kde-base/libkdepim)"
 OLDDEPEND="~kde-base/certmanager-$PV ~kde-base/libkdepim-$PV"
-need-version-range $KM_DEPRANGE  kde-base/certmanager kde-base/libkdepim
+
 KMCOPYLIB="
 	libkleopatra certmanager/lib/ 
 	libkdepim libkdepim/"

@@ -11,9 +11,9 @@ inherit kde-meta
 DESCRIPTION="Noatun auto-collatig playlist"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=" =sys-libs/db-4.2*"
+DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/noatun)	
+		=sys-libs/db-4.2*"
 OLDDEPEND="~kde-base/noatun-$PV =sys-libs/db-4.2*"
-need-version-range $KM_DEPRANGE  kde-base/noatun
 
 myconf="--with-extra-includes=/usr/include/db4.2"
 PATCHES="$FILESDIR/noatun-oblique-db-location.diff"

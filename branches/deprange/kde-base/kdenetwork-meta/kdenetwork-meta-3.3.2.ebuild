@@ -22,6 +22,6 @@ DEPEND="~kde-base/dcoprss-3.3.1
 	~kde-base/krfb-3.3.1
 	~kde-base/ksirc-$PV
 	~kde-base/ktalkd-3.3.1
-	~kde-base/kwifimanager-3.3.1
+	~kde-base/kwifimanager-$PV
 	~kde-base/librss-3.3.1
 	~kde-base/lisa-3.3.1"

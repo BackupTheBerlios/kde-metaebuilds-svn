@@ -9,9 +9,8 @@ inherit kde-meta
 DESCRIPTION="kde four-in-a-row game"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/libkdegames)"
 OLDDEPEND="~kde-base/libkdegames-$PV"
-need-version-range $KM_DEPRANGE  kde-base/libkdegames
 
 KMEXTRACTONLY=libkdegames
 KMCOPYLIB="libkdegames libkdegames"

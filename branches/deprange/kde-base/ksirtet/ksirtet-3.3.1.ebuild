@@ -9,9 +9,8 @@ inherit kde-meta
 DESCRIPTION="KSirtet is an adaptation of the well-known Tetris game"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/libkdegames)"
 OLDDEPEND="~kde-base/libkdegames-$PV"
-need-version-range $KM_DEPRANGE  kde-base/libkdegames
 
 KMEXTRACTONLY=libkdegames
 KMCOMPILEONLY=libksirtet

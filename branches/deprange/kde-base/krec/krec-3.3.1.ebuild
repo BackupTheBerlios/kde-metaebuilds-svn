@@ -14,10 +14,10 @@ OLDDEPEND="
 	~kde-base/kdemultimedia-arts-$PV
 	oggvorbis? ( media-libs/libvorbis )
 	encode? ( media-sound/lame )"
-DEPEND="
+DEPEND="$(need-version-range $KM_DEPRANGE kde-base/kdemultimedia-arts)
 	oggvorbis? ( media-libs/libvorbis )
 	encode? ( media-sound/lame )"
-need-version-range $KM_DEPRANGE kde-base/kdemultimedia-arts
+
 KMCOPYLIB="libartsgui_kde arts/gui/kde/
 	libartscontrolsupport arts/tools/"
 KMEXTRACTONLY="

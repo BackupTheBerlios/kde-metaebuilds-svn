@@ -10,12 +10,17 @@ inherit kde-meta eutils
 DESCRIPTION="The Lean KDE Media Player"
 KEYWORDS="~x86"
 IUSE="xine audiofile"
-RDEPEND="${DEPEND}
+
+OLDRDEPEND="
 	~kde-base/kdemultimedia-arts-$PV
 	~kde-base/artsplugin-mpeglib-$PV
 	~kde-base/artsplugin-mpg123-$PV
 	xine? ( ~kde-base/artsplugin-xine-$PV )
-	audiofike? ( ~kde-base/artsplugin-audiofile-$PV )"
+	audiofile? ( ~kde-base/artsplugin-audiofile-$PV )"
+RDEPEND="$(need-version-range $KM_DEPRANGE kde-base/kdemultimedia-arts kde-base/artsplugin-mpeglib kde-base/artsplugin-mpg123)
+	xine? ( ~kde-base/artsplugin-xine-$PV )
+	audiofile? ( ~kde-base/artsplugin-audiofile-$PV )"
+	
 KMEXTRACTONLY="arts/"
 
 pkg_setup() {
