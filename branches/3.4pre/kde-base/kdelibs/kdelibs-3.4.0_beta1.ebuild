@@ -50,7 +50,6 @@ src_compile() {
 	myconf="$myconf --with-distribution=Gentoo --enable-libfam --enable-dnotify"
 	myconf="$myconf $(use_with alsa) $(use_enable cups) $(use_with arts)"
 
-	use ipv6	|| myconf="$myconf --with-ipv6-lookup=no"
 	use ssl		&& myconf="$myconf --with-ssl-dir=/usr"	|| myconf="$myconf --without-ssl"
 
 	use kerberos || myconf="$myconf --with-gssapi=no"
