@@ -202,7 +202,7 @@ function kde-meta_src_unpack() {
 	cd $WORKDIR
 	extractlist=""
 	for item in admin Makefile.am Makefile.am.in configure.in.in configure.in.bot \
-				AUTHORS COPYING INSTALL README \
+				AUTHORS COPYING INSTALL README NEWS ChangeLog \
 				$KMMODULE $KMEXTRA $KMCOMPILEONLY $KMEXTRACTONLY $DOCS
 	do
 		extractlist="$extractlist $myP/$item"
