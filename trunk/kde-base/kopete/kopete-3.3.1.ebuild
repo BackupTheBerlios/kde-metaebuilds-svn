@@ -7,5 +7,7 @@ inherit kde-meta eutils
 
 DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="ssl"
 DEPEND="!net-im/kopete"
+RDEPEND="$DEPEND
+	ssl? ( app-crypt/qca-tls )"
