@@ -43,7 +43,7 @@ src_install() {
 	# and it's the Gentoo Way to avoid modifying upstream behaviour.
 	# Tell me if you don't like this. --danarmak
 	cd ${D}/${KDEDIR}/share/config/kdm || die
-	sed -i -e "s:#SessionsDirs=:SessionsDirs=/usr/share/xsession\n#SessionsDirs=:" kdmrc
+	sed -i -e "s:#SessionsDirs=:SessionsDirs=/usr/share/xsessions\n#SessionsDirs=:" kdmrc
 	
 	# Install a default user icon to prevent kdm from logging an error every time it runs.
 	cd ${D}/${KDEDIR}/share/apps/kdm
