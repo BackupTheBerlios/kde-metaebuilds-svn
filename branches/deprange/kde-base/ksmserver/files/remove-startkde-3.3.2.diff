@@ -1,0 +1,10 @@
+--- Makefile.am.in.orig	2003-09-02 16:53:45.000000000 +0300
++++ Makefile.am.in	2004-09-21 00:24:07.843563152 +0300
+@@ -7,7 +7,6 @@
+ 
+ AUTOMAKE_OPTIONS = foreign 1.5
+ 
+-bin_SCRIPTS = startkde
+ 
+ EXTRA_DIST = admin bsd-port debian kdebase.spec.in README.pam kde.pamd kscreensaver.pamd mkpamserv
+ 

@@ -1,0 +1,5 @@
+MD5 3bdf8b2a716027df2af23fa075660b8b lilo-config-3.3.1.ebuild 267
+MD5 3bdf8b2a716027df2af23fa075660b8b lilo-config-3.3.2.ebuild 267
+MD5 d593b6b8d568cef10aecca256d8dd6be files/never-disable.diff 281
+MD5 1b7044cc47387864595648b07cc36c92 files/digest-lilo-config-3.3.1 292
+MD5 164dc030232d8dcbb04f10ba7badaad3 files/digest-lilo-config-3.3.2 367

@@ -1,0 +1,7 @@
+MD5 86c5ab778870ecb258e993d79ac5afdf khelpcenter-3.3.1.ebuild 363
+MD5 86c5ab778870ecb258e993d79ac5afdf khelpcenter-3.3.2.ebuild 363
+MD5 d70f91367fe7ca5b8c2aeafd03ce4e89 files/digest-khelpcenter-3.3.1 293
+MD5 246c4966e0da17bb808cd6cdccd7a0ce files/digest-khelpcenter-3.3.2 368
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.2.diff 295

@@ -1,0 +1,7 @@
+MD5 69ca5d05356ab09da6b0976d6090ebd0 libkonq-3.3.2.ebuild 376
+MD5 69ca5d05356ab09da6b0976d6090ebd0 libkonq-3.3.1.ebuild 376
+MD5 22c93ed5e8c381d00484e030e0208a37 files/digest-libkonq-3.3.1 289
+MD5 d6af03e5276ba593944f65417f7d3590 files/digest-libkonq-3.3.2 364
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.2.diff 295
