@@ -14,7 +14,9 @@ PATCHES="$FILESDIR/configure.in.in-kdm-settings.diff"
 
 DEPEND="ssl? ( dev-libs/openssl )
 	arts? ( $(deprange ${PV/3.4/1.4} ${MAXKDEVER/3.4/1.4} kde-base/arts) )
-	opengl? ( virtual/opengl )"
+	opengl? ( virtual/opengl )
+	dev-libs/libusb" # to support some logitech mice - should get a local useflag
+			 # (this isn't a separate kcm but a part of the input module)
 RDEPEND="${DEPEND}
 $(deprange $PV $MAXKDEVER kde-base/kcminit)
 $(deprange $PV $MAXKDEVER kde-base/kdebase-applnk)"
