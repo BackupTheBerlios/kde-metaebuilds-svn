@@ -21,6 +21,5 @@ RDEPEND="${DEPEND}
 	app-text/cstetex
 	app-text/dvipdfm )
 	)"
-PATCHES="$FILESDIR/kdvi-configure-check-freetype.diff" # bugs.kde.org 96255
 
 KMCOMPILEONLY="kviewshell/"
