@@ -5,7 +5,7 @@
 inherit kde eutils flag-o-matic
 set-kdedir 3.4
 
-myPV=3.3.90
+myPV=3.3.91
 DESCRIPTION="KDE libraries needed by all kde programs"
 HOMEPAGE="http://www.kde.org/"
 SRC_URI="mirror://kde/unstable/${myPV}/src/${PN}-${myPV}.tar.bz2"
