@@ -20,7 +20,8 @@ KMEXTRACTONLY="kicker/core/kicker.h
 	    kicker/taskbar/taskbarbindings.cpp
 	    kdesktop/kdesktopbindings.cpp
 	    klipper/klipperbindings.cpp
-	    kxkb/kxkbbindings.cpp"
+	    kxkb/kxkbbindings.cpp
+	    libkonq/"
 
 src_unpack() {
     kde-meta_src_unpack
