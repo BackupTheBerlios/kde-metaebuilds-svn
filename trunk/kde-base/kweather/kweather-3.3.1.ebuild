@@ -2,9 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-KMNAME=kdeutils
+KMNAME=kdetoys
 inherit kde-meta
 
-DESCRIPTION="Ark - KDE Archiving tool"
+DESCRIPTION=""
 KEYWORDS="~x86"
 IUSE=""
+DEPEND=""

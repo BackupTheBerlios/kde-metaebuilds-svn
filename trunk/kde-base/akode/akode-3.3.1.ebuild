@@ -3,7 +3,7 @@
 # $Header: $
 
 KMNAME=kdemultimedia
-inherit kde-meta eutils
+inherit kde-meta
 
 DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop
 and other kde apps"

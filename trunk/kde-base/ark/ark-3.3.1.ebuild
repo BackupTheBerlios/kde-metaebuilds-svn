@@ -3,7 +3,7 @@
 # $Header: $
 
 KMNAME=kdeutils
-inherit kde-meta eutils
+inherit kde-meta
 
 DESCRIPTION="Ark - KDE Archiving tool"
 KEYWORDS="~x86"
