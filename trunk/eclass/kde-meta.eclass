@@ -18,8 +18,13 @@ if [ -z "$KMNAME" ]; then
 fi
 
 myPN="$KMNAME"
-myP="$myPN-$PV"
-myPV="$PV"
+case "$PV" in
+	3.4.0_alpha1)	myPV="${PV/3.4.0_alpha1/3.3.90}" ;;
+	3.4.0_alpha2)	myPV="${PV/3.4.0_alpha1/3.3.91}" ;;
+	*)		myPV="$PV" ;;
+esac
+myP="$myPN-$myPV"
+
 # is this a kde-base ebuild, vs eg koffice
 case "$myPN" in kde-i18n|arts|kdeaccessibility|kdeaddons|kdeadmin|kdeartwork|kdebase|kdebindings|kdeedu|kdegames|kdegraphics|kdelibs|kdemultimedia|kdenetwork|kdepim|kdesdk|kdetoys|kdeutils|kdewebdev|kdelibs-apidocs)
 	debug-print "$ECLASS: KDEBASE ebuild recognized"
@@ -31,19 +36,16 @@ esac
 if [ "$KDEBASE" = "true" ]; then
 	unset SRC_URI
 	
-	need-kde $myPV
+	need-kde $PV
 	
-	# 3.3 prereleases
-	[ "$PV" == "3.4.0_alpha1" ] && S=${WORKDIR}/${PN}-3.3.90
-	
-	DESCRIPTION="KDE ${myPV} - "
+	DESCRIPTION="KDE ${PV} - "
 	HOMEPAGE="http://www.kde.org/"
 	LICENSE="GPL-2"
 	SLOT="$KDEMAJORVER.$KDEMINORVER"
 	
 	# Main tarball for normal downloading style
 	case "$myPV" in
-		3.4.0_alpha1)	SRC_PATH="unstable/3.3.90/src/${myPN}-${myPV/3.4.0_alpha1/3.3.90}.tar.bz2" ;;
+		3.3.9?)		SRC_PATH="unstable/${myPV}/src/${myPN}-${myPV}.tar.bz2" ;;
 		3.3.0)		SRC_PATH="stable/3.3/src/${myP}.tar.bz2" ;;
 		3*)			SRC_PATH="stable/${myPV}/src/${myP}.tar.bz2" ;;
 		5)			SRC_URI="" # cvs ebuilds, no SRC_URI needed
@@ -64,8 +66,7 @@ if [ "$KDEBASE" = "true" ]; then
 		3.3.2)		XDELTA_BASE="stable/3.3/src/${myPN}-3.3.0.tar.bz2"
 					XDELTA_DELTA="stable/3.3.1/src/${myPN}-3.3.0-3.3.1.tar.xdelta stable/3.3.2/src/${myPN}-3.3.1-3.3.2.tar.xdelta"
 					;;
-		*)			ewarn "$ECLASS: Error: unrecognized version ${myPV}, can't use xdeltas"
-					;;
+		*)			;;
 	esac	
 
 elif [ "$KMNAME" == "koffice" ]; then
@@ -295,6 +296,7 @@ function kde-meta_src_unpack() {
 			KMTARPARAMS="$KMTARPARAMS -j"
 		fi
 		cd $WORKDIR
+		
 		echo ">>> Extracting from tarball..."
 		# Note that KMTARPARAMS is also used by an ebuild
 		tar -xpf $TARFILE $KMTARPARAMS $extractlist	
@@ -402,31 +404,8 @@ function kde-meta_src_compile() {
 }
 
 function kde-meta_src_install() {
-	debug-print-function $FUNCNAME $*
-	
-	if [ "$1" == "" ]; then
-		kde-meta_src_install make dodoc
-	fi
-	while [ -n "$1" ]; do
-		case $1 in
-		    make)
-				for dir in $KMMODULE $KMEXTRA $DOCS; do
-					if [ -d $S/$dir ]; then 
-						cd $S/$dir
-						make DESTDIR=${D} destdir=${D} install || die
-					fi
-				done
-				;;
-		    dodoc)
-				kde_src_install dodoc
-				;;
-		    all)
-				kde-meta_src_install make dodoc
-				;;
-		esac
-		shift
-	done
-}	
+	kde_src_install
+}
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install
 
