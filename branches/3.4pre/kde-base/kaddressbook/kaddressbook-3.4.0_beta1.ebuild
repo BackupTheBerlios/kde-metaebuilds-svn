@@ -39,7 +39,8 @@ KMEXTRACTONLY="
 	kmail/kmailIface.h"
 KMCOMPILEONLY="
 	libical/src/libical/
-	libical/src/libicalss/"
+	libical/src/libicalss/
+	akregator/src/librss"
 	# We add them here because they are standard plugins and programs related to kaddressbook but not a dep of any other kdepim program, so they will be lost if noone install them
 KMEXTRA="
 	kabc/
