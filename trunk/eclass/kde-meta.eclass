@@ -66,18 +66,22 @@ if [ "$KDEBASE" = "true" ]; then
 	HOMEPAGE="http://www.kde.org/"
 	LICENSE="GPL-2"
 	SLOT="$KDEMAJORVER.$KDEMINORVER"
-fi
+
+	# Necessary dep for xdeltas. Hope like hell it doesn't worm its way into RDEPEND
+	# through the sneaky eclass dep mangling portage does.
+	DEPEND="$DEPEND kdexdeltas? ( dev-util/xdelta )"
+
 # END adapted from kde-dist.eclass
+
+elif [ "$KMNAME" == "koffice" ]; then
+	SRC_URI="$SRC_URI mirror://kde/stable/koffice-$PV/src/koffice-$PV.tar.bz2"
+fi
 
 # prepackaged makefiles for broken-up ebuilds. Ebuild can define KM_MAKEFILESREV to be >=1 to
 # use a newer tarball without increasing the ebuild revision.
 MAKEFILESTARBALL="$PN-$PVR-${KM_MAKEFILESREV:-0}-makefiles.tar.bz2"
 SRC_URI="$SRC_URI usepackagedmakefiles? ( mirror://gentoo/$MAKEFILESTARBALL )"
 
-# Necessary dep for xdeltas. Hope like hell it doesn't worm its way into RDEPEND
-# through the sneaky eclass dep mangling portage does.
-DEPEND="$DEPEND kdexdeltas? ( dev-util/xdelta )"
-#RDEPEND=""
 
 # TODO FIX: Temporary place for code common to all ebuilds derived from any one metapackage.
 
