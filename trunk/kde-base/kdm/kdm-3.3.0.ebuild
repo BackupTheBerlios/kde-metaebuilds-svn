@@ -15,7 +15,11 @@ DEPEND="$DEPEND
 		~kde-base/kcontrol-$PV" # Requires the desktop background settings and kdm modules,
 								# so until we separate the kcontrol modules into separate ebuilds :-),
 								# there's a dep here
-
+src_unpack() {
+        kde-meta_src_unpack
+        epatch ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff
+}
+								
 src_compile() {
 	use pam \
 		&& myconf="$myconf --with-pam=yes" \
