@@ -20,7 +20,8 @@ DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
 $(deprange $PV $MAXKDEVER kde-base/libkcal)
 $(deprange $PV $MAXKDEVER kde-base/certmanager)
 $(deprange $PV $MAXKDEVER kde-base/kdepim-kresources)
-$(deprange $PV $MAXKDEVER kde-base/libkpimidentities)"
+$(deprange $PV $MAXKDEVER kde-base/libkpimidentities)
+$(deprange $PV $MAXKDEVER kde-base/kaddressbook)"
 
 KMCOPYLIB="
 	libkcal libkcal
