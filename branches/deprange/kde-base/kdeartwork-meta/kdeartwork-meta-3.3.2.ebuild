@@ -1,6 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+KDEMAXVER=3.3.2
 
 DESCRIPTION="kdeartwork - merge this to pull in all kdeartwork-derived packages"
 HOMEPAGE="http://www.kde.org/"

@@ -1,6 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+KDEMAXVER=3.3.1
 
 DESCRIPTION="kdepim 3.3.0 - merge this to pull in all kdepim-derived packages"
 HOMEPAGE="http://www.kde.org/"
