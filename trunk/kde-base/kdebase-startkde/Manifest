@@ -1,0 +1,5 @@
+MD5 7927551bbbee6745348a8505d2b047ba kdebase-startkde-3.3.1.ebuild 1528
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebase-startkde-3.3.1 0
+MD5 ca0fc4bf60b72dd1b8d42cb7e2be5a75 files/agent-shutdown.sh 204
+MD5 510d05672fcad238e92db44fbfa65f89 files/agent-startup.sh 209
+MD5 e77b4002adb1b92689ecb41dec979c49 files/kde-3.3.desktop 3900
