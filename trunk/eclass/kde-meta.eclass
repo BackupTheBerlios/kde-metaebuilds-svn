@@ -57,6 +57,9 @@ if [ "$KDEBASE" = "true" ]; then
 		3.3.1)		XDELTA_BASE="stable/3.3/src/${myPN}-3.3.0.tar.bz2"
 					XDELTA_DELTA="stable/3.3.1/src/${myPN}-3.3.0-3.3.1.tar.xdelta"
 					;;
+		3.3.2)		XDELTA_BASE="stable/3.3/src/${myPN}-3.3.0.tar.bz2"
+					XDELTA_DELTA="stable/3.3.1/src/${myPN}-3.3.0-3.3.1.tar.xdelta stable/3.3.2/src/${myPN}-3.3.1-3.3.2.tar.xdelta"
+					;;
 		*)			die "$ECLASS: Error: unrecognized version ${myPV}, could not set SRC_URI"
 					;;
 	esac	

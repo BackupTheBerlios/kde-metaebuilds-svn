@@ -2,7 +2,7 @@ MD5 49617e12561b560e20b17824ad326768 kdm-3.3.1-r1.ebuild 1344
 MD5 49617e12561b560e20b17824ad326768 kdm-3.3.2.ebuild 1344
 MD5 aa88d66c364bbbb14af7e292f3230c38 kdm-3.3.1.ebuild 2018
 MD5 4b4c236cf3d8e8ce41af16551f2a8932 files/digest-kdm-3.3.1 285
-MD5 f6c302709a9f74bbce44239964e1bf99 files/digest-kdm-3.3.2 360
+MD5 02dfebc601832bdefc153bcb0d99c981 files/digest-kdm-3.3.2 360
 MD5 b048371a651391ef2bb4166e40e6adff files/kde.pam 405
 MD5 ca0fc4bf60b72dd1b8d42cb7e2be5a75 files/agent-shutdown.sh 204
 MD5 2b5419b0b173138e22fe03f4157d5660 files/kde-np.pam 379

@@ -9,5 +9,5 @@ inherit kde-meta
 DESCRIPTION="konqueror plugin for changing the User Agent field sent to the server"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"
+DEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-3.3.1"
 
