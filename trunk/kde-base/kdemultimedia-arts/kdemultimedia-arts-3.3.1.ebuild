@@ -14,7 +14,7 @@ KMEXTRA="doc/artsbuilder"
 
 pkg_setup() {
 	if ! useq arts; then
-		eerror "artsplugin-audiofile needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
+		eerror "kdemultimedia-arts needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
 		die	
 	fi
 }

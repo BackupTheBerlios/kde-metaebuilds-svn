@@ -15,7 +15,7 @@ KMEXTRACTONLY="mpeglib/"
 
 pkg_setup() {
 	if ! useq arts; then
-		eerror "artsplugin-audiofile needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
+		eerror "artsplugin-mpeglib needs the USE=\"arts\" enabled and also the kdelibs compiled with the USE=\"arts\" enabled"
 		die	
 	fi
 }
