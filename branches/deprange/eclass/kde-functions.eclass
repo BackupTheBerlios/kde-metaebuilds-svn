@@ -85,7 +85,7 @@ need-version-range() {
 		# If min verson had -rN component, add all revisions from r99 to it in descending order
 		if [ -n "$MINREV" ]; then
 			let MINMINOR--
-			for (( i=5 ; $i >= $MINREV ; i-- )) ; do
+			for (( i=99 ; $i >= $MINREV ; i-- )) ; do
 				NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.$MINMINOR-r$i"
 			done
 		fi
