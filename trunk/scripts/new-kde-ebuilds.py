@@ -1,10 +1,6 @@
 #!/usr/bin/python
 import sys, os, os.path, re, string, shutil, copy, portage
 
-if len(sys.argv) < 5:
-	print ("Usage: " + sys.argv[0] + " <new version> <category dir> <MAXKDEVER substitute variable> <list of changed packages>\n")
-	sys.exit (1)
-
 # ===============
 # FUNCTIONS START
 # ===============
@@ -34,19 +30,39 @@ def myvercmp (first, second):
 	else:
 		return -1
 
-# generates a new deprange parameter string.
-# accepts a dictionary of the ebuild versions that exist (including the version being created),
-# the version of the ebuild that has the dependency, and the name 
-
 # =====================
 # GLOBAL SECTION STARTS
 # =====================
 
 # parse params
-newver = sys.argv[1]
-basedir = sys.argv[2]
-maxvervar = sys.argv[3]
-updatedpackages = sys.argv[4:]
+newver = None
+stopver = None
+basedir = None
+maxvervar = None
+updatedpackages = []
+basename = sys.argv.pop (0) # remove argv[0]
+while (len (sys.argv) > 0):
+	param = sys.argv.pop (0)
+	if param == "-newver":
+		newver = sys.argv.pop (0)
+	elif param == "-stopver":
+		stopver = sys.argv.pop (0)
+	elif param == "-cat":
+		basedir = sys.argv.pop (0)
+	elif param == "-maxvervar":
+		maxvervar = sys.argv.pop (0)
+	else:
+		updatedpackages.append (param)
+
+if (newver == None) or (stopver == None) or (basedir == None) or (maxvervar == None):
+	print ("Usage: " + basename + " -newver n -stopver s -cat c -maxvervar m <list of changed packages>\n" +
+		"\tn\tThe new version to create\n" +
+		"\ts\tThe greatest version that shouldn't be considered as an ancestor to the new one\n" +
+		"\t\t(e.g. when creating 3.4.0, spcify stopver=3.3.99)\n" +
+		"\tc\tCategory directory to process\n" +
+		"\tm\tName of the 'maximum version' variable - MAXKDEVER for kde-base, MAXKOFFICEVER for app-office\n"
+	);
+	sys.exit (1)
 
 # create listing of package dirs
 packages = os.listdir (basedir)
@@ -60,13 +76,22 @@ for nonpackage in ("CVS", ".svn"):
 packagevers = {}
 for package in packages[:]:
 	versions = extantVersions (basedir + "/" + package)
+	if len (versions) == 0:
+		sys.stderr.write ("Warning: package directory " + package + " contains no ebuilds\n")
+	
+	# remove versions <= stopver
+	# e.g. when creating the first 3.4 ebuilds, we'll specify stopver=3.3.99, so that the newest
+	# 3.3.x ebuilds' MAXKDEVER won't be changed to 3.4.
+	
+	for version in versions[:]:
+		if myvercmp (version, stopver) <= 0:
+			versions.remove (version)
 	
 	# if no actual ebuild files exist inside the package directory, extantVersions()
 	# returns an empty list
 	if len (versions) > 0:
 		packagevers[package] = versions
 	else:
-		sys.stderr.write ("Warning: package directory " + package + " contains no ebuilds\n")
 		packages.remove (package)
 
 # make sure we're not being asked to create new packages
