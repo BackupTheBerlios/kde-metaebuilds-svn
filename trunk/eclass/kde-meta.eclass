@@ -193,7 +193,7 @@ function kde-meta_src_unpack() {
 	fi
 
 	# Unless disabled, docs are also extracted, compiled and installed
-	local DOCS
+	DOCS=""
 	if [ "$KMNOMODULE" != "true" ] && [ "$KMNODOCS" != "true" ]; then
 		DOCS="doc/$KMMODULE"
 	fi
