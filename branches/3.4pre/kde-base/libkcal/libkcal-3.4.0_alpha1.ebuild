@@ -14,6 +14,7 @@ OLDDEPEND="~kde-base/ktnef-$PV"
 DEPEND="
 $(deprange $PV $MAXKDEVER kde-base/ktnef)"
 
-KMEXTRA="libical"
-KMEXTRACTONLY="libkdepim/email.h"
+
 KMCOPYLIB="libktnef ktnef/lib"
+KMEXTRACTONLY="libkdepim/email.h"
+KMCOMPILEONLY="libemailfunctions/"

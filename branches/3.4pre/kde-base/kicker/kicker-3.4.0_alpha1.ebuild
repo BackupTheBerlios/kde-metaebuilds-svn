@@ -16,5 +16,6 @@ DEPEND="
 $(deprange $PV $MAXKDEVER kde-base/libkonq)"
 
 KMCOPYLIB="libkonq libkonq"
-KMEXTRACTONLY="libkonq"
-
+KMEXTRACTONLY="libkonq
+	kdm/kfrontend/themer/"
+KMCOMPILEONLY="kdmlib/"
