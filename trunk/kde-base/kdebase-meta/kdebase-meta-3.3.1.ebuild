@@ -31,7 +31,7 @@ RDEPEND="
 ~kde-base/khelpcenter-${PV}
 ~kde-base/khotkeys-${PV}
 ~kde-base/kicker-${PV}
-~kde-base/kioslave-${PV}
+~kde-base/kdebase-kioslaves-${PV}
 ~kde-base/klipper-${PV}
 ~kde-base/kmenuedit-${PV}
 ~kde-base/konqueror-${PV}
