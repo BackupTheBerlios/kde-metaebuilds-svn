@@ -14,8 +14,6 @@ IUSE="svga"
 
 # in case something from kdelibs linked against svgalib,
 # we might link against it too. this isn't pretty by any means.
-OLDDEPEND="~kde-base/noatun-$PV
-	svga? ( media-libs/svgalib )" 
-DEPEND="$(deprange $PV $MAXKDEVER kde-base/noatun)
-		svga? ( media-libs/svgalib )"
+OLDDEPEND="~kde-base/noatun-$PV"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/noatun)"
 
