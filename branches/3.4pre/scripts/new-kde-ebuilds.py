@@ -136,13 +136,13 @@ for package in updatedpackages:
 		deppkg = depcatpkg[depcatpkg.find ("/") + 1:]
 		if deppkg not in packages:
 			sys.stderr.write ("dependency " + depcatpkg + " of package " + package + " cannot be updated because it does not exist\n")
-		
-		bestdep = bestVersion (newpackagevers[deppkg])
-		if bestdep == newver:
-			newdep = "$(deprange $PV $" + maxvervar + " " + depcatpkg + ")"
 		else:
-			newdep = "$(deprange " + bestdep + " $PV " + depcatpkg + ")"
-		ebuildtext = ebuildtext.replace (matchstr, newdep)
+			bestdep = bestVersion (newpackagevers[deppkg])
+			if bestdep == newver:
+				newdep = "$(deprange $PV $" + maxvervar + " " + depcatpkg + ")"
+			else:
+				newdep = "$(deprange " + bestdep + " $PV " + depcatpkg + ")"
+			ebuildtext = ebuildtext.replace (matchstr, newdep)
 	
 	# write ebuild back
 	newfile = file (newebuild, "w")
