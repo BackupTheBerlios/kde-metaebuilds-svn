@@ -20,7 +20,7 @@ fi
 myPN="$KMNAME"
 case "$PV" in
 	3.4.0_alpha1)	myPV="${PV/3.4.0_alpha1/3.3.90}" ;;
-	3.4.0_alpha2)	myPV="${PV/3.4.0_alpha1/3.3.91}" ;;
+	3.4.0_alpha2)	myPV="${PV/3.4.0_alpha2/3.3.91}" ;;
 	*)		myPV="$PV" ;;
 esac
 myP="$myPN-$myPV"
@@ -56,10 +56,9 @@ if [ "$KDEBASE" = "true" ]; then
 	# Base tarball and xdeltas for patch downloading style
 	# Note that we use XDELTA_BASE, XDELTA_DELTA again in src_unpack()
 	# For future versions, add all applicable xdeltas (from x.y.0) in correct order to XDELTA_DELTA
+	# For versions that don't have deltas, it's more efficient to leave XDELTA_BASE
+	# unset, making src_unpack extract directly from the tarball in distfiles
 	case "$myPV" in
-		3.3.0)		XDELTA_BASE="stable/3.3/src/${myP}.tar.bz2"
-					XDELTA_DELTA=""
-					;;
 		3.3.1)		XDELTA_BASE="stable/3.3/src/${myPN}-3.3.0.tar.bz2"
 					XDELTA_DELTA="stable/3.3.1/src/${myPN}-3.3.0-3.3.1.tar.xdelta"
 					;;
@@ -273,8 +272,6 @@ function kde-meta_src_unpack() {
 	for section in $sections; do
 	case $section in
 	unpack)
-
-		
 		
 		# Create final list of stuff to extract
 		extractlist=""
@@ -286,8 +283,8 @@ function kde-meta_src_unpack() {
 		done
 
 		# xdeltas require us to uncompress to a tar file first.
-		# $KMTARPARAMS is for an ebuild to use; currently used by kturtle
-		if useq kdexdeltas; then
+		# $KMTARPARAMS is also available for an ebuild to use; currently used by kturtle
+		if useq kdexdeltas && [ -n "$XDELTA_BASE" ]; then
 			echo ">>> Base archive + xdelta patch mode enabled."
 			echo ">>> Uncompressing base archive..."
 			cd $T
