@@ -132,17 +132,34 @@ for package in updatedpackages:
 	# and have to use string.replace()
 	for match in reDeprange.finditer (ebuildtext):
 		matchstr = match.group (0)
+		fromver = match.group (1)
+		tover = match.group (2)
 		depcatpkg = match.group (3)
 		deppkg = depcatpkg[depcatpkg.find ("/") + 1:]
-		if deppkg not in packages:
-			sys.stderr.write ("dependency " + depcatpkg + " of package " + package + " cannot be updated because it does not exist\n")
-		else:
-			bestdep = bestVersion (newpackagevers[deppkg])
-			if bestdep == newver:
-				newdep = "$(deprange $PV $" + maxvervar + " " + depcatpkg + ")"
+		
+		# arts has its own versioning scheme and gets special treatment
+		if deppkg == "arts":
+			if ((not re.compile ("\$\{PV/\d\.\d/\d\.\d\}").match (fromver)) or
+				(not re.compile ("\$\{" + maxvervar + "/\d\.\d/\d\.\d\}").match (tover))):
+				sys.stderr.write ("illegal dep on arts in " + package + ", should be of the form " +
+					"$(deprange ${PV/x.y/1.y} ${" + maxvervar + "/x.y/1.y} kde-base/arts)\n"
+				)
+				sys.stderr.write ("fromver=-" + fromver + "-, tover=-" + tover + "-\n")
 			else:
-				newdep = "$(deprange " + bestdep + " $PV " + depcatpkg + ")"
-			ebuildtext = ebuildtext.replace (matchstr, newdep)
+				sys.stderr.write ("warning: not updating dep on arts in " + package + "\n")
+				# don't change ebuildtext
+		
+		# all packages other than arts:
+		else:
+			if deppkg not in packages:
+				sys.stderr.write ("dependency " + depcatpkg + " of package " + package + " cannot be updated because it does not exist\n")
+			else:
+				bestdep = bestVersion (newpackagevers[deppkg])
+				if bestdep == newver:
+					newdep = "$(deprange $PV $" + maxvervar + " " + depcatpkg + ")"
+				else:
+					newdep = "$(deprange " + bestdep + " $PV " + depcatpkg + ")"
+				ebuildtext = ebuildtext.replace (matchstr, newdep)
 	
 	# write ebuild back
 	newfile = file (newebuild, "w")
