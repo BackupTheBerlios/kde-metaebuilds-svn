@@ -10,7 +10,7 @@
 inherit kde
 ECLASS=kde-meta
 INHERITED="$INHERITED $ECLASS"
-IUSE="$IUSE usepackagedmakefiles packagemakefiles"
+IUSE="$IUSE usepackagedmakefiles"
 
 # only broken-up ebuilds can use this eclass
 if [ -z "$KMNAME" ]; then
@@ -260,7 +260,7 @@ function kde-meta_src_unpack() {
 			# Create Makefile.am files
 			create_fullpaths
 			change_makefiles $S "false"
-			if useq packagemakefiles; then
+			if [ -n "$KM_PACKAGEMAKEFILES" ]; then
 				make -f admin/Makefile.common || die "Failed to create makefile templates"
 				cd $WORKDIR
 	# 			# skipped:  $P/configure.in.in* $P/acinclude.m4 $P/aclocal.m4 $P/configure 
