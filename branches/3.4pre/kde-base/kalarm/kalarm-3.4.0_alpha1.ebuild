@@ -12,37 +12,34 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/libkdepim-$PV
 	~kde-base/libkdenetwork-$PV
-	~kde-base/libkcal-$PV
-	~kde-base/kalarmd-3.3.1"
+	~kde-base/libkcal-$PV"
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
 $(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
-$(deprange $PV $MAXKDEVER kde-base/libkcal)
-$(deprange $PV $MAXKDEVER kde-base/kalarmd)"
+$(deprange $PV $MAXKDEVER kde-base/libkmime)
+$(deprange $PV $MAXKDEVER kde-base/libkpimidentities)
+$(deprange $PV $MAXKDEVER kde-base/libkcal)"
 
 KMCOPYLIB="
 	libkcal libkcal
-	libkdenetwork libkdenetwork
-	libkalarmd kalarmd
-	libkdepim libkdepim"
+	libkdepim libkdepim
+	libkmime libkmime
+	libkpimidentities libkpimidentities"
 KMEXTRACTONLY="
-	libical/
+	libkcal/libical
 	libkdepim/
-	libkdenetwork/"
+	libkdenetwork/
+	libkpimidentities/
+	libkmime/"
 KMCOMPILEONLY="
-	kalarmd/
-	libical/src/libical/
-	libical/src/libicalss/"
+	libkcal/libical/src/libical/
+	libkcal/libical/src/libicalss/"
 
 src_compile() {
-	export DO_NOT_COMPILE="kalarmd libical" && kde-meta_src_compile myconf configure
-	# generate "alarmdaemoniface_stub.h"
-	cd ${S}/kalarmd && make alarmdaemoniface_stub.h
-	# generate "alarmguiiface_stub.h"
-	cd ${S}/kalarmd && make alarmguiiface_stub.h
+	export DO_NOT_COMPILE="libkcal" && kde-meta_src_compile myconf configure
 	# generate "ical.h"
-	cd ${S}/libical/src/libical && make ical.h
+	cd ${S}/libkcal/libical/src/libical && make ical.h
 	# generate "icalss.h"
-	cd ${S}/libical/src/libicalss && make icalss.h
+	cd ${S}/libkcal/libical/src/libicalss && make icalss.h
 	
 	kde-meta_src_compile make
 }
