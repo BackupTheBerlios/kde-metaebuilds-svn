@@ -202,7 +202,7 @@ function kde-meta_src_unpack() {
 	# $KMTARPARAMS is for an ebuild to use; currently used by kturtle
 	cd $WORKDIR
 	extractlist=""
-	for item in admin Makefile.am Makefile.am.in configure.in.in configure.in.bot \
+	for item in admin Makefile.am Makefile.am.in configure.in.in configure.in.bot acinclude.m4 aclocal.m4 \
 				AUTHORS COPYING INSTALL README NEWS ChangeLog \
 				$KMMODULE $KMEXTRA $KMCOMPILEONLY $KMEXTRACTONLY $DOCS
 	do
@@ -235,6 +235,13 @@ function kde-meta_src_unpack() {
 		echo ">>> Using pregenerated makefile templates"
 		cd $WORKDIR
 		tar -xjf $DISTDIR/$MAKEFILESTARBALL
+		cd $S
+		echo ">>> Creating configure script"
+		# If you can, clean this up
+		touch aclocal.m4
+		touch config.h.in
+		touch `find . -name Makefile.in -print`
+		make -f admin/Makefile.common configure || die "Failed to create configure script"
 	else
 		# Create Makefile.am files
 		create_fullpaths
@@ -242,12 +249,15 @@ function kde-meta_src_unpack() {
 		if useq packagemakefiles; then
 			make -f admin/Makefile.common || die "Failed to create makefile templates"
 			cd $WORKDIR
-			/bin/tar -cjpf $T/$MAKEFILESTARBALL  $P/stamp-h.in $P/configure.in* \
-				`find $P -name Makefile\*` $P/config.h.in $P/acinclude.m4 $P/aclocal.m4 \
-				$P/configure $P/configure.files $P/subdirs
+# 			# skipped:  $P/configure.in.in* $P/acinclude.m4 $P/aclocal.m4 $P/configure 
+			 /bin/tar -cjpf $T/$MAKEFILESTARBALL $P/stamp-h.in $P/configure.in $P/configure.files \
+				`find $P -name Makefile\*` $P/config.h.in $P/subdirs
 			echo ">>> Saved generated makefile templates in $T/$MAKEFILESTARBALL"
 		fi
 	fi
+
+	# for ebuilds with extended src_unpack
+	cd $S
 }
 
 function kde-meta_src_compile() {
