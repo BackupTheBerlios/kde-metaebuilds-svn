@@ -179,75 +179,70 @@ function change_makefiles() {
 function kde-meta_src_unpack() {
 	debug-print-function $FUNCNAME $*
 
-	if [ -z "$KMNAME" ]; then
-		kde_src_unpack $*
-	else
-		# Overridable module (subdirectory) name, with default value
-		if [ -z "$KMMODULE" ]; then
-		    KMMODULE=$PN
-		fi
-	
-		# Unless disabled, docs are also extracted, compiled and installed
-		DOCS=""
-		if [ "$KMNODOCS" != "true" ]; then
-			DOCS="doc/$KMMODULE"
-		fi
-		
-		# Extract everything necessary
-		cd $WORKDIR
-		extractlist=""
-		for item in admin Makefile.am Makefile.am.in configure.in.in configure.in.bot \
-					AUTHORS COPYING INSTALL README \
-					$KMMODULE $KMEXTRA $KMCOMPILEONLY $KMEXTRACTONLY $DOCS
-		do
-			extractlist="$extractlist $myP/$item"
-		done
-		tar -xjpf $DISTDIR/${myP}.tar.bz2 $extractlist
-		# Default $S is based on $P not $myP; rename the extracted dir to fit $S
-		mv $myP $P
-		
-		# Copy over KMCOPYLIB items
-		libname=""
-		for x in $KMCOPYLIB; do
-		    if [ "$libname" == "" ]; then
-			libname=$x
-		    else
-			dirname=$x
-			cd $S
-			mkdir -p ${dirname}
-			cd ${dirname}
-			ln -s ${PREFIX}/lib/${libname}* .
-			libname=""
-		    fi
-		done
+	# Overridable module (subdirectory) name, with default value
+	if [ -z "$KMMODULE" ]; then
+		KMMODULE=$PN
+	fi
 
-		# Create Makefile.am files
-		create_fullpaths
-		change_makefiles $S "false"
-		
-		# apply any patches
-		kde_src_unpack autopatch
+	# Unless disabled, docs are also extracted, compiled and installed
+	DOCS=""
+	if [ "$KMNODOCS" != "true" ]; then
+		DOCS="doc/$KMMODULE"
+	fi
 	
-		# Extract Makefile.in files, configure script. 
-		# Don't preserve mtimes; this overrides all Makefile.am data.
-		if useq usepackagedmakefiles; then
-			tar -xjmf $DISTDIR/$P-makefiles.tar.bz2
-		fi
-		
-		# allow usage of precreated makefiles, and/or packaging of the makefiles we create.
-		if useq usepackagedmakefiles; then
-			echo ">>> Using pregenerated makefile templates"
+	# Extract everything necessary
+	cd $WORKDIR
+	extractlist=""
+	for item in admin Makefile.am Makefile.am.in configure.in.in configure.in.bot \
+				AUTHORS COPYING INSTALL README \
+				$KMMODULE $KMEXTRA $KMCOMPILEONLY $KMEXTRACTONLY $DOCS
+	do
+		extractlist="$extractlist $myP/$item"
+	done
+	tar -xjpf $DISTDIR/${myP}.tar.bz2 $extractlist
+	# Default $S is based on $P not $myP; rename the extracted dir to fit $S
+	mv $myP $P
+	
+	# Copy over KMCOPYLIB items
+	libname=""
+	for x in $KMCOPYLIB; do
+		if [ "$libname" == "" ]; then
+		libname=$x
 		else
-			if useq packagemakefiles; then
-				make -f admin/Makefile.common || die "Failed to create makefile templates"
-				cd $WORKDIR
-				/bin/tar -cjpf $T/$P-makefiles.tar.bz2 $P/aclocal.m4 $P/stamp-h.in $P/configure.in* \
- 					`find $P -name Makefile.in` $P/config.h.in $P/acinclude.m4 \
-					$P/configure $P/configure.files $P/subdirs
-				echo ">>> Saved generated makefile templates in $T/$P-makefiles.tar.bz2"
-			fi
+		dirname=$x
+		cd $S
+		mkdir -p ${dirname}
+		cd ${dirname}
+		ln -s ${PREFIX}/lib/${libname}* .
+		libname=""
 		fi
-		
+	done
+
+	# Create Makefile.am files
+	create_fullpaths
+	change_makefiles $S "false"
+	
+	# apply any patches
+	kde_src_unpack autopatch
+
+	# Extract Makefile.in files, configure script. 
+	# Don't preserve mtimes; this overrides all Makefile.am data.
+	if useq usepackagedmakefiles; then
+		tar -xjmf $DISTDIR/$P-makefiles.tar.bz2
+	fi
+	
+	# allow usage of precreated makefiles, and/or packaging of the makefiles we create.
+	if useq usepackagedmakefiles; then
+		echo ">>> Using pregenerated makefile templates"
+	else
+		if useq packagemakefiles; then
+			make -f admin/Makefile.common || die "Failed to create makefile templates"
+			cd $WORKDIR
+			/bin/tar -cjpf $T/$P-makefiles.tar.bz2 $P/aclocal.m4 $P/stamp-h.in $P/configure.in* \
+				`find $P -name Makefile.in` $P/config.h.in $P/acinclude.m4 \
+				$P/configure $P/configure.files $P/subdirs
+			echo ">>> Saved generated makefile templates in $T/$P-makefiles.tar.bz2"
+		fi
 	fi
 }
 
@@ -275,6 +270,7 @@ function kde-meta_src_compile() {
 	callsections="$*"
 	[ -z "$callsections" -o "$callsections" == "all" ] && callsections="myconf configure make"
 	for section in $callsections; do
+		debug-print "$FUNCNAME: now in section $section"
 		if [ "$section" == "configure" ]; then
 			# don't log makefile.common stuff in confcache
 			[ ! -f "Makefile.in" ] && make -f admin/Makefile.common
