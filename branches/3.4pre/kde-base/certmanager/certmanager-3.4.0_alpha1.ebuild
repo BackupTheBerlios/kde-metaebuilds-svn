@@ -12,6 +12,7 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/libkdenetwork-$PV"
 DEPEND="
+$(deprange $PV $MAXKDEVER kde-base/libkpgp)
 $(deprange $PV $MAXKDEVER kde-base/libkdenetwork)"
 
 KMCOPYLIB="libqgpgme libkdenetwork/qgpgme/"
