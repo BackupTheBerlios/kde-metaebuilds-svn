@@ -17,7 +17,7 @@ RDEPEND="~kde-base/akode-$PV
 	arts? ( ~kde-base/artsplugin-xine-3.3.1 )
 	arts? ( ~kde-base/juk-$PV )
 	arts? ( ~kde-base/kaboodle-3.3.1 )
-	~kde-base/kaudiocreator-3.3.1
+	~kde-base/kaudiocreator-$PV
 	arts? ( ~kde-base/kdemultimedia-arts-$PV )
 	~kde-base/kdemultimedia-kappfinder-data-3.3.1
 	~kde-base/kdemultimedia-kfile-plugins-3.3.1

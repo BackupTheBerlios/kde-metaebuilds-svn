@@ -12,7 +12,7 @@ IUSE="gphoto2 scanner povray"
 
 DEPEND="gphoto2? ( ~kde-base/kamera-3.3.1 )
 	~kde-base/kcoloredit-3.3.1
-	~kde-base/kdegraphics-kfile-plugins-3.3.1
+	~kde-base/kdegraphics-kfile-plugins-$PV
 	~kde-base/kdvi-$PV
 	~kde-base/kfax-$PV
 	~kde-base/kghostview-$PV
