@@ -16,7 +16,8 @@ $(deprange $PV $MAXKDEVER kde-base/kfilereplace)
 $(deprange $PV $MAXKDEVER kde-base/kimagemapeditor)
 $(deprange $PV $MAXKDEVER kde-base/klinkstatus)
 $(deprange $PV $MAXKDEVER kde-base/kommander)
-$(deprange $PV $MAXKDEVER kde-base/kxsldbg)"
+$(deprange $PV $MAXKDEVER kde-base/kxsldbg)
+!app-editors/quanta"
 myconf="--with-extra-includes=$(xml2-config --cflags | sed -e 's:^-I::')"
 
 KMCOMPILEONLY=lib
