@@ -42,10 +42,11 @@ src_install() {
 	chmod a+x startkde
 
 	# startup and shutdown scripts
+	insopts -m0755
 	insinto ${KDEDIR}/env
-	newins $FILESDIR/agent-startup.sh agent-startup.sh
+	doins $FILESDIR/agent-startup.sh
 	insinto $KDEDIR/shutdown
-	newins $FILESDIR/agent-shutdown.sh agent-shutdown.sh
+	doins $FILESDIR/agent-shutdown.sh
 
 	# x11 session script - old style
 	cd ${T}
