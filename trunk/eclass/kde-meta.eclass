@@ -102,7 +102,7 @@ DEPEND="$DEPEND kdexdeltas? ( dev-util/xdelta )"
 
 # END adapted from kde-dist.eclass
 
-#Don't support prepackaged Makefiles with alpha/beta/rc version.
+# Don't support prepackaged Makefiles with alpha/beta/rc version.
 case $myPV in
 	3.3.0 | 3.3.1 | 3.3.2)
 		# prepackaged makefiles for broken-up ebuilds. Ebuild can define KM_MAKEFILESREV to be >=1 to
