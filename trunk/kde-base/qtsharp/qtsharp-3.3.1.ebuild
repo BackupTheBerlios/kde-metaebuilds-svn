@@ -9,6 +9,7 @@ DESCRIPTION=""
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="dev-dotnet/csant"
+PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
 pkg_setup() {
     ewarn "This package is considered broken by upstream. You're on your own."
