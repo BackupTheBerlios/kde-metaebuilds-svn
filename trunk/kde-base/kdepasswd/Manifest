@@ -1,6 +1,5 @@
 MD5 d6f0dc75aef9c9fff886003db6198d82 kdepasswd-3.3.0.ebuild 500
 MD5 d6f0dc75aef9c9fff886003db6198d82 kdepasswd-3.3.1.ebuild 500
-MD5 2059c4f85f3d573f955c8f37ca317f97 files/digest-kdepasswd-3.3.0 148
-MD5 2fc37f547444702199d6e33634d44c20 files/digest-kdepasswd-3.3.1 68
+MD5 d484102134604dcacc244d6fa50ce436 files/digest-kdepasswd-3.3.1 147
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295

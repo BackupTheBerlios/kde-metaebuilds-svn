@@ -1,6 +1,5 @@
 MD5 ddcb920f521c9ca50e0cc2e6aab1ba87 kfind-3.3.1.ebuild 494
 MD5 ddcb920f521c9ca50e0cc2e6aab1ba87 kfind-3.3.0.ebuild 494
-MD5 7498c3a9d58e8c6de5d9b0ea7ed8a14d files/digest-kfind-3.3.0 142
-MD5 2fc37f547444702199d6e33634d44c20 files/digest-kfind-3.3.1 68
+MD5 6963545ee5f62c4eb2bf6d62574565a3 files/digest-kfind-3.3.1 143
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295

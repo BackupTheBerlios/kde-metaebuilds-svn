@@ -7,7 +7,7 @@ inherit kde-meta
 DESCRIPTION=""
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="~kde-base/ilbkdeedu-$PV"
+DEPEND="~kde-base/libkdeedu-$PV"
 
 KMEXTRACTONLY="libkdeedu/kdeeducore"
 KMCOPYLIB="libkdeeducore libkdeedu/kdeeducore"

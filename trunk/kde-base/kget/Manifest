@@ -1,5 +1,4 @@
 MD5 b69012f02cf1d1b83c24c35d128f24e1 kget-3.3.0.ebuild 361
-MD5 b69012f02cf1d1b83c24c35d128f24e1 kget-3.3.1.ebuild 361
-MD5 b2d9aaa8ade25bea02d0af0f369cbd57 files/digest-kget-3.3.0 143
-MD5 a0086a72d069c5606f1e2ea81b98fea8 files/digest-kget-3.3.1 70
+MD5 bd6334e4a6e5ea9bbd4334c59793ae89 kget-3.3.1.ebuild 287
+MD5 19d31e954cf4abf2aad23c57837f372f files/digest-kget-3.3.1 144
 MD5 8dcaf6114da2b32d2bce63e39a38758e files/3.3.0-kget.diff 1321
