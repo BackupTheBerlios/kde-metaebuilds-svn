@@ -76,11 +76,14 @@ fi
 
 # Common xdelta code
 
-SRC_URI="$SRC_URI kdexdeltas? ( mirror://kde/$XDELTA_BASE "
-for x in $XDELTA_DELTA; do
-	SRC_URI="$SRC_URI mirror://kde/$x"
-done
-SRC_URI="$SRC_URI ) !kdexdeltas? ( mirror://kde/$SRC_PATH )"
+if [ -n "$XDELTA_BASE" ]; then
+	SRC_URI="$SRC_URI kdexdeltas? ( mirror://kde/$XDELTA_BASE "
+	for x in $XDELTA_DELTA; do
+		SRC_URI="$SRC_URI mirror://kde/$x"
+	done
+	SRC_URI="$SRC_URI ) !kdexdeltas? ( mirror://kde/$SRC_PATH )"
+fi
+	
 debug-print "$ECLASS: finished, SRC_URI=$SRC_URI"
 
 # Necessary dep for xdeltas. Hope like hell it doesn't worm its way into RDEPEND

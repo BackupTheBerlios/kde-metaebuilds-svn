@@ -1,5 +1,5 @@
 MD5 059613cea50d21ae592f7ec5a163e566 kicker-3.3.1.ebuild 506
 MD5 07e3f3f7982d29e2317f32f209e06573 files/applets-configure.in.in.diff 606
-MD5 491c6e3e25763a9f98b484d691ec9b86 files/digest-kicker-3.3.1 144
+MD5 e667bd6273ecf5dbd832f35a4633fe90 files/digest-kicker-3.3.1 288
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-DESCRIPTION="koffice 1.3.3 - merge this to pull in all koffice-derived packages"
+DESCRIPTION="koffice - merge this to pull in all koffice-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"

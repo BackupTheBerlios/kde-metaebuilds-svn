@@ -9,11 +9,12 @@ for dir in $@; do
         echo ">>> $x"
         cd $x && \
 	rm -f Manifest files/digest-$x-$ver && \
-        FEATURES=-cvs USE="-usepackagedmakefiles packagemakefiles" ebuild $x-$ver.ebuild clean unpack && \
+        FEATURES=-cvs USE="-usepackagedmakefiles" KM_PACKAGEMAKEFILES="yes" \
+		ebuild $x-$ver.ebuild clean unpack && \
         cp -f /var/tmp/portage/$x-$ver/temp/*-makefiles.tar.bz2 /usr/local/portage/distfiles && \
         ln -f /usr/local/portage/distfiles/* /usr/portage/distfiles/ && \
-        FEATURES=cvs USE="usepackagedmakefiles" ebuild $x-$ver.ebuild digest && \
-        cd .. || break 2
+        FEATURES=cvs USE="usepackagedmakefiles" ebuild $x-$ver.ebuild digest # || break 2
+        cd ..
     done
     cd ..
 done
