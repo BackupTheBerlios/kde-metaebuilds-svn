@@ -31,6 +31,9 @@ KMEXTRA="
 	kounavail/
 	doc/koffice
 	doc/thesaurus"
+	
+KMEXTRACTONLY="
+	kchart/kdchart" 
 
 need-kde 3.1
 
