@@ -13,11 +13,14 @@ IUSE=""
 OLDDEPEND="~kde-base/libkcal-$PV
 	~kde-base/libkdepim-$PV"
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcal)
+$(deprange $PV $MAXKDEVER kde-base/kdepim-kresources)
 $(deprange $PV $MAXKDEVER kde-base/libkdepim)"
 
 KMCOPYLIB="
 	libkcal libkcal
-	libkdepim libkdepim"
+	libkdepim libkdepim
+	libkcal_resourceremote kresources/remote"
 KMEXTRACTONLY="
 	libkcal/
-	libkdepim/"
+	libkdepim/
+	kresources/remote"
