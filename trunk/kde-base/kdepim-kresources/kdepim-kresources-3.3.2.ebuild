@@ -22,24 +22,27 @@ KMEXTRACTONLY="
 	libkpimexchange/
 	libkdepim/
 	korganizer/
-	kmail/kmailicalIface.h"
+	kmail/kmailicalIface.h
+	"
 KMCOMPILEONLY="
+	libkdenetwork/gpgmepp/
+	certmanager/
 	libical/src/libical/
 	libical/src/libicalss/
 	kaddressbook/
 	knotes/"
 	
-src_compile() {
-	export DO_NOT_COMPILE="libical kaddressbook knotes" && kde-meta_src_compile myconf configure
-	# generate "ical.h"
-	cd ${S}/libical/src/libical && make ical.h
-	# generate "icalss.h"
-	cd ${S}/libical/src/libicalss && make icalss.h
-	
-	cd ${S}/kaddressbook/interfaces && make libkabinterfaces.la
-	# generate "libkabcommon.la"
-	cd ${S}/kaddressbook && make libkabcommon.la
-	cd ${S}/knotes && make libknotes.la
-	
-	kde-meta_src_compile "make"
-}
+#src_compile() {
+#	export DO_NOT_COMPILE="libical kaddressbook knotes" && kde-meta_src_compile myconf configure
+#	# generate "ical.h"
+#	cd ${S}/libical/src/libical && make ical.h
+#	# generate "icalss.h"
+#	cd ${S}/libical/src/libicalss && make icalss.h
+#	
+#	cd ${S}/kaddressbook/interfaces && make libkabinterfaces.la
+#	# generate "libkabcommon.la"
+#	cd ${S}/kaddressbook && make libkabcommon.la
+#	cd ${S}/knotes && make libknotes.la libknotesresources.la
+#	
+#	kde-meta_src_compile "make"
+#}
