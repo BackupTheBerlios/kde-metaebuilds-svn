@@ -55,8 +55,8 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 
 	# x11 session - new style
 	dodir /usr/share/xsessions
-	sed -e "s:@BINDIR@:${KDEDIR}/bin:g" \
- 		$S/kdm/kfrontend/sessions/kde-$PV.desktop.in > $D/usr/share/xsessions/kde-$PV.desktop
+	sed -e "s:@KDE_BINDIR@:${KDEDIR}/bin:g;s:Name=KDE:Name=KDE $PV:" \
+ 		$S/kdm/kfrontend/sessions/kde.desktop.in > $D/usr/share/xsessions/kde-$PV.desktop
 }
 
 pkg_postinst () {
