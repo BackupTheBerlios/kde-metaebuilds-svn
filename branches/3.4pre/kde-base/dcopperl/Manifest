@@ -1,3 +1,4 @@
-MD5 99ee49e5c9627f0692e3c050a68b809c dcopperl-3.3.1.ebuild 303
+MD5 294b5ba6896dc5eaac26ee0781138b58 dcopperl-3.4.0_beta1.ebuild 346
+MD5 294b5ba6896dc5eaac26ee0781138b58 dcopperl-3.4.0_alpha1.ebuild 346
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
-MD5 66090ca70d479ca4663427eb774febb6 files/digest-dcopperl-3.3.1 300
+MD5 4877266a41162d4c439090a71dcc66bc files/digest-dcopperl-3.4.0_beta1 225

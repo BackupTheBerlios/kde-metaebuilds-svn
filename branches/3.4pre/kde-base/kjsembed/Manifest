@@ -1,3 +1,4 @@
-MD5 08a208fb2c9e2cc05499730848bf8c9f kjsembed-3.3.1.ebuild 355
+MD5 e757fa99ea5eea6ac1083c0e711aa389 kjsembed-3.4.0_beta1.ebuild 452
+MD5 e757fa99ea5eea6ac1083c0e711aa389 kjsembed-3.4.0_alpha1.ebuild 452
+MD5 4877266a41162d4c439090a71dcc66bc files/digest-kjsembed-3.4.0_beta1 225
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
-MD5 d0f87300dc9d99c02f184289407b0125 files/digest-kjsembed-3.3.1 300
