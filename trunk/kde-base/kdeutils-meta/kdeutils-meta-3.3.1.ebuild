@@ -15,7 +15,7 @@ DEPEND="
 	~kde-base/ark-$PV
 	~kde-base/kcalc-$PV
 	~kde-base/kcharselect-$PV
-	~kde-base/kdelirc-$PV
+	lirc? ( ~kde-base/kdelirc-$PV )
 	~kde-base/kdf-$PV
 	~kde-base/kedit-$PV
 	~kde-base/kfloppy-$PV
