@@ -1,4 +1,2 @@
-MD5 b72b5ac2bd58f0760463e977b41c96a8 kmrml-3.3.1.ebuild 265
-MD5 b72b5ac2bd58f0760463e977b41c96a8 kmrml-3.3.2.ebuild 265
-MD5 8da3e034becf249f4013b097281e8859 files/digest-kmrml-3.3.1 296
-MD5 b2ab54f6f1bc54b9aedc43f824be60d7 files/digest-kmrml-3.3.2 375
+MD5 d084a25dfdce12214da6faf83c181120 kmrml-3.4.0_alpha1.ebuild 308
+MD5 f85ff1154cc1ce2a3fcc01be1098fca8 files/digest-kmrml-3.4.0_alpha1 72

@@ -1,5 +1,2 @@
-MD5 015212c738a3c9863efca0edbe95f32e kstars-3.3.1.ebuild 600
-MD5 015212c738a3c9863efca0edbe95f32e kstars-3.3.2.ebuild 600
-MD5 4be87586c676390c7039d16095cb16ef files/digest-kstars-3.3.1 284
-MD5 b2e856619f167467a0e1e2f5366ecd94 files/digest-kstars-3.3.2 358
-MD5 221b952d234335b7df86fd12050267c4 files/kdeedu-3.3.0-sparc.patch 2607
+MD5 3906edaf9f8a333ed60138f1dc78650f kstars-3.4.0_alpha1.ebuild 701
+MD5 2f8ae5d56e22103d2da191f4da825a5e files/digest-kstars-3.4.0_alpha1 68

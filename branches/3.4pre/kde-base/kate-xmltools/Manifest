@@ -1,4 +1,2 @@
-MD5 cd7b32516f30651f294a7f80543ea470 kate-xmltools-3.3.2.ebuild 326
-MD5 cd7b32516f30651f294a7f80543ea470 kate-xmltools-3.3.1.ebuild 326
-MD5 8b9313603c5ed93b9249b25848212ed2 files/digest-kate-xmltools-3.3.1 298
-MD5 b1f31282658c4527ed58f8ae00ec5f97 files/digest-kate-xmltools-3.3.2 375
+MD5 f1c4def7a61960b20a1352840c155b6c kate-xmltools-3.4.0_alpha1.ebuild 485
+MD5 b47f9ddbd93d3dd0541fa87746a9fa34 files/digest-kate-xmltools-3.4.0_alpha1 70

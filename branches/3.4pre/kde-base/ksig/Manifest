@@ -1,4 +1,2 @@
-MD5 7e984cdedd71072a1dc0f224f2dc760c ksig-3.3.2.ebuild 232
-MD5 7e984cdedd71072a1dc0f224f2dc760c ksig-3.3.1.ebuild 232
-MD5 1c8cc2803ff6ff38a9a824d341a0227b files/digest-ksig-3.3.1 289
-MD5 5967069976840974ad93f32a636cec0a files/digest-ksig-3.3.2 366
+MD5 11cb38306d9c6ce077dbd22c9bbda5bc ksig-3.4.0_alpha1.ebuild 275
+MD5 b47f9ddbd93d3dd0541fa87746a9fa34 files/digest-ksig-3.4.0_alpha1 70

@@ -1,5 +1,2 @@
-MD5 027d22a7a47cd9e0693edba29dafd2b1 kpdf-3.3.2.ebuild 317
-MD5 027d22a7a47cd9e0693edba29dafd2b1 kpdf-3.3.1.ebuild 317
-MD5 246ea4af07658db545af12b5ad371289 files/digest-kpdf-3.3.1 295
-MD5 918502bf72eeb523a05e147e7f99d45c files/digest-kpdf-3.3.2 374
-MD5 651fba579516ea947fbefee373f40a6c files/post-3.3.1-kdegraphics.diff 1533
+MD5 c33c915d629ac6146020d86e8d13af93 kpdf-3.4.0_alpha1.ebuild 360
+MD5 f85ff1154cc1ce2a3fcc01be1098fca8 files/digest-kpdf-3.4.0_alpha1 72

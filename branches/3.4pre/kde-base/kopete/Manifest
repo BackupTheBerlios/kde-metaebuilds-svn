@@ -1,5 +1,2 @@
-MD5 93de835e6d8c7837ab42f411f10c60cf kopete-3.3.2.ebuild 304
-MD5 93de835e6d8c7837ab42f411f10c60cf kopete-3.3.1.ebuild 304
-MD5 b8a5e2c1ff1e952ab3541f985e22407c files/digest-kopete-3.3.1 295
-MD5 d382911e4f7631a0d4b19fdf81e955fd files/digest-kopete-3.3.2 373
-MD5 805378603d34bf14a7b856f30374428b files/3.3.0-kopete.diff 566
+MD5 a80a812bcb4dd44b092e94c757e01584 kopete-3.4.0_alpha1.ebuild 347
+MD5 09cbac9d8b68d5bd4514c50df459e782 files/digest-kopete-3.4.0_alpha1 71

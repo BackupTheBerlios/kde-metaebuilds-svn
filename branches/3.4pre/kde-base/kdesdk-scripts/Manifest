@@ -1,4 +1,2 @@
-MD5 b968bdcd653abccbaa078c540cb492f2 kdesdk-scripts-3.3.1.ebuild 290
-MD5 b968bdcd653abccbaa078c540cb492f2 kdesdk-scripts-3.3.2.ebuild 290
-MD5 c1d2c02244fc46e7d6e9d0947717ebb8 files/digest-kdesdk-scripts-3.3.1 290
-MD5 4d1ed53cdbf3e0e2e44d351e2fe54dd6 files/digest-kdesdk-scripts-3.3.2 364
+MD5 cedacabe713affd32250b6ca2f395eb9 kdesdk-scripts-3.4.0_alpha1.ebuild 333
+MD5 6fd89829eb39c6f490ef984b5bb6b1e6 files/digest-kdesdk-scripts-3.4.0_alpha1 67

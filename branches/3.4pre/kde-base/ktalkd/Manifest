@@ -1,4 +1,2 @@
-MD5 d542782431bb2084cc5bc5653f8c3729 ktalkd-3.3.1.ebuild 250
-MD5 d542782431bb2084cc5bc5653f8c3729 ktalkd-3.3.2.ebuild 250
-MD5 3ff91be88c62a1b06c09a3b3ab8d46f1 files/digest-ktalkd-3.3.1 294
-MD5 42697159ddf48d658f43c72ab9901b83 files/digest-ktalkd-3.3.2 372
+MD5 46425c4d30c708d3ac954de7bf2cd815 ktalkd-3.4.0_alpha1.ebuild 293
+MD5 09cbac9d8b68d5bd4514c50df459e782 files/digest-ktalkd-3.4.0_alpha1 71

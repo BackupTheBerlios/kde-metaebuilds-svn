@@ -1,4 +1,2 @@
-MD5 82a359afa7d6a35e3f78eb4b00a761be kmid-3.3.1.ebuild 220
-MD5 82a359afa7d6a35e3f78eb4b00a761be kmid-3.3.2.ebuild 220
-MD5 a711cb28be3972c7d8d116d75914694b files/digest-kmid-3.3.1 301
-MD5 c85612b2bb783a2973dc897ca4bc9b18 files/digest-kmid-3.3.2 382
+MD5 c88865c2d50178f965db594220400ba8 kmid-3.4.0_alpha1.ebuild 263
+MD5 fc6c88b42efcb16aaa7a7459489c41b2 files/digest-kmid-3.4.0_alpha1 74

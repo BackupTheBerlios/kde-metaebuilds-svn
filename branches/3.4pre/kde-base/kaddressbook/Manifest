@@ -1,4 +1,2 @@
-MD5 384823b7f23c6d2d62f78f8f49f6cf3d kaddressbook-3.3.1.ebuild 1225
-MD5 384823b7f23c6d2d62f78f8f49f6cf3d kaddressbook-3.3.2.ebuild 1225
-MD5 2f0c139d4d51c20582922afd51c62a10 files/digest-kaddressbook-3.3.1 289
-MD5 d984052b6ae0db2f10374796811de6d9 files/digest-kaddressbook-3.3.2 362
+MD5 a7cccda7263c688e84fb1d349de3fdb6 kaddressbook-3.4.0_alpha1.ebuild 1513
+MD5 892303ffe022b31a222f9efab549727b files/digest-kaddressbook-3.4.0_alpha1 68

@@ -1,4 +1,2 @@
-MD5 898ca1f4d38f7f0319c2d225aae852de kweather-3.3.1.ebuild 228
-MD5 898ca1f4d38f7f0319c2d225aae852de kweather-3.3.2.ebuild 228
-MD5 85d0072fcbb80aa70f668a160a5d2125 files/digest-kweather-3.3.1 286
-MD5 48be3bd9f4f16f706fd026a113b69beb files/digest-kweather-3.3.2 360
+MD5 4d3059a9bce0b4be0314c83a9171be99 kweather-3.4.0_alpha1.ebuild 271
+MD5 602c2c663bebe1af788c1bc95755b9d9 files/digest-kweather-3.4.0_alpha1 68

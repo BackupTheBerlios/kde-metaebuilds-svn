@@ -1,4 +1,2 @@
-MD5 ff7fa7edb26c2f8c4610d7503fb6c9ee ksnake-3.3.1.ebuild 310
-MD5 ff7fa7edb26c2f8c4610d7503fb6c9ee ksnake-3.3.2.ebuild 310
-MD5 b0f441fa446ef7b2b009008075ec6210 files/digest-ksnake-3.3.1 288
-MD5 cfc3fd82a97183e7cdd2e6d73f66a72d files/digest-ksnake-3.3.2 364
+MD5 5b50261ae14a078d16acbc4ca87a1b85 ksnake-3.4.0_alpha1.ebuild 413
+MD5 b35124f462cce0e0518bb5468c406f9d files/digest-ksnake-3.4.0_alpha1 69

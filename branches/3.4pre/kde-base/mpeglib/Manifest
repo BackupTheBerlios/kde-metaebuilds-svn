@@ -1,4 +1,3 @@
-MD5 f6aba680afe14cc89434f73d56f987f2 mpeglib-3.3.2.ebuild 222
-MD5 f6aba680afe14cc89434f73d56f987f2 mpeglib-3.3.1.ebuild 222
-MD5 3abd46b2902832d9c724a7eacf1db6ce files/digest-mpeglib-3.3.1 304
-MD5 4760c7a3ddad78a64d30335980091dfd files/digest-mpeglib-3.3.2 385
+MD5 e0e1f4bd0a184ee356e99b26b177ffeb mpeglib-3.4.0_alpha1.ebuild 356
+MD5 fc6c88b42efcb16aaa7a7459489c41b2 files/digest-mpeglib-3.4.0_alpha1 74
+MD5 0af60268ec8424c72256db89062b6f31 files/kdemultimedia-64bit.patch 634

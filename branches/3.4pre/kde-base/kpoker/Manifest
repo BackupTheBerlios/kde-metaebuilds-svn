@@ -1,4 +1,2 @@
-MD5 67e1558b99826ae1870a6415bac4218f kpoker-3.3.2.ebuild 307
-MD5 dafc0e316aae370ef483cf9904c1a388 kpoker-3.3.1.ebuild 305
-MD5 d932afbc30b212476a27a32515c5fd32 files/digest-kpoker-3.3.1 288
-MD5 84c4ec9457ee04e901abe5715bc6e636 files/digest-kpoker-3.3.2 364
+MD5 4a41a1e0bc40afe105c1a4d8accb63f9 kpoker-3.4.0_alpha1.ebuild 411
+MD5 b35124f462cce0e0518bb5468c406f9d files/digest-kpoker-3.4.0_alpha1 69

@@ -1,4 +1,2 @@
-MD5 4023c60a7d833f0537359d6a47ab2cb3 knode-3.3.1.ebuild 618
-MD5 4023c60a7d833f0537359d6a47ab2cb3 knode-3.3.2.ebuild 618
-MD5 b9ed632f45b10e91903ec7109a5575d5 files/digest-knode-3.3.1 282
-MD5 5bea95462a8955c2bb1bbbf5e7d1e308 files/digest-knode-3.3.2 355
+MD5 02ee1733e206851d20f2d2e3a30e3e3c knode-3.4.0_alpha1.ebuild 726
+MD5 892303ffe022b31a222f9efab549727b files/digest-knode-3.4.0_alpha1 68

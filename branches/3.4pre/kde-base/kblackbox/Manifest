@@ -1,4 +1,2 @@
-MD5 70437aa6fe89651d29e1685e0893d53d kblackbox-3.3.2.ebuild 308
-MD5 70437aa6fe89651d29e1685e0893d53d kblackbox-3.3.1.ebuild 308
-MD5 cb76d0cc61dc415d2dfaed0f5fd6fe18 files/digest-kblackbox-3.3.1 291
-MD5 09c10150c9c224a70c448eec52d94b10 files/digest-kblackbox-3.3.2 367
+MD5 908a8431f657d87fd74377901763e4c0 kblackbox-3.4.0_alpha1.ebuild 411
+MD5 b35124f462cce0e0518bb5468c406f9d files/digest-kblackbox-3.4.0_alpha1 69

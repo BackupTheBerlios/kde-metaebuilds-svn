@@ -1,4 +1,2 @@
-MD5 12abfad3cd667972ab7189b53931ee73 kbabel-3.3.2.ebuild 258
-MD5 12abfad3cd667972ab7189b53931ee73 kbabel-3.3.1.ebuild 258
-MD5 a2bcf8b36449ab5bfa25d7b23fd82e07 files/digest-kbabel-3.3.1 282
-MD5 405b28dc91d7dd77148382d8b73a8d2e files/digest-kbabel-3.3.2 356
+MD5 36a64bdcae92e5feb1dd411b1bf0a51e kbabel-3.4.0_alpha1.ebuild 301
+MD5 6fd89829eb39c6f490ef984b5bb6b1e6 files/digest-kbabel-3.4.0_alpha1 67

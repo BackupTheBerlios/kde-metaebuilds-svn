@@ -1,4 +1,2 @@
-MD5 4fcf0512a52861a72865203825fc4160 konqueror-fsview-3.3.1.ebuild 356
-MD5 4fcf0512a52861a72865203825fc4160 konqueror-fsview-3.3.2.ebuild 356
-MD5 5b96baa09db3dd98defae275a27c3d5e files/digest-konqueror-fsview-3.3.1 301
-MD5 fe8742813e5c5dd546cfcecdcd61c832 files/digest-konqueror-fsview-3.3.2 378
+MD5 39830a9099423c36c9c5626b148263cd konqueror-fsview-3.4.0_alpha1.ebuild 520
+MD5 b47f9ddbd93d3dd0541fa87746a9fa34 files/digest-konqueror-fsview-3.4.0_alpha1 70

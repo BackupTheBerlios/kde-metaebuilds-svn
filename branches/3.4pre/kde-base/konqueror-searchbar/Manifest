@@ -1,4 +1,2 @@
-MD5 1cb02f0562f17dcf0c199320f3b4d84b konqueror-searchbar-3.3.1.ebuild 345
-MD5 1cb02f0562f17dcf0c199320f3b4d84b konqueror-searchbar-3.3.2.ebuild 345
-MD5 25e16be18b6a71d0ce451f6bec8ec75a files/digest-konqueror-searchbar-3.3.1 304
-MD5 cf656cd453644e294a5cd3e150dfb796 files/digest-konqueror-searchbar-3.3.2 381
+MD5 6a0fc4a464bfc7aa3ea028c98129b769 konqueror-searchbar-3.4.0_alpha1.ebuild 509
+MD5 b47f9ddbd93d3dd0541fa87746a9fa34 files/digest-konqueror-searchbar-3.4.0_alpha1 70

@@ -1,4 +1,2 @@
-MD5 dd361333e7eadaf373cacfe03ba3b4f6 krfb-3.3.2.ebuild 359
-MD5 dd361333e7eadaf373cacfe03ba3b4f6 krfb-3.3.1.ebuild 359
-MD5 12ebc16a47045e15d62349607c5628a6 files/digest-krfb-3.3.1 292
-MD5 c408ad219f1a26c96795d86f52ccd97e files/digest-krfb-3.3.2 370
+MD5 5bdd8e275ec57d63c7ecfd8d023b74e1 krfb-3.4.0_alpha1.ebuild 402
+MD5 09cbac9d8b68d5bd4514c50df459e782 files/digest-krfb-3.4.0_alpha1 71

@@ -1,4 +1,2 @@
-MD5 b21cbab989ac828ad5903f3c53403ba7 klaptopdaemon-3.3.2.ebuild 265
-MD5 b21cbab989ac828ad5903f3c53403ba7 klaptopdaemon-3.3.1.ebuild 265
-MD5 7cc63e6e060ce63858d6bf83b424a77c files/digest-klaptopdaemon-3.3.1 295
-MD5 ceb82db8a74c1876ae4b6d9ddfc15958 files/digest-klaptopdaemon-3.3.2 371
+MD5 9fa6257feb86dc831f93637ba35336b2 klaptopdaemon-3.4.0_alpha1.ebuild 308
+MD5 d329630a6f718e3d3af7fe3acaf81446 files/digest-klaptopdaemon-3.4.0_alpha1 69

@@ -1,5 +1,2 @@
-MD5 ac43d080b3412a47180d9902beb3acbe libkdepim-3.3.2.ebuild 289
-MD5 ac43d080b3412a47180d9902beb3acbe libkdepim-3.3.1.ebuild 289
-MD5 233bdefd09b2bdc820984499d418ac65 files/digest-libkdepim-3.3.1 286
-MD5 7628a01017f7c40c3f98077e33aa1451 files/digest-libkdepim-3.3.2 359
-MD5 850fbc4d948b6ac4912a4735ac70ce86 files/kdepim-3.3.0-spam-assistant-libkdepim.patch 4080
+MD5 fb935049f3c64204468a1e5c6ef5c9aa libkdepim-3.4.0_alpha1.ebuild 390
+MD5 892303ffe022b31a222f9efab549727b files/digest-libkdepim-3.4.0_alpha1 68

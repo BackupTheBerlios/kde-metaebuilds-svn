@@ -1,4 +1,2 @@
-MD5 125ff795235da148489d9076b41c285b libkscan-3.3.2.ebuild 255
-MD5 125ff795235da148489d9076b41c285b libkscan-3.3.1.ebuild 255
-MD5 10794676401058f42e9622b0187e6897 files/digest-libkscan-3.3.1 299
-MD5 341a8f753c62b60d943110da77770b65 files/digest-libkscan-3.3.2 378
+MD5 1938f5f9397d32579d6a329011a0e221 libkscan-3.4.0_alpha1.ebuild 298
+MD5 f85ff1154cc1ce2a3fcc01be1098fca8 files/digest-libkscan-3.4.0_alpha1 72

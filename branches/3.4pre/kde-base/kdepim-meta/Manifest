@@ -1,4 +1,2 @@
-MD5 d09981f6ccfb65b6b1ae9b006d63bb4b kdepim-meta-3.3.1.ebuild 1022
-MD5 aeba782079de6cfaeafcd02d62e85f4e kdepim-meta-3.3.2.ebuild 1044
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdepim-meta-3.3.1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdepim-meta-3.3.2 0
+MD5 15cf8d7308502441a8fc1a9f2b60de8a kdepim-meta-3.4.0_alpha1.ebuild 1696
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdepim-meta-3.4.0_alpha1 0

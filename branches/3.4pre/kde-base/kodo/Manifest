@@ -1,4 +1,2 @@
-MD5 8382c695bcff36247cc5160c9d2ff87e kodo-3.3.1.ebuild 256
-MD5 8382c695bcff36247cc5160c9d2ff87e kodo-3.3.2.ebuild 256
-MD5 13a6f314751de882cf7b4127d283f961 files/digest-kodo-3.3.1 282
-MD5 6b44a3420eaf74c7d94cfdd0a87b412d files/digest-kodo-3.3.2 356
+MD5 31ea71ff6aaa5f7754f5f5cd6658721e kodo-3.4.0_alpha1.ebuild 299
+MD5 602c2c663bebe1af788c1bc95755b9d9 files/digest-kodo-3.4.0_alpha1 68

@@ -1,4 +1,2 @@
-MD5 2533d20fd33b4a6848678faf0b356c5c krdc-3.3.2.ebuild 465
-MD5 2533d20fd33b4a6848678faf0b356c5c krdc-3.3.1.ebuild 465
-MD5 f5fc831c430c2b30a1ea686c0b566249 files/digest-krdc-3.3.1 292
-MD5 48c606d0d4ce2c9131c50a8529eff60e files/digest-krdc-3.3.2 370
+MD5 7bc6fd68d93863f45d4b8071d9d83b77 krdc-3.4.0_alpha1.ebuild 508
+MD5 09cbac9d8b68d5bd4514c50df459e782 files/digest-krdc-3.4.0_alpha1 71

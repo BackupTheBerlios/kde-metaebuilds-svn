@@ -1,4 +1,2 @@
-MD5 fb23936ea8ea64eb28218ef33a2804e8 kdenetwork-meta-3.3.2.ebuild 655
-MD5 3199545672da8eb80ae58a7f212e2d25 kdenetwork-meta-3.3.1.ebuild 637
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdenetwork-meta-3.3.1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdenetwork-meta-3.3.2 0
+MD5 0be8241751f80469fc4a2a6be62537fe kdenetwork-meta-3.4.0_alpha1.ebuild 1004
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdenetwork-meta-3.4.0_alpha1 0

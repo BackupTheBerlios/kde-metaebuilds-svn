@@ -1,4 +1,2 @@
-MD5 76e074141a870ae7034f81b4e2c7bfd6 kwin4-3.3.2.ebuild 313
-MD5 76e074141a870ae7034f81b4e2c7bfd6 kwin4-3.3.1.ebuild 313
-MD5 56ab4b55a0123523e9809da0a26daffe files/digest-kwin4-3.3.1 287
-MD5 9a6c4673c8ecae54d1cc91f0d7a609c6 files/digest-kwin4-3.3.2 363
+MD5 f8ecf9365d5a0c5d3e671f7c4774bfc9 kwin4-3.4.0_alpha1.ebuild 416
+MD5 b35124f462cce0e0518bb5468c406f9d files/digest-kwin4-3.4.0_alpha1 69

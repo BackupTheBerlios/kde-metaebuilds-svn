@@ -1,4 +1,2 @@
-MD5 b6614a991cb6529affa4f5b2851875fa konqueror-babelfish-3.3.1.ebuild 372
-MD5 b6614a991cb6529affa4f5b2851875fa konqueror-babelfish-3.3.2.ebuild 372
-MD5 816945942c12c236127d3610b6e79774 files/digest-konqueror-babelfish-3.3.1 304
-MD5 d3dcfeb03af6ab6ee7ce5ee0145ad741 files/digest-konqueror-babelfish-3.3.2 381
+MD5 1ad341e55ac28ab76d41f2c21667e4ea konqueror-babelfish-3.4.0_alpha1.ebuild 536
+MD5 b47f9ddbd93d3dd0541fa87746a9fa34 files/digest-konqueror-babelfish-3.4.0_alpha1 70

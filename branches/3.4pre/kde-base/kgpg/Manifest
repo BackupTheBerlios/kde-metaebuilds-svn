@@ -1,4 +1,2 @@
-MD5 c2325a54e66ed07d95856c5afa067fb1 kgpg-3.3.2.ebuild 260
-MD5 c2325a54e66ed07d95856c5afa067fb1 kgpg-3.3.1.ebuild 260
-MD5 39bd3c340d442291d4d5d4360c4248f9 files/digest-kgpg-3.3.1 286
-MD5 8274b840d1b2f5b14913bed0c863c9e8 files/digest-kgpg-3.3.2 362
+MD5 cad664a8d511302fae9ec84af8120307 kgpg-3.4.0_alpha1.ebuild 303
+MD5 d329630a6f718e3d3af7fe3acaf81446 files/digest-kgpg-3.4.0_alpha1 69

@@ -1,4 +1,2 @@
-MD5 acbd5c929538792a259245b166543bbe kpilot-3.3.2.ebuild 783
-MD5 acbd5c929538792a259245b166543bbe kpilot-3.3.1.ebuild 783
-MD5 d2277adc5e125767606800e49554d5a8 files/digest-kpilot-3.3.1 283
-MD5 c13a5992becf972439a85e1210f787d7 files/digest-kpilot-3.3.2 356
+MD5 b89a6d87f16cfce1033efbe9c9d79756 kpilot-3.4.0_alpha1.ebuild 890
+MD5 892303ffe022b31a222f9efab549727b files/digest-kpilot-3.4.0_alpha1 68

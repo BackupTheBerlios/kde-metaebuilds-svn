@@ -1,4 +1,2 @@
-MD5 a66a5ff889b074a377e5d5a647c1610f libkcddb-3.3.2.ebuild 225
-MD5 a66a5ff889b074a377e5d5a647c1610f libkcddb-3.3.1.ebuild 225
-MD5 606e53f4219a54b370213d138d9531ea files/digest-libkcddb-3.3.1 305
-MD5 762c6630a52d8ec3011e99d7693a1c9d files/digest-libkcddb-3.3.2 386
+MD5 55c6e3f231d7d41343b58f2188edb6ea libkcddb-3.4.0_alpha1.ebuild 268
+MD5 fc6c88b42efcb16aaa7a7459489c41b2 files/digest-libkcddb-3.4.0_alpha1 74

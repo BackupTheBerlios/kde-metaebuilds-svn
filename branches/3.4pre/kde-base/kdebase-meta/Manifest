@@ -1,4 +1,2 @@
-MD5 76dbd5ba62fac7ad934ac8c203952784 kdebase-meta-3.3.2.ebuild 1432
-MD5 76dbd5ba62fac7ad934ac8c203952784 kdebase-meta-3.3.1.ebuild 1432
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebase-meta-3.3.1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebase-meta-3.3.2 0
+MD5 b3ed624d7fd1e15ba99165da2aa9f7b3 kdebase-meta-3.4.0_alpha1.ebuild 2239
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebase-meta-3.4.0_alpha1 0
