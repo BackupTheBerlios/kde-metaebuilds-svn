@@ -5,7 +5,7 @@
 inherit kde flag-o-matic eutils
 set-kdedir 3.4
 
-myPV=1.3.90
+myPV=1.3.91
 DESCRIPTION="aRts, the KDE sound (and all-around multimedia) server/output manager"
 HOMEPAGE="http://multimedia.kde.org/"
 SRC_URI="mirror://kde/unstable/3.3.91/src/${PN}-${myPV}.tar.bz2"
