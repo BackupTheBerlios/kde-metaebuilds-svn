@@ -8,7 +8,7 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 SLOT="3.3"
 KEYWORDS="~x86"
-IUSE="gphoto2 scanner"
+IUSE="gphoto2 scanner povray"
 
 DEPEND="gphoto2? ( ~kde-base/kamera-$PV )
 	~kde-base/kcoloredit-$PV
@@ -21,7 +21,7 @@ DEPEND="gphoto2? ( ~kde-base/kamera-$PV )
 	~kde-base/kolourpaint-$PV
 	scanner? ( ~kde-base/kooka-$PV )
 	~kde-base/kpdf-$PV
-	~kde-base/kpovmodeler-$PV
+	povray? ( ~kde-base/kpovmodeler-$PV )
 	~kde-base/kruler-$PV
 	~kde-base/ksnapshot-$PV
 	~kde-base/ksvgplugin-$PV
