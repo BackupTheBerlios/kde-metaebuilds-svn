@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+MAXKOFFICEVER=1.3.5
 KMNAME=koffice
 inherit kde-meta eutils
 
@@ -15,7 +16,7 @@ KEYWORDS="~x86"
 IUSE=""
 SLOT="0"
 
-DEPEND="~app-office/koffice-libs-$PV
+DEPEND="$(need-version-range $PV $MAXKOFFICEVER app-office/koffice-libs)
 	dev-util/pkgconfig"
 
 KMCOPYLIB="

@@ -3,6 +3,7 @@
 # $Header: $
 
 KMNAME=koffice
+MAXKOFFICEVER=1.3.4
 inherit kde-meta eutils
 
 DESCRIPTION="KOffice Word Processor"
@@ -15,7 +16,7 @@ KEYWORDS="~x86"
 IUSE=""
 SLOT="0"
 
-DEPEND="~app-office/koffice-libs-$PV
+DEPEND="$(need-version-range $PV $MAXKOFFICEVER app-office/koffice-libs)
 	>=app-text/wv2-0.1.8
 	>=media-gfx/imagemagick-5.4.5
 	dev-util/pkgconfig"
