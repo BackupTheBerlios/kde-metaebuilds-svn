@@ -11,16 +11,3 @@ DESCRIPTION="KDE splashscreen framework (the splashscreen of KDE itself, not of 
 KEYWORDS="~x86"
 IUSE=""
 
-
-
-src_install() {
-	kde-meta_src_install
-	
-	#backup splashscreen images, so they can be put back when unmerging
-	#mosfet or so.
-	if [ ! -d ${KDEDIR}/share/apps/ksplash.default ]
-	then
-		cd ${D}/${KDEDIR}/share/apps
-		cp -rf ksplash/ ksplash.default
-	fi
-}
