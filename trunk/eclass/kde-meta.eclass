@@ -199,6 +199,7 @@ function kde-meta_src_unpack() {
 	fi
 	
 	# Extract everything necessary
+	# $KMTARPARAMS is for an ebuild to use; currently used by kturtle
 	cd $WORKDIR
 	extractlist=""
 	for item in admin Makefile.am Makefile.am.in configure.in.in configure.in.bot \
@@ -207,7 +208,7 @@ function kde-meta_src_unpack() {
 	do
 		extractlist="$extractlist $myP/$item"
 	done
-	tar -xjpf $DISTDIR/${myP}.tar.bz2 $extractlist
+	tar -xjpf $DISTDIR/${myP}.tar.bz2 $KMTARPARAMS $extractlist 
 	# Default $S is based on $P not $myP; rename the extracted dir to fit $S
 	mv $myP $P
 	
