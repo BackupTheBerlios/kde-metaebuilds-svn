@@ -1,5 +1,0 @@
-MD5 e67bc98b3ecdad29b20210b47e1b7b71 kioslave-3.3.1.ebuild 690
-MD5 56b54f21ecad53253c1a7030a940b564 files/digest-kioslave-3.3.1 146
-MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
-MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
-MD5 7b19cedba543f3d94c0884ff3d921081 files/3.3.0-sasl-fix.diff 2419
