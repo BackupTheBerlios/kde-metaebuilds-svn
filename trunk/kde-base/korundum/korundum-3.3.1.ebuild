@@ -5,6 +5,7 @@
 KMNAME=kdebindings
 KMCOPYLIB="libsmokeqt smoke/qt libsmokekde smoke/kde"
 KMCOMPILEONLY="qtruby"
+KM_MAKEFILESREV=1
 inherit kde-meta
 
 DESCRIPTION="KDE ruby bindings"

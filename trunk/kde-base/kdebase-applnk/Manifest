@@ -1,4 +1,7 @@
+MD5 ed53b6f1bc25f79321f20548d58d5f3c kdebase-applnk-3.3.2.ebuild 398
 MD5 ed53b6f1bc25f79321f20548d58d5f3c kdebase-applnk-3.3.1.ebuild 398
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.2.diff 295
 MD5 d26b49a61cd78eca8e4960c614b1ac73 files/digest-kdebase-applnk-3.3.1 296
+MD5 7995d5ab8e26dfed88aa7b9aeed54ac4 files/digest-kdebase-applnk-3.3.2 371

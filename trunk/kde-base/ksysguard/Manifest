@@ -1,4 +1,7 @@
+MD5 7dbb78b7e447d25e4f16c3c454162e46 ksysguard-3.3.2.ebuild 360
 MD5 7dbb78b7e447d25e4f16c3c454162e46 ksysguard-3.3.1.ebuild 360
 MD5 9a9546c426e343711cb99a5a4738724b files/digest-ksysguard-3.3.1 291
+MD5 8595b8b6505132bedbe186672292e501 files/digest-ksysguard-3.3.2 366
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.2.diff 295

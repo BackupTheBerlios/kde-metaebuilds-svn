@@ -1,4 +1,7 @@
 MD5 106622d161f9e0ca92ec94218ce7d6fd kappfinder-3.3.1.ebuild 448
+MD5 106622d161f9e0ca92ec94218ce7d6fd kappfinder-3.3.2.ebuild 448
 MD5 1dc6a102acdbc96af1bd63b235b343b9 files/digest-kappfinder-3.3.1 292
+MD5 ec39c05d5f40dfec1e71d18b67734634 files/digest-kappfinder-3.3.2 367
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.2.diff 295

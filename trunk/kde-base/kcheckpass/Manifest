@@ -1,4 +1,7 @@
 MD5 ac141039a3abf9a35e3bf7ce3b62b495 kcheckpass-3.3.1.ebuild 447
+MD5 ac141039a3abf9a35e3bf7ce3b62b495 kcheckpass-3.3.2.ebuild 447
 MD5 45bef6064f6687dae602fbdc60e50e77 files/digest-kcheckpass-3.3.1 292
+MD5 2f32792cae5ae59d1f8401556d151ba2 files/digest-kcheckpass-3.3.2 367
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.2.diff 295

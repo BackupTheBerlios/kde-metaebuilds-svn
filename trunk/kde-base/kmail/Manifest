@@ -1,3 +1,5 @@
+MD5 2d7734896d14af6724245403158c499c kmail-3.3.2.ebuild 1124
 MD5 2d7734896d14af6724245403158c499c kmail-3.3.1.ebuild 1124
 MD5 23ebadb66524f79d0d620b421e287348 files/kdepim-3.3.0-spam-assistant.patch 28873
 MD5 5022cab87e82e3d03d8714bb76a0fd97 files/digest-kmail-3.3.1 282
+MD5 37ce271e87d46ed9d79aa115e18b9ddd files/digest-kmail-3.3.2 355

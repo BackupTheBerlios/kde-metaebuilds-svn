@@ -5,6 +5,7 @@
 KMNAME=kdebindings
 KMEXTRACTONLY=qtjava
 KMCOPYLIB="libqtjavasupport qtjava/javalib/qtjava"
+KM_MAKEFILESREV=1
 inherit kde-meta
 
 DESCRIPTION="KDE java bindings"
@@ -22,18 +23,18 @@ PATCHES="$FILESDIR/no-gtk-glib-check.diff $FILESDIR/classpath.diff"
 # Someone who knows about java-in-gentoo should look at this and the
 # other java kdebindings, and fix the stupid thing
 src_unpack() {
-    kde-meta_src_unpack
-    
-    # $PREFIX-dependant, so don't go into the makefile tarballs
-    cd $S/kdejava/koala/org/kde/koala
-    for x in Makefile.am Makefile.in; do
-	mv $x $x.orig
-	sed -e "s:_CLASSPATH_:$(java-config -p qtjava):" $x.orig > $x
-	rm $x.orig
+	kde-meta_src_unpack
+
+	# $PREFIX-dependant, so don't go into the makefile tarballs
+	cd $S/kdejava/koala/org/kde/koala
+	for x in Makefile.am Makefile.in; do
+		mv $x $x.orig
+		sed -e "s:_CLASSPATH_:$(java-config -p qtjava):" $x.orig > $x
+		rm $x.orig
     done
 }
 
 src_compile() {
-    myconf="$myconf --with-java=`java-config --jdk-home`"
-    kde-meta_src_compile
+	myconf="$myconf --with-java=`java-config --jdk-home`"
+	kde-meta_src_compile
 }

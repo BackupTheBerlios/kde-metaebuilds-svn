@@ -1,4 +1,7 @@
 MD5 cf2b9d51f9b1197288dd17d14d0e2276 kdebugdialog-3.3.1.ebuild 402
+MD5 cf2b9d51f9b1197288dd17d14d0e2276 kdebugdialog-3.3.2.ebuild 402
 MD5 8cc9927d236021894ae70cc11e4773e8 files/digest-kdebugdialog-3.3.1 294
+MD5 fb564fd7b61bc6f829ea4c0af04fa7c8 files/digest-kdebugdialog-3.3.2 369
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.2.diff 295

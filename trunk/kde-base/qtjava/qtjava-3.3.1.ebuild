@@ -3,6 +3,7 @@
 # $Header: $
 
 KMNAME=kdebindings
+KM_MAKEFILESREV=1
 inherit kde-meta
 
 DESCRIPTION="Java bindings for QT"
@@ -13,8 +14,8 @@ PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
 
 src_compile() {
-    myconf="$myconf --with-java=`java-config --jdk-home`"
-    kde-meta_src_compile
+	myconf="$myconf --with-java=`java-config --jdk-home`"
+	kde-meta_src_compile
 }
 
 # Doesn't really need kde, only qt? But then, it installs by default into $KDEDIR/...
@@ -22,10 +23,10 @@ src_compile() {
 # Someone who's into java should look over this...
 
 src_install() {
-    kde-meta_src_install
+	kde-meta_src_install
 
-    mkdir -p $D/usr/share/qtjava
-    cat > $D/usr/share/qtjava/package.env << EOF
+	mkdir -p $D/usr/share/qtjava
+	cat > $D/usr/share/qtjava/package.env << EOF
 DESCRIPTION=Java bindings for QT
 CLASSPATH=:$PREFIX/lib/java/qtjava.jar:
 EOF

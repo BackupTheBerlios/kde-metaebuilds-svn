@@ -7,6 +7,7 @@
 
 KMNAME=kdebindings
 KMEXTRACTONLY="kdejava/configure.in.in"
+KM_MAKEFILESREV=1
 inherit kde-meta
 
 DESCRIPTION="Java bindings for DCOP"
@@ -18,10 +19,10 @@ PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
 
 pkg_setup() {
-    ewarn "This package is consdered broken by upstream. You're on your own."
+	ewarn "This package is consdered broken by upstream. You're on your own."
 }
 
 src_compile () {
-    myconf="$myconf --with-java=`java-config --jdk-home`"
-    kde-meta_src_compile
+	myconf="$myconf --with-java=`java-config --jdk-home`"
+	kde-meta_src_compile
 }

@@ -1,4 +1,7 @@
 MD5 4ab8dc18a46a0e642f6af2be6d72ad07 kreadconfig-3.3.1.ebuild 396
+MD5 4ab8dc18a46a0e642f6af2be6d72ad07 kreadconfig-3.3.2.ebuild 396
 MD5 75cb284fe11d018cc7106e1a4e9a628d files/digest-kreadconfig-3.3.1 293
+MD5 042b25743d3cdf52f9b067cbb703d42a files/digest-kreadconfig-3.3.2 368
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.2.diff 295

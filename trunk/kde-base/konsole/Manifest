@@ -1,4 +1,7 @@
+MD5 7ef43d978f206ac5a6ec5de34989e487 konsole-3.3.2.ebuild 372
 MD5 7ef43d978f206ac5a6ec5de34989e487 konsole-3.3.1.ebuild 372
 MD5 c40b758f1e0c034acda9af23f9fdfd7d files/digest-konsole-3.3.1 289
+MD5 35086b48b38f3c7ca9991268d0167239 files/digest-konsole-3.3.2 364
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.2.diff 295

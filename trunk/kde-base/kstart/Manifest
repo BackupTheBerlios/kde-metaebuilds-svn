@@ -1,4 +1,7 @@
+MD5 0a13dfc40f05665a416d1a54ba3583ea kstart-3.3.2.ebuild 410
 MD5 0a13dfc40f05665a416d1a54ba3583ea kstart-3.3.1.ebuild 410
 MD5 33342360d553e6728210b45bb7174242 files/digest-kstart-3.3.1 288
+MD5 3cf0e4b0b88a49e47b50f704d0b90bdb files/digest-kstart-3.3.2 363
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.2.diff 295

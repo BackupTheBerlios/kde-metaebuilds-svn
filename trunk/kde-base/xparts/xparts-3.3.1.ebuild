@@ -5,6 +5,7 @@
 KMNAME=kdebindings
 KMEXTRACTONLY="dcopc"
 KMCOPYLIB="libdcopc dcopc"
+KM_MAKEFILESREV=1
 inherit kde-meta
 
 DESCRIPTION="Allows embedding of generic XParts as KDE KParts (broken)"
@@ -16,9 +17,9 @@ DEPEND="=dev-libs/glib-1.2*
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
 pkg_setup() {
-    ewarn "This is considered to be broken by upstream. You're on your own."
+	ewarn "This is considered to be broken by upstream. You're on your own."
 }
-	
+
 src_unpack() {
 	kde-meta_src_unpack
 

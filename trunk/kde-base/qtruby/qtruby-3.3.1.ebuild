@@ -4,6 +4,7 @@
 
 KMNAME=kdebindings
 KMCOPYLIB="libsmokeqt smoke/qt"
+KM_MAKEFILESREV=1
 inherit kde-meta
 
 DESCRIPTION="Ruby bindings for QT"

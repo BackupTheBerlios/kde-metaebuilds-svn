@@ -1,3 +1,3 @@
-MD5 2f37c4c1f9eac25951e344ec6a4bf031 korundum-3.3.1.ebuild 405
-MD5 0a32ed50d2cf0d101a77feb064b1c5ed files/digest-korundum-3.3.1 300
-MD5 5b4709a4940e69ed965855ca38b4ee56 files/no-gtk-glib-check.diff 596
+MD5 adfc0ce6528d3da1d76333cad3ac3793 korundum-3.3.1.ebuild 423
+MD5 1bb262c0ff6cda19d3a7d7f5e6bcb841 files/digest-korundum-3.3.1 300
+MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949

@@ -3,6 +3,7 @@
 # $Header: $
 
 KMNAME=kdebindings
+KM_MAKEFILESREV=1
 inherit kde-meta
 
 DESCRIPTION="C# bindings for QT"
@@ -12,6 +13,6 @@ DEPEND="dev-dotnet/csant"
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
 pkg_setup() {
-    ewarn "This package is considered broken by upstream. You're on your own."
-    ewarn "This won't build. Portage doesn't have a csant ebuild yet."
+	ewarn "This package is considered broken by upstream. You're on your own."
+	ewarn "This won't build. Portage doesn't have a csant ebuild yet."
 }

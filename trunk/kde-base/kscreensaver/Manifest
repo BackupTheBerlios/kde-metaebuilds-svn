@@ -1,4 +1,7 @@
 MD5 4383e27ad00c36b86d88e68077ae2965 kscreensaver-3.3.1.ebuild 490
+MD5 4383e27ad00c36b86d88e68077ae2965 kscreensaver-3.3.2.ebuild 490
 MD5 e4b614b8f37437df33eee9906ff1d766 files/digest-kscreensaver-3.3.1 294
+MD5 3d9847cf312c44b80b99983303b05d0d files/digest-kscreensaver-3.3.2 369
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.2.diff 295

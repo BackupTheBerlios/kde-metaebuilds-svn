@@ -3,6 +3,7 @@
 # $Header: $
 
 KMNAME=kdebindings
+KM_MAKEFILESREV=1
 inherit kde-meta
 
 DESCRIPTION="KDE javascript parser and embedder"

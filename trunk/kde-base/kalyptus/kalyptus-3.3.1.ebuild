@@ -3,6 +3,7 @@
 # $Header: $
 
 KMNAME=kdebindings
+KM_MAKEFILESREV=1
 inherit kde-meta
 
 DESCRIPTION="KDE bindings generator for C, ObjC and Java"
@@ -14,11 +15,11 @@ PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 # Weird build system, weirder errors.
 # You're welcome to fix this in a better way --danarmak
 src_compile () {
-    export S=$S/kalyptus
-    kde-meta_src_compile
+	export S=$S/kalyptus
+	kde-meta_src_compile
 }
 
 src_install() {
-    cd $S/kalyptus
-    make install DESTDIR=$D
+	cd $S/kalyptus
+	make install DESTDIR=$D
 }

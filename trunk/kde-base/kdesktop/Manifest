@@ -1,4 +1,7 @@
+MD5 430eb4e94dd10b41d317af84abe37955 kdesktop-3.3.2.ebuild 1290
 MD5 430eb4e94dd10b41d317af84abe37955 kdesktop-3.3.1.ebuild 1290
 MD5 62095924d1471d80b0ce0f7339026be2 files/digest-kdesktop-3.3.1 290
+MD5 4cdd07e91e3a23dba2c2865307fc28b9 files/digest-kdesktop-3.3.2 365
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.0.diff 295
 MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.1.diff 295
+MD5 3d4f0135804f0a76f4b2557b879a5f86 files/remove-startkde-3.3.2.diff 295
