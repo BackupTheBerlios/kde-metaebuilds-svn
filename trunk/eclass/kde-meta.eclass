@@ -184,80 +184,98 @@ function change_makefiles() {
 	fi
 }
 
+# This has function sections now. Call unpack, apply any patches not in $PATCHES,
+# then call makefiles.
 function kde-meta_src_unpack() {
 	debug-print-function $FUNCNAME $*
 
-	# Overridable module (subdirectory) name, with default value
-	if [ "$KMNOMODULE" != "true" ] && [ -z "$KMMODULE" ]; then
-		KMMODULE=$PN
-	fi
+	sections="$@"
+	[ -z "$sections" ] && sections="unpack makefiles"
+	for section in $sections; do
+	case $section in
+	unpack)
 
-	# Unless disabled, docs are also extracted, compiled and installed
-	DOCS=""
-	if [ "$KMNOMODULE" != "true" ] && [ "$KMNODOCS" != "true" ]; then
-		DOCS="doc/$KMMODULE"
-	fi
-	
-	# Extract everything necessary
-	# $KMTARPARAMS is for an ebuild to use; currently used by kturtle
-	cd $WORKDIR
-	extractlist=""
-	for item in admin Makefile.am Makefile.am.in configure.in.in configure.in.bot acinclude.m4 aclocal.m4 \
-				AUTHORS COPYING INSTALL README NEWS ChangeLog \
-				$KMMODULE $KMEXTRA $KMCOMPILEONLY $KMEXTRACTONLY $DOCS
-	do
-		extractlist="$extractlist $myP/$item"
-	done
-	tar -xjpf $DISTDIR/${myP}.tar.bz2 $KMTARPARAMS $extractlist 
-	# Default $S is based on $P not $myP; rename the extracted dir to fit $S
-	mv $myP $P
-	
-	# Copy over KMCOPYLIB items
-	libname=""
-	for x in $KMCOPYLIB; do
-		if [ "$libname" == "" ]; then
-		libname=$x
-		else
-		dirname=$x
-		cd $S
-		mkdir -p ${dirname}
-		cd ${dirname}
-		ln -s ${PREFIX}/lib/${libname}* .
-		libname=""
+		# Overridable module (subdirectory) name, with default value
+		if [ "$KMNOMODULE" != "true" ] && [ -z "$KMMODULE" ]; then
+			KMMODULE=$PN
 		fi
-	done
-
-	# apply any patches
-	kde_src_unpack autopatch
-
-	# allow usage of precreated makefiles, and/or packaging of the makefiles we create.
-	if useq usepackagedmakefiles; then
-		echo ">>> Using pregenerated makefile templates"
+	
+		# Unless disabled, docs are also extracted, compiled and installed
+		DOCS=""
+		if [ "$KMNOMODULE" != "true" ] && [ "$KMNODOCS" != "true" ]; then
+			DOCS="doc/$KMMODULE"
+		fi
+		
+		# Extract everything necessary
+		# $KMTARPARAMS is for an ebuild to use; currently used by kturtle
 		cd $WORKDIR
-		tar -xjf $DISTDIR/$MAKEFILESTARBALL
+		extractlist=""
+		for item in admin Makefile.am Makefile.am.in configure.in.in configure.in.bot acinclude.m4 aclocal.m4 \
+					AUTHORS COPYING INSTALL README NEWS ChangeLog \
+					$KMMODULE $KMEXTRA $KMCOMPILEONLY $KMEXTRACTONLY $DOCS
+		do
+			extractlist="$extractlist $myP/$item"
+		done
+		tar -xjpf $DISTDIR/${myP}.tar.bz2 $KMTARPARAMS $extractlist 
+		# Default $S is based on $P not $myP; rename the extracted dir to fit $S
+		mv $myP $P
+		
+		# Copy over KMCOPYLIB items
+		libname=""
+		for x in $KMCOPYLIB; do
+			if [ "$libname" == "" ]; then
+			libname=$x
+			else
+			dirname=$x
+			cd $S
+			mkdir -p ${dirname}
+			cd ${dirname}
+			ln -s ${PREFIX}/lib/${libname}* .
+			libname=""
+			fi
+		done
+	
+		# apply any patches
+		kde_src_unpack autopatch
+	
+		# for ebuilds with extended src_unpack
 		cd $S
-		echo ">>> Creating configure script"
-		# If you can, clean this up
-		touch aclocal.m4
-		touch config.h.in
-		touch `find . -name Makefile.in -print`
-		make -f admin/Makefile.common configure || die "Failed to create configure script"
-	else
-		# Create Makefile.am files
-		create_fullpaths
-		change_makefiles $S "false"
-		if useq packagemakefiles; then
-			make -f admin/Makefile.common || die "Failed to create makefile templates"
-			cd $WORKDIR
-# 			# skipped:  $P/configure.in.in* $P/acinclude.m4 $P/aclocal.m4 $P/configure 
-			 /bin/tar -cjpf $T/$MAKEFILESTARBALL $P/stamp-h.in $P/configure.in $P/configure.files \
-				`find $P -name Makefile\*` $P/config.h.in $P/subdirs
-			echo ">>> Saved generated makefile templates in $T/$MAKEFILESTARBALL"
-		fi
-	fi
+	
+	;;
+	makefiles)
 
-	# for ebuilds with extended src_unpack
-	cd $S
+		# allow usage of precreated makefiles, and/or packaging of the makefiles we create.
+		if useq usepackagedmakefiles; then
+			echo ">>> Using pregenerated makefile templates"
+			cd $WORKDIR
+			tar -xjf $DISTDIR/$MAKEFILESTARBALL
+			cd $S
+			echo ">>> Creating configure script"
+			# If you can, clean this up
+			touch aclocal.m4
+			touch config.h.in
+			touch `find . -name Makefile.in -print`
+			make -f admin/Makefile.common configure || die "Failed to create configure script"
+		else
+			# Create Makefile.am files
+			create_fullpaths
+			change_makefiles $S "false"
+			if useq packagemakefiles; then
+				make -f admin/Makefile.common || die "Failed to create makefile templates"
+				cd $WORKDIR
+	# 			# skipped:  $P/configure.in.in* $P/acinclude.m4 $P/aclocal.m4 $P/configure 
+				/bin/tar -cjpf $T/$MAKEFILESTARBALL $P/stamp-h.in $P/configure.in $P/configure.files \
+					`find $P -name Makefile\*` $P/config.h.in $P/subdirs
+				echo ">>> Saved generated makefile templates in $T/$MAKEFILESTARBALL"
+			fi
+		fi
+	
+		# for ebuilds with extended src_unpack
+		cd $S
+	
+	;;
+	esac
+	done
 }
 
 function kde-meta_src_compile() {
