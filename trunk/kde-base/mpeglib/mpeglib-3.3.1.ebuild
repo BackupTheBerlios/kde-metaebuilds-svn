@@ -10,3 +10,8 @@ inherit kde-meta eutils
 DESCRIPTION="KDE mpeg library"
 KEYWORDS="~x86"
 IUSE=""
+
+if [ "${ARCH}" != "amd64" ] ; then
+	PATCHES="${FILESDIR}/kdemultimedia-64bit.patch"
+fi
+			
