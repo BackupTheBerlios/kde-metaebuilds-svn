@@ -1,0 +1,43 @@
+#!/bin/sh
+
+ARGSNUMBER=$#
+if [ $ARGSNUMBER -lt "2" ]; then
+	echo "Usage = $0 version ebuildlistfile"
+	echo
+	echo "This script will update the newest revision of the specified ebuild version."
+	exit 1
+fi
+
+VER=$1
+listfile=$2
+
+if [ ! -f $listfiles ]; then
+	echo "$listfiles: Not found"
+	exit 1
+fi
+
+while read line;
+do
+	if [ -n "$line" -a ! -n "$(echo $line | grep "#")" ]; then
+		ebuilddir=$line
+		ebuildname=`echo $line | sed -e s:.*\/::`
+		
+		# Take the last revision
+		lastebuild="$ebuildname-$VER"
+		i=1
+		while [ -f "$ebuilddir/$ebuildname-$VER-r$i.ebuild" ];
+		do
+			lastebuild="$ebuildname-$VER-r$i"
+			i=$(($i+1))
+		done
+	
+		
+		if [ -f "$ebuilddir/$lastebuild.ebuild" ]; then	
+			echo ">>> Running \"ebuild $ebuilddir/$lastebuild.ebuild digest"
+			emerge -K ="$ebuilddir/$lastebuild.ebuild" 
+		else
+			echo ">>> File $ebuilddir/$lastebuild.ebuild not found!"
+		fi
+	fi
+
+done < $listfile

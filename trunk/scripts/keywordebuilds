@@ -1,0 +1,50 @@
+#!/bin/sh
+
+ARGSNUMBER=$#
+if [ $ARGSNUMBER -lt "3" ]; then
+	echo "Usage = $0 version keyword1 [keyword2 .. keywordN] ebuildlistfile"
+	echo
+	echo "This script will update the newest revision of the specified ebuild version."
+	exit 1
+fi
+
+VER=$1
+
+for (( i=2; i<$ARGSNUMBER; i++ )); do
+	shift
+	KEYWORDS="$KEYWORDS $1"
+done
+
+shift
+listfile=$1
+
+if [ ! -f $listfile ]; then
+	echo "$listfile: Not found"
+	exit 1
+fi
+
+while read line;
+do
+	if [ -n "$line" -a ! -n "$(echo $line | grep "#")" ]; then
+		ebuilddir=$line
+		ebuildname=`echo $line | sed -e s:.*\/::`
+		
+		# Take the last revision
+		lastebuild="$ebuildname-$VER"
+		i=1
+		while [ -f "$ebuilddir/$ebuildname-$VER-r$i.ebuild" ];
+		do
+			lastebuild="$ebuildname-$VER-r$i"
+			i=$(($i+1))
+		done
+	
+		
+		if [ -f "$ebuilddir/$lastebuild.ebuild" ]; then	
+			echo ">>> Running \"ekeyword $KEYWORDS\" on $ebuilddir/$lastebuild.ebuild"
+			ekeyword $KEYWORDS "$ebuilddir/$lastebuild.ebuild"
+		else
+			echo ">>> File $ebuilddir/$lastebuild.ebuild not found!"
+		fi
+	fi
+
+done < $listfile
