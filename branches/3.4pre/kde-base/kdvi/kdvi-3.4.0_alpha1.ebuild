@@ -13,7 +13,6 @@ IUSE="tetex"
 OLDDEPEND="~kde-base/kviewshell-$PV"
 DEPEND="
 $(deprange $PV $MAXKDEVER kde-base/kviewshell)"
-
 RDEPEND="${DEPEND}
 	tetex? (
 	|| ( >=app-text/tetex-2
@@ -21,5 +20,6 @@ RDEPEND="${DEPEND}
 	app-text/cstetex
 	app-text/dvipdfm )
 	)"
-KMCOPYLIB="libkmultipage kviewshell"
-KMEXTRACTONLY="kviewshell/"
+PATCHES="$FILESDIR/kdvi-configure-check-freetype.diff"
+
+KMCOMPILEONLY="kviewshell/"
