@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-DESCRIPTION="kdepim - merge this to pull in all kdepim-derived packages"
+DESCRIPTION="kdemultimedia - merge this to pull in all kdemultimedia-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"
