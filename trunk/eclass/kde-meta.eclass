@@ -99,8 +99,9 @@ fi
 # Each two consecutive words, libname and dirname, are considered. symlinks are created under $S/$dirname
 # pointing to $PREFIX/lib/libname*.
 
-# create a full path vars, and remove ALL the endings "/"
+# ====================================================
 
+# create a full path vars, and remove ALL the endings "/"
 function create_fullpaths() {
 	for item in $KMMODULE; do
 		tmp=`echo $item | sed -e "s/\/*$//g"`
@@ -120,8 +121,11 @@ function create_fullpaths() {
 	done
 }
 
-# $1 = directory
-# $2 = parameter $isextractonly, so we can know if the parent dir was defined as KMEXTRACTONLY
+# Creates Makefile.am files in directories where we didn't extract the originals.
+# Params: $1 = directory
+# $2 = $isextractonly: true iff the parent dir was defined as KMEXTRACTONLY
+# Recurses through $S and all subdirs. Creates Makefile.am with SUBDIRS=<list of existing subdirs>
+# or just empty all:, install: targets if no subdirs exist.
 function change_makefiles() {
 	debug-print-function $FUNCNAME $*
 	local dirlistfullpath dirlist directory isextractonly
@@ -131,7 +135,8 @@ function change_makefiles() {
 	
 	# check if the dir is defined as KMEXTRACTONLY or if it was defined is KMEXTRACTONLY in the parent dir, this is valid only if it's not also defined as KMMODULE, KMEXTRA or KMCOMPILEONLY. They will ovverride KMEXTRACTONLY, but only in the current dir.
 	isextractonly="false"
-	if ( hasq "$1" $KMEXTRACTONLYFULLPATH && ! hasq "$1" $KMMODULEFULLPATH $KMEXTRAFULLPATH $KMCOMPILEONLYFULLPATH ) || ( [ $2 = "true" ] && ! hasq "$1" $KMMODULEFULLPATH $KMEXTRAFULLPATH $KMCOMPILEONLYFULLPATH ); then
+	if ( ( hasq "$1" $KMEXTRACTONLYFULLPATH || [ $2 = "true" ] ) && \
+		 ( ! hasq "$1" $KMMODULEFULLPATH $KMEXTRAFULLPATH $KMCOMPILEONLYFULLPATH ) ); then
 		isextractonly="true"
 	fi
 	debug-print "isextractonly = $isextractonly"
@@ -185,12 +190,10 @@ function kde-meta_src_unpack() {
 	# Overridable module (subdirectory) name, with default value
 	if [ "$KMNOMODULE" != "true" ] && [ -z "$KMMODULE" ]; then
 		KMMODULE=$PN
-	else
-		KMMODULE=""
 	fi
 
 	# Unless disabled, docs are also extracted, compiled and installed
-	DOCS=""
+	local DOCS
 	if [ "$KMNOMODULE" != "true" ] && [ "$KMNODOCS" != "true" ]; then
 		DOCS="doc/$KMMODULE"
 	fi
