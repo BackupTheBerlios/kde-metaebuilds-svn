@@ -12,7 +12,7 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/libkcal-$PV"
 DEPEND="
-$(need-version-range $PV $MAXKDEVER kde-base/libkcal)"
+$(deprange $PV $MAXKDEVER kde-base/libkcal)"
 
 KMCOPYLIB="libkcal libkcal"
 # libkcal is installed because a lot of headers are needed, but it don't have to be compiled

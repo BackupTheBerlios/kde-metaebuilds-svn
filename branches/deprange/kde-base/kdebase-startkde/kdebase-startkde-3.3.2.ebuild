@@ -19,13 +19,13 @@ IUSE=""
 # kdesktop, kicker etc are started because they put files in $KDEDIR/share/autostart
 # and so in theory they aren't strictly necessary deps.
 RDEPEND="$RDEPEND 
-$(need-version-range 3.3.1 $PV kde-base/kdesktop)
-$(need-version-range 3.3.1 $PV kde-base/kcminit)
-$(need-version-range 3.3.1 $PV kde-base/ksmserver)
-$(need-version-range $PV $MAXKDEVER kde-base/kwin)
-$(need-version-range 3.3.1 $PV kde-base/kpersonalizer)
-$(need-version-range 3.3.1 $PV kde-base/kreadconfig)
-$(need-version-range 3.3.1 $PV kde-base/ksplashml)"
+$(deprange 3.3.1 $PV kde-base/kdesktop)
+$(deprange 3.3.1 $PV kde-base/kcminit)
+$(deprange 3.3.1 $PV kde-base/ksmserver)
+$(deprange $PV $MAXKDEVER kde-base/kwin)
+$(deprange 3.3.1 $PV kde-base/kpersonalizer)
+$(deprange 3.3.1 $PV kde-base/kreadconfig)
+$(deprange 3.3.1 $PV kde-base/ksplashml)"
 
 src_compile() {
 	einfo "Nothing to compile"

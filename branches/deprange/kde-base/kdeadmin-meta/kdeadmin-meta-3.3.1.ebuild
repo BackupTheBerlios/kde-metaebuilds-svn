@@ -13,13 +13,13 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="
-$(need-version-range $PV $MAXKDEVER kde-base/kcmlinuz)
-$(need-version-range $PV $MAXKDEVER kde-base/kcron)
-$(need-version-range $PV $MAXKDEVER kde-base/kdat)
-$(need-version-range $PV $MAXKDEVER kde-base/kdeadmin-kfile-plugins)
-$(need-version-range $PV $MAXKDEVER kde-base/kuser)
-x86? ( $(need-version-range $PV $MAXKDEVER kde-base/lilo-config) )
-$(need-version-range $PV $MAXKDEVER kde-base/secpolicy)"
+$(deprange $PV $MAXKDEVER kde-base/kcmlinuz)
+$(deprange $PV $MAXKDEVER kde-base/kcron)
+$(deprange $PV $MAXKDEVER kde-base/kdat)
+$(deprange $PV $MAXKDEVER kde-base/kdeadmin-kfile-plugins)
+$(deprange $PV $MAXKDEVER kde-base/kuser)
+x86? ( $(deprange $PV $MAXKDEVER kde-base/lilo-config) )
+$(deprange $PV $MAXKDEVER kde-base/secpolicy)"
 
 # NOTE: kpackage, ksysv are useless on a normal gentoo system and so aren't included
 # in the above list. However, packages do nominally exist for them.

@@ -10,13 +10,13 @@ inherit kde-meta eutils
 DESCRIPTION="A Personal Organizer for KDE"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $PV $MAXKDEVER kde-base/libkpimexchange)
-$(need-version-range $PV $MAXKDEVER kde-base/libkdepim) 
-$(need-version-range $PV $MAXKDEVER kde-base/libkcal)
-$(need-version-range $PV $MAXKDEVER kde-base/libkpimidentities)
-$(need-version-range $PV $MAXKDEVER kde-base/ktnef)
-$(need-version-range $PV $MAXKDEVER kde-base/kdepim-kresources)
-$(need-version-range $PV $MAXKDEVER kde-base/kontact)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkpimexchange)
+$(deprange $PV $MAXKDEVER kde-base/libkdepim) 
+$(deprange $PV $MAXKDEVER kde-base/libkcal)
+$(deprange $PV $MAXKDEVER kde-base/libkpimidentities)
+$(deprange $PV $MAXKDEVER kde-base/ktnef)
+$(deprange $PV $MAXKDEVER kde-base/kdepim-kresources)
+$(deprange $PV $MAXKDEVER kde-base/kontact)"
 
 KMCOPYLIB="
 	libkdepim libkdepim

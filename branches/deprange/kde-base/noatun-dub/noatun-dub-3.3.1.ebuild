@@ -11,7 +11,7 @@ inherit kde-meta
 DESCRIPTION="noatun playlist plugin"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/noatun)"
+DEPEND="$(deprange $KM_DEPRANGE  kde-base/noatun)"
 OLDDEPEND="~kde-base/noatun-$PV"
 
 

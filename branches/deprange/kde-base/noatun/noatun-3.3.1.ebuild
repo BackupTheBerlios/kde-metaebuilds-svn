@@ -11,11 +11,11 @@ DESCRIPTION="KDE media player"
 KEYWORDS="~x86"
 IUSE="xine audiofile"
 RDEPEND="
-$(need-version-range $PV $MAXKDEVER kde-base/kdemultimedia-arts)
-$(need-version-range $PV $MAXKDEVER kde-base/artsplugin-mpeglib)
-$(need-version-range $PV $MAXKDEVER  kde-base/artsplugin-mpg123)
-	xine? ( $(need-version-range $PV $MAXKDEVER kde-base/artsplugin-xine) )
-	audiofile? ( $(need-version-range $PV $MAXKDEVER kde-base/artsplugin-audiofile) )"
+$(deprange $PV $MAXKDEVER kde-base/kdemultimedia-arts)
+$(deprange $PV $MAXKDEVER kde-base/artsplugin-mpeglib)
+$(deprange $PV $MAXKDEVER  kde-base/artsplugin-mpg123)
+	xine? ( $(deprange $PV $MAXKDEVER kde-base/artsplugin-xine) )
+	audiofile? ( $(deprange $PV $MAXKDEVER kde-base/artsplugin-audiofile) )"
 	
 KMCOPYLIB="
 	libartsgui_kde arts/gui/kde/

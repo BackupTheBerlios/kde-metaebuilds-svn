@@ -12,7 +12,7 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/libkdenetwork-$PV"
 DEPEND="
-$(need-version-range $PV $MAXKDEVER kde-base/libkdenetwork)"
+$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)"
 
 KMCOPYLIB="libkdenetwork libkdenetwork/ 
 	libqgpgme libkdenetwork/qgpgme/"

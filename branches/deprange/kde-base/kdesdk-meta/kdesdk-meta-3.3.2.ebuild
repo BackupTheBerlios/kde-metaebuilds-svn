@@ -13,16 +13,16 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="
-	$(need-version-range $PV $MAXKDEVER kde-base/cervisia)
-	$(need-version-range 3.3.1 $PV kde-base/kapptemplate)
-	$(need-version-range $PV $MAXKDEVER kde-base/kbabel)
-	$(need-version-range $PV $MAXKDEVER kde-base/kbugbuster)
-	$(need-version-range 3.3.1 $PV kde-base/kcachegrind)
-	$(need-version-range 3.3.1 $PV kde-base/kdesdk-kfile-plugins)
-	$(need-version-range $PV $MAXKDEVER kde-base/kdesdk-misc)
-	$(need-version-range $PV $MAXKDEVER kde-base/kdesdk-scripts)
-	$(need-version-range 3.3.1 $PV kde-base/kmtrace)
-	$(need-version-range $PV $MAXKDEVER kde-base/kompare)
-	$(need-version-range 3.3.1 $PV kde-base/kspy)
-	$(need-version-range 3.3.1 $PV kde-base/kuiviewer)
-	$(need-version-range $PV $MAXKDEVER kde-base/umbrello)"
+	$(deprange $PV $MAXKDEVER kde-base/cervisia)
+	$(deprange 3.3.1 $PV kde-base/kapptemplate)
+	$(deprange $PV $MAXKDEVER kde-base/kbabel)
+	$(deprange $PV $MAXKDEVER kde-base/kbugbuster)
+	$(deprange 3.3.1 $PV kde-base/kcachegrind)
+	$(deprange 3.3.1 $PV kde-base/kdesdk-kfile-plugins)
+	$(deprange $PV $MAXKDEVER kde-base/kdesdk-misc)
+	$(deprange $PV $MAXKDEVER kde-base/kdesdk-scripts)
+	$(deprange 3.3.1 $PV kde-base/kmtrace)
+	$(deprange $PV $MAXKDEVER kde-base/kompare)
+	$(deprange 3.3.1 $PV kde-base/kspy)
+	$(deprange 3.3.1 $PV kde-base/kuiviewer)
+	$(deprange $PV $MAXKDEVER kde-base/umbrello)"

@@ -10,9 +10,9 @@ inherit kde-meta eutils
 DESCRIPTION="A newsreader for KDE"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $PV $MAXKDEVER kde-base/libkdepim)
-$(need-version-range $PV $MAXKDEVER kde-base/libkdenetwork)
-$(need-version-range $PV $MAXKDEVER kde-base/kontact)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
+$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
+$(deprange $PV $MAXKDEVER kde-base/kontact)"
 
 KMCOPYLIB="
 	libkdepim libkdepim

@@ -11,7 +11,7 @@ inherit kde-meta
 DESCRIPTION="konqueror plugin for restoring the last-open-locations list after a crash"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/konqueror kde-base/kdeaddons-docs-konq-plugins)"
+DEPEND="$(deprange $KM_DEPRANGE  kde-base/konqueror kde-base/kdeaddons-docs-konq-plugins)"
 OLDDEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"
 
 

@@ -16,11 +16,11 @@ OLDDEPEND="~kde-base/libkdepim-$PV
 	~kde-base/certmanager-$PV
 	~kde-base/kdepim-kresources-$PV
 	~kde-base/libkpimidentities-$PV"
-DEPEND="$(need-version-range $PV $MAXKDEVER kde-base/libkdepim)
-$(need-version-range $PV $MAXKDEVER kde-base/libkcal)
-$(need-version-range $PV $MAXKDEVER kde-base/certmanager)
-$(need-version-range $PV $MAXKDEVER kde-base/kdepim-kresources)
-$(need-version-range $PV $MAXKDEVER kde-base/libkpimidentities)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
+$(deprange $PV $MAXKDEVER kde-base/libkcal)
+$(deprange $PV $MAXKDEVER kde-base/certmanager)
+$(deprange $PV $MAXKDEVER kde-base/kdepim-kresources)
+$(deprange $PV $MAXKDEVER kde-base/libkpimidentities)"
 
 KMCOPYLIB="
 	libkcal_imap kresources/imap/kcal

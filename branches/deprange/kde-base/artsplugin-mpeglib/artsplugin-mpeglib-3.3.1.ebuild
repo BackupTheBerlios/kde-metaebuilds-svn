@@ -11,7 +11,7 @@ inherit kde-meta eutils
 DESCRIPTION="mpeglib plugin for arts"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/mpeglib)"
+DEPEND="$(deprange $KM_DEPRANGE  kde-base/mpeglib)"
 OLDDEPEND="~kde-base/mpeglib-$PV"
 KMCOPYLIB="libmpeg mpeglib/lib/"
 KMEXTRACTONLY="mpeglib/"

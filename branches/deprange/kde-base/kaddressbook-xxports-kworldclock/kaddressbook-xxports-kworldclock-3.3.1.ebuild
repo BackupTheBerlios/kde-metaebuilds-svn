@@ -11,7 +11,7 @@ inherit kde-meta
 DESCRIPTION="KAB KWorldClock XXPort Plugin"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/kaddressbook)"
+DEPEND="$(deprange $KM_DEPRANGE  kde-base/kaddressbook)"
 OLDDEPEND="~kde-base/kaddressbook-$PV"
 
 

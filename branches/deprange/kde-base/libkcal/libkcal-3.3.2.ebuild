@@ -12,7 +12,7 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/ktnef-$PV"
 DEPEND="
-$(need-version-range $PV $MAXKDEVER kde-base/ktnef)"
+$(deprange $PV $MAXKDEVER kde-base/ktnef)"
 
 KMEXTRA="libical"
 KMEXTRACTONLY="libkdepim/email.h"

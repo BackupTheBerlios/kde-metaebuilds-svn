@@ -12,11 +12,11 @@ IUSE="doc"
 DEPEND="doc? ( app-doc/quanta-docs )
 	dev-libs/libxml2"
 RDEPEND="$DEPEND
-$(need-version-range $PV $MAXKDEVER kde-base/kfilereplace)
-$(need-version-range $PV $MAXKDEVER kde-base/kimagemapeditor)
-$(need-version-range $PV $MAXKDEVER kde-base/klinkstatus)
-$(need-version-range $PV $MAXKDEVER kde-base/kommander)
-$(need-version-range 3.3.1 $PV kde-base/kxsldbg)"
+$(deprange $PV $MAXKDEVER kde-base/kfilereplace)
+$(deprange $PV $MAXKDEVER kde-base/kimagemapeditor)
+$(deprange $PV $MAXKDEVER kde-base/klinkstatus)
+$(deprange $PV $MAXKDEVER kde-base/kommander)
+$(deprange 3.3.1 $PV kde-base/kxsldbg)"
 myconf="--with-extra-includes=$(xml2-config --cflags | sed -e 's:^-I::')"
 
 KMCOMPILEONLY=lib

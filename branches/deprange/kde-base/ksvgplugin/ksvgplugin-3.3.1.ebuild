@@ -12,7 +12,7 @@ inherit kde-meta eutils
 DESCRIPTION="SVG viewer kpart"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $KM_DEPRANGE  kde)"
+DEPEND="$(deprange $KM_DEPRANGE  kde)"
 OLDDEPEND="~kde-base/libksvg"
 
 KMNODOC="true"

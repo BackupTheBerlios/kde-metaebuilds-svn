@@ -13,7 +13,7 @@ IUSE=""
 PATCHES="$FILESDIR/remove-startkde-$PV.diff $FILESDIR/applets-configure.in.in.diff"
 OLDDEPEND="~kde-base/libkonq-3.3.1"
 DEPEND="
-$(need-version-range 3.3.1 $PV kde-base/libkonq)"
+$(deprange 3.3.1 $PV kde-base/libkonq)"
 
 KMCOPYLIB="libkonq libkonq"
 KMEXTRACTONLY="libkonq"

@@ -19,7 +19,7 @@ SLOT="0"
 
 DEPEND="dev-util/pkgconfig"
 
-RDEPEND="$DEPEND $(need-version-range $PV $MAXKOFFICEVER app-office/koffice-data)"
+RDEPEND="$DEPEND $(deprange $PV $MAXKOFFICEVER app-office/koffice-data)"
 
 KMEXTRA="
 	interfaces/ 

@@ -13,17 +13,17 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="
-$(need-version-range $PV $MAXKDEVER kde-base/kdeaccessibility-meta)
-$(need-version-range $PV $MAXKDEVER kde-base/kdeaddons-meta)
-$(need-version-range $PV $MAXKDEVER kde-base/kdeadmin-meta)
-$(need-version-range $PV $MAXKDEVER kde-base/kdebase-meta)
-$(need-version-range $PV $MAXKDEVER kde-base/kdeedu-meta)
-$(need-version-range $PV $MAXKDEVER kde-base/kdegames-meta)
-$(need-version-range $PV $MAXKDEVER kde-base/kdegraphics-meta)
-$(need-version-range $PV $MAXKDEVER kde-base/kdemultimedia-meta)
-$(need-version-range $PV $MAXKDEVER kde-base/kdenetwork-meta)
-$(need-version-range $PV $MAXKDEVER kde-base/kdepim-meta)
-$(need-version-range $PV $MAXKDEVER kde-base/kdesdk-meta)
-$(need-version-range $PV $MAXKDEVER kde-base/kdetoys-meta)
-$(need-version-range $PV $MAXKDEVER kde-base/kdeutils-meta)
-$(need-version-range $PV $MAXKDEVER kde-base/kdewebdev-meta)"
+$(deprange $PV $MAXKDEVER kde-base/kdeaccessibility-meta)
+$(deprange $PV $MAXKDEVER kde-base/kdeaddons-meta)
+$(deprange $PV $MAXKDEVER kde-base/kdeadmin-meta)
+$(deprange $PV $MAXKDEVER kde-base/kdebase-meta)
+$(deprange $PV $MAXKDEVER kde-base/kdeedu-meta)
+$(deprange $PV $MAXKDEVER kde-base/kdegames-meta)
+$(deprange $PV $MAXKDEVER kde-base/kdegraphics-meta)
+$(deprange $PV $MAXKDEVER kde-base/kdemultimedia-meta)
+$(deprange $PV $MAXKDEVER kde-base/kdenetwork-meta)
+$(deprange $PV $MAXKDEVER kde-base/kdepim-meta)
+$(deprange $PV $MAXKDEVER kde-base/kdesdk-meta)
+$(deprange $PV $MAXKDEVER kde-base/kdetoys-meta)
+$(deprange $PV $MAXKDEVER kde-base/kdeutils-meta)
+$(deprange $PV $MAXKDEVER kde-base/kdewebdev-meta)"

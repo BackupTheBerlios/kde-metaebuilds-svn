@@ -9,7 +9,7 @@ inherit kde-meta
 DESCRIPTION="Kicker applet - RSS news ticker"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/knewsticker)"
+DEPEND="$(deprange $KM_DEPRANGE  kde-base/knewsticker)"
 OLDDEPEND="~kde-base/knewsticker-$PV"
 
 

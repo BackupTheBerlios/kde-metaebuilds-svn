@@ -12,8 +12,8 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/libkcal-$PV
 	~kde-base/libkdepim-$PV"
-DEPEND="$(need-version-range $PV $MAXKDEVER kde-base/libkcal)
-$(need-version-range $PV $MAXKDEVER kde-base/libkdepim)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcal)
+$(deprange $PV $MAXKDEVER kde-base/libkdepim)"
 
 KMCOPYLIB="
 	libkcal libkcal

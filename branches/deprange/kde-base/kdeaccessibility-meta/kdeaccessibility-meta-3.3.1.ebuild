@@ -13,7 +13,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="
-$(need-version-range $PV $MAXKDEVER kde-base/kmag)
-$(need-version-range $PV $MAXKDEVER kde-base/kmousetool)
-$(need-version-range $PV $MAXKDEVER kde-base/kmouth)"
+$(deprange $PV $MAXKDEVER kde-base/kmag)
+$(deprange $PV $MAXKDEVER kde-base/kmousetool)
+$(deprange $PV $MAXKDEVER kde-base/kmouth)"
 

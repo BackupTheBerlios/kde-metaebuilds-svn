@@ -12,14 +12,14 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND="$(need-version-range $PV $MAXKOFFICEVER app-office/karbon)
-	$(need-version-range $PV $MAXKOFFICEVER app-office/kchart)
-	$(need-version-range $PV $MAXKOFFICEVER app-office/kformula)
-	$(need-version-range $PV $MAXKOFFICEVER app-office/kivio)
-	$(need-version-range $PV $MAXKOFFICEVER app-office/koffice-data)
-	$(need-version-range $PV $MAXKOFFICEVER app-office/koffice-libs)
-	$(need-version-range $PV $MAXKOFFICEVER app-office/koshell)
-	$(need-version-range $PV $MAXKOFFICEVER app-office/kpresenter)
-	$(need-version-range $PV $MAXKOFFICEVER app-office/kspread)
-	$(need-version-range $PV $MAXKOFFICEVER app-office/kugar)
-	$(need-version-range $PV $MAXKOFFICEVER app-office/kword)"
+RDEPEND="$(deprange $PV $MAXKOFFICEVER app-office/karbon)
+	$(deprange $PV $MAXKOFFICEVER app-office/kchart)
+	$(deprange $PV $MAXKOFFICEVER app-office/kformula)
+	$(deprange $PV $MAXKOFFICEVER app-office/kivio)
+	$(deprange $PV $MAXKOFFICEVER app-office/koffice-data)
+	$(deprange $PV $MAXKOFFICEVER app-office/koffice-libs)
+	$(deprange $PV $MAXKOFFICEVER app-office/koshell)
+	$(deprange $PV $MAXKOFFICEVER app-office/kpresenter)
+	$(deprange $PV $MAXKOFFICEVER app-office/kspread)
+	$(deprange $PV $MAXKOFFICEVER app-office/kugar)
+	$(deprange $PV $MAXKOFFICEVER app-office/kword)"

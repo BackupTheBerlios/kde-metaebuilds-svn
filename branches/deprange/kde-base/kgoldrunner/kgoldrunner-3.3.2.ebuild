@@ -11,7 +11,7 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/libkdegames-3.3.1"
 DEPEND="
-$(need-version-range 3.3.1 $PV kde-base/libkdegames)"
+$(deprange 3.3.1 $PV kde-base/libkdegames)"
 
 
 KMEXTRACTONLY=libkdegames

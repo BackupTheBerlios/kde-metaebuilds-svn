@@ -11,7 +11,7 @@ inherit kde-meta
 DESCRIPTION="Noatun auto-collatig playlist"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/noatun)	
+DEPEND="$(deprange $KM_DEPRANGE  kde-base/noatun)	
 		=sys-libs/db-4.2*"
 OLDDEPEND="~kde-base/noatun-$PV =sys-libs/db-4.2*"
 

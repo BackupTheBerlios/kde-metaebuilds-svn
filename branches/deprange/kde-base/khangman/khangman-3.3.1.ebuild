@@ -9,7 +9,7 @@ inherit kde-meta
 DESCRIPTION="Classical hangman game for KDE"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/libkdeedu)"
+DEPEND="$(deprange $KM_DEPRANGE  kde-base/libkdeedu)"
 OLDDEPEND="~kde-base/libkdeedu-$PV"
 
 KMEXTRACTONLY="libkdeedu/kdeeducore"

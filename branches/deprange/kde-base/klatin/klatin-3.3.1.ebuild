@@ -11,7 +11,7 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/libkdeedu-$PV"
 DEPEND="
-$(need-version-range $PV $MAXKDEVER kde-base/libkdeedu)"
+$(deprange $PV $MAXKDEVER kde-base/libkdeedu)"
 
 
 KMEXTRACTONLY="libkdeedu/kdeeducore"

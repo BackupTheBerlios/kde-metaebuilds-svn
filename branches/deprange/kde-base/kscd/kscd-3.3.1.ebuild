@@ -12,7 +12,7 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/libkcddb-$PV"
 DEPEND="
-$(need-version-range $PV $MAXKDEVER kde-base/libkcddb)"
+$(deprange $PV $MAXKDEVER kde-base/libkcddb)"
 
 KMCOPYLIB="libkcddb libkcddb"
 KMEXTRACTONLY="

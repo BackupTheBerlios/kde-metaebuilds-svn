@@ -13,10 +13,10 @@ IUSE="ssl arts"
 PATCHES="$FILESDIR/remove-startkde-$PV.diff $FILESDIR/configure.in.in-kdm-settings.diff"
 
 DEPEND="ssl? ( dev-libs/openssl )
-	arts? ( $(need-version-range ${PV/3.3/1.3} ${MAXKDEVER/3.3/1.3} kde-base/arts) )"
+	arts? ( $(deprange ${PV/3.3/1.3} ${MAXKDEVER/3.3/1.3} kde-base/arts) )"
 RDEPEND="${DEPEND}
-$(need-version-range 3.3.1 $PV kde-base/kcminit)
-$(need-version-range 3.3.1 $PV kde-base/kdebase-applnk)"
+$(deprange 3.3.1 $PV kde-base/kcminit)
+$(deprange 3.3.1 $PV kde-base/kdebase-applnk)"
 
 KMEXTRACTONLY="kicker/core/kicker.h
 	    kwin/kwinbindings.cpp

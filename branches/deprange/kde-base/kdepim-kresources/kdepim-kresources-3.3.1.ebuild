@@ -11,9 +11,9 @@ inherit kde-meta eutils
 DESCRIPTION="KDE PIM groupware plugin collection"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $PV $MAXKDEVER kde-base/libkcal)
-$(need-version-range $PV $MAXKDEVER kde-base/libkpimexchange)
-$(need-version-range $PV $MAXKDEVER kde-base/libkdepim)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcal)
+$(deprange $PV $MAXKDEVER kde-base/libkpimexchange)
+$(deprange $PV $MAXKDEVER kde-base/libkdepim)"
 KMCOPYLIB="
 	libkcal libkcal
 	libkpimexchange libkpimexchange

@@ -16,7 +16,7 @@ KEYWORDS="~x86"
 IUSE=""
 SLOT="0"
 
-DEPEND="$(need-version-range 1.3.4 $PV app-office/koffice-libs)
+DEPEND="$(deprange 1.3.4 $PV app-office/koffice-libs)
 	dev-util/pkgconfig"
 
 KMCOPYLIB="

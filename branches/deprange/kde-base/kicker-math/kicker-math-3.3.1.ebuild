@@ -13,7 +13,7 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/kicker-$PV ~kde-base/kdeaddons-docs-kicker-applets-$PV"
 DEPEND="
-$(need-version-range $PV $MAXKDEVER kde-base/kicker)
-$(need-version-range $PV $MAXKDEVER kde-base/kdeaddons-docs-kicker-applets)"
+$(deprange $PV $MAXKDEVER kde-base/kicker)
+$(deprange $PV $MAXKDEVER kde-base/kdeaddons-docs-kicker-applets)"
 
 

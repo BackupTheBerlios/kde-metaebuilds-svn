@@ -13,7 +13,7 @@ KEYWORDS="~x86"
 IUSE="ldap samba"
 DEPEND="ldap? ( net-nds/openldap )
 		samba? ( >=net-fs/samba-3.0.1 )
-		$(need-version-range $PV $MAXKDEVER kde-base/kdesktop)" # for the kdeeject script used by the devices/mounthelper ioslave
+		$(deprange $PV $MAXKDEVER kde-base/kdesktop)" # for the kdeeject script used by the devices/mounthelper ioslave
 PATCHES="$FILESDIR/remove-startkde-$PV.diff"
 
 src_compile () {

@@ -12,6 +12,6 @@ KEYWORDS="~x86"
 IUSE="kcal"
 
 OLDDEPEND="kcal? ( ~kde-base/libkcal-$PV )"
-DEPEND="kcal? ( $(need-version-range $PV $MAXKDEVER kde-base/libkcal) )"
+DEPEND="kcal? ( $(deprange $PV $MAXKDEVER kde-base/libkcal) )"
 
 #TODO tell configure about the optional kcal support, or something

@@ -11,7 +11,7 @@ inherit kde-meta
 DESCRIPTION="KDE color picker gui"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/kicker kde-base/kdeaddons-docs-kicker-applets)"
+DEPEND="$(deprange $KM_DEPRANGE  kde-base/kicker kde-base/kdeaddons-docs-kicker-applets)"
 OLDDEPEND="~kde-base/kicker-$PV ~kde-base/kdeaddons-docs-kicker-applets-$PV"
 
 

@@ -11,7 +11,7 @@ inherit kde-meta eutils
 DESCRIPTION="kioslaves from kdemultimedia package"
 KEYWORDS="~x86"
 IUSE="oggvorbis flac encode"
-DEPEND="$(need-version-range 3.3.1 $PV kde-base/libkcddb)
+DEPEND="$(deprange 3.3.1 $PV kde-base/libkcddb)
 	media-sound/cdparanoia
 	media-libs/taglib
 	oggvorbis? ( media-libs/libvorbis )

@@ -13,7 +13,7 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"
 DEPEND="
-$(need-version-range $PV $MAXKDEVER kde-base/konqueror)
-$(need-version-range $PV $MAXKDEVER kde-base/kdeaddons-docs-konq-plugins)"
+$(deprange $PV $MAXKDEVER kde-base/konqueror)
+$(deprange $PV $MAXKDEVER kde-base/kdeaddons-docs-konq-plugins)"
 
 

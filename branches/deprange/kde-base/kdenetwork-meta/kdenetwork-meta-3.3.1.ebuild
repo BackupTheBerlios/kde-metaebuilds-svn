@@ -12,18 +12,18 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND="$(need-version-range $PV $MAXKDEVER kde-base/dcoprss)
-	$(need-version-range $PV $MAXKDEVER kde-base/kdenetwork-filesharing)
-	$(need-version-range $PV $MAXKDEVER kde-base/kdict)
-	$(need-version-range $PV $MAXKDEVER kde-base/kget)
-	$(need-version-range $PV $MAXKDEVER kde-base/knewsticker)
-	$(need-version-range $PV $MAXKDEVER kde-base/kopete)
-	$(need-version-range $PV $MAXKDEVER kde-base/kpf)
-	$(need-version-range $PV $MAXKDEVER kde-base/kppp)
-	$(need-version-range $PV $MAXKDEVER kde-base/krdc)
-	$(need-version-range $PV $MAXKDEVER kde-base/krfb)
-	$(need-version-range $PV $MAXKDEVER kde-base/ksirc)
-	$(need-version-range $PV $MAXKDEVER kde-base/ktalkd)
-	$(need-version-range $PV $MAXKDEVER kde-base/kwifimanager)
-	$(need-version-range $PV $MAXKDEVER kde-base/librss)
-	$(need-version-range $PV $MAXKDEVER kde-base/lisa)"
+RDEPEND="$(deprange $PV $MAXKDEVER kde-base/dcoprss)
+	$(deprange $PV $MAXKDEVER kde-base/kdenetwork-filesharing)
+	$(deprange $PV $MAXKDEVER kde-base/kdict)
+	$(deprange $PV $MAXKDEVER kde-base/kget)
+	$(deprange $PV $MAXKDEVER kde-base/knewsticker)
+	$(deprange $PV $MAXKDEVER kde-base/kopete)
+	$(deprange $PV $MAXKDEVER kde-base/kpf)
+	$(deprange $PV $MAXKDEVER kde-base/kppp)
+	$(deprange $PV $MAXKDEVER kde-base/krdc)
+	$(deprange $PV $MAXKDEVER kde-base/krfb)
+	$(deprange $PV $MAXKDEVER kde-base/ksirc)
+	$(deprange $PV $MAXKDEVER kde-base/ktalkd)
+	$(deprange $PV $MAXKDEVER kde-base/kwifimanager)
+	$(deprange $PV $MAXKDEVER kde-base/librss)
+	$(deprange $PV $MAXKDEVER kde-base/lisa)"

@@ -16,7 +16,7 @@ KEYWORDS="~x86"
 IUSE=""
 SLOT="0"
 
-DEPEND="$(need-version-range $PV $MAXKOFFICEVER app-office/koffice-libs)
+DEPEND="$(deprange $PV $MAXKOFFICEVER app-office/koffice-libs)
 	>=media-libs/libart_lgpl-2.3.9
 	dev-util/pkgconfig"
 

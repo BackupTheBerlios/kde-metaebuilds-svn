@@ -10,7 +10,7 @@ inherit kde-meta eutils
 DESCRIPTION="KDE CD ripper and audio encoder frontend"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $PV $MAXKDEVER kde-base/libkcddb)
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcddb)
 	media-sound/cdparanoia"
 KMCOPYLIB="libkcddb libkcddb"
 KMCOMPILEONLY="kscd/libwm/"

@@ -11,7 +11,7 @@ inherit kde-meta
 DESCRIPTION="noatun plugin that guesses tag values (author, title, ...) from filenames"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/noatun)"
+DEPEND="$(deprange $KM_DEPRANGE  kde-base/noatun)"
 OLDDEPEND="~kde-base/noatun-$PV"
 
 

@@ -14,10 +14,10 @@ OLDDEPEND="~kde-base/libkdepim-$PV
 	~kde-base/libkdenetwork-$PV
 	~kde-base/libkcal-$PV
 	~kde-base/kalarmd-3.3.1"
-DEPEND="$(need-version-range $PV $MAXKDEVER kde-base/libkdepim)
-$(need-version-range $PV $MAXKDEVER kde-base/libkdenetwork)
-$(need-version-range $PV $MAXKDEVER kde-base/libkcal)
-$(need-version-range 3.3.1 $PV kde-base/kalarmd)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
+$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
+$(deprange $PV $MAXKDEVER kde-base/libkcal)
+$(deprange 3.3.1 $PV kde-base/kalarmd)"
 
 KMCOPYLIB="
 	libkcal libkcal

@@ -45,14 +45,14 @@ need-autoconf() {
 
 }
 
-# Usage: need-version-range minver maxver package [...]
+# Usage: deprange minver maxver package [...]
 # For minver, a -rN part is supported.
 # This function echoes a string of the form (for package="kde-base/kdelibs")
 # || ( =kde-base/kdelibs-3.3.1-r1 ~kde-base/kdelibs-3.3.2 ~kde-base/kdelibs-3.3.3 )
 # This dep means versions of package from maxver through minver will be acceptable.
 # Note that only the kde versioning scheme is supported - ie x.y, and we only iterate through y
 # (i.e. x can contain more . separators).
-need-version-range() {
+deprange() {
 	
 	# Assign, parse params
 	local MINVER=$1
@@ -140,11 +140,11 @@ need-kde() {
 		# If we're a kde-base package, we need at least our own version of kdelibs.
 		# Also, split kde-base ebuilds are not updated with every KDE release, and so
 		# can require support of different versions of kdelibs.
-		# KM_DEPRANGE should contain 2nd and 3rd parameter to need-version-range:
+		# KM_DEPRANGE should contain 2nd and 3rd parameter to deprange:
 		# max and min KDE versions. E.g. KM_DEPRANGE="3.3.4 $PV".
 		if [ -n "$KM_DEPRANGE" ]; then
-			DEPEND="$DEPEND $(need-version-range $KM_DEPRANGE kde-base/kdelibs)"
-			RDEPEND="$RDEPEND $(need-version-range $KM_DEPRANGE kde-base/kdelibs)"
+			DEPEND="$DEPEND $(deprange $KM_DEPRANGE kde-base/kdelibs)"
+			RDEPEND="$RDEPEND $(deprange $KM_DEPRANGE kde-base/kdelibs)"
 		else
 			DEPEND="${DEPEND} ~kde-base/kdelibs-$PV"
 			RDEPEND="${RDEPEND} ~kde-base/kdelibs-$PV"

@@ -13,7 +13,7 @@ IUSE="pam"
 KMCOMPILEONLY="kcontrol/background"
 DEPEND="$DEPEND 
 		pam? ( sys-libs/pam )
-$(need-version-range $PV $MAXKDEVER kde-base/kcontrol)"
+$(deprange $PV $MAXKDEVER kde-base/kcontrol)"
 	# Requires the desktop background settings and kdm modules,
 	# so until we separate the kcontrol modules into separate ebuilds :-),
 	# there's a dep here

@@ -13,9 +13,9 @@ IUSE=""
 OLDDEPEND="~kde-base/libkdepim-$PV
 	~kde-base/libkdenetwork-$PV
 	~kde-base/libkcal-$PV"
-DEPEND="$(need-version-range $PV $MAXKDEVER kde-base/libkdepim)
-$(need-version-range $PV $MAXKDEVER kde-base/libkdenetwork)
-$(need-version-range $PV $MAXKDEVER kde-base/libkcal)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
+$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
+$(deprange $PV $MAXKDEVER kde-base/libkcal)"
 
 KMCOPYLIB="
 	libkcal libkcal

@@ -11,7 +11,7 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/libkdeedu-3.3.1"
 DEPEND="
-$(need-version-range 3.3.1 $PV kde-base/libkdeedu)"
+$(deprange 3.3.1 $PV kde-base/libkdeedu)"
 
 
 KMEXTRACTONLY="libkdeedu/kdeeducore"

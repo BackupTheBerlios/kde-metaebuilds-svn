@@ -13,13 +13,13 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="
-$(need-version-range 3.3.1 $PV kde-base/amor)
-$(need-version-range 3.3.1 $PV kde-base/eyesapplet)
-$(need-version-range 3.3.1 $PV kde-base/fifteenapplet)
-$(need-version-range 3.3.1 $PV kde-base/kmoon)
-$(need-version-range 3.3.1 $PV kde-base/kodo)
-$(need-version-range 3.3.1 $PV kde-base/kteatime)
-$(need-version-range 3.3.1 $PV kde-base/ktux)
-$(need-version-range $PV $MAXKDEVER kde-base/kweather)
-$(need-version-range $PV $MAXKDEVER kde-base/kworldwatch)
+$(deprange 3.3.1 $PV kde-base/amor)
+$(deprange 3.3.1 $PV kde-base/eyesapplet)
+$(deprange 3.3.1 $PV kde-base/fifteenapplet)
+$(deprange 3.3.1 $PV kde-base/kmoon)
+$(deprange 3.3.1 $PV kde-base/kodo)
+$(deprange 3.3.1 $PV kde-base/kteatime)
+$(deprange 3.3.1 $PV kde-base/ktux)
+$(deprange $PV $MAXKDEVER kde-base/kweather)
+$(deprange $PV $MAXKDEVER kde-base/kworldwatch)
 "

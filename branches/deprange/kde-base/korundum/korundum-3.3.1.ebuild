@@ -15,8 +15,8 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND=">=virtual/ruby-1.8 ~kde-base/qtruby-$PV ~kde-base/smoke-$PV"
 DEPEND=" >=virtual/ruby-1.8
-$(need-version-range $PV $MAXKDEVER kde-base/qtruby)
-$(need-version-range $PV $MAXKDEVER kde-base/smoke)"
+$(deprange $PV $MAXKDEVER kde-base/qtruby)
+$(deprange $PV $MAXKDEVER kde-base/smoke)"
 
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 

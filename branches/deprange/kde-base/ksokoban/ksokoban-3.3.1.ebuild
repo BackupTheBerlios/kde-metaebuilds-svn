@@ -9,7 +9,7 @@ inherit kde-meta
 DESCRIPTION="The japanese warehouse keeper game"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/libkdegames)"
+DEPEND="$(deprange $KM_DEPRANGE  kde-base/libkdegames)"
 OLDDEPEND="~kde-base/libkdegames-$PV"
 
 KMEXTRACTONLY=libkdegames

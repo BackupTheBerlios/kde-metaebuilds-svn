@@ -12,7 +12,7 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/libkdepim-$PV"
 DEPEND="
-$(need-version-range $PV $MAXKDEVER kde-base/libkdepim)"
+$(deprange $PV $MAXKDEVER kde-base/libkdepim)"
 
 KMCOPYLIB="libkdepim libkdepim/"
 KMEXTRACTONLY="libkdepim/

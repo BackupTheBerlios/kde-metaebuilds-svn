@@ -13,16 +13,16 @@ KEYWORDS="~x86"
 IUSE=""
 
 RRDEPEND="
-$(need-version-range 3.3.1 $PV kde-base/dcopc)
-$(need-version-range 3.3.1 $PV kde-base/dcopperl)
-$(need-version-range 3.3.1 $PV kde-base/dcoppython)
-$(need-version-range $PV $MAXKDEVER kde-base/kalyptus)
-$(need-version-range 3.3.1 $PV kde-base/kdejava)
-$(need-version-range 3.3.1 $PV kde-base/kjsembed)
-$(need-version-range $PV $MAXKDEVER kde-base/korundum)
-$(need-version-range $PV $MAXKDEVER kde-base/qtjava)
-$(need-version-range $PV $MAXKDEVER kde-base/qtruby)
-$(need-version-range 3.3.1 $PV kde-base/smoke)"
+$(deprange 3.3.1 $PV kde-base/dcopc)
+$(deprange 3.3.1 $PV kde-base/dcopperl)
+$(deprange 3.3.1 $PV kde-base/dcoppython)
+$(deprange $PV $MAXKDEVER kde-base/kalyptus)
+$(deprange 3.3.1 $PV kde-base/kdejava)
+$(deprange 3.3.1 $PV kde-base/kjsembed)
+$(deprange $PV $MAXKDEVER kde-base/korundum)
+$(deprange $PV $MAXKDEVER kde-base/qtjava)
+$(deprange $PV $MAXKDEVER kde-base/qtruby)
+$(deprange 3.3.1 $PV kde-base/smoke)"
 
 
 # Omitted: qtsharp, dcopjava, xparts (considered broken by upstream) 

@@ -13,14 +13,14 @@ KEYWORDS="~x86"
 IUSE=""
 
 # Note most packages didn't change between koffice 1.3.4 and 1.3.5
-RDEPEND="$(need-version-range 1.3.4 $PV app-office/karbon)
-	$(need-version-range 1.3.4 $PV app-office/kchart)
-	$(need-version-range 1.3.4 $PV app-office/kformula)
-	$(need-version-range 1.3.4 $PV app-office/kivio)
-	$(need-version-range 1.3.4 $PV app-office/koffice-data)
-	$(need-version-range 1.3.4 $PV app-office/koffice-libs)
-	$(need-version-range 1.3.4 $PV app-office/koshell)
-	$(need-version-range $PV $MAXKOFFICEVER app-office/kpresenter)
-	$(need-version-range $PV $MAXKOFFICEVER app-office/kspread)
-	$(need-version-range 1.3.4 $PV app-office/kugar)
-	$(need-version-range $PV $MAXKOFFICEVER app-office/kword)"
+RDEPEND="$(deprange 1.3.4 $PV app-office/karbon)
+	$(deprange 1.3.4 $PV app-office/kchart)
+	$(deprange 1.3.4 $PV app-office/kformula)
+	$(deprange 1.3.4 $PV app-office/kivio)
+	$(deprange 1.3.4 $PV app-office/koffice-data)
+	$(deprange 1.3.4 $PV app-office/koffice-libs)
+	$(deprange 1.3.4 $PV app-office/koshell)
+	$(deprange $PV $MAXKOFFICEVER app-office/kpresenter)
+	$(deprange $PV $MAXKOFFICEVER app-office/kspread)
+	$(deprange 1.3.4 $PV app-office/kugar)
+	$(deprange $PV $MAXKOFFICEVER app-office/kword)"

@@ -13,9 +13,9 @@ IUSE=""
 PATCHES="$FILESDIR/remove-startkde-$PV.diff"
 OLDDEPEND="~kde-base/libkonq-$PV"
 DEPEND="
-$(need-version-range $PV $MAXKDEVER kde-base/libkonq)"
+$(deprange $PV $MAXKDEVER kde-base/libkonq)"
 
 RDEPEND="${DEPEND}
-$(need-version-range 3.3.1 $PV kde-base/kcontrol)"
+$(deprange 3.3.1 $PV kde-base/kcontrol)"
 KMCOPYLIB="libkonq libkonq"
 KMEXTRACTONLY=kdesktop/KDesktopIface.h

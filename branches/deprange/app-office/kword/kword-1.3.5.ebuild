@@ -13,7 +13,7 @@ LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~x86"
 IUSE=""
 SLOT="0"
-DEPEND="$(need-version-range 1.3.4 $PV app-office/koffice-libs)
+DEPEND="$(deprange 1.3.4 $PV app-office/koffice-libs)
 	>=app-text/wv2-0.1.8
 	>=media-gfx/imagemagick-5.4.5
 	dev-util/pkgconfig"

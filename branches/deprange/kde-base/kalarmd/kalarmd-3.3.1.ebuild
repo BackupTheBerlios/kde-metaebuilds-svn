@@ -10,7 +10,7 @@ inherit kde-meta eutils
 DESCRIPTION="KOrganizer/KAlarm Alarm Daemon"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/libkcal)"
+DEPEND="$(deprange $KM_DEPRANGE  kde-base/libkcal)"
 OLDDEPEND="~kde-base/libkcal-$PV"
 
 KMCOPYLIB="libkcal libkcal"

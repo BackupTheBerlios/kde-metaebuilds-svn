@@ -15,11 +15,11 @@ OLDDEPEND="~kde-base/libkdepim-$PV
 	~kde-base/certmanager-$PV
 	~kde-base/libkdenetwork-$PV
 	~kde-base/kontact-$PV"
-DEPEND="$(need-version-range $PV $MAXKDEVER kde-base/libkdepim)
-$(need-version-range $PV $MAXKDEVER kde-base/libkcal)
-$(need-version-range $PV $MAXKDEVER kde-base/certmanager)
-$(need-version-range $PV $MAXKDEVER kde-base/libkdenetwork)
-$(need-version-range $PV $MAXKDEVER kde-base/kontact)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
+$(deprange $PV $MAXKDEVER kde-base/libkcal)
+$(deprange $PV $MAXKDEVER kde-base/certmanager)
+$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
+$(deprange $PV $MAXKDEVER kde-base/kontact)"
 
 KMCOPYLIB="
 	libkdepim libkdepim

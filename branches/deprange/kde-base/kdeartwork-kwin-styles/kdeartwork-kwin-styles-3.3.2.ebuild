@@ -13,5 +13,5 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/kwin-$PV"
 DEPEND="
-$(need-version-range $PV $MAXKDEVER kde-base/kwin)"
+$(deprange $PV $MAXKDEVER kde-base/kwin)"
 

@@ -11,7 +11,7 @@ inherit kde-meta
 DESCRIPTION="Kate plugin: html editing tools"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $KM_DEPRANGE  kde-base/kate kde-base/kdeaddons-docs-kate-plugins)"
+DEPEND="$(deprange $KM_DEPRANGE  kde-base/kate kde-base/kdeaddons-docs-kate-plugins)"
 OLDDEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"
 
 

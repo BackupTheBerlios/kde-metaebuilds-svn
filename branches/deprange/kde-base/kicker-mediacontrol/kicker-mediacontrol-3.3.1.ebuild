@@ -13,7 +13,7 @@ KEYWORDS="~x86"
 IUSE="xmms"
 OLDDEPEND="~kde-base/kicker-$PV ~kde-base/kdeaddons-docs-kicker-applets-$PV
 	xmms? ( media-sound/xmms )"
-DEPEND="xmms? ( media-sound/xmms ) $(need-version-range $KM_DEPRANGE kde-base/kicker kde-base/kdeaddons-docs-kicker-applets)"
+DEPEND="xmms? ( media-sound/xmms ) $(deprange $KM_DEPRANGE kde-base/kicker kde-base/kdeaddons-docs-kicker-applets)"
 
 use xmms || export ac_cv_have_xmms=no
 

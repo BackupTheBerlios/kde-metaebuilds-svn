@@ -13,13 +13,13 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="
-$(need-version-range $PV $MAXKDEVER kde-base/kdeartwork-iconthemes)
-$(need-version-range $PV $MAXKDEVER kde-base/kdeartwork-icewm-themes)
-$(need-version-range $PV $MAXKDEVER kde-base/kdeartwork-kscreensaver)
-$(need-version-range $PV $MAXKDEVER kde-base/kdeartwork-kwin-styles)
-$(need-version-range $PV $MAXKDEVER kde-base/kdeartwork-kworldclock)
-$(need-version-range $PV $MAXKDEVER kde-base/kdeartwork-sounds)
-$(need-version-range $PV $MAXKDEVER kde-base/kdeartwork-styles)
-$(need-version-range $PV $MAXKDEVER kde-base/kdeartwork-wallpapers)
+$(deprange $PV $MAXKDEVER kde-base/kdeartwork-iconthemes)
+$(deprange $PV $MAXKDEVER kde-base/kdeartwork-icewm-themes)
+$(deprange $PV $MAXKDEVER kde-base/kdeartwork-kscreensaver)
+$(deprange $PV $MAXKDEVER kde-base/kdeartwork-kwin-styles)
+$(deprange $PV $MAXKDEVER kde-base/kdeartwork-kworldclock)
+$(deprange $PV $MAXKDEVER kde-base/kdeartwork-sounds)
+$(deprange $PV $MAXKDEVER kde-base/kdeartwork-styles)
+$(deprange $PV $MAXKDEVER kde-base/kdeartwork-wallpapers)
 "
 

@@ -15,13 +15,13 @@ IUSE=""
 # kdesktop, kicker etc are started because they put files in $KDEDIR/share/autostart
 # and so in theory they aren't strictly necessary deps.
 RDEPEND="$RDEPEND 
-$(need-version-range $PV $MAXKDEVER kde-base/kdesktop)
-$(need-version-range $PV $MAXKDEVER kde-base/kcminit)
-$(need-version-range $PV $MAXKDEVER kde-base/ksmserver)
-$(need-version-range $PV $MAXKDEVER kde-base/kwin)
-$(need-version-range $PV $MAXKDEVER kde-base/kpersonalizer)
-$(need-version-range $PV $MAXKDEVER kde-base/kreadconfig)
-$(need-version-range $PV $MAXKDEVER kde-base/ksplashml)"
+$(deprange $PV $MAXKDEVER kde-base/kdesktop)
+$(deprange $PV $MAXKDEVER kde-base/kcminit)
+$(deprange $PV $MAXKDEVER kde-base/ksmserver)
+$(deprange $PV $MAXKDEVER kde-base/kwin)
+$(deprange $PV $MAXKDEVER kde-base/kpersonalizer)
+$(deprange $PV $MAXKDEVER kde-base/kreadconfig)
+$(deprange $PV $MAXKDEVER kde-base/ksplashml)"
 
 src_unpack() {
 	einfo "Nothing to unpack"

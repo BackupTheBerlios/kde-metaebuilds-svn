@@ -10,17 +10,17 @@ inherit kde-meta eutils
 DESCRIPTION="KDE mail client"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(need-version-range $PV $MAXKDEVER kde-base/libkdenetwork)
-$(need-version-range $PV $MAXKDEVER kde-base/libkdepim)
-$(need-version-range $PV $MAXKDEVER kde-base/libkpimidentities) 
-$(need-version-range $PV $MAXKDEVER kde-base/mimelib) 
-$(need-version-range $PV $MAXKDEVER kde-base/libksieve) 
-$(need-version-range $PV $MAXKDEVER kde-base/certmanager)
-$(need-version-range $PV $MAXKDEVER kde-base/libkcal)"
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
+$(deprange $PV $MAXKDEVER kde-base/libkdepim)
+$(deprange $PV $MAXKDEVER kde-base/libkpimidentities) 
+$(deprange $PV $MAXKDEVER kde-base/mimelib) 
+$(deprange $PV $MAXKDEVER kde-base/libksieve) 
+$(deprange $PV $MAXKDEVER kde-base/certmanager)
+$(deprange $PV $MAXKDEVER kde-base/libkcal)"
 RDEPEND="${DEPEND}
-$(need-version-range $PV $MAXKDEVER kde-base/kdepim-kioslaves)
-$(need-version-range $PV $MAXKDEVER kde-base/kmailcvt)
-$(need-version-range $PV $MAXKDEVER kde-base/kontact)"
+$(deprange $PV $MAXKDEVER kde-base/kdepim-kioslaves)
+$(deprange $PV $MAXKDEVER kde-base/kmailcvt)
+$(deprange $PV $MAXKDEVER kde-base/kontact)"
 
 KMCOPYLIB="
 	libkdenetwork libkdenetwork/ 

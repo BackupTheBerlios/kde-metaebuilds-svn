@@ -12,7 +12,7 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/kviewshell-$PV"
 DEPEND="
-$(need-version-range $PV $MAXKDEVER kde-base/kviewshell)"
+$(deprange $PV $MAXKDEVER kde-base/kviewshell)"
 
 KMEXTRA="kfaxview"
 KMCOPYLIB="libkmultipage kviewshell"
