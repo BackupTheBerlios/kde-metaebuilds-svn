@@ -25,4 +25,5 @@ RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/kompare)
 	$(deprange $PV $MAXKDEVER kde-base/kspy)
 	$(deprange $PV $MAXKDEVER kde-base/kuiviewer)
+	$(deprange $PV $MAXKDEVER kde-base/kdesdk-kioslaves)
 	$(deprange $PV $MAXKDEVER kde-base/umbrello)"
