@@ -17,8 +17,9 @@ DEPEND="$DEPEND
 								# there's a dep here
 
 src_unpack() {
-        kde-meta_src_unpack
+        kde-meta_src_unpack unpack
         epatch ${FILESDIR}/${PVR}/startkde-${PVR}-gentoo.diff
+	kde-meta_src_unpack makefiles
 }
 
 								

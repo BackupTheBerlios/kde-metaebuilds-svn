@@ -13,9 +13,3 @@ DEPEND="$DEPEND ~kde-base/libkonq-$PV"
 KMCOPYLIB="libkonq libkonq"
 KMEXTRACTONLY="libkonq"
 
-# Add test from kioslaves, which decides whether to compile the devices:/ ioslave and its kicker applet frontend
-# based on the OS
-#src_unpack() {
-#    kde-meta_src_unpack
-#    cp $FILESDIR/configure.in.in-devices $S/kicker/applets/configure.in.in
-#}

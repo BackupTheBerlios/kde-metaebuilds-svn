@@ -24,8 +24,9 @@ KMEXTRACTONLY="kicker/core/kicker.h
 	    libkonq/"
 
 src_unpack() {
-    kde-meta_src_unpack
+    kde-meta_src_unpack unpack
     cp $FILESDIR/configure.in.in-kdm-settings $S/kcontrol/configure.in.in
+    kde-meta_src_unpack makefiles
 }
 
 src_compile() {

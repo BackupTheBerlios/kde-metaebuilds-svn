@@ -11,6 +11,7 @@ DEPEND=""
 
 # For consistent building behaviour regardless of whether lilo is installed
 src_unpack () {
-    kde-meta_src_unpack
-    use x86 && echo > $S/lilo-config/configure.in.in
+    kde-meta_src_unpack unpack
+    echo > $S/lilo-config/configure.in.in
+    kde-meta_src_unpack makefiles
 }
