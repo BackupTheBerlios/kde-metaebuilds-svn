@@ -2,7 +2,7 @@
 import sys, os, os.path, re, string, shutil, copy, portage
 
 if len(sys.argv) < 5:
-	print ("Usage: " + sys.argv[0] + " <new version> <category dir> <MAXKDEVER substitute variable> <list of changed packages>")
+	print ("Usage: " + sys.argv[0] + " <new version> <category dir> <MAXKDEVER substitute variable> <list of changed packages>\n")
 	sys.exit (1)
 
 # ===============
@@ -48,16 +48,32 @@ basedir = sys.argv[2]
 maxvervar = sys.argv[3]
 updatedpackages = sys.argv[4:]
 
-# list the existing versions of all packages (for iterating over files)
+# create listing of package dirs
 packages = os.listdir (basedir)
 for nonpackage in ("CVS", ".svn"):
 	try:
 		packages.remove (nonpackage)
 	except:
 		pass
+
+# create map of existing package versions
 packagevers = {}
-for package in packages:
-	packagevers[package] = extantVersions (basedir + "/" + package)	
+for package in packages[:]:
+	versions = extantVersions (basedir + "/" + package)
+	
+	# if no actual ebuild files exist inside the package directory, extantVersions()
+	# returns an empty list
+	if len (versions) > 0:
+		packagevers[package] = versions
+	else:
+		sys.stderr.write ("Warning: package directory " + package + " contains no ebuilds\n")
+		packages.remove (package)
+
+# make sure we're not being asked to create new packages
+for package in updatedpackages[:]:
+	if not packagevers.has_key (package):
+		sys.stderr.write ("Cannot update package " + package + ", no existing version found\n")
+		updatedpackages.remove (package)
 
 # list the versions that will now exist (for dependency creation)
 newpackagevers = copy.deepcopy (packagevers)
@@ -65,9 +81,10 @@ for package in updatedpackages:
 	newpackagevers[package] += [newver]
 
 # for every package to be updated
-reDeprange = re.compile ("\$\(deprange +([\$a-zA-Z0-9.]+) +([\$a-zA-Z0-9.]+) +(.*)\)")
+reDeprange = re.compile ("\$\(deprange +([\$a-zA-Z0-9.]+) +([\$a-zA-Z0-9.]+) +(.*?)\)")
 for package in updatedpackages:
-	assert package in packages, "package " + package + " cannot be updated because it does not exist"
+	if package not in packages:
+		sys.stderr.write ("package " + package + " cannot be updated because it does not exist\n")
 	packagedir = basedir + "/" + package
 
 	# determine ebuild to use as base
@@ -92,7 +109,8 @@ for package in updatedpackages:
 		matchstr = match.group (0)
 		depcatpkg = match.group (3)
 		deppkg = depcatpkg[depcatpkg.find ("/") + 1:]
-		assert deppkg in packages, "dependency " + dep + " of package " + package + " cannot be updated because it does not exist"
+		if deppkg not in packages:
+			sys.stderr.write ("dependency " + depcatpkg + " of package " + package + " cannot be updated because it does not exist\n")
 		
 		bestdep = bestVersion (newpackagevers[deppkg])
 		if bestdep == newver:
@@ -130,7 +148,8 @@ for package in packages:
 			tover = match.group (2)
 			depcatpkg = match.group (3)
 			deppkg = depcatpkg[depcatpkg.find ("/") + 1:]
-			assert deppkg in packages, "dependency " + dep + " of package " + package + " cannot be updated because it does not exist"
+			if deppkg not in packages:
+				sys.stderr.write ("dependency " + depcatpkg + " of package " + package + " cannot be updated because it does not exist\n")
 			
 			# leave fromver untouched; replace tover with a reference to maxvervar,
 			# whose value we changed to newver. note that sometimes fromver != lastver
