@@ -19,8 +19,3 @@ pkg_setup() {
 	fi
 }
 
-src_compile() {
-	replace-flags -O3 -O2
-	
-	kde-meta_src_compile
-}
