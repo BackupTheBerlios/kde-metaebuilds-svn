@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-KDEMAXVER=3.3.1
+MAXKDEVER=3.3.1
 
+inherit kde-functions
 DESCRIPTION="kdemultimedia - merge this to pull in all kdemultimedia-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
@@ -11,22 +12,22 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE="arts"
 
-RDEPEND="~kde-base/akode-$PV
-	arts? ( ~kde-base/artsplugin-audiofile-$PV )
-	arts? ( ~kde-base/artsplugin-mpeglib-$PV )
-	arts? ( ~kde-base/artsplugin-mpg123-$PV )
-	arts? ( ~kde-base/artsplugin-xine-$PV )
-	arts? ( ~kde-base/juk-$PV )
-	arts? ( ~kde-base/kaboodle-$PV )
-	~kde-base/kaudiocreator-$PV
-	arts? ( ~kde-base/kdemultimedia-arts-$PV )
-	~kde-base/kdemultimedia-kappfinder-data-$PV
-	~kde-base/kdemultimedia-kfile-plugins-$PV
-	~kde-base/kdemultimedia-kioslaves-$PV
-	~kde-base/kmid-$PV
-	~kde-base/kmix-$PV
-	arts? ( ~kde-base/krec-$PV )
-	~kde-base/kscd-$PV
-	~kde-base/libkcddb-$PV
-	~kde-base/mpeglib-$PV
-	arts? ( ~kde-base/noatun-$PV )"
+RDEPEND="arts? ( $(need-version-range $PV $MAXKDEVER kde-base/artsplugin-audiofile)
+		$(need-version-range $PV $MAXKDEVER kde-base/artsplugin-mpeglib)
+		$(need-version-range $PV $MAXKDEVER kde-base/artsplugin-mpg123)
+		$(need-version-range $PV $MAXKDEVER kde-base/artsplugin-xine)
+		$(need-version-range $PV $MAXKDEVER kde-base/juk)
+		$(need-version-range $PV $MAXKDEVER kde-base/kaboodle)
+		$(need-version-range $PV $MAXKDEVER kde-base/kdemultimedia-arts)
+		$(need-version-range $PV $MAXKDEVER kde-base/krec)
+		$(need-version-range $PV $MAXKDEVER kde-base/noatun) )
+	$(need-version-range $PV $MAXKDEVER kde-base/akode)
+	$(need-version-range $PV $MAXKDEVER kde-base/kaudiocreator)
+	$(need-version-range $PV $MAXKDEVER kde-base/kdemultimedia-kappfinder-data)
+	$(need-version-range $PV $MAXKDEVER kde-base/kdemultimedia-kfile-plugins)
+	$(need-version-range $PV $MAXKDEVER kde-base/kdemultimedia-kioslaves)
+	$(need-version-range $PV $MAXKDEVER kde-base/kmid)
+	$(need-version-range $PV $MAXKDEVER kde-base/kmix)
+	$(need-version-range $PV $MAXKDEVER kde-base/kscd)
+	$(need-version-range $PV $MAXKDEVER kde-base/libkcddb)
+	$(need-version-range $PV $MAXKDEVER kde-base/mpeglib)"

@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-KDEMAXVER=3.3.1
+MAXKDEVER=3.3.1
 
+inherit kde-functions
 DESCRIPTION="kdegames - merge this to pull in all kdepim-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
@@ -12,35 +13,35 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="
-~kde-base/ktuberling-$PV
-arts? ( ~kde-base/kolf-$PV )
-~kde-base/kpat-$PV
-~kde-base/katomic-$PV
-~kde-base/kbounce-$PV
-~kde-base/kbattleship-$PV
-~kde-base/ksame-$PV
-~kde-base/ktron-$PV
-~kde-base/kwin4-$PV
-~kde-base/lskat-$PV
-~kde-base/kgoldrunner-$PV
-~kde-base/kshisen-$PV
-~kde-base/ksirtet-$PV
-~kde-base/konquest-$PV
-~kde-base/kspaceduel-$PV
-~kde-base/kbackgammon-$PV
-~kde-base/kasteroids-$PV
-~kde-base/klines-$PV
-~kde-base/kmines-$PV
-~kde-base/kpoker-$PV
-~kde-base/ksnake-$PV
-~kde-base/kreversi-$PV
-~kde-base/kblackbox-$PV
-~kde-base/ksmiletris-$PV
-~kde-base/kmahjongg-$PV
-~kde-base/kfouleggs-$PV
-~kde-base/klickety-$PV
-~kde-base/kjumpingcube-$PV
-~kde-base/kenolaba-$PV
-~kde-base/ksokoban-$PV
-~kde-base/atlantik-$PV
+$(need-version-range $PV $MAXKDEVER kde-base/ktuberling)
+arts? ( $(need-version-range $PV $MAXKDEVER kde-base/kolf) )
+$(need-version-range $PV $MAXKDEVER kde-base/kpat)
+$(need-version-range $PV $MAXKDEVER kde-base/katomic)
+$(need-version-range $PV $MAXKDEVER kde-base/kbounce)
+$(need-version-range $PV $MAXKDEVER kde-base/kbattleship)
+$(need-version-range $PV $MAXKDEVER kde-base/ksame)
+$(need-version-range $PV $MAXKDEVER kde-base/ktron)
+$(need-version-range $PV $MAXKDEVER kde-base/kwin4)
+$(need-version-range $PV $MAXKDEVER kde-base/lskat)
+$(need-version-range $PV $MAXKDEVER kde-base/kgoldrunner)
+$(need-version-range $PV $MAXKDEVER kde-base/kshisen)
+$(need-version-range $PV $MAXKDEVER kde-base/ksirtet)
+$(need-version-range $PV $MAXKDEVER kde-base/konquest)
+$(need-version-range $PV $MAXKDEVER kde-base/kspaceduel)
+$(need-version-range $PV $MAXKDEVER kde-base/kbackgammon)
+$(need-version-range $PV $MAXKDEVER kde-base/kasteroids)
+$(need-version-range $PV $MAXKDEVER kde-base/klines)
+$(need-version-range $PV $MAXKDEVER kde-base/kmines)
+$(need-version-range $PV $MAXKDEVER kde-base/kpoker)
+$(need-version-range $PV $MAXKDEVER kde-base/ksnake)
+$(need-version-range $PV $MAXKDEVER kde-base/kreversi)
+$(need-version-range $PV $MAXKDEVER kde-base/kblackbox)
+$(need-version-range $PV $MAXKDEVER kde-base/ksmiletris)
+$(need-version-range $PV $MAXKDEVER kde-base/kmahjongg)
+$(need-version-range $PV $MAXKDEVER kde-base/kfouleggs)
+$(need-version-range $PV $MAXKDEVER kde-base/klickety)
+$(need-version-range $PV $MAXKDEVER kde-base/kjumpingcube)
+$(need-version-range $PV $MAXKDEVER kde-base/kenolaba)
+$(need-version-range $PV $MAXKDEVER kde-base/ksokoban)
+$(need-version-range $PV $MAXKDEVER kde-base/atlantik)
 "

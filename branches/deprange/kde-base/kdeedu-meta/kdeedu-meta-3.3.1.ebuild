@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-KDEMAXVER=3.3.1
+MAXKDEVER=3.3.1
 
+inherit kde-functions
 DESCRIPTION="kdeedu 3.3.0 - merge this to pull in all kdeedu-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
@@ -12,24 +13,24 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="
-~kde-base/kig-$PV
-~kde-base/kalzium-$PV
-~kde-base/libkdeedu-$PV
-~kde-base/khangman-$PV
-~kde-base/kpercentage-$PV
-~kde-base/kiten-$PV
-~kde-base/kvoctrain-$PV
-~kde-base/kturtle-$PV
-~kde-base/kverbos-$PV
-~kde-base/kdeedu-applnk-$PV
-~kde-base/kbruch-$PV
-~kde-base/keduca-$PV
-~kde-base/kmessedwords-$PV
-~kde-base/klatin-$PV
-~kde-base/kmplot-$PV
-~kde-base/kstars-$PV
-~kde-base/ktouch-$PV
-~kde-base/klettres-$PV
-~kde-base/kmathtool-$PV
-~kde-base/kwordquiz-$PV
+$(need-version-range $PV $MAXKDEVER kde-base/kig)
+$(need-version-range $PV $MAXKDEVER kde-base/kalzium)
+$(need-version-range $PV $MAXKDEVER kde-base/libkdeedu)
+$(need-version-range $PV $MAXKDEVER kde-base/khangman)
+$(need-version-range $PV $MAXKDEVER kde-base/kpercentage)
+$(need-version-range $PV $MAXKDEVER kde-base/kiten)
+$(need-version-range $PV $MAXKDEVER kde-base/kvoctrain)
+$(need-version-range $PV $MAXKDEVER kde-base/kturtle)
+$(need-version-range $PV $MAXKDEVER kde-base/kverbos)
+$(need-version-range $PV $MAXKDEVER kde-base/kdeedu-applnk)
+$(need-version-range $PV $MAXKDEVER kde-base/kbruch)
+$(need-version-range $PV $MAXKDEVER kde-base/keduca)
+$(need-version-range $PV $MAXKDEVER kde-base/kmessedwords)
+$(need-version-range $PV $MAXKDEVER kde-base/klatin)
+$(need-version-range $PV $MAXKDEVER kde-base/kmplot)
+$(need-version-range $PV $MAXKDEVER kde-base/kstars)
+$(need-version-range $PV $MAXKDEVER kde-base/ktouch)
+$(need-version-range $PV $MAXKDEVER kde-base/klettres)
+$(need-version-range $PV $MAXKDEVER kde-base/kmathtool)
+$(need-version-range $PV $MAXKDEVER kde-base/kwordquiz)
 "

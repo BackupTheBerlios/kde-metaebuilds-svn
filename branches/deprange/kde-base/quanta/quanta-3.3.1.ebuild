@@ -16,7 +16,7 @@ $(need-version-range $PV $MAXKDEVER kde-base/kfilereplace)
 $(need-version-range $PV $MAXKDEVER kde-base/kimagemapeditor)
 $(need-version-range $PV $MAXKDEVER kde-base/klinkstatus)
 $(need-version-range $PV $MAXKDEVER kde-base/kommander)
-$(need-version-range $PV $KDEMAXVER kde-base/kxsldbg)"
+$(need-version-range $PV $MAXKDEVER kde-base/kxsldbg)"
 
 KMCOMPILEONLY=lib
 

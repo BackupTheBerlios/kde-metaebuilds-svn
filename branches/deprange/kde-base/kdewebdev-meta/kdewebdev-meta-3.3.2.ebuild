@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-KDEMAXVER=3.3.2
+MAXKDEVER=3.3.2
 
+inherit kde-functions
 DESCRIPTION="kdewebdev - merge this to pull in all kdewebdev-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
@@ -12,10 +13,10 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="
-~kde-base/kfilereplace-$PV
-~kde-base/kimagemapeditor-$PV
-~kde-base/klinkstatus-$PV
-~kde-base/kommander-$PV
-~kde-base/kxsldbg-3.3.1
-~kde-base/quanta-$PV
+$(need-version-range $PV $MAXKDEVER kde-base/kfilereplace)
+$(need-version-range $PV $MAXKDEVER kde-base/kimagemapeditor)
+$(need-version-range $PV $MAXKDEVER kde-base/klinkstatus)
+$(need-version-range $PV $MAXKDEVER kde-base/kommander)
+$(need-version-range 3.3.1 $PV kde-base/kxsldbg)
+$(need-version-range $PV $MAXKDEVER kde-base/quanta)
 "

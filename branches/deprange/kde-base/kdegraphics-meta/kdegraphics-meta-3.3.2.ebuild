@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-KDEMAXVER=3.3.2
+MAXKDEVER=3.3.2
 
+inherit kde-functions
 DESCRIPTION="kdegraphics - merge this to pull in all kdegraphics-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
@@ -11,23 +12,23 @@ SLOT="3.3"
 KEYWORDS="~x86"
 IUSE="gphoto2 scanner povray"
 
-RDEPEND="gphoto2? ( ~kde-base/kamera-3.3.1 )
-	~kde-base/kcoloredit-3.3.1
-	~kde-base/kdegraphics-kfile-plugins-$PV
-	~kde-base/kdvi-$PV
-	~kde-base/kfax-$PV
-	~kde-base/kghostview-$PV
-	~kde-base/kiconedit-3.3.1
-	~kde-base/kmrml-3.3.1
-	~kde-base/kolourpaint-$PV
-	scanner? ( ~kde-base/kooka-3.3.1 )
-	~kde-base/kpdf-$PV
-	povray? ( ~kde-base/kpovmodeler-$PV )
-	~kde-base/kruler-3.3.1
-	~kde-base/ksnapshot-3.3.1
-	~kde-base/ksvgplugin-3.3.1
-	~kde-base/kuickshow-$PV
-	~kde-base/kview-3.3.1
-	~kde-base/kviewshell-$PV
-	scanner? ( ~kde-base/libkscan-3.3.1 )
-	~kde-base/libksvg-3.3.1"
+RDEPEND="gphoto2? ( $(need-version-range 3.3.1 $PV kde-base/kamera) )
+	$(need-version-range 3.3.1 $PV kde-base/kcoloredit)
+	$(need-version-range $PV $MAXKDEVER kde-base/kdegraphics-kfile-plugins)
+	$(need-version-range $PV $MAXKDEVER kde-base/kdvi)
+	$(need-version-range $PV $MAXKDEVER kde-base/kfax)
+	$(need-version-range $PV $MAXKDEVER kde-base/kghostview)
+	$(need-version-range 3.3.1 $PV kde-base/kiconedit)
+	$(need-version-range 3.3.1 $PV kde-base/kmrml)
+	$(need-version-range $PV $MAXKDEVER kde-base/kolourpaint)
+	scanner? ( $(need-version-range 3.3.1 $PV kde-base/kooka) )
+	$(need-version-range $PV $MAXKDEVER kde-base/kpdf)
+	povray? ( $(need-version-range $PV $MAXKDEVER kde-base/kpovmodeler) )
+	$(need-version-range 3.3.1 $PV kde-base/kruler)
+	$(need-version-range 3.3.1 $PV kde-base/ksnapshot)
+	$(need-version-range 3.3.1 $PV kde-base/ksvgplugin)
+	$(need-version-range $PV $MAXKDEVER kde-base/kuickshow)
+	$(need-version-range 3.3.1 $PV kde-base/kview)
+	$(need-version-range $PV $MAXKDEVER kde-base/kviewshell)
+	scanner? ( $(need-version-range 3.3.1 $PV kde-base/libkscan) )
+	$(need-version-range 3.3.1 $PV kde-base/libksvg)"

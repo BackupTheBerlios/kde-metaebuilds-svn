@@ -3,6 +3,7 @@
 # $Header: $
 MAXKOFFICEVER=1.3.5
 
+inherit kde-functions
 DESCRIPTION="koffice - merge this to pull in all koffice-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
@@ -12,14 +13,14 @@ KEYWORDS="~x86"
 IUSE=""
 
 # Note most packages didn't change between koffice 1.3.4 and 1.3.5
-RDEPEND="~app-office/karbon-1.3.4
-	~app-office/kchart-1.3.4
-	~app-office/kformula-1.3.4
-	~app-office/kivio-1.3.4
-	~app-office/koffice-data-1.3.4
-	~app-office/koffice-libs-1.3.4
-	~app-office/koshell-1.3.4
-	~app-office/kpresenter-1.3.5
-	~app-office/kspread-1.3.5
-	~app-office/kugar-1.3.4
-	~app-office/kword-1.3.5"
+RDEPEND="$(need-version-range 1.3.4 $PV app-office/karbon)
+	$(need-version-range 1.3.4 $PV app-office/kchart)
+	$(need-version-range 1.3.4 $PV app-office/kformula)
+	$(need-version-range 1.3.4 $PV app-office/kivio)
+	$(need-version-range 1.3.4 $PV app-office/koffice-data)
+	$(need-version-range 1.3.4 $PV app-office/koffice-libs)
+	$(need-version-range 1.3.4 $PV app-office/koshell)
+	$(need-version-range $PV $MAXKOFFICEVER app-office/kpresenter)
+	$(need-version-range $PV $MAXKOFFICEVER app-office/kspread)
+	$(need-version-range 1.3.4 $PV app-office/kugar)
+	$(need-version-range $PV $MAXKOFFICEVER app-office/kword)"

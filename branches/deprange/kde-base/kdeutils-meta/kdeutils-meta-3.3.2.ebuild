@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-KDEMAXVER=3.3.2
+MAXKDEVER=3.3.2
 
+inherit kde-functions
 DESCRIPTION="kdeutils - merge this to pull in all kdeutils-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
@@ -13,19 +14,19 @@ IUSE=""
 
 # We don't add kcardtools because it needs a libksmartcard from kdelibs that it's not alway installed"
 RDEPEND="
-	~kde-base/ark-3.3.1
-	~kde-base/kcalc-3.3.1
-	~kde-base/kcharselect-3.3.1
-	lirc? ( ~kde-base/kdelirc-3.3.1 )
-	~kde-base/kdf-$PV
-	~kde-base/kedit-3.3.1
-	~kde-base/kfloppy-3.3.1
-	~kde-base/kgpg-3.3.1
-	~kde-base/khexedit-$PV
-	~kde-base/kjots-3.3.1
-	~kde-base/klaptopdaemon-$PV
-	~kde-base/kmilo-3.3.1
-	~kde-base/kregexpeditor-3.3.1
-	~kde-base/ksim-$PV
-	~kde-base/ktimer-3.3.1
-	~kde-base/kwalletmanager-$PV"
+	$(need-version-range 3.3.1 $PV kde-base/ark)
+	$(need-version-range 3.3.1 $PV kde-base/kcalc)
+	$(need-version-range 3.3.1 $PV kde-base/kcharselect)
+	lirc? ( $(need-version-range 3.3.1 $PV kde-base/kdelirc) )
+	$(need-version-range $PV $MAXKDEVER kde-base/kdf)
+	$(need-version-range 3.3.1 $PV kde-base/kedit)
+	$(need-version-range 3.3.1 $PV kde-base/kfloppy)
+	$(need-version-range 3.3.1 $PV kde-base/kgpg)
+	$(need-version-range $PV $MAXKDEVER kde-base/khexedit)
+	$(need-version-range 3.3.1 $PV kde-base/kjots)
+	$(need-version-range $PV $MAXKDEVER kde-base/klaptopdaemon)
+	$(need-version-range 3.3.1 $PV kde-base/kmilo)
+	$(need-version-range 3.3.1 $PV kde-base/kregexpeditor)
+	$(need-version-range $PV $MAXKDEVER kde-base/ksim)
+	$(need-version-range 3.3.1 $PV kde-base/ktimer)
+	$(need-version-range $PV $MAXKDEVER kde-base/kwalletmanager)"

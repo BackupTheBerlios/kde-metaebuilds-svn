@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-KDEMAXVER=3.3.1
+MAXKDEVER=3.3.1
 
+inherit kde-functions
 DESCRIPTION="kdetoys - merge this to pull in all kdetoys-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
@@ -12,13 +13,13 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="
-~kde-base/amor-$PV
-~kde-base/eyesapplet-$PV
-~kde-base/fifteenapplet-$PV
-~kde-base/kmoon-$PV
-~kde-base/kodo-$PV
-~kde-base/kteatime-$PV
-~kde-base/ktux-$PV
-~kde-base/kweather-$PV
-~kde-base/kworldwatch-$PV
+$(need-version-range $PV $MAXKDEVER kde-base/amor)
+$(need-version-range $PV $MAXKDEVER kde-base/eyesapplet)
+$(need-version-range $PV $MAXKDEVER kde-base/fifteenapplet)
+$(need-version-range $PV $MAXKDEVER kde-base/kmoon)
+$(need-version-range $PV $MAXKDEVER kde-base/kodo)
+$(need-version-range $PV $MAXKDEVER kde-base/kteatime)
+$(need-version-range $PV $MAXKDEVER kde-base/ktux)
+$(need-version-range $PV $MAXKDEVER kde-base/kweather)
+$(need-version-range $PV $MAXKDEVER kde-base/kworldwatch)
 "
