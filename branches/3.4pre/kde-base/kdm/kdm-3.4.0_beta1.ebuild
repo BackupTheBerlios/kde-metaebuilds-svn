@@ -43,11 +43,20 @@ src_install() {
 	# and it's the Gentoo Way to avoid modifying upstream behaviour.
 	# Tell me if you don't like this. --danarmak
 	cd ${D}/${KDEDIR}/share/config/kdm || die
-	sed -i -e "s:#SessionsDirs=:SessionsDirs=/usr/share/xsessions\n#SessionsDirs=:" kdmrc
-	
-	# Install a default user icon to prevent kdm from logging an error every time it runs.
-	cd ${D}/${KDEDIR}/share/apps/kdm
-	mkdir faces
-	cp pics/users/default1.png faces/.default.face.icon
+	sed -i -e "s:#SessionsDirs=:SessionsDirs=/usr/share/xsessions\n#SessionsDirs=:" \
+		-e "s:#GreetFont=:GreetFont=Sans Serif,24,-1,5,50,0,0,0,0,0\n#GreetFont=:" \
+		-e "s:#StdFont=:StdFont=Sans Serif,12,-1,5,50,0,0,0,0,0\n#StdFont=:" \
+		-e "s:#FailFont=:FailFont=Sans Serif,12,-1,5,75,0,0,0,0,0\n#FailFont=:" \
+		-e "s:#AntiAliasing=:AntiAliasing=true\n#AntiAliasing=:" \
+		kdmrc
 }
 
+pkg_postinst() {
+	# set the default kdm face icon if it's not already set by the system admin
+	# because this is user-overrideable in that way, it's not in src_install
+	if [ ! -e "${ROOT}${KDEDIR}/share/apps/kdm/faces/.default.face.icon" ];	then
+		mkdir -p "${ROOT}${KDEDIR}/share/apps/kdm/faces"
+		cp "${ROOT}${KDEDIR}/share/apps/kdm/pics/users/default1.png" \
+		    "${ROOT}${KDEDIR}/share/apps/kdm/faces/.default.face.icon"
+	fi
+}
