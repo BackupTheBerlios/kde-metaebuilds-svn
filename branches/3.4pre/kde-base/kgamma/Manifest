@@ -1,4 +1,3 @@
-MD5 c6ca87ebb6774efb99127e683a5f3bc7 kgamma-3.3.1.ebuild 268
-MD5 c6ca87ebb6774efb99127e683a5f3bc7 kgamma-3.3.2.ebuild 268
-MD5 fa792e809757bf5f020b42b44a4ec413 files/digest-kgamma-3.3.1 297
-MD5 04c45579473571a24d99232cd24cf71c files/digest-kgamma-3.3.2 376
+MD5 df920449f147c61cf511ed75b6bbf3a5 kgamma-3.4.0_alpha1.ebuild 311
+MD5 df920449f147c61cf511ed75b6bbf3a5 kgamma-3.4.0_beta1.ebuild 311
+MD5 2ed7b7cff3ca3ea63807d913c938cf52 files/digest-kgamma-3.4.0_beta1 225
