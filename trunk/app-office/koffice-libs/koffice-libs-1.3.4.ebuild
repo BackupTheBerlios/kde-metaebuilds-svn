@@ -38,8 +38,10 @@ KMEXTRACTONLY="
 need-kde 3.1
 
 src_unpack() {
-	kde-meta_src_unpack
+	kde-meta_src_unpack unpack
 	
 	# Force the compilation of libkopainter.
 	sed -i 's:$(KOPAINTERDIR):kopainter:' $S/lib/Makefile.am	
+	
+	kde-meta_src_unpack makefiles
 }
