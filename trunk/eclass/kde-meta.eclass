@@ -99,6 +99,7 @@ DEPEND="$DEPEND kdexdeltas? ( dev-util/xdelta )"
 
 # END adapted from kde-dist.eclass
 
+
 # prepackaged makefiles for broken-up ebuilds. Ebuild can define KM_MAKEFILESREV to be >=1 to
 # use a newer tarball without increasing the ebuild revision.
 MAKEFILESTARBALL="$PN-$PVR-${KM_MAKEFILESREV:-0}-makefiles.tar.bz2"
