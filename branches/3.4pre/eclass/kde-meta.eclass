@@ -292,9 +292,10 @@ function kde-meta_src_unpack() {
 			echo ">>> Uncompressing base archive..."
 			cd $T
 			bunzip2 -dkc ${DISTDIR}/${XDELTA_BASE/*\//} > ${myP}.tar
-			for x in $XDELTA_DELTA; do
-				echo ">>> Applying xdelta: $x"
-				xdelta patch ${DISTDIR}/${x/*\//} ${myP}.tar ${myP}.tar.1
+			for delta in $XDELTA_DELTA; do
+				deltafile="${delta/*\//}"
+				echo ">>> Applying xdelta: $deltafile"
+				xdelta patch ${DISTDIR}/$deltafile ${myP}.tar ${myP}.tar.1
 				mv ${myP}.tar.1 ${myP}.tar
 			done
 			TARFILE=$T/$myP.tar
