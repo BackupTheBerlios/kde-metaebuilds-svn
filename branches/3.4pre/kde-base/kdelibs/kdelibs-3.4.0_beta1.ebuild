@@ -42,7 +42,7 @@ DEPEND="${RDEPEND}
 	!kde-misc/kgamma"
 
 PATCHES="$FILESDIR/reference-list-rev-1.3.diff
-	$FILESDIR/kio-job-ref-1.428.diff"
+	$FILESDIR/post-3.3.2-kdelibs-kio.diff"
 
 src_compile() {
 	kde_src_compile myconf
