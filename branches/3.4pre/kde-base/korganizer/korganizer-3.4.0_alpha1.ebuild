@@ -16,7 +16,8 @@ $(deprange $PV $MAXKDEVER kde-base/libkcal)
 $(deprange $PV $MAXKDEVER kde-base/libkpimidentities)
 $(deprange $PV $MAXKDEVER kde-base/ktnef)
 $(deprange $PV $MAXKDEVER kde-base/kdepim-kresources)
-$(deprange $PV $MAXKDEVER kde-base/kontact)"
+$(deprange $PV $MAXKDEVER kde-base/kontact)
+$(deprange $PV $MAXKDEVER kde-base/libkholidays)"
 
 KMCOPYLIB="
 	libkdepim libkdepim
@@ -25,7 +26,8 @@ KMCOPYLIB="
 	libkpimidentities libkpimidentities
 	libktnef ktnef/lib
 	libkcal_resourceremote kresources/remote
-	libkpinterfaces kontact/interfaces"
+	libkpinterfaces kontact/interfaces
+	libkholidays libkholidays"
 KMEXTRACTONLY="
 	libkpimexchange/
 	libkcal/
@@ -36,9 +38,11 @@ KMEXTRACTONLY="
 	certmanager/lib/
 	kresources/remote/
 	kmail/kmailIface.h
-	kontact/interfaces/"
+	kontact/interfaces/
+	libkholidays"
 KMCOMPILEONLY="
-	kalarmd/"
+	kalarmd/
+	libemailfunctions"
 	
 # They seems to be used only by korganizer
 KMEXTRA="
