@@ -12,7 +12,8 @@ KEYWORDS="~x86"
 IUSE="tetex"
 OLDDEPEND="~kde-base/kviewshell-$PV"
 DEPEND="
-$(deprange $PV $MAXKDEVER kde-base/kviewshell)"
+$(deprange $PV $MAXKDEVER kde-base/kviewshell)
+>=media-libs/freetype-2"
 RDEPEND="${DEPEND}
 	tetex? (
 	|| ( >=app-text/tetex-2
@@ -20,6 +21,6 @@ RDEPEND="${DEPEND}
 	app-text/cstetex
 	app-text/dvipdfm )
 	)"
-PATCHES="$FILESDIR/kdvi-configure-check-freetype.diff"
+PATCHES="$FILESDIR/kdvi-configure-check-freetype.diff" # bugs.kde.org 96255
 
 KMCOMPILEONLY="kviewshell/"
