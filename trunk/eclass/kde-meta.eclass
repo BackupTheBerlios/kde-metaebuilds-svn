@@ -33,6 +33,9 @@ if [ "$KDEBASE" = "true" ]; then
 	
 	need-kde $myPV
 	
+	# 3.3 prereleases
+	[ "$PV" == "3.4.0_alpha1" ] && S=${WORKDIR}/${PN}-3.3.90
+	
 	DESCRIPTION="KDE ${myPV} - "
 	HOMEPAGE="http://www.kde.org/"
 	LICENSE="GPL-2"
@@ -40,7 +43,7 @@ if [ "$KDEBASE" = "true" ]; then
 	
 	# Main tarball for normal downloading style
 	case "$myPV" in
-		3.3.90)		SRC_PATH="unstable/3.3.90/src/${myP}.tar.bz2" ;;
+		3.4.0_alpha1)	SRC_PATH="unstable/3.3.90/src/${myPN}-${myPV/3.4.0_alpha1/3.3.90}.tar.bz2" ;;
 		3.3.0)		SRC_PATH="stable/3.3/src/${myP}.tar.bz2" ;;
 		3*)			SRC_PATH="stable/${myPV}/src/${myP}.tar.bz2" ;;
 		5)			SRC_URI="" # cvs ebuilds, no SRC_URI needed
@@ -61,7 +64,7 @@ if [ "$KDEBASE" = "true" ]; then
 		3.3.2)		XDELTA_BASE="stable/3.3/src/${myPN}-3.3.0.tar.bz2"
 					XDELTA_DELTA="stable/3.3.1/src/${myPN}-3.3.0-3.3.1.tar.xdelta stable/3.3.2/src/${myPN}-3.3.1-3.3.2.tar.xdelta"
 					;;
-		*)			ewarn "$ECLASS: Error: unrecognized version ${myPV}, could not set SRC_URI, can't use xdeltas"
+		*)			ewarn "$ECLASS: Error: unrecognized version ${myPV}, can't use xdeltas"
 					;;
 	esac	
 
@@ -99,11 +102,17 @@ DEPEND="$DEPEND kdexdeltas? ( dev-util/xdelta )"
 
 # END adapted from kde-dist.eclass
 
-
-# prepackaged makefiles for broken-up ebuilds. Ebuild can define KM_MAKEFILESREV to be >=1 to
-# use a newer tarball without increasing the ebuild revision.
-MAKEFILESTARBALL="$PN-$PVR-${KM_MAKEFILESREV:-0}-makefiles.tar.bz2"
-SRC_URI="$SRC_URI usepackagedmakefiles? ( mirror://gentoo/$MAKEFILESTARBALL )"
+#Don't support prepackaged Makefiles with alpha/beta/rc version.
+case $myPV in
+	3.3.0 | 3.3.1 | 3.3.2)
+		# prepackaged makefiles for broken-up ebuilds. Ebuild can define KM_MAKEFILESREV to be >=1 to
+		# use a newer tarball without increasing the ebuild revision.
+		MAKEFILESTARBALL="$PN-$PVR-${KM_MAKEFILESREV:-0}-makefiles.tar.bz2"
+		SRC_URI="$SRC_URI usepackagedmakefiles? ( mirror://gentoo/$MAKEFILESTARBALL )"
+		;;
+		
+	*) ;;
+esac
 
 
 # TODO FIX: Temporary place for code common to all ebuilds derived from any one metapackage.
