@@ -32,13 +32,13 @@ RDEPEND="arts? ( ~kde-base/arts-${PV/3.4/1.4} )
 	virtual/ghostscript
 	media-libs/libart_lgpl
 	net-dns/libidn
-	sys-devel/gettext
 	jpeg2k? ( x86? ( media-libs/jasper ) )"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58
 	>=sys-devel/automake-1.8
 	doc? ( app-doc/doxygen )
+	sys-devel/gettext
 	!kde-misc/kgamma"
 
 PATCHES="$FILESDIR/reference-list-rev-1.3.diff
