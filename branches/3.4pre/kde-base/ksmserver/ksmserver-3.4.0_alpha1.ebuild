@@ -11,4 +11,6 @@ DESCRIPTION="The reliable KDE session manager that talks the standard X11R6"
 KEYWORDS="~x86"
 IUSE=""
 
+KMEXTRACTONLY="kdm/kfrontend/themer/"
+KMCOMPILEONLY="kdmlib/"
 KMNODOCS=true

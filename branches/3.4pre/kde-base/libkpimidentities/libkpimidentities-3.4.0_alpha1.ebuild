@@ -20,3 +20,5 @@ KMCOPYLIB="
 KMEXTRACTONLY="
 	libkdepim/ 
 	certmanager/"
+KMCOMPILEONLY="
+	libemailfunctions/"

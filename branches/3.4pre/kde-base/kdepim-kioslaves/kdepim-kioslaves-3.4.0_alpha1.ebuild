@@ -13,3 +13,8 @@ DESCRIPTION="kioslaves from kdepim package"
 KEYWORDS="~x86"
 IUSE=""
 
+DEPEND="
+$(deprange $PV $MAXKDEVER kde-base/libkmime)"
+
+KMCOPYLIB="libkmime libkmime/"
+KMEXTRACTONLY="libkmime/"

@@ -3,6 +3,9 @@
 # $Header: $
 
 KMNAME=kdepim
+
+MAXKDEVER=$PV
+KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE kpgp library"

@@ -14,9 +14,11 @@ OLDDEPEND="~kde-base/libkdenetwork-$PV"
 DEPEND="
 $(deprange $PV $MAXKDEVER kde-base/libkdenetwork)"
 
-KMCOPYLIB="libkdenetwork libkdenetwork/ 
-	libqgpgme libkdenetwork/qgpgme/"
-KMCOMPILEONLY="libkdenetwork/"
+KMCOPYLIB="libqgpgme libkdenetwork/qgpgme/"
+KMEXTRACTONLY="libkdenetwork/
+	libkpgp/
+	libkdepim/"
+
 KMEXTRA="
 	doc/kleopatra
 	doc/kwatchgnupg"

@@ -12,10 +12,13 @@ KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/libkdepim-$PV"
 DEPEND="
-$(deprange $PV $MAXKDEVER kde-base/libkdepim)"
+$(deprange $PV $MAXKDEVER kde-base/libkdepim)
+$(deprange $PV $MAXKDEVER kde-base/libkpimidentities)"
 
-KMCOPYLIB="libkdepim libkdepim/"
+KMCOPYLIB="libkdepim libkdepim/
+	libkpimidentities.la libkpimidentities/"
 KMEXTRACTONLY="libkdepim/
+	libkpimidentities/
 	kontact/plugins/"
 KMEXTRA="
 	kontact/plugins/newsticker/

@@ -26,7 +26,6 @@ KMCOPYLIB="
 	libkcal libkcal
 	libkleopatra certmanager/lib/
 	libqgpgme libkdenetwork/qgpgme/
-	libkdenetwork libkdenetwork/
 	libkpinterfaces kontact/interfaces/"
 KMEXTRACTONLY="
 	libkdepim/
