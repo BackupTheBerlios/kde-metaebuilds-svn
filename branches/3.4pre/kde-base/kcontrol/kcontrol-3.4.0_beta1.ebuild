@@ -35,12 +35,3 @@ src_compile() {
 	kde-meta_src_compile
 }
 	
-src_install() {
-	kde-meta_src_install
-
-	# kcontrol modules
-	cd ${D}/${KDEDIR}/etc/xdg/menus
-	ln -s default_kde-settings.menu kde-settings.menu
-	ln -s default_kde-information.menu kde-information.menu
-	ln -s default_kde-screensavers.menu kde-screensavers.menu
-}
