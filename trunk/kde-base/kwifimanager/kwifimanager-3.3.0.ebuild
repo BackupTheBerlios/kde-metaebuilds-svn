@@ -9,5 +9,5 @@ inherit kde-meta eutils
 DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="net-wireless/wireless-tools"
+DEPEND=">=net-wireless/wireless-tools-25"
 KMEXTRA="doc/kwifimanager"
