@@ -1,0 +1,11 @@
+--- kdepim-3.3.0.orig/kfile-plugins/Makefile.am	2004-05-22 22:57:56.000000000 +0200
++++ kdepim-3.3.0/kfile-plugins/Makefile.am	2004-09-24 00:27:45.019967496 +0200
+@@ -1,6 +1,6 @@
+-if compile_kpilot
++
+ PILOTPLUGIN = palm-databases
+-endif
++
+ 
+ SUBDIRS=vcf $(PILOTPLUGIN)
+ 
