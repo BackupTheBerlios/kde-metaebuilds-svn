@@ -26,4 +26,6 @@ RDEPEND="$(deprange $PV $MAXKDEVER kde-base/dcoprss)
 	$(deprange $PV $MAXKDEVER kde-base/ktalkd)
 	$(deprange $PV $MAXKDEVER kde-base/kwifimanager)
 	$(deprange $PV $MAXKDEVER kde-base/librss)
+	$(deprange $PV $MAXKDEVER kde-base/kdnssd)
+	$(deprange $PV $MAXKDEVER kde-base/kdenetwork-kfile-plugins)
 	$(deprange $PV $MAXKDEVER kde-base/lisa)"
