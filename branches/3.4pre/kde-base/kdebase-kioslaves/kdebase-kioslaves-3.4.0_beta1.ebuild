@@ -10,9 +10,10 @@ inherit kde-meta eutils
 
 DESCRIPTION="kioslave: the kde VFS framework - kioslave plugins present a filesystem-like view of arbitrary data"
 KEYWORDS="~x86"
-IUSE="ldap samba"
+IUSE="ldap samba sasl"
 DEPEND="ldap? ( net-nds/openldap )
 		samba? ( >=net-fs/samba-3.0.1 )
+		sasl? ( >=dev-libs/cyrus-sasl-2 )
 		~kde-base/kdesktop-$PV" # for the kdeeject script used by the devices/mounthelper ioslave
 
 
