@@ -14,13 +14,13 @@ IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcal)
 $(deprange $PV $MAXKDEVER kde-base/libkpimexchange)
 $(deprange $PV $MAXKDEVER kde-base/libkdepim)
+$(deprange $PV $MAXKDEVER kde-base/libkpgp)
 $(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
 	>=app-crypt/gpgme-0.4.0"
 KMCOPYLIB="
 	libkcal libkcal
 	libkpimexchange libkpimexchange
 	libkdepim libkdepim
-	libkdenetwork libkdenetwork
 	libqgpgme libkdenetwork/qgpgme
 	"
 KMEXTRACTONLY="
@@ -31,6 +31,7 @@ KMEXTRACTONLY="
 	korganizer/
 	kmail/kmailicalIface.h
 	libkdenetwork/
+	libkpgp/
 	"
 KMCOMPILEONLY="
 	libkdenetwork/gpgmepp
@@ -40,7 +41,9 @@ KMCOMPILEONLY="
 	kaddressbook/
 	certmanager/
 "
-	
+
+PATCHES="$FILESDIR/use-installed-kode.diff"
+
 #src_compile() {
 #	export DO_NOT_COMPILE="libical kaddressbook knotes" && kde-meta_src_compile myconf configure
 #	# generate "ical.h"
