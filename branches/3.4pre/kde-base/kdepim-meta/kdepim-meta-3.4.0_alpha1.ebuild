@@ -28,6 +28,7 @@ RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/kmobile)
 	$(deprange $PV $MAXKDEVER kde-base/knode)
 	$(deprange $PV $MAXKDEVER kde-base/knotes)
+	$(deprange $PV $MAXKDEVER kde-base/kode)
 	$(deprange $PV $MAXKDEVER kde-base/konsolekalendar)
 	$(deprange $PV $MAXKDEVER kde-base/kontact)
 	$(deprange $PV $MAXKDEVER kde-base/korganizer)

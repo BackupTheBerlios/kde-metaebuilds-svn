@@ -22,9 +22,12 @@ RDEPEND="${DEPEND}
 $(deprange $PV $MAXKDEVER kde-base/kcheckpass)
 	sys-apps/eject"
 
-KMCOPYLIB="libkonq libkonq"
-KMEXTRACTONLY="kcheckpass/kcheckpass.h"
-KMCOMPILEONLY="kcontrol/background"
+KMCOPYLIB="libkonq libkonq/"
+KMEXTRACTONLY="kcheckpass/kcheckpass.h
+	libkonq/
+	kdm/kfrontend/themer/"
+KMCOMPILEONLY="kcontrol/background
+	kdmlib/"
 KMNODOCS=true
 
 src_install() {
