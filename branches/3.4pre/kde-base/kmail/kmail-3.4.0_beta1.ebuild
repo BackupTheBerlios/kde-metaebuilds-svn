@@ -43,7 +43,8 @@ KMEXTRACTONLY="
 	korganizer/korganizeriface.h
 	kontact/interfaces/
 	libkmime/
-	libkpgp"
+	libkpgp
+	dcopidlng"
 KMCOMPILEONLY="libemailfunctions"
 # the kmail plugins are installed with kmail
 KMEXTRA="
