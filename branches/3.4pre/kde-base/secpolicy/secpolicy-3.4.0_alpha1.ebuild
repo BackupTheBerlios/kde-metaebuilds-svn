@@ -11,3 +11,4 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND=""
 
+# NOTE TODO some dep is missing here - check on empty install
