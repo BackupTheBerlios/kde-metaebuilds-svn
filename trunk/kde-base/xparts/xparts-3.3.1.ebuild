@@ -11,6 +11,11 @@ IUSE="mozilla"
 DEPEND="=dev-libs/glib-1.2*
 	=x11-lisb/gtk+-1.2*
 	mozilla? ( net-www/mozilla )"
+PATCHES="$FILESDIR/no-gtk-glib-check.diff"
+
+pkg_setup() {
+    ewarn "This is considered to be broken by upstream. You're on your own."
+}
 	
 src_unpack() {
 	kde-meta_src_unpack
