@@ -11,7 +11,7 @@ inherit kde-meta
 DESCRIPTION="kate plugin for simple text filtering"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(deprange $KM_DEPRANGE  kde-base/kate kde-base/kdeaddons-docs-kate-plugins)"
+DEPEND="$(deprange $PV $MAXKDEVER  kde-base/kate kde-base/kdeaddons-docs-kate-plugins)"
 OLDDEPEND="~kde-base/kate-$PV ~kde-base/kdeaddons-docs-kate-plugins-$PV"
 
 

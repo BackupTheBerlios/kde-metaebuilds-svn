@@ -11,7 +11,7 @@ DESCRIPTION="KDE file find utility"
 KEYWORDS="~x86"
 IUSE=""
 PATCHES="$FILESDIR/remove-startkde-$PV.diff"
-DEPEND="$(deprange $KM_DEPRANGE  kde-base/libkonq)"
+DEPEND="$(deprange $PV $MAXKDEVER  kde-base/libkonq)"
 OLDDEPEND="~kde-base/libkonq-$PV"
 
 KMCOPYLIB="libkonq libkonq"

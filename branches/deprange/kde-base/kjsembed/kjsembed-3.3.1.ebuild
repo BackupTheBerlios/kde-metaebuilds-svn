@@ -11,7 +11,7 @@ inherit kde-meta
 DESCRIPTION="KDE javascript parser and embedder"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(deprange $KM_DEPRANGE  kde-base/kwin)"
+DEPEND="$(deprange $PV $MAXKDEVER  kde-base/kwin)"
 OLDDEPEND="~kde-base/kwin-$PV"
 
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"

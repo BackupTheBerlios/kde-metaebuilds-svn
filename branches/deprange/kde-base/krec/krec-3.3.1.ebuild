@@ -14,7 +14,7 @@ OLDDEPEND="
 	~kde-base/kdemultimedia-arts-$PV
 	oggvorbis? ( media-libs/libvorbis )
 	encode? ( media-sound/lame )"
-DEPEND="$(deprange $KM_DEPRANGE kde-base/kdemultimedia-arts)
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/kdemultimedia-arts)
 	oggvorbis? ( media-libs/libvorbis )
 	encode? ( media-sound/lame )"
 

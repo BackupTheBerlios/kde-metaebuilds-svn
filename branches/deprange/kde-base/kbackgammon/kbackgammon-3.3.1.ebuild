@@ -9,7 +9,7 @@ inherit kde-meta
 DESCRIPTION="A Backgammon program for KDE"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(deprange $KM_DEPRANGE  kde-base/libkdegames)"
+DEPEND="$(deprange $PV $MAXKDEVER  kde-base/libkdegames)"
 OLDDEPEND="~kde-base/libkdegames-$PV"
 
 KMEXTRACTONLY=libkdegames

@@ -11,7 +11,7 @@ inherit kde-meta
 DESCRIPTION="konqueror image rotation plugin"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(deprange $KM_DEPRANGE  kde-base/konqueror kde-base/kdeaddons-docs-konq-plugins)"
+DEPEND="$(deprange $PV $MAXKDEVER  kde-base/konqueror kde-base/kdeaddons-docs-konq-plugins)"
 OLDDEPEND="~kde-base/konqueror-$PV ~kde-base/kdeaddons-docs-konq-plugins-$PV"
 
 

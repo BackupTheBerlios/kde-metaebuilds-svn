@@ -11,7 +11,7 @@ inherit kde-meta
 DESCRIPTION="noatun visualization plugin"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=" >=media-libs/libsdl-1.2 $(deprange $KM_DEPRANGE  kde-base/noatun)"
+DEPEND=" >=media-libs/libsdl-1.2 $(deprange $PV $MAXKDEVER  kde-base/noatun)"
 OLDDEPEND=">=media-libs/libsdl-1.2 ~kde-base/noatun-$PV"
 
 myconf="--with-sdl-prefix=/usr"

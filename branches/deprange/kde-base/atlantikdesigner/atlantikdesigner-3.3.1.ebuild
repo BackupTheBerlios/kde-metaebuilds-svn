@@ -9,7 +9,7 @@ inherit kde-meta
 DESCRIPTION="Atlantik gameboard designer"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="$(deprange $KM_DEPRANGE  kde-base/atlantik)"
+DEPEND="$(deprange $PV $MAXKDEVER  kde-base/atlantik)"
 OLDDEPEND="~kde-base/atlantik-$PV"
 
 
