@@ -86,9 +86,6 @@ src_install() {
 ROOTPATH=${PREFIX}/sbin:${PREFIX}/bin
 LDPATH=${PREFIX}/lib
 CONFIG_PROTECT=\"${PREFIX}/share/config ${PREFIX}/env ${PREFIX}/shutdown\"" > ${D}/etc/env.d/46kdepaths-3.4.0_beta1 # number goes down with version upgrade
-
-		echo "KDEDIR=$PREFIX" > ${D}/etc/env.d/59kdedir-3.4.0_beta1 # number goes up with version upgrade
-
 	fi
 
 }
