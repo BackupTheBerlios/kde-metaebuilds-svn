@@ -16,10 +16,13 @@ $(deprange $PV $MAXKDEVER kde-base/kontact)"
 
 KMCOPYLIB="
 	libkdepim libkdepim
-	libkdenetwork libkdenetwork
-	libkpinterfaces kontact/interfaces"
+	libkpinterfaces kontact/interfaces
+	libkmime libkmime
+	libkpgp libkpgp"
 KMEXTRACTONLY="
 	libkdepim/
 	libkdenetwork/
-	kontact/interfaces"
+	kontact/interfaces
+	libkmime
+	libkpgp"
 KMEXTRA="kontact/plugins/knode" # We add here the kontact's plugin instead of compiling it with kontact because it needs a lot of this programs deps.

@@ -23,7 +23,6 @@ $(deprange $PV $MAXKDEVER kde-base/kmailcvt)
 $(deprange $PV $MAXKDEVER kde-base/kontact)"
 	
 KMCOPYLIB="
-	libkdenetwork libkdenetwork/ 
 	libkdepim libkdepim/
 	libkpimidentities libkpimidentities/
 	libmimelib mimelib/
