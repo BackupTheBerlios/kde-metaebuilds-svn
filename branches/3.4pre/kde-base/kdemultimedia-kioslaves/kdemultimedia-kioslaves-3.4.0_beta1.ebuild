@@ -18,11 +18,13 @@ DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcddb)
 	flac? ( media-libs/flac )
 	encode? ( media-sound/lame )"
 KMCOPYLIB="libkcddb libkcddb"
-KMEXTRACTONLY="kdemultimedia-3.3.0/akode/configure.in.in
-	libkcddb/"
+KMEXTRACTONLY="kdemultimedia-3.3.0/akode/configure.in.in"
+KMCOMPILEONLY="libkcddb/"
 
 
 src_compile() {
 	use oggvorbis && myconf="$myconf --with-vorbis=/usr" || myconf="$myconf --without-vorbis"
-	kde-meta_src_compile
+	DO_NOT_COMPILE=libkcddb kde-meta_src_compile myconf configure
+	cd $S/libkcddb && make configbase.h
+	DO_NOT_COMPILE=libkcddb kde-meta_src_compile make
 }
