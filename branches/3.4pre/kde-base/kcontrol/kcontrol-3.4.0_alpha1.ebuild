@@ -9,11 +9,12 @@ inherit kde-meta eutils
 
 DESCRIPTION="The KDE Control Center"
 KEYWORDS="~x86"
-IUSE="ssl arts"
+IUSE="ssl arts opengl"
 PATCHES="$FILESDIR/configure.in.in-kdm-settings.diff"
 
 DEPEND="ssl? ( dev-libs/openssl )
-	arts? ( $(deprange ${PV/3.4/1.4} ${MAXKDEVER/3.4/1.4} kde-base/arts) )"
+	arts? ( $(deprange ${PV/3.4/1.4} ${MAXKDEVER/3.4/1.4} kde-base/arts) )
+	opengl? ( virtual/opengl )"
 RDEPEND="${DEPEND}
 $(deprange $PV $MAXKDEVER kde-base/kcminit)
 $(deprange $PV $MAXKDEVER kde-base/kdebase-applnk)"
@@ -28,7 +29,7 @@ KMEXTRACTONLY="kicker/core/kicker.h
 	    libkonq/"
 
 src_compile() {
-	myconf="$myconf `use_with ssl` `use_with arts`"
+	myconf="$myconf `use_with ssl` `use_with arts` `use_with opengl gl`"
 	kde-meta_src_compile
 }
 	
