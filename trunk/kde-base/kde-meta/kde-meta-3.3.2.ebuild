@@ -24,4 +24,5 @@ RDEPEND="
 ~kde-base/kdesdk-meta-${PV}
 ~kde-base/kdetoys-meta-${PV}
 ~kde-base/kdeutils-meta-${PV}
-~kde-base/kdewebdev-meta-${PV}"
+~kde-base/kdewebdev-meta-${PV}
+~kde-base/kdeartwork-meta-${PV}"
