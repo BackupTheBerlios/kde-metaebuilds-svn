@@ -11,17 +11,16 @@ DESCRIPTION="Synchronize Data with KDE"
 KEYWORDS="~x86"
 IUSE=""
 OLDDEPEND="~kde-base/libkdepim-$PV
-	~kde-base/libkdenetwork-$PV
 	~kde-base/libkcal-$PV"
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
-$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
 $(deprange $PV $MAXKDEVER kde-base/libkcal)"
 
 KMCOPYLIB="
 	libkcal libkcal
-	libkdenetwork libkdenetwork
 	libkdepim libkdepim"
 KMEXTRACTONLY="
 	libkcal/
 	libkdepim/
 	libkdenetwork/"
+KMCOMPILEONLY="
+	libemailfunctions/"

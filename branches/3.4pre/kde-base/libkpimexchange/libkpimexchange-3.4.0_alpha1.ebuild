@@ -17,18 +17,17 @@ $(deprange $PV $MAXKDEVER kde-base/libkcal)"
 KMCOPYLIB="libkcal libkcal"
 # libkcal is installed because a lot of headers are needed, but it don't have to be compiled
 KMEXTRACTONLY="
-	libkcal/
-	libical/"
+	libkcal/"
 KMCOMPILEONLY="
-	libical/src/libical/
-	libical/src/libicalss/"
+	libkcal/libical/src/libical/
+	libkcal/libical/src/libicalss/"
 	
 src_compile() {
-	export DO_NOT_COMPILE="libical" && kde-meta_src_compile myconf configure
+	kde-meta_src_compile myconf configure
 	# generate "ical.h"
-	cd ${S}/libical/src/libical && make ical.h
+	cd ${S}/libkcal/libical/src/libical && make ical.h
 	# generate "icalss.h"
-	cd ${S}/libical/src/libicalss && make icalss.h
+	cd ${S}/libkcal/libical/src/libicalss && make icalss.h
 	
 	kde-meta_src_compile make
 }
