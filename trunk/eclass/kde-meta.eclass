@@ -317,20 +317,29 @@ function kde-meta_src_unpack() {
 		libname=""
 		for x in $KMCOPYLIB; do
 			if [ "$libname" == "" ]; then
-			libname=$x
+				libname=$x
 			else
-			dirname=$x
-			cd $S
-			mkdir -p ${dirname}
-			cd ${dirname}
-			ln -s ${PREFIX}/lib/${libname}* .
-			libname=""
+				dirname=$x
+				cd $S
+				mkdir -p ${dirname}
+				cd ${dirname}
+				if [ ! "$(find ${PREFIX}/lib/ -name "${libname}*")" == "" ]; then
+					echo "Symlinking library ${libname} under ${PREFIX}/lib/ in source dir"
+					ln -s ${PREFIX}/lib/${libname}* .
+				else
+					die "Can't find library ${libname} under ${PREFIX}/lib/"
+				fi
 			fi
 		done
 	
 		# apply any patches
 		kde_src_unpack autopatch
 	
+		# kdebase: Remove the installation of the "startkde" script.
+		if [ "$KMNAME" == "kdebase" ]; then
+			sed -i -e s:"bin_SCRIPTS = startkde"::g ${S}/Makefile.am.in
+		fi
+		
 		# for ebuilds with extended src_unpack
 		cd $S
 	
