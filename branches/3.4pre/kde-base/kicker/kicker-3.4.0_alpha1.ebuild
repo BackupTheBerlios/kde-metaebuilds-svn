@@ -10,7 +10,7 @@ inherit kde-meta eutils
 DESCRIPTION="KDE panel housing varous applets"
 KEYWORDS="~x86"
 IUSE=""
-PATCHES="$FILESDIR/remove-startkde-$PV.diff $FILESDIR/applets-configure.in.in.diff"
+PATCHES="$FILESDIR/applets-configure.in.in.diff"
 OLDDEPEND="~kde-base/libkonq-3.3.1"
 DEPEND="
 $(deprange $PV $MAXKDEVER kde-base/libkonq)"
