@@ -247,27 +247,33 @@ function change_makefiles() {
 	fi
 }
 
+function set_common_variables() {
+	# Overridable module (subdirectory) name, with default value
+	if [ "$KMNOMODULE" != "true" ] && [ -z "$KMMODULE" ]; then
+		KMMODULE=$PN
+	fi
+
+	# Unless disabled, docs are also extracted, compiled and installed
+	DOCS=""
+	if [ "$KMNOMODULE" != "true" ] && [ "$KMNODOCS" != "true" ]; then
+		DOCS="doc/$KMMODULE"
+	fi
+}
+
 # This has function sections now. Call unpack, apply any patches not in $PATCHES,
 # then call makefiles.
 function kde-meta_src_unpack() {
 	debug-print-function $FUNCNAME $*
 
+	set_common_variables
+	
 	sections="$@"
 	[ -z "$sections" ] && sections="unpack makefiles"
 	for section in $sections; do
 	case $section in
 	unpack)
 
-		# Overridable module (subdirectory) name, with default value
-		if [ "$KMNOMODULE" != "true" ] && [ -z "$KMMODULE" ]; then
-			KMMODULE=$PN
-		fi
-	
-		# Unless disabled, docs are also extracted, compiled and installed
-		DOCS=""
-		if [ "$KMNOMODULE" != "true" ] && [ "$KMNODOCS" != "true" ]; then
-			DOCS="doc/$KMMODULE"
-		fi
+		
 		
 		# Create final list of stuff to extract
 		extractlist=""
@@ -367,6 +373,8 @@ function kde-meta_src_unpack() {
 
 function kde-meta_src_compile() {
 	debug-print-function $FUNCNAME $*
+	
+	set_common_variables	
 
 	# kdebase: all configure.in's talk about java. Need to investigate which ones 
 	# actually need it.
@@ -404,8 +412,33 @@ function kde-meta_src_compile() {
 }
 
 function kde-meta_src_install() {
-	kde_src_install
-}
+	debug-print-function $FUNCNAME $*
+	
+	set_common_variables
+	
+	if [ "$1" == "" ]; then
+		kde-meta_src_install make dodoc
+	fi
+	while [ -n "$1" ]; do
+		case $1 in
+		    make)
+				for dir in $KMMODULE $KMEXTRA $DOCS; do
+					if [ -d $S/$dir ]; then 
+						cd $S/$dir
+						make DESTDIR=${D} destdir=${D} install || die
+					fi
+				done
+				;;
+		    dodoc)
+				kde_src_install dodoc
+				;;
+		    all)
+				kde-meta_src_install make dodoc
+				;;
+		esac
+		shift
+	done
+}	
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install
 
