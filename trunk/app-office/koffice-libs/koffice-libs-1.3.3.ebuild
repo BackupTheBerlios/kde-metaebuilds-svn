@@ -4,6 +4,7 @@
 
 KMNAME=koffice
 KMMODULE=lib
+KM_MAKEFILESREV=1
 inherit kde-meta eutils
 
 DESCRIPTION="A free, integrated office suite for KDE, the K Desktop Environment."
