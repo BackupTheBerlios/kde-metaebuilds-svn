@@ -51,15 +51,15 @@ src_install() {
 	# x11 session script - old style
 	cd ${T}
 	echo "#!/bin/sh
-${KDEDIR}/bin/startkde" > kde-${PV}
-	chmod a+x kde-${PV}
+${KDEDIR}/bin/startkde" > kde-$SLOT
+	chmod a+x kde-$SLOT
 	exeinto /etc/X11/Sessions
-	doexe kde-${PV}
+	doexe kde-$SLOT
 
 	# x11 session - new style
 	dodir /usr/share/xsessions
 	sed -e "s:@KDE_BINDIR@:${KDEDIR}/bin:g;s:Name=KDE:Name=KDE $PV:" \
- 		$S/kdm/kfrontend/sessions/kde.desktop.in > $D/usr/share/xsessions/kde-${PV:0:3}.desktop
+ 		$S/kdm/kfrontend/sessions/kde.desktop.in > $D/usr/share/xsessions/kde-$SLOT.desktop
 }
 
 pkg_postinst () {
