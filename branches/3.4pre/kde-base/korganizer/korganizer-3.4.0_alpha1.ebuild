@@ -41,7 +41,6 @@ KMEXTRACTONLY="
 	kontact/interfaces/
 	libkholidays"
 KMCOMPILEONLY="
-	kalarmd/
 	libemailfunctions"
 	
 # They seems to be used only by korganizer
@@ -50,12 +49,12 @@ KMEXTRA="
 	kdgantt
 	kontact/plugins/korganizer/" # We add here the kontact's plugin instead of compiling it with kontact because it needs a lot of korganizer deps.
 
-src_compile() {
-	export DO_NOT_COMPILE="kalarmd" && kde-meta_src_compile myconf configure
-	# generate "alarmdaemoniface_stub.h"
-	cd ${S}/kalarmd && make alarmdaemoniface_stub.h
-	# generate "alarmguiiface_stub.h"
-	cd ${S}/kalarmd && make alarmguiiface_stub.h
-	
-	kde-meta_src_compile make
-}
+#src_compile() {
+#	export DO_NOT_COMPILE="kalarmd" && kde-meta_src_compile myconf configure
+#	# generate "alarmdaemoniface_stub.h"
+#	cd ${S}/kalarmd && make alarmdaemoniface_stub.h
+#	# generate "alarmguiiface_stub.h"
+#	cd ${S}/kalarmd && make alarmguiiface_stub.h
+#	
+#	kde-meta_src_compile make
+#}
