@@ -30,4 +30,8 @@ src_install() {
 	insinto /etc/conf.d
 	newins ${FILESDIR}/lisa.conf lisa
 	newins ${FILESDIR}/reslisa.conf reslisa
+	
+	for x in /etc/lisarc /etc/reslisarc; do
+		echo '# Default lisa/reslisa configfile' > $D/$x
+	done
 }

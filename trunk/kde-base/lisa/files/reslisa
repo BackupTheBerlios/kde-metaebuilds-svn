@@ -9,7 +9,7 @@ depend() {
 
 start() {
     ebegin "Starting reslisa"
-    start-stop-daemon --start -x _KDEDIR_/bin/reslisa -q -- 1>/dev/null
+    start-stop-daemon --start -x _KDEDIR_/bin/reslisa -q -- $RESLISACONF 1>/dev/null
     eend $? "Failed to start reslisa"
 }
 
