@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-DESCRIPTION="kdetoys 3.3.1 - merge this to pull in all kdetoys-derived packages"
+DESCRIPTION="kdetoys - merge this to pull in all kdetoys-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-DESCRIPTION="kdewebdev 3.3.0 - merge this to pull in all kdewebdev-derived packages"
+DESCRIPTION="kdewebdev - merge this to pull in all kdewebdev-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"

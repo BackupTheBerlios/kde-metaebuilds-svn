@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-DESCRIPTION="kdenetwork 3.3.0 - merge this to pull in all kdenetwork-derived packages"
+DESCRIPTION="kdenetwork - merge this to pull in all kdenetwork-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"

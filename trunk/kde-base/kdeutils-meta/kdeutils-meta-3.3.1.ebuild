@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-DESCRIPTION="kdeutils 3.3.0 - merge this to pull in all kdeutils-derived packages"
+DESCRIPTION="kdeutils - merge this to pull in all kdeutils-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"

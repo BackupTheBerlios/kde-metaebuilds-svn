@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-DESCRIPTION="kdegraphics 3.3.1 - merge this to pull in all kdegraphics-derived packages"
+DESCRIPTION="kdegraphics - merge this to pull in all kdegraphics-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"
