@@ -20,7 +20,7 @@ fi
 myPN="$KMNAME"
 case "$PV" in
 	3.4.0_alpha1)	myPV="${PV/3.4.0_alpha1/3.3.90}" ;;
-	3.4.0_beta1)	myPV="${PV/3.4.0_alpha2/3.3.91}" ;;
+	3.4.0_beta1)	myPV="${PV/3.4.0_beta1/3.3.91}" ;;
 	*)		myPV="$PV" ;;
 esac
 myP="$myPN-$myPV"
