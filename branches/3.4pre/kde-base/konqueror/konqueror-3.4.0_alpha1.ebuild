@@ -21,4 +21,3 @@ $(deprange $PV $MAXKDEVER kde-base/kcontrol)"
 KMCOPYLIB="libkonq libkonq"
 KMEXTRACTONLY=kdesktop/KDesktopIface.h
 
-PATCHES="$FILESDIR/post-3.3.2-kdebase-htmlframes2.patch"
