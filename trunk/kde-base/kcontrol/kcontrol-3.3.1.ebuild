@@ -8,7 +8,7 @@ inherit kde-meta eutils
 DESCRIPTION="Library used by konqueror's file manager mode as well as kdesktop and other kde apps"
 KEYWORDS="~x86"
 IUSE="ssl arts"
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+PATCHES="$FILESDIR/remove-startkde-$PV.diff $FILESDIR/configure.in.in-kdm-settings.diff"
 DEPEND="ssl? ( dev-libs/openssl )
 	arts? ( ~kde-base/arts-${PV//3.3/1.3} )"
 RDEPEND="${DEPEND}
@@ -22,12 +22,6 @@ KMEXTRACTONLY="kicker/core/kicker.h
 	    klipper/klipperbindings.cpp
 	    kxkb/kxkbbindings.cpp
 	    libkonq/"
-
-src_unpack() {
-    kde-meta_src_unpack unpack
-    cp $FILESDIR/configure.in.in-kdm-settings $S/kcontrol/configure.in.in
-    kde-meta_src_unpack makefiles
-}
 
 src_compile() {
 	myconf="$myconf `use_with ssl` `use_with arts`"
