@@ -336,6 +336,7 @@ set-kdedir() {
 				3.1) export PREFIX="/usr/kde/3.1";;
 				3.2) export PREFIX="/usr/kde/3.2";;
 				3.3) export PREFIX="/usr/kde/3.3";;
+				3.4) export PREFIX="/usr/kde/3.4";;
 				5.0) export PREFIX="/usr/kde/cvs";;
 			esac
 		fi
@@ -349,7 +350,7 @@ set-kdedir() {
 	else
 		if [ -z "$KDEBASE" ]; then
 			# find the latest kdelibs installed
-			for x in /usr/kde/{cvs,3.3,3.2,3.1,3.0,3} $PREFIX $KDE3LIBSDIR $KDELIBSDIR $KDE3DIR $KDEDIR /usr/kde/*; do
+			for x in /usr/kde/{cvs,3.4,3.3,3.2,3.1,3.0,3} $PREFIX $KDE3LIBSDIR $KDELIBSDIR $KDE3DIR $KDEDIR /usr/kde/*; do
 				if [ -f "${x}/include/kwin.h" ]; then
 					debug-print found
 					export KDEDIR="$x"
@@ -357,12 +358,13 @@ set-kdedir() {
 				fi
 			done
 		else
-			# kde-base ebuilds msut always use the exact version of kdelibs they came with
+			# kde-base ebuilds must always use the exact version of kdelibs they came with
 			case $KDEMAJORVER.$KDEMINORVER in
 				3.0) export KDEDIR="/usr/kde/3";;
 				3.1) export KDEDIR="/usr/kde/3.1";;
 				3.2) export KDEDIR="/usr/kde/3.2";;
 				3.3) export KDEDIR="/usr/kde/3.3";;
+				3.4) export KDEDIR="/usr/kde/3.4";;
 				5.0) export KDEDIR="/usr/kde/cvs";;
 			esac
 		fi
