@@ -53,11 +53,11 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 
 	# x11 session - new style
 	dodir /usr/share/xsessions
-	sed -e "s:_PREFIX_:${PREFIX}:g" \
+	sed -e "s:_PREFIX_:${KDEDIR}:g" -e "s:_VERSION_:3.3:g" \
  		$FILESDIR/kde-3.3.desktop > $D/usr/share/xsessions/kde-3.3.desktop
 }
 
 pkg_postinst () {
 	einfo "To enable gpg-agent and/or ssh-agent in KDE sessions,"
-	einfo "edit $PREFIX/env/agent-startup.sh and $PREFIX/shutdown/agent-shutdown.sh"
+	einfo "edit $KDEDIR/env/agent-startup.sh and $KDEDIR/shutdown/agent-shutdown.sh"
 }
