@@ -11,11 +11,16 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND="~kde-base/libkcal-$PV
 	~kde-base/libkpimexchange-$PV
-	~kde-base/libkdepim-$PV"
+	~kde-base/libkdepim-$PV
+	~kde-base/libkdenetwork-$PV
+	>=app-crypt/gpgme-0.4.0"
 KMCOPYLIB="
 	libkcal libkcal
 	libkpimexchange libkpimexchange
-	libkdepim libkdepim"
+	libkdepim libkdepim
+	libkdenetwork libkdenetwork
+	libqgpgme libkdenetwork/qgpgme
+	"
 KMEXTRACTONLY="
 	libkcal/
 	libical/
@@ -23,14 +28,16 @@ KMEXTRACTONLY="
 	libkdepim/
 	korganizer/
 	kmail/kmailicalIface.h
+	libkdenetwork/
 	"
 KMCOMPILEONLY="
-	libkdenetwork/
-	certmanager/
+	libkdenetwork/gpgmepp
 	libical/src/libical/
 	libical/src/libicalss/
+	knotes/
 	kaddressbook/
-	knotes/"
+	certmanager/
+"
 	
 #src_compile() {
 #	export DO_NOT_COMPILE="libical kaddressbook knotes" && kde-meta_src_compile myconf configure
