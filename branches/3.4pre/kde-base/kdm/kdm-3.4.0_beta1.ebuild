@@ -40,12 +40,13 @@ src_install() {
 	newins ${FILESDIR}/kde.pam kde
 	newins ${FILESDIR}/kde-np.pam kde-np
 
-	insinto ${KDEDIR}/share/config/kdm
-	doins ${FILESDIR}/${PVR}/backgroundrc
-
+	# We tell kdm to /use session files from /usr/share/xsessions.
+	# I've removed some other kdmrc mods from here, since it's not clear why
+	# the default aren't ok (and I'm not sure about the benefits of using
+	# the xdm configfiles under /etc/X11 instead of our own ones),
+	# and it's the Gentoo Way to avoid modifying upstream behaviour.
+	# Tell me if you don't like this. --danarmak
 	cd ${D}/${KDEDIR}/share/config/kdm || die
-	sed -e "s:_PREFIX_:${PREFIX}:g" \
-	    -e "s:_RANDOM_:${RANDOM}${RANDOM}:g" \
-	${FILESDIR}/${PVR}/kdmrc > kdmrc
+	sed -i -e "s:#SessionsDirs=:SessionsDirs=/usr/share/xsession\n#SessionsDirs=:" kdmrc
 }
 
