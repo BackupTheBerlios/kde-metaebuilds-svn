@@ -8,7 +8,7 @@ inherit kde-meta eutils
 
 DESCRIPTION="A free, integrated office suite for KDE, the K Desktop Environment."
 HOMEPAGE="http://www.koffice.org/"
-SRC_URI="mirror://kde/stable/${KMNAME}/src/${KMNAME}-${PV}.tar.bz2"
+SRC_URI="$SRC_URI mirror://kde/stable/${KMNAME}/src/${KMNAME}-${PV}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~x86"
