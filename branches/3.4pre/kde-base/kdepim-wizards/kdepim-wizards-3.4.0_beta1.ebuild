@@ -23,9 +23,6 @@ $(deprange $PV $MAXKDEVER kde-base/kdepim-kresources)
 $(deprange $PV $MAXKDEVER kde-base/libkpimidentities)"
 
 KMCOPYLIB="
-	libkcal_imap kresources/imap/kcal
-	libkabc_imap kresources/imap/kabc
-	libknotes_imap kresources/imap/knotes
 	libkcal libkcal
 	libkdepim libkdepim
 	libkpimidentities libkpimidentities
@@ -35,14 +32,18 @@ KMCOPYLIB="
 	libkcal_slox kresources/slox
 	libkabc_slox kresources/slox
 	libkcal_groupwise kresources/groupwise
-	libkabc_groupwise kresources/groupwise"
+	libkabc_groupwise kresources/groupwise
+	libkcalkolab kresources/kolab/kcal
+	libkabckolab kresources/kolab/kabc
+	libknoteskolab kresources/kolab/knotes"
 KMEXTRACTONLY="
 	libkdepim/
 	libkcal/
 	libkpimidentities/
 	kresources/
 	knotes/
-	certmanager/lib/"
+	certmanager/lib/
+	kmail"
 KMCOMPILEONLY="kresources/slox/
 		kresources/groupwise
 		kresources/egroupware"
