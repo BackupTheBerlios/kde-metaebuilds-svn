@@ -10,6 +10,9 @@ inherit kde-meta eutils
 DESCRIPTION="KDE login manager, similar to xdm and gdm"
 KEYWORDS="~x86"
 IUSE="pam"
+
+KMEXTRA="kdmlib/"
+KMEXTRACTONLY="libkonq/konq_defaults.h"
 KMCOMPILEONLY="kcontrol/background"
 DEPEND="$DEPEND 
 		pam? ( sys-libs/pam )
@@ -17,7 +20,7 @@ $(deprange $PV $MAXKDEVER kde-base/kcontrol)"
 	# Requires the desktop background settings and kdm modules,
 	# so until we separate the kcontrol modules into separate ebuilds :-),
 	# there's a dep here
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+
 
 src_compile() {
 	use pam \

@@ -11,7 +11,7 @@ DESCRIPTION="KDE splashscreen framework (the splashscreen of KDE itself, not of 
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+
 
 src_install() {
 	kde-meta_src_install

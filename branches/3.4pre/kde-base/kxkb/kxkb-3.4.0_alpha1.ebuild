@@ -11,4 +11,4 @@ DESCRIPTION="Kicker applet for management of X keymaps"
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

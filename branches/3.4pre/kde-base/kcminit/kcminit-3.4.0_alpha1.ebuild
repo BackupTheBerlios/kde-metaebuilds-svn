@@ -11,4 +11,4 @@ DESCRIPTION="KCMInit - runs startups initialization for Control Modules."
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

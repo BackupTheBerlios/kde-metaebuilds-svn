@@ -11,4 +11,4 @@ DESCRIPTION="KDE tool that looks for well-known apps in your path and creates .d
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

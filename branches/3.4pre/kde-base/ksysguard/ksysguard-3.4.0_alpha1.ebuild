@@ -11,4 +11,4 @@ DESCRIPTION="KDE System Guard"
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

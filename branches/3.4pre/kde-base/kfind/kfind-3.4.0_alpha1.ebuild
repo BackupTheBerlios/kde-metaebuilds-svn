@@ -10,7 +10,7 @@ inherit kde-meta eutils
 DESCRIPTION="KDE file find utility"
 KEYWORDS="~x86"
 IUSE=""
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkonq)"
 OLDDEPEND="~kde-base/libkonq-$PV"
 

@@ -11,4 +11,4 @@ DESCRIPTION="KDE crash handler gives the user feedback if a program crashed"
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

@@ -11,4 +11,4 @@ DESCRIPTION="KDE: Read KConfig entries - for use in shell scripts"
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

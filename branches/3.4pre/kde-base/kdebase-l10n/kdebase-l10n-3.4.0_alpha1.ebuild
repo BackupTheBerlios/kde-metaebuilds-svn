@@ -11,5 +11,5 @@ inherit kde-meta eutils
 DESCRIPTION="l10n files from kdebase"
 KEYWORDS="~x86"
 IUSE=""
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+
 KMNODOCS=true

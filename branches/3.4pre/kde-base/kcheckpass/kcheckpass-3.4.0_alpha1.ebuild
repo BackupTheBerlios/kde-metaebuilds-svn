@@ -11,4 +11,4 @@ DESCRIPTION="KDE pam client that allows you to auth as a specified user without 
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

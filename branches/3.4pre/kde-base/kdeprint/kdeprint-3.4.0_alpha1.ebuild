@@ -10,7 +10,7 @@ inherit kde-meta eutils
 DESCRIPTION="KDE printer queue/device manager"
 KEYWORDS="~x86"
 IUSE="cups"
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+
 DEPEND="cups? ( net-print/cups )"
 
 src_compile() {

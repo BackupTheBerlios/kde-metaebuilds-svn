@@ -11,4 +11,4 @@ DESCRIPTION="kicker applet for KDE and X clipboard management"
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

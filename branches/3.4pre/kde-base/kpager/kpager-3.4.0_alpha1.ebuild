@@ -11,4 +11,4 @@ DESCRIPTION="KDE Virtual Desktop Overview"
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

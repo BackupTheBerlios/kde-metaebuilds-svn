@@ -10,7 +10,7 @@ inherit kde-meta eutils
 DESCRIPTION="KDE screensaver framework"
 KEYWORDS="~x86"
 IUSE="opengl"
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+
 DEPEND="opengl? ( virtual/opengl )"
 
 src_compile() {

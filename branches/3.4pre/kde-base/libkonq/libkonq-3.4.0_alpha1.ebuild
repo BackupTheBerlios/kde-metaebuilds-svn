@@ -11,4 +11,4 @@ DESCRIPTION="The embeddable part of konqueror"
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

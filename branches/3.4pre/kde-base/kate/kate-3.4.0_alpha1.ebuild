@@ -11,4 +11,4 @@ DESCRIPTION="KDE MDI editor/ide"
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

@@ -14,7 +14,7 @@ IUSE="ldap samba"
 DEPEND="ldap? ( net-nds/openldap )
 		samba? ( >=net-fs/samba-3.0.1 )
 		~kde-base/kdesktop-$PV" # for the kdeeject script used by the devices/mounthelper ioslave
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+
 
 src_compile () {
 	myconf="$myconf `use_with ldap`"

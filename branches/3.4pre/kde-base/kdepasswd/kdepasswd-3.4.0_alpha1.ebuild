@@ -10,7 +10,7 @@ inherit kde-meta eutils
 DESCRIPTION="KDE GUI for passwd"
 KEYWORDS="~x86"
 IUSE=""
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+
 OLDDEPEND="~kde-base/libkonq-3.3.1"
 DEPEND="
 $(deprange $PV $MAXKDEVER kde-base/libkonq)"

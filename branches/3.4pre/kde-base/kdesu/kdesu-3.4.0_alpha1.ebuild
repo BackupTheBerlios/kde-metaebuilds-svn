@@ -11,4 +11,4 @@ DESCRIPTION="KDE: gui for su(1)"
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

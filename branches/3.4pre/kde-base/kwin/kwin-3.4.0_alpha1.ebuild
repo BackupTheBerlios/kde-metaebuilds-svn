@@ -11,5 +11,5 @@ DESCRIPTION="KDE window manager"
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+
 

@@ -10,5 +10,5 @@ inherit kde-meta eutils
 DESCRIPTION="The reliable KDE session manager that talks the standard X11R6"
 KEYWORDS="~x86"
 IUSE=""
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+
 KMNODOCS=true

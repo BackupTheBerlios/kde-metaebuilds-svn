@@ -10,5 +10,5 @@ inherit kde-meta eutils
 DESCRIPTION="KDialog can be used to show nice dialog boxes from shell scripts"
 KEYWORDS="~x86"
 IUSE=""
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+
 KMNODOCS=true

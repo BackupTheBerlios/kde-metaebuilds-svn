@@ -10,7 +10,7 @@ inherit kde-meta eutils
 DESCRIPTION="The KDE Control Center"
 KEYWORDS="~x86"
 IUSE="ssl arts"
-PATCHES="$FILESDIR/remove-startkde-$PV.diff $FILESDIR/configure.in.in-kdm-settings.diff"
+PATCHES="$FILESDIR/configure.in.in-kdm-settings.diff"
 
 DEPEND="ssl? ( dev-libs/openssl )
 	arts? ( $(deprange ${PV/3.4/1.4} ${MAXKDEVER/3.4/1.4} kde-base/arts) )"

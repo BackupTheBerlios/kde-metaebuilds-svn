@@ -11,4 +11,4 @@ DESCRIPTION="The KDE Help Center"
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

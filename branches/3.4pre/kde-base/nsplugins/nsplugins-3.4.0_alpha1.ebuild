@@ -11,4 +11,4 @@ DESCRIPTION="Netscape plugins support for konqueror"
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

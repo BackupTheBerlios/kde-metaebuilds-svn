@@ -11,4 +11,4 @@ DESCRIPTION="KDE: Allows any application to be kept in the system tray"
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

@@ -11,4 +11,4 @@ DESCRIPTION="KDE: graphical DCOP browser/client"
 KEYWORDS="~x86"
 IUSE=""
 KMNODOCS="true"
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

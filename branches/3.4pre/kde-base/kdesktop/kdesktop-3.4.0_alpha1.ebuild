@@ -10,7 +10,7 @@ inherit kde-meta eutils
 DESCRIPTION="The KDE desktop"
 KEYWORDS="~x86"
 IUSE=""
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+
 DEPEND="$DEPEND 
 $(deprange $PV $MAXKDEVER kde-base/libkonq)
 $(deprange $PV $MAXKDEVER kde-base/kdm)

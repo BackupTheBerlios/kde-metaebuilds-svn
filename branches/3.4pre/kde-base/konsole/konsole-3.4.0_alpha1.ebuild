@@ -11,4 +11,4 @@ DESCRIPTION="X terminal for use with KDE."
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

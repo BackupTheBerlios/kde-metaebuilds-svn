@@ -11,5 +11,5 @@ inherit kde-meta eutils
 DESCRIPTION="Pics included with kdebase"
 KEYWORDS="~x86"
 IUSE=""
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+
 KMNODOCS=true

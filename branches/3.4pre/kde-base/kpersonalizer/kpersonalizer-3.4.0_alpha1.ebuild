@@ -11,4 +11,4 @@ DESCRIPTION="KDE basic settings wizard"
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+

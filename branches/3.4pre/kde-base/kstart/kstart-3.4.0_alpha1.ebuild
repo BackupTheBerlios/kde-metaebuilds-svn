@@ -11,4 +11,4 @@ DESCRIPTION="KDE: Utility to launch applications with special window properties"
 KEYWORDS="~x86"
 IUSE=""
 
-PATCHES="$FILESDIR/remove-startkde-$PV.diff"
+
