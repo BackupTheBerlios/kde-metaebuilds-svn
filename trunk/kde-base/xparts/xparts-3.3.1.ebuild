@@ -3,13 +3,15 @@
 # $Header: $
 
 KMNAME=kdebindings
+KMEXTRACTONLY="dcopc"
+KMCOPYLIB="libdcopc dcopc"
 inherit kde-meta
 
 DESCRIPTION="Allows embedding of generic XParts as KDE KParts (broken)"
 KEYWORDS="~x86"
 IUSE="mozilla"
 DEPEND="=dev-libs/glib-1.2*
-	=x11-lisb/gtk+-1.2*
+	=x11-libs/gtk+-1.2*
 	mozilla? ( net-www/mozilla )"
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
