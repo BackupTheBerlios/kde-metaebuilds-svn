@@ -10,7 +10,7 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 SLOT="3.4"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="wifi"
 
 RDEPEND="$(deprange $PV $MAXKDEVER kde-base/dcoprss)
 	$(deprange $PV $MAXKDEVER kde-base/kdenetwork-filesharing)
@@ -24,7 +24,7 @@ RDEPEND="$(deprange $PV $MAXKDEVER kde-base/dcoprss)
 	$(deprange $PV $MAXKDEVER kde-base/krfb)
 	$(deprange $PV $MAXKDEVER kde-base/ksirc)
 	$(deprange $PV $MAXKDEVER kde-base/ktalkd)
-	$(deprange $PV $MAXKDEVER kde-base/kwifimanager)
+	wifi? ( $(deprange $PV $MAXKDEVER kde-base/kwifimanager) )
 	$(deprange $PV $MAXKDEVER kde-base/librss)
 	$(deprange $PV $MAXKDEVER kde-base/kdnssd)
 	$(deprange $PV $MAXKDEVER kde-base/kdenetwork-kfile-plugins)
